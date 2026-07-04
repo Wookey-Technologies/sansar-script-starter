@@ -19,25 +19,25 @@ public class NPCAnimation3 : SceneObjectScript
 {
     #region EditorProperties
     // Start playing on these events. Can be a comma separated list of event names.
-    public string AnimationClip1 = null;
-    public string AnimationClip2 = null;
-    public string AnimationClip3 = null;
-    public string AnimationClip4 = null;
-    public string AnimationClip5 = null;
-    public string AnimationClip6 = null;
-    public string AnimationClip7 = null;
-    public string AnimationClip8 = null;
-    public string AnimationClip9 = null;
-    public string AnimationClip10 = null;
-    public string AnimationClip11 = null;
-    public string AnimationClip12 = null;
-    public string AnimationClip13 = null;
-    public string AnimationClip14 = null;
-    public string AnimationClip15 = null;
-    public string AnimationClip16 = null;
-    public string AnimationClip17 = null;
-    public string AnimationClip18 = null;
-    public string EnableEvent = null;
+    public string AnimationClip1 = "";
+    public string AnimationClip2 = "";
+    public string AnimationClip3 = "";
+    public string AnimationClip4 = "";
+    public string AnimationClip5 = "";
+    public string AnimationClip6 = "";
+    public string AnimationClip7 = "";
+    public string AnimationClip8 = "";
+    public string AnimationClip9 = "";
+    public string AnimationClip10 = "";
+    public string AnimationClip11 = "";
+    public string AnimationClip12 = "";
+    public string AnimationClip13 = "";
+    public string AnimationClip14 = "";
+    public string AnimationClip15 = "";
+    public string AnimationClip16 = "";
+    public string AnimationClip17 = "";
+    public string AnimationClip18 = "";
+    public string EnableEvent = "";
     public int delay = 0;
     //public string DisableEvent = null;
 
@@ -299,7 +299,7 @@ public class NPCAnimation3 : SceneObjectScript
         animation.JumpToFrame(0);
         initialAnimationParameters = animation.GetParameters();
 
-        if (EnableEvent != "")
+        if (!string.IsNullOrWhiteSpace(EnableEvent))
         {
             Log.Write("Enable Event was not null: " + EnableEvent);
             SubscribeToAll(EnableEvent, Subscribe);
@@ -352,6 +352,24 @@ public class NPCAnimation3 : SceneObjectScript
         List<string> AnimationArray = new List<string>();
         AnimationArray.Clear();
         AnimationArray = AnimationIn.Split(',').ToList();
+        if (AnimationArray.Count < 7)
+        {
+            Log.Write(LogLevel.Warning, "AnimationClip" + (AnimationNumber + 1)
+                + " needs at least 7 comma-separated values (event,doneEvent,startFrame,endFrame,playbackType,speed,blendDuration); got: " + AnimationIn);
+            return;
+        }
+        // Validate the numeric fields up front so the Parse calls in
+        // PlayAnimationEvent can never throw (and kill the script) later.
+        int checkInt; float checkFloat;
+        if (!Int32.TryParse(AnimationArray[2], out checkInt)
+            || !Int32.TryParse(AnimationArray[3], out checkInt)
+            || !float.TryParse(AnimationArray[5], out checkFloat)
+            || !Int32.TryParse(AnimationArray[6], out checkInt))
+        {
+            Log.Write(LogLevel.Warning, "AnimationClip" + (AnimationNumber + 1)
+                + " startFrame, endFrame, speed and blendDuration must be numeric; got: " + AnimationIn);
+            return;
+        }
         AnimationEvent[AnimationNumber] = AnimationArray[0];
         AnimationDoneEvent[AnimationNumber] = AnimationArray[1];
         Log.Write("Animation Event: " + AnimationEvent[AnimationNumber]);
@@ -360,11 +378,27 @@ public class NPCAnimation3 : SceneObjectScript
         PlaybackType[AnimationNumber] = AnimationArray[4];
         AnimationSpeed[AnimationNumber] = AnimationArray[5];
         BlendDuration[AnimationNumber] = AnimationArray[6];
-        if (AnimationArray.Count() > 7)
+        if (AnimationArray.Count >= 10)
         {
-            EndPosition[AnimationNumber].X = float.Parse(AnimationArray[7]);
-            EndPosition[AnimationNumber].Y = float.Parse(AnimationArray[8]);
-            EndPosition[AnimationNumber].Z = float.Parse(AnimationArray[9]);
+            float posX, posY, posZ;
+            if (float.TryParse(AnimationArray[7], out posX)
+                && float.TryParse(AnimationArray[8], out posY)
+                && float.TryParse(AnimationArray[9], out posZ))
+            {
+                EndPosition[AnimationNumber].X = posX;
+                EndPosition[AnimationNumber].Y = posY;
+                EndPosition[AnimationNumber].Z = posZ;
+            }
+            else
+            {
+                Log.Write(LogLevel.Warning, "AnimationClip" + (AnimationNumber + 1)
+                    + " end position (values 8-10) must be numeric; ignoring it.");
+            }
+        }
+        else if (AnimationArray.Count > 7)
+        {
+            Log.Write(LogLevel.Warning, "AnimationClip" + (AnimationNumber + 1)
+                + " end position needs all three of X,Y,Z (values 8-10); ignoring it.");
         }
         SubscribeToAll(AnimationEvent[AnimationNumber], ExecuteAnimation);
         Log.Write("Finished Parse Animation");

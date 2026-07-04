@@ -11,10 +11,11 @@ in here — you do not need the Sansar client installed to write and validate sc
    `.NET Framework 4.7.2`. C# 6/7 features are fine (string interpolation, tuples,
    pattern matching); C# 8+ features are not (no `string?`, ranges, switch
    expressions).
-2. **Only whitelisted .NET APIs.** No file I/O, threads, sockets, reflection, or
+2. **Only whitelisted .NET APIs.** No file I/O, threads, sockets, .NET reflection, or
    `Regex`. The full allowed list is `api-docs/access.html`. Use Sansar equivalents:
    `ScenePrivate.HttpClient` (HTTP), coroutines (`StartCoroutine`/`Wait`) instead of
-   threads.
+   threads, and Sansar's own `Reflective` mechanism (`[RegisterReflective]` /
+   `FindReflective`) for cross-script calls — that one is fine.
 3. **Unhandled exceptions permanently kill the script.** Wrap calls on agents
    (players) in `try/catch` — an agent can disconnect between an `IsValid` check and
    the next line. Catch `ThrottleException` on rate-limited calls (chat, media,
@@ -70,7 +71,7 @@ in here — you do not need the Sansar client installed to write and validate sc
 | Click interactions | `examples/official/InteractionExample.cs`, `examples/snippets/AddInteractionScript.cs` |
 | Keyboard/controller input | `examples/official/CommandExample.cs`, `examples/snippets/AllAgentsCommandScript.cs` |
 | Held-object input (guns, flashlights) | `examples/snippets/FlashlightScript.cs`, `examples/official/PewPewExample.cs` |
-| Moving objects (non-physics) | `examples/official/MoverExample1-3.cs`, `examples/snippets/PatrolMoverScript.cs` |
+| Moving objects (non-physics) | `examples/official/MoverExample1.cs`, `MoverExample2.cs`, `MoverExample3.cs`, `examples/snippets/PatrolMoverScript.cs` |
 | Physics: forces, collisions | `examples/snippets/RigidBodyImpulseScript.cs`, guide "How to control physical objects" |
 | Trigger volumes | `examples/snippets/TriggerVolumeScript.cs` |
 | Raycasts / shapecasts | `examples/official/CastRayExample.cs` |

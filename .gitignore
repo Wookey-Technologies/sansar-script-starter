@@ -3,6 +3,10 @@ bin/
 obj/
 *.dll.tmp
 
+# Python
+__pycache__/
+*.py[cod]
+
 # Visual Studio
 .vs/
 *.suo
@@ -11,3 +15,5 @@ obj/
 # OS
 Thumbs.db
 .DS_Store
+.claude/
+.codex-reviews/

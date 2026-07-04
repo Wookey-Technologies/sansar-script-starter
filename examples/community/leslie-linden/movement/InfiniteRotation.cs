@@ -33,7 +33,7 @@ public class InfiniteRotation : SceneObjectScript
     {
         double OneThirdRotationDuration = RotationDuration / 3.0;
 
-        Vector rotationAxis = Vector.Up;
+        Vector rotationAxis = Vector.ObjectUp;
         if (RotationAxis.LengthSquared() > 0.0f)
             rotationAxis = RotationAxis.Normalized();
 

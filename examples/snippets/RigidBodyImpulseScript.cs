@@ -20,7 +20,7 @@ public class RigidBodyImpulseScript : SceneObjectScript
             {
                 MyInteraction.Subscribe((InteractionData data) =>
                 {
-                    _rb.AddLinearImpulse(Vector.Up * 100.0f);
+                    _rb.AddLinearImpulse(Vector.ObjectUp * 100.0f);
                 });
             }
             else

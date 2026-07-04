@@ -2,6 +2,10 @@
 
 This comprehensive guide covers everything you need to know about spawning objects in Sansar using `ScenePrivate.CreateCluster` and organizing them in grid layouts for game pieces and structured arrangements.
 
+> **Axis convention:** Sansar is **Z-up**. The ground plane is X–Y, height is Z
+> (`Vector.ObjectUp` is the world up vector), and a "yaw" rotation is a rotation
+> around the Z axis. All snippets below follow this convention.
+
 ## Table of Contents
 1. [ScenePrivate.CreateCluster Overview](#sceneprivatecreateCluster-overview)
 2. [Method Signatures and Parameters](#method-signatures-and-parameters)
@@ -59,15 +63,15 @@ Vector position = agent.Position;             // Agent position
 ```csharp
 Quaternion rotation = Quaternion.Identity;              // No rotation
 Quaternion rotation = ObjectPrivate.Rotation;           // Current object rotation
-Quaternion rotation = Quaternion.FromEulerAngles(       // Euler angles
-    0, Math.PI / 2, 0);  // 90 degrees around Y-axis
+Quaternion rotation = Quaternion.FromEulerAngles(       // Euler angles (takes a Vector)
+    new Vector(0, 0, Mathf.PiOverTwo));  // 90 degrees around the vertical (Z) axis
 ```
 
 #### Vector (Velocity)
 ```csharp
 Vector velocity = Vector.Zero;                 // Stationary
-Vector velocity = new Vector(0, 5, 0);        // Upward velocity
-Vector velocity = Vector.Up * 10;             // Upward at 10 units/sec
+Vector velocity = new Vector(0, 0, 5);         // Upward velocity (Z is up)
+Vector velocity = Vector.ObjectUp * 10;        // Upward at 10 units/sec
 ```
 
 ### Callback Function Structure
@@ -123,9 +127,9 @@ public class GridSpawner : SceneObjectScript
     private Vector WorldToGrid(Vector worldPos)
     {
         return new Vector(
-            Math.Round((worldPos.X - GridOrigin.X) / GridSize),
-            Math.Round((worldPos.Y - GridOrigin.Y) / GridSize),
-            Math.Round((worldPos.Z - GridOrigin.Z) / GridSize)
+            (float)Math.Round((worldPos.X - GridOrigin.X) / GridSize),
+            (float)Math.Round((worldPos.Y - GridOrigin.Y) / GridSize),
+            (float)Math.Round((worldPos.Z - GridOrigin.Z) / GridSize)
         );
     }
     
@@ -222,9 +226,9 @@ public class ChessBoard : SceneObjectScript
             int pieceType = pieceTypes[col];
             if (pieceType < ChessPieces.Count && ChessPieces[pieceType] != null)
             {
-                Vector position = new Vector(col * SQUARE_SIZE, 0, row * SQUARE_SIZE);
+                Vector position = new Vector(col * SQUARE_SIZE, row * SQUARE_SIZE, 0);
                 Quaternion rotation = (row > 3) ? 
-                    Quaternion.FromEulerAngles(0, Math.PI, 0) : // Rotate black pieces
+                    Quaternion.FromEulerAngles(new Vector(0, 0, Mathf.PI)) : // Turn black pieces around
                     Quaternion.Identity;
                 
                 PlaceChessPiece(position, rotation, pieceType, row, col);
@@ -562,14 +566,14 @@ Add natural variation to spawned objects for more realistic placement:
 ```csharp
 public class VarianceSpawner : SceneObjectScript
 {
-    [Tooltip("Position variance in each axis")]
-    public Vector PositionVariance = new Vector(0.1f, 0, 0.1f);
+    [Tooltip("Position variance in each axis (horizontal = X and Y)")]
+    public Vector PositionVariance = new Vector(0.1f, 0.1f, 0);
     
-    [Tooltip("Rotation variance in degrees")]
-    public Vector RotationVariance = new Vector(0, 15, 0);
+    [Tooltip("Rotation variance in degrees (yaw = around Z)")]
+    public Vector RotationVariance = new Vector(0, 0, 15);
     
     [Tooltip("Velocity variance")]
-    public Vector VelocityVariance = new Vector(1, 0, 1);
+    public Vector VelocityVariance = new Vector(1, 1, 0);
     
     private Random random = new Random();
     
@@ -701,16 +705,16 @@ private void SpawnGridWithAdvancedPatterns(int gridX, int gridY, ClusterResource
 {
     Vector basePosition = GridToWorld(gridX, gridY);
     
-    // Add slight randomization for natural look
+    // Add slight randomization for natural look (horizontal jitter in X/Y)
     Vector position = basePosition + new Vector(
         PositionVariance.X * RandomNegOneToOne(),
-        0,
-        PositionVariance.Z * RandomNegOneToOne()
+        PositionVariance.Y * RandomNegOneToOne(),
+        0
     );
     
-    // Random rotation for variety
-    float randomY = RotationVariance.Y * RandomNegOneToOne() * Mathf.RadiansPerDegree;
-    Quaternion rotation = Quaternion.FromEulerAngles(0, randomY, 0);
+    // Random yaw (around the vertical Z axis) for variety
+    float randomYaw = RotationVariance.Z * RandomNegOneToOne() * Mathf.RadiansPerDegree;
+    Quaternion rotation = Quaternion.FromEulerAngles(new Vector(0, 0, randomYaw));
     
     try
     {
@@ -1129,12 +1133,10 @@ public void CleanupSpawnedObjects()
     Log.Write(LogLevel.Info, "Cleaned up all spawned objects");
 }
 
-// Automatic cleanup on script shutdown
-public override void OnDestroy()
-{
-    CleanupSpawnedObjects();
-    base.OnDestroy();
-}
+// Note: Sansar scripts have no destroy/shutdown callback (there is no
+// OnDestroy). Expose cleanup explicitly instead - e.g. call
+// CleanupSpawnedObjects() from an Interaction, a chat command, or before
+// starting a new round.
 ```
 
 ## Advanced Grid Patterns
@@ -1144,8 +1146,8 @@ public override void OnDestroy()
 private Vector HexGridToWorld(int q, int r)
 {
     float x = GridSize * (3.0f/2.0f * q);
-    float z = GridSize * (Math.Sqrt(3.0f)/2.0f * q + Math.Sqrt(3.0f) * r);
-    return new Vector(x, 0, z);
+    float y = GridSize * (float)(Math.Sqrt(3.0)/2.0 * q + Math.Sqrt(3.0) * r);
+    return new Vector(x, y, 0);   // hex grid on the ground (X-Y) plane
 }
 ```
 
@@ -1155,14 +1157,15 @@ private void SpawnInCircle(ClusterResource resource, Vector center, float radius
 {
     for (int i = 0; i < count; i++)
     {
-        float angle = (2.0f * Math.PI * i) / count;
+        float angle = (Mathf.TwoPi * i) / count;
         Vector position = center + new Vector(
-            Math.Cos(angle) * radius,
-            0,
-            Math.Sin(angle) * radius
+            (float)Math.Cos(angle) * radius,
+            (float)Math.Sin(angle) * radius,
+            0
         );
         
-        Quaternion rotation = Quaternion.FromEulerAngles(0, angle + Math.PI/2, 0);
+        // Face outward: yaw around the vertical (Z) axis
+        Quaternion rotation = Quaternion.FromEulerAngles(new Vector(0, 0, angle + Mathf.PiOverTwo));
         SafeCreateCluster(resource, position, rotation);
     }
 }

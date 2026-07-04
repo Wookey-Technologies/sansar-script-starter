@@ -42,15 +42,23 @@ public class FlashlightScript : SceneObjectScript
 
         _rb.SubscribeToHeldObject(HeldObjectEventType.Grab, (HeldObjectData holdData) =>
         {
-            AgentPrivate agent = ScenePrivate.FindAgent(holdData.HeldObjectInfo.SessionId);
-
-            if (agent != null && agent.IsValid)
+            try
             {
-                _commandSubscription = agent.Client.SubscribeToCommand("PrimaryAction", CommandAction.Pressed, (CommandData command) =>
+                AgentPrivate agent = ScenePrivate.FindAgent(holdData.HeldObjectInfo.SessionId);
+
+                if (agent != null && agent.IsValid)
                 {
-                    SetLight(!_lightOn);
-                },
-                (canceledData) => { });
+                    _commandSubscription = agent.Client.SubscribeToCommand("PrimaryAction", CommandAction.Pressed, (CommandData command) =>
+                    {
+                        SetLight(!_lightOn);
+                    },
+                    (canceledData) => { });
+                }
+            }
+            catch
+            {
+                // The agent can log out between FindAgent and Client access;
+                // an unhandled exception here would kill the script.
             }
         });
 

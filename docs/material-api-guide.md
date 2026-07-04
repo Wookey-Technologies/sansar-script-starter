@@ -164,8 +164,9 @@ Color black = Color.Black;
 Color orange = new Color(1.0f, 0.5f, 0.0f, 1.0f);
 Color purple = new Color(0.5f, 0.0f, 0.8f, 1.0f);
 
-// Random colors
-Color randomColor = Color.Random();
+// Random colors (there is no Color.Random() in the API - use System.Random)
+Random rng = new Random();
+Color randomColor = new Color((float)rng.NextDouble(), (float)rng.NextDouble(), (float)rng.NextDouble(), 1.0f);
 
 // From string (if parsing user input)
 if (Color.TryParse("(1.0,0.5,0.0,1.0)", out Color parsedColor))
@@ -179,8 +180,10 @@ if (Color.TryParse("(1.0,0.5,0.0,1.0)", out Color parsedColor))
 // Copy tint from one object to another
 private void CopyTint(MeshComponent sourceMesh, MeshComponent targetMesh)
 {
-    var sourceMaterials = sourceMesh.GetRenderMaterials();
-    var targetMaterials = targetMesh.GetRenderMaterials();
+    // GetRenderMaterials() returns IEnumerable<RenderMaterial>;
+    // use System.Linq's ToList() when you need Count or indexing.
+    var sourceMaterials = sourceMesh.GetRenderMaterials().ToList();
+    var targetMaterials = targetMesh.GetRenderMaterials().ToList();
 
     for (int i = 0; i < Math.Min(sourceMaterials.Count, targetMaterials.Count); i++)
     {
@@ -411,7 +414,7 @@ public class InteractiveColorChanger : SceneObjectScript
     public Interaction ColorInteraction;
 
     private MeshComponent mesh;
-    private Color[] colors = { Color.Red, Color.Green, Color.Blue, Color.Yellow, Color.Purple };
+    private Color[] colors = { Color.Red, Color.Green, Color.Blue, Color.Yellow, Color.Magenta };
     private int currentColorIndex = 0;
 
     public override void Init()
@@ -466,7 +469,7 @@ public class EmissivePulseSpawner : SceneObjectScript
     public override void Init()
     {
         // Spawn object with pulse effect
-        Vector spawnPos = ObjectPrivate.Position + Vector.Up * 2;
+        Vector spawnPos = ObjectPrivate.Position + Vector.ObjectUp * 2;
         
         ScenePrivate.CreateCluster(SpawnObject, spawnPos, Quaternion.Identity, Vector.Zero,
             (ScenePrivate.CreateClusterData data) =>
@@ -675,7 +678,7 @@ private bool ValidateMaterialCapabilities(MeshComponent mesh, out string issues)
         return false;
     }
 
-    var materials = mesh.GetRenderMaterials();
+    var materials = mesh.GetRenderMaterials().ToList();
     if (materials.Count == 0)
     {
         issues = "No materials found on mesh";

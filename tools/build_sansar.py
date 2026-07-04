@@ -18,11 +18,25 @@ import glob
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Tuple
 
+# Windows consoles often default to a legacy codepage that cannot print the
+# status glyphs below; degrade to '?' instead of crashing.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, 'reconfigure'):
+        _stream.reconfigure(errors='replace')
+
 class SansarBuilder:
     def __init__(self, config_file: str):
         self.config_file = config_file
+        # All relative paths in the config (sources and output) are resolved
+        # against the config file's directory, not the process cwd.
+        self.config_dir = str(Path(config_file).resolve().parent)
         self.config = self.load_config()
         self.output_lines = []
+
+    def resolve_path(self, path: str) -> str:
+        if os.path.isabs(path):
+            return path
+        return os.path.join(self.config_dir, path)
         
     def load_config(self) -> Dict[str, Any]:
         """Load the project configuration"""
@@ -129,6 +143,12 @@ class SansarBuilder:
             
             return content
         
+        elif extract_mode == "code_only":
+            # Entire file minus using directives (auto-generated configs merge
+            # whole files and hoist a shared set of usings to the top).
+            using_re = re.compile(r'\s*using\s+(static\s+)?[\w.]+(\s*=\s*[\w.\s<>,]+)?\s*;\s*$')
+            return [line.rstrip() for line in lines if not using_re.match(line)]
+
         else:
             # Default: return entire file
             return [line.rstrip() for line in lines]
@@ -168,20 +188,25 @@ class SansarBuilder:
             
             elif item_type == 'file':
                 # Process a file
-                file_path = item.get('path', '')
+                rel_path = item.get('path', '')
+                file_path = self.resolve_path(rel_path)
                 extract_mode = item.get('extract', 'full')
                 optional = item.get('optional', False)
                 nested = item.get('nested', False)
-                
-                if not os.path.exists(file_path) and optional:
-                    continue
-                
+
+                if not os.path.exists(file_path):
+                    if optional:
+                        continue
+                    print(f"  ✗ Required file not found: {file_path}")
+                    print(f"    (listed in {self.config_file})")
+                    sys.exit(1)
+
                 content = self.extract_content(file_path, extract_mode)
-                
+
                 if content:
                     # Add file marker comment
-                    self.output_lines.append(f'        // --- From {file_path} ---')
-                    
+                    self.output_lines.append(f'        // --- From {rel_path} ---')
+
                     # Add content with proper indentation
                     indent = '        ' if nested else '        '
                     for line in content:
@@ -189,7 +214,7 @@ class SansarBuilder:
                             self.output_lines.append(indent + line)
                         else:
                             self.output_lines.append('')
-                    
+
                     self.output_lines.append('')
             
             elif item_type == 'class_close':
@@ -202,8 +227,8 @@ class SansarBuilder:
     
     def write_output(self):
         """Write the merged content to the output file"""
-        output_file = self.config.get('output', 'output.cs')
-        
+        output_file = self.resolve_path(self.config.get('output', 'output.cs'))
+
         with open(output_file, 'w', encoding='utf-8') as f:
             for line in self.output_lines:
                 f.write(line + '\n')
@@ -235,7 +260,7 @@ class SansarBuilder:
     
     def test_compilation(self):
         """Compile-check the merged output via tools/check.ps1 (single source of truth)"""
-        output_file = self.config.get('output', 'output.cs')
+        output_file = self.resolve_path(self.config.get('output', 'output.cs'))
 
         check_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'check.ps1')
         if not os.path.exists(check_script):
@@ -314,7 +339,12 @@ class SmartBuilder:
     
     @staticmethod
     def generate_simple_config(folder: str, cs_files: List[str]) -> Optional[str]:
-        """Generate a simple build config for a folder with .cs files"""
+        """Generate a build config that merges a folder of .cs files"""
+        # Never merge a previous merge output back into itself.
+        cs_files = [f for f in cs_files if not f.endswith('-merged.cs')]
+        if not cs_files:
+            return None
+
         # Try to determine the main class file
         main_file = None
         for f in cs_files:
@@ -323,29 +353,52 @@ class SmartBuilder:
                 if ': SceneObjectScript' in content or 'public override void Init()' in content:
                     main_file = f
                     break
-        
+
         if not main_file:
             print(f"⚠ Could not determine main class in {folder}")
             return None
-        
+
         # Extract class name from main file
         class_name = Path(main_file).stem
-        
-        # Create a simple config
+
+        # Union of using directives across all files, kept verbatim; the merged
+        # file gets one shared set at the top and 'code_only' strips the rest.
+        using_re = re.compile(r'\s*using\s+(static\s+)?[\w.]+(\s*=\s*[\w.\s<>,]+)?\s*;\s*$')
+        usings: List[str] = []
+        for f in cs_files:
+            with open(f, 'r', encoding='utf-8') as file:
+                for line in file:
+                    stripped = line.strip()
+                    if using_re.match(line) and stripped not in usings:
+                        usings.append(stripped)
+
+        build_order: List[Dict[str, Any]] = [
+            {"type": "header",
+             "content": [f"// {class_name}-merged.cs - generated by build_sansar.py from {os.path.basename(os.path.abspath(folder))}/"]},
+            {"type": "header", "content": usings},
+        ]
+        for f in cs_files:
+            build_order.append({
+                "type": "file",
+                "path": os.path.relpath(f, folder).replace(os.sep, '/'),
+                "extract": "code_only",
+            })
+
+        # Output name must not collide with any source file.
         config = {
             "project": class_name,
             "description": f"Auto-generated config for {class_name}",
             "version": "1.0.0",
-            "output": f"{class_name}.cs",
+            "output": f"{class_name}-merged.cs",
             "auto_generated": True,
-            "source_files": [os.path.relpath(f, folder) for f in cs_files]
+            "build_order": build_order
         }
-        
+
         # Save config
         config_path = os.path.join(folder, "build.json")
         with open(config_path, 'w') as f:
             json.dump(config, f, indent=2)
-        
+
         print(f"📝 Generated config: {config_path}")
         return config_path
 

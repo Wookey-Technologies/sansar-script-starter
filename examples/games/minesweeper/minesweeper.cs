@@ -315,7 +315,7 @@ namespace Minesweeper
 
             try
             {
-                agent.Client.TeleportTo(game.GetSafePosition() + Vector.Up, new Vector(0.0f, -1.0f, 0.0f));
+                agent.Client.TeleportTo(game.GetSafePosition() + Vector.ObjectUp, new Vector(0.0f, -1.0f, 0.0f));
             }
             catch
             {
@@ -571,7 +571,7 @@ namespace Minesweeper
             void StartSpinning(GameManager gm)
             {
                 float radius = 0.5f / (2.0f * (float)Math.Sin(Mathf.PiOverTwo / _config.GridWidth));
-                Vector comOffset = Vector.Up * radius;
+                Vector comOffset = Vector.ObjectUp * radius;
                 Vector angularVel = new Vector(0.0f, _config.SpinSpeed, 0.0f);
 
                 for (int x = 0; x < _config.GridWidth; x++)

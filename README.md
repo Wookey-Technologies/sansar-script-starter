@@ -42,7 +42,7 @@ Sansar scripting. Then browse [examples/](examples/) and use
 | [docs/material-api-guide.md](docs/material-api-guide.md) | Runtime material control (tint, emissive, animation). |
 | [docs/spawning-and-grid-guide.md](docs/spawning-and-grid-guide.md) | Object spawning, grid layouts, throttle-safe batching. |
 | [api-docs/](api-docs/) | Full generated API reference (`index.html`) and the allowed-.NET-API list (`access.html`). |
-| [assemblies/](assemblies/) | `Sansar.Script.dll` / `Sansar.Simulation.dll` + IntelliSense XML — what scripts compile against. |
+| [assemblies/](assemblies/) | `Sansar.Script.dll` / `Sansar.Simulation.dll` + IntelliSense XML — what scripts compile against — plus `Mono.Simd.dll` (also referenced by Sansar's importer). |
 | [examples/official/](examples/official/) | Example scripts shipped with Sansar, incl. the Scene Scripts Library and Quest library source. |
 | [examples/snippets/](examples/snippets/) | Small single-purpose scripts from the scripting guide. |
 | [examples/community/](examples/community/) | Community-contributed scripts (binah, GranddadGotMojo, evoav, leslie-linden, and more). |
@@ -78,8 +78,12 @@ of the **March 2026 Sansar client**. To refresh them from a newer installation, 
 - `C:\Program Files\Sansar\Client\ScriptApi\access.html` → `api-docs/access.html`
 - `C:\Program Files\Sansar\Client\ScriptApi\Examples\*` → `examples/official/`
 
+(`assemblies/Mono.Simd.dll` is not part of the client install — it comes from
+Sansar's Mono runtime and essentially never changes; keep the existing copy.)
+
 then run `.\tools\check.ps1 -All` to see whether any examples were broken by API
-changes.
+changes. Note that refreshing overwrites `examples/official/` wholesale, including
+the `ScriptExamples.csproj` whose assembly paths this kit points at `assemblies/`.
 
 ## Attribution
 

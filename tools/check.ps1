@@ -53,6 +53,15 @@ foreach ($ref in $sansarRefs) {
     }
 }
 
+# Optional references that Sansar's importer also passes to the compiler.
+$monoSimd = Join-Path $assembliesDir 'Mono.Simd.dll'
+if (Test-Path $monoSimd) { $sansarRefs += $monoSimd }
+$dataAnnotations = @(
+    "${env:ProgramFiles(x86)}\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.ComponentModel.DataAnnotations.dll",
+    "$env:windir\Microsoft.NET\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll"
+) | Where-Object { Test-Path $_ } | Select-Object -First 1
+if ($dataAnnotations) { $sansarRefs += $dataAnnotations }
+
 # --- Find a C# compiler -------------------------------------------------------
 function Find-Csc {
     # 1. vswhere (authoritative when Visual Studio / Build Tools are installed)
@@ -95,8 +104,8 @@ New-Item -ItemType Directory -Path $tempDir | Out-Null
 
 # --- Compile one unit (one or more .cs files) ---------------------------------
 $script:results = @()
-function Invoke-Check {
-    param([string]$Label, [string[]]$Files)
+function Invoke-Compile {
+    param([string[]]$Files)
 
     $outDll = Join-Path $tempDir 'check.dll'
     if (Test-Path $outDll) { Remove-Item $outDll -Force }
@@ -109,11 +118,17 @@ function Invoke-Check {
     foreach ($ref in $sansarRefs) { $cscArgs += "/reference:$ref" }
     $cscArgs += $Files
 
-    $output = & $csc.Path $cscArgs
-    $ok = ($LASTEXITCODE -eq 0)
-    $warnings = @($output | Where-Object { $_ -match 'warning CS' })
+    $output = @(& $csc.Path $cscArgs)
+    return @{ Ok = ($LASTEXITCODE -eq 0); Output = $output }
+}
 
-    if ($ok) {
+function Invoke-Check {
+    param([string]$Label, [string[]]$Files)
+
+    $result = Invoke-Compile -Files $Files
+    $warnings = @($result.Output | Where-Object { $_ -match 'warning CS' })
+
+    if ($result.Ok) {
         $note = ''
         if ($warnings.Count -gt 0) { $note = " ($($warnings.Count) warning(s))" }
         Write-Host "  OK   $Label$note" -ForegroundColor Green
@@ -121,24 +136,48 @@ function Invoke-Check {
     }
     else {
         Write-Host "  FAIL $Label" -ForegroundColor Red
-        foreach ($line in $output) { Write-Host "       $line" -ForegroundColor Red }
+        foreach ($line in $result.Output) { Write-Host "       $line" -ForegroundColor Red }
     }
-    $script:results += [pscustomobject]@{ Label = $Label; Ok = $ok }
-    return $ok
+    $script:results += [pscustomobject]@{ Label = $Label; Ok = $result.Ok }
+    return $result.Ok
 }
 
 # --- Resolve a .json script assembly to its source files ----------------------
 function Get-AssemblySources {
     param([string]$JsonPath)
-    $json = Get-Content $JsonPath -Raw | ConvertFrom-Json
+    try {
+        $json = Get-Content $JsonPath -Raw | ConvertFrom-Json
+    }
+    catch {
+        return @{ Files = @(); Missing = @("(unparseable JSON: $($_.Exception.Message))") }
+    }
     $dir = Split-Path -Parent $JsonPath
     $files = @()
+    $missing = @()
     foreach ($src in $json.source) {
         $resolved = Join-Path $dir $src
         if (Test-Path $resolved) { $files += (Resolve-Path $resolved).Path }
-        else { Write-Host "  WARN missing source '$src' listed in $JsonPath" -ForegroundColor Yellow }
+        else { $missing += $src }
     }
-    return $files
+    return @{ Files = $files; Missing = $missing }
+}
+
+# A .json assembly with missing or no sources is a failure: Sansar cannot import it.
+function Invoke-CheckAssembly {
+    param([string]$Label, [string]$JsonPath)
+    $sources = Get-AssemblySources $JsonPath
+    if ($sources.Missing.Count -gt 0 -or $sources.Files.Count -eq 0) {
+        Write-Host "  FAIL $Label" -ForegroundColor Red
+        foreach ($m in $sources.Missing) {
+            Write-Host "       missing source '$m'" -ForegroundColor Red
+        }
+        if ($sources.Files.Count -eq 0 -and $sources.Missing.Count -eq 0) {
+            Write-Host "       no source files listed" -ForegroundColor Red
+        }
+        $script:results += [pscustomobject]@{ Label = $Label; Ok = $false }
+        return $false
+    }
+    return Invoke-Check -Label $Label -Files $sources.Files
 }
 
 # --- Check a directory tree ----------------------------------------------------
@@ -152,14 +191,11 @@ function Invoke-CheckDirectory {
     # Files covered by a .json assembly are checked as part of that assembly.
     $covered = @{}
     foreach ($jf in $jsonFiles) {
-        foreach ($src in (Get-AssemblySources $jf.FullName)) { $covered[$src] = $true }
+        foreach ($src in (Get-AssemblySources $jf.FullName).Files) { $covered[$src] = $true }
     }
 
     foreach ($jf in $jsonFiles) {
-        $files = Get-AssemblySources $jf.FullName
-        if ($files.Count -gt 0) {
-            Invoke-Check -Label (Resolve-Path $jf.FullName -Relative) -Files $files | Out-Null
-        }
+        Invoke-CheckAssembly -Label (Resolve-Path $jf.FullName -Relative) -JsonPath $jf.FullName | Out-Null
     }
 
     # Group loose .cs files by directory.
@@ -171,20 +207,28 @@ function Invoke-CheckDirectory {
         $failed = @()
         foreach ($file in $group.Group) {
             $ok = Invoke-Check -Label (Resolve-Path $file.FullName -Relative) -Files @($file.FullName)
-            if (-not $ok) { $failed += $file.FullName }
+            if (-not $ok) { $failed += (Resolve-Path $file.FullName -Relative) }
         }
-        # If every loose file in a directory fails alone, they likely form an
-        # implicit multi-file project; retry them as a single compilation unit.
-        if ($group.Group.Count -gt 1 -and $failed.Count -eq $group.Group.Count) {
-            Write-Host "  ...  retrying $($group.Name) as one unit" -ForegroundColor Cyan
-            # Drop the individual failures from the tally before the group retry.
-            $dropLabels = @{}
-            foreach ($file in $group.Group) {
-                $dropLabels[(Resolve-Path $file.FullName -Relative)] = $true
-            }
-            $script:results = @($script:results | Where-Object { -not $dropLabels.ContainsKey($_.Label) })
+        # A loose file that fails alone may just depend on its neighbors (an
+        # implicit multi-file project). Quietly try the directory as one unit;
+        # only if that compiles do the individual failures get replaced.
+        if ($group.Group.Count -gt 1 -and $failed.Count -gt 0) {
             $allFiles = @($group.Group | ForEach-Object { $_.FullName })
-            Invoke-Check -Label ((Resolve-Path $group.Name -Relative) + '\* (compiled together)') -Files $allFiles | Out-Null
+            $retry = Invoke-Compile -Files $allFiles
+            if ($retry.Ok) {
+                Write-Host "  ...  $($failed.Count) file(s) above only compile together with their neighbors:" -ForegroundColor Cyan
+                $dropLabels = @{}
+                foreach ($label in $failed) { $dropLabels[$label] = $true }
+                $script:results = @($script:results | Where-Object { -not $dropLabels.ContainsKey($_.Label) })
+                $groupLabel = (Resolve-Path $group.Name -Relative) + '\* (compiled together)'
+                $warnings = @($retry.Output | Where-Object { $_ -match 'warning CS' })
+                $note = ''
+                if ($warnings.Count -gt 0) { $note = " ($($warnings.Count) warning(s))" }
+                Write-Host "  OK   $groupLabel$note" -ForegroundColor Green
+                foreach ($w in $warnings) { Write-Host "       $w" -ForegroundColor DarkYellow }
+                $script:results += [pscustomobject]@{ Label = $groupLabel; Ok = $true }
+            }
+            # else: the individual FAILs above stand on their own.
         }
     }
 }
@@ -216,8 +260,7 @@ try {
             Invoke-CheckDirectory -Dir $item.FullName
         }
         elseif ($item.Extension -eq '.json') {
-            $files = Get-AssemblySources $item.FullName
-            if ($files.Count -gt 0) { Invoke-Check -Label $p -Files $files | Out-Null }
+            Invoke-CheckAssembly -Label $p -JsonPath $item.FullName | Out-Null
         }
         else {
             Invoke-Check -Label $p -Files @($item.FullName) | Out-Null

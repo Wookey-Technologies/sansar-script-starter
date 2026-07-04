@@ -3,7 +3,11 @@
 ## check.ps1 — local compile checking
 
 Compiles scripts with the same settings Sansar's importer uses (Roslyn, C# 7.3,
-.NET Framework 4.7.2, `SERVERSCRIPT_1_1`), referencing `../assemblies`.
+`SERVERSCRIPT_1_1`), referencing the Sansar assemblies and `Mono.Simd.dll` from
+`../assemblies` plus `System.ComponentModel.DataAnnotations` when installed.
+The local compiler is newer than Sansar's (language version is pinned to 7.3 to
+compensate) and compiles against your machine's .NET Framework — in rare corner
+cases something could pass here and still fail on import, but not the reverse.
 
 ```powershell
 .\tools\check.ps1 MyScript.cs                 # single script

@@ -269,8 +269,7 @@ public class ActionAudioController : SceneObjectScript
     private void VolumeUp(ScriptEventData data)
     {
         Log.Write("In volumeUp");
-        curLoudness = currentPlayHandle.GetLoudness();
-        curLoudness = 5;
+        curLoudness = currentPlayHandle.GetLoudness() + 5;
         currentPlayHandle.SetLoudness(curLoudness);
         scenePlayHandle.SetLoudness(curLoudness);
     }
@@ -278,8 +277,7 @@ public class ActionAudioController : SceneObjectScript
     private void VolumeDown(ScriptEventData data)
     {
         Log.Write("In volumeDown");
-        curLoudness = currentPlayHandle.GetLoudness();
-        curLoudness = -5;
+        curLoudness = currentPlayHandle.GetLoudness() - 5;
         currentPlayHandle.SetLoudness(curLoudness);
         scenePlayHandle.SetLoudness(curLoudness);
     }
@@ -288,6 +286,7 @@ public class ActionAudioController : SceneObjectScript
     {
         Log.Write("In volumeOn");
         currentPlayHandle.SetLoudness(volume);
+        scenePlayHandle.SetLoudness(volume);
     }
 
     private void VolumeOff(ScriptEventData data)
@@ -296,7 +295,7 @@ public class ActionAudioController : SceneObjectScript
         float setLoudness = currentPlayHandle.GetLoudness() * -2;
         float setSceneLoudness = scenePlayHandle.GetLoudness() * -2;
         currentPlayHandle.SetLoudness(setLoudness);
-        scenePlayHandle.SetLoudness(setLoudness);
+        scenePlayHandle.SetLoudness(setSceneLoudness);
         Wait(TimeSpan.FromSeconds(1));
         Log.Write("Current Speaker Loudness: " + currentPlayHandle.GetLoudness());
         Log.Write("Current Scene Loudness: " + scenePlayHandle.GetLoudness());

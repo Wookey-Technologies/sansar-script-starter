@@ -80,6 +80,8 @@ Notes on commonly-questioned APIs (current whitelist):
    | `ScenePrivate.OverrideMediaSource` | 5 calls / 10 sec |
    | `ScenePrivate.PerformMediaAction` | 5 calls / 10 sec |
 
+   This table is the authoritative copy — worked retry patterns are in the
+   [scripting guide's Gotchas chapter](scripting-guide.md#throttle-exceptions).
    When spawning many objects (`CreateCluster`), use a queue/coroutine and catch
    `ThrottleException` with retry — see the
    [spawning guide](spawning-and-grid-guide.md).

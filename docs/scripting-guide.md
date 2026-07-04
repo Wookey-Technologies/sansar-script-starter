@@ -36,7 +36,7 @@ Happy scripting!
 1. [File structure for this repository](#file-structure-for-this-repository)
 1. [Scripting documentation](#scripting-documentation)
     1. [Brief summary of Sansar namespaces](#brief-summary-of-sansar-namespaces)
-    1. [AgentPrivate vs. AgentPublic, etc.](#agentprivate-vs.-agentpublic,-etc.)
+    1. [AgentPrivate vs. AgentPublic, etc.](#agentprivate-vs-agentpublic-etc)
 1. [How to create a scripted experience in Sansar](#how-to-create-a-scripted-experience-in-sansar)
     1. [Importing](#importing)
     1. [Attaching a script to an object](#attaching-a-script-to-an-object)
@@ -349,7 +349,7 @@ override the display name and define a tooltip for each property.  Here are a fe
     public string MyStringProperty;
 
     [DefaultValue(3)]
-    [Range(0,5)
+    [Range(0,5)]
     public int MyRangedIntProperty;
 
     [Tooltip("Custom object gravity multiplier")]
@@ -820,7 +820,7 @@ public class RigidBodyImpulseScript : SceneObjectScript
             {
                 MyInteraction.Subscribe((InteractionData data) =>
                 {
-                    _rb.AddLinearImpulse(Vector.Up * 100.0f);
+                    _rb.AddLinearImpulse(Vector.ObjectUp * 100.0f);
                 });
             }
             else
@@ -2038,7 +2038,7 @@ void PushObjects()
     float radius = 5.0f;
     float distance = 10.0f;
     Vector pos = ObjectPrivate.Position;
-    RayCastHit[] castHits = ScenePrivate.CastSphere(radius, pos, pos + Vector.Up * distance, ScenePrivate.MaximumCastRayResults);
+    RayCastHit[] castHits = ScenePrivate.CastSphere(radius, pos, pos + Vector.ObjectUp * distance, ScenePrivate.MaximumCastRayResults);
 
     for (int i = 0; i < castHits.Length; i++)
     {
@@ -2055,7 +2055,7 @@ void PushObjects()
         // Apply a force to push all of the dynamic objects up
         RigidBodyComponent rb = obj.GetComponent(ComponentType.RigidBodyComponent, 0) as RigidBodyComponent;
         if ((rb != null) && (rb.GetMotionType() == RigidBodyMotionType.MotionTypeDynamic))
-            rb.AddLinearImpulse(Vector.Up * 100.0f);
+            rb.AddLinearImpulse(Vector.ObjectUp * 100.0f);
     }
 }
 ```
@@ -2070,6 +2070,10 @@ physics world:
 The Sansar scripting system was designed with different constraints than most other game engines
 and as a result there are some quirks to using the API that will come as a surprise to most
 programmers.
+
+This chapter explains the surprises with worked examples. The condensed, authoritative
+checklist of platform facts — compiler settings, the API whitelist, throttle rates,
+property limits — lives in [platform-constraints.md](platform-constraints.md).
 
 
 ## Set functions and WaitFor
@@ -2224,21 +2228,8 @@ InteractionProperty.Subscribe((InteractionData data) =>
 });
 ```
 
-The complete list of functions that are throttled and will throw a `ThrottleException` is:
-
-Function Name | Throttle Rate
---------------|--------------
-AgentPrivate.SendChat | 64 calls per 2 seconds
-AgentPrivate.OverrideAudioStream | 5 calls per 10 seconds
-AgentPrivate.OverrideMediaSource | 5 calls per 10 seconds
-AgentPrivate.PerformMediaAction | 5 calls per 10 seconds
-AgentPublic.SendChat | 32 calls per 2 seconds
-ScenePrivate.Chat.MessageAllUsers | 32 calls per 2 seconds
-ScenePrivate.CreateCluster | 100 calls per second
-ScenePrivate.HttpClient.Request | 10 calls per second
-ScenePrivate.OverrideAudioStream | 5 calls per 10 seconds
-ScenePrivate.OverrideMediaSource | 5 calls per 10 seconds
-ScenePrivate.PerformMediaAction | 5 calls per 10 seconds
+The complete list of throttled functions and their current rates is maintained in
+[platform-constraints.md](platform-constraints.md#things-that-kill-your-script).
 
 
 ### Logging is throttled too

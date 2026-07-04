@@ -46,11 +46,27 @@ namespace ScriptLibrary
 
                     if (agent != null)
                     {
-                        agent.Client.SetActiveCamera(CamComponent);
+                        try
+                        {
+                            agent.Client.SetActiveCamera(CamComponent);
+                        }
+                        catch
+                        {
+                            return; // agent logged out; nothing to reset later
+                        }
+
                         if (Duration > 0)
                         {
-                           Wait(TimeSpan.FromSeconds(Duration));
-                           agent.Client.ResetCamera();
+                            Wait(TimeSpan.FromSeconds(Duration));
+                            try
+                            {
+                                if (agent.IsValid)
+                                    agent.Client.ResetCamera();
+                            }
+                            catch
+                            {
+                                // agent may have left during the wait
+                            }
                         }
                     }
                 });
@@ -64,7 +80,16 @@ namespace ScriptLibrary
                     AgentPrivate agent = ScenePrivate.FindAgent(idata.ObjectId);
 
                     if (agent != null)
-                        agent.Client.ResetCamera();
+                    {
+                        try
+                        {
+                            agent.Client.ResetCamera();
+                        }
+                        catch
+                        {
+                            // agent may have logged out
+                        }
+                    }
                 });
             }
         }
