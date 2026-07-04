@@ -1,0 +1,1551 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.Client</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.Client">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.Client:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.Client:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.Client:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.Client">Client  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.Client:Summary">The Client class is used for access to the Client connected to a <a href="../Sansar.Simulation/AgentPrivate.html">Sansar.Simulation.AgentPrivate</a>.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.Client:Signature">[Sansar.Script.Interface]<br />public class  <b>Client</b> : <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.Client:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.Client:Docs:Remarks">This class is also used for receiving input events from a client.</div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.Client:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.Client.AgentInfo">AgentInfo</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/AgentInfo.html">AgentInfo</a>
+                  </i>.  Returns the <a href="../Sansar.Simulation/AgentInfo.html">Sansar.Simulation.AgentInfo</a> for this instance. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.Client.InVrAndHandsActive">InVrAndHandsActive</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. Retrieves whether or not this Client is using a VR headset and using hand tracking controllers currently.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.Client.UI">UI</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/UI.html">UI</a>
+                  </i>.  Returns the <a href="../Sansar.Simulation/UI.html">Sansar.Simulation.UI</a> for this instance. </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.CaptureImage(Sansar.Simulation.CameraComponent)">CaptureImage</a>
+                  </b>(<a href="../Sansar.Simulation/CameraComponent.html">CameraComponent</a>)<blockquote>Take a image from the camera point of view</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.ClearTutorialHint()">ClearTutorialHint</a>
+                  </b>()<blockquote>
+            Clears any scripted tutorial hint being shown to the player
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.ClearTutorialHint(System.Action{Sansar.Script.OperationCompleteEvent})">ClearTutorialHint</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>
+            Clears any scripted tutorial hint being shown to the player
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean)">EnableAutomaticTutorialHints</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Enables / Disables automatic (non-scripted) tutorial hints.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">EnableAutomaticTutorialHints</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>
+            Enables / Disables automatic (non-scripted) tutorial hints.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.GetActiveCamera()">GetActiveCamera</a>
+                  </b>()<nobr> : <a href="../Sansar.Simulation/CameraComponent.html">CameraComponent</a></nobr><blockquote> Returns the active camera for this instance. </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.OpenQuestCharacterDialog(Sansar.Simulation.QuestCharacter)">OpenQuestCharacterDialog</a>
+                  </b>(<a href="../Sansar.Simulation/QuestCharacter.html">QuestCharacter</a>)<blockquote>
+            Opens the quest dialog for a character.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.OpenStoreListing(System.Guid)">OpenStoreListing</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Guid">Guid</a>)<blockquote>
+            Opens the product's Store page.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.OpenUserStore(System.String)">OpenUserStore</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Opens the user's Store page.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.ResetCamera()">ResetCamera</a>
+                  </b>()<blockquote>Resets the active camera for this Client to the system default</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.SendChat(System.String)">SendChat</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Sends a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message to the $className$.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent)">SetActiveCamera</a>
+                  </b>(<a href="../Sansar.Simulation/CameraComponent.html">CameraComponent</a>)<blockquote>Sets the active camera for this Client.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent,Sansar.Simulation.ScriptCameraControlMode)">SetActiveCamera</a>
+                  </b>(<a href="../Sansar.Simulation/CameraComponent.html">CameraComponent</a>, <a href="../Sansar.Simulation/ScriptCameraControlMode.html">ScriptCameraControlMode</a>)<blockquote>Sets the active camera for this Client.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint)">ShowTutorialHint</a>
+                  </b>(<a href="../Sansar.Simulation/TutorialHint.html">TutorialHint</a>)<blockquote>
+            Show a tutorial hint to the player
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Action{Sansar.Script.OperationCompleteEvent})">ShowTutorialHint</a>
+                  </b>(<a href="../Sansar.Simulation/TutorialHint.html">TutorialHint</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>
+            Show a tutorial hint to the player
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32)">ShowTutorialHint</a>
+                  </b>(<a href="../Sansar.Simulation/TutorialHint.html">TutorialHint</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Show a tutorial hint to the player
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent})">ShowTutorialHint</a>
+                  </b>(<a href="../Sansar.Simulation/TutorialHint.html">TutorialHint</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>
+            Show a tutorial hint to the player
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.SubscribeToCommand(System.String,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean)">SubscribeToCommand</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;CommandData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.CancelData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a></nobr><blockquote>Subscribes to Command Events.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.SubscribeToCommand(System.String,Sansar.Simulation.CommandAction,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean)">SubscribeToCommand</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Sansar.Simulation/CommandAction.html">CommandAction</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;CommandData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.CancelData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a></nobr><blockquote>Subscribes to Command Events.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.SubscribeToTwitch(System.Action{Sansar.Simulation.TwitchData},System.Boolean)">SubscribeToTwitch</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;TwitchData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a></nobr><blockquote>Subscribes to Twitch Events.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.SubscribeToTwitch(Sansar.Simulation.TwitchEventType,System.Action{Sansar.Simulation.TwitchData},System.Boolean)">SubscribeToTwitch</a>
+                  </b>(<a href="../Sansar.Simulation/TwitchEventType.html">TwitchEventType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;TwitchData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a></nobr><blockquote>Subscribes to Twitch Events.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.TeleportTo(System.String)">TeleportTo</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Teleports to a spawn point in the scene
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.TeleportTo(Sansar.Vector,Sansar.Vector)">TeleportTo</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Vector.html">Sansar.Vector</a>)<blockquote>
+            Teleports to the position facing the specified direction
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.TeleportToCharacterEditor()">TeleportToCharacterEditor</a>
+                  </b>()<blockquote>
+            Teleports to the Character Editor
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.TeleportToCharacterEditor(System.String)">TeleportToCharacterEditor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Teleports to the Character Editor
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String)">TeleportToLocation</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Teleports the personaHandle to the locationHandle.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String,System.String)">TeleportToLocation</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Teleports the personaHandle to the locationHandle.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.TeleportToLookbook()">TeleportToLookbook</a>
+                  </b>()<blockquote>
+            Teleports to the Lookbook
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.TeleportToLookbook(System.String)">TeleportToLookbook</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Teleports to the Lookbook
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.TeleportToUri(System.String)">TeleportToUri</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Teleports to the specified URI
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote> A string representation of this object. </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Client.VibrationPulse(Sansar.Simulation.ControlPointType,System.Single,System.Single)">VibrationPulse</a>
+                  </b>(<a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Pulses the vibration haptic motor for a control point.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.Client:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="P:Sansar.Simulation.Client.AgentInfo">AgentInfo Property</h3>
+        <blockquote id="P:Sansar.Simulation.Client.AgentInfo:member">
+          <div class="msummary"> Returns the <a href="../Sansar.Simulation/AgentInfo.html">Sansar.Simulation.AgentInfo</a> for this instance. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/AgentInfo.html">AgentInfo</a> <b>AgentInfo</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.Client.AgentInfo:Value">The <a href="../Sansar.Simulation/AgentInfo.html">Sansar.Simulation.AgentInfo</a> for this instance</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Client.AgentInfo:Remarks">The <a href="../Sansar.Simulation/AgentInfo.html">Sansar.Simulation.AgentInfo</a> holds information about an agent. </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Client.AgentInfo:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.CaptureImage(Sansar.Simulation.CameraComponent)">CaptureImage Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.CaptureImage(Sansar.Simulation.CameraComponent):member">
+          <div class="msummary">Take a image from the camera point of view</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>CaptureImage</b> (<a href="../Sansar.Simulation/CameraComponent.html">CameraComponent</a> component)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.CaptureImage(Sansar.Simulation.CameraComponent):Parameters">
+            <dl>
+              <dt>
+                <i>component</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.CaptureImage(Sansar.Simulation.CameraComponent):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.CaptureImage(Sansar.Simulation.CameraComponent):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.ClearTutorialHint()">ClearTutorialHint Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.ClearTutorialHint():member">
+          <div class="msummary">
+            Clears any scripted tutorial hint being shown to the player
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ClearTutorialHint</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ClearTutorialHint():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ClearTutorialHint():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.ClearTutorialHint(System.Action{Sansar.Script.OperationCompleteEvent})">ClearTutorialHint Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.ClearTutorialHint(System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">
+            Clears any scripted tutorial hint being shown to the player
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ClearTutorialHint</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.ClearTutorialHint(System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ClearTutorialHint(System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ClearTutorialHint(System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean)">EnableAutomaticTutorialHints Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean):member">
+          <div class="msummary">
+            Enables / Disables automatic (non-scripted) tutorial hints.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnableAutomaticTutorialHints</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enabled)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>enabled</i>
+              </dt>
+              <dd>Enabled state of automatic hints.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean):Remarks"> If the user has disabled hints in the settings menu, enabling them from script will have no effect.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">EnableAutomaticTutorialHints Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">
+            Enables / Disables automatic (non-scripted) tutorial hints.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnableAutomaticTutorialHints</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enabled, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>enabled</i>
+              </dt>
+              <dd>Enabled state of automatic hints.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks"> If the user has disabled hints in the settings menu, enabling them from script will have no effect.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.EnableAutomaticTutorialHints(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.GetActiveCamera()">GetActiveCamera Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.GetActiveCamera():member">
+          <div class="msummary"> Returns the active camera for this instance. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/CameraComponent.html">CameraComponent</a> <b>GetActiveCamera</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.GetActiveCamera():Returns">The active camera for this instance</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.GetActiveCamera():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.GetActiveCamera():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.Client.InVrAndHandsActive">InVrAndHandsActive Property</h3>
+        <blockquote id="P:Sansar.Simulation.Client.InVrAndHandsActive:member">
+          <div class="msummary">Retrieves whether or not this Client is using a VR headset and using hand tracking controllers currently.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>InVrAndHandsActive</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.Client.InVrAndHandsActive:Value">Whether or not this Client is using a VR headset and using hand tracking controllers currently.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Client.InVrAndHandsActive:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Client.InVrAndHandsActive:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.OpenQuestCharacterDialog(Sansar.Simulation.QuestCharacter)">OpenQuestCharacterDialog Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.OpenQuestCharacterDialog(Sansar.Simulation.QuestCharacter):member">
+          <div class="msummary">
+            Opens the quest dialog for a character.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OpenQuestCharacterDialog</b> (<a href="../Sansar.Simulation/QuestCharacter.html">QuestCharacter</a> character)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.OpenQuestCharacterDialog(Sansar.Simulation.QuestCharacter):Parameters">
+            <dl>
+              <dt>
+                <i>character</i>
+              </dt>
+              <dd>The character to open the quest dialog for.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.OpenQuestCharacterDialog(Sansar.Simulation.QuestCharacter):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.OpenQuestCharacterDialog(Sansar.Simulation.QuestCharacter):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.OpenStoreListing(System.Guid)">OpenStoreListing Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.OpenStoreListing(System.Guid):member">
+          <div class="msummary">
+            Opens the product's Store page.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OpenStoreListing</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Guid">Guid</a> productId)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.OpenStoreListing(System.Guid):Parameters">
+            <dl>
+              <dt>
+                <i>productId</i>
+              </dt>
+              <dd>A product ID from a Sansar store listing.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.OpenStoreListing(System.Guid):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.OpenStoreListing(System.Guid):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.OpenUserStore(System.String)">OpenUserStore Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.OpenUserStore(System.String):member">
+          <div class="msummary">
+            Opens the user's Store page.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OpenUserStore</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> creatorHandle)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.OpenUserStore(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>creatorHandle</i>
+              </dt>
+              <dd>Creator handle: Creator's handle Sansar store.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.OpenUserStore(System.String):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.OpenUserStore(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.ResetCamera()">ResetCamera Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.ResetCamera():member">
+          <div class="msummary">Resets the active camera for this Client to the system default</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ResetCamera</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ResetCamera():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ResetCamera():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.SendChat(System.String)">SendChat Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.SendChat(System.String):member">
+          <div class="msummary">Sends a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message to the $className$.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use AgentPrivate.SendChat or AgentPublic.SendChat", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SendChat</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SendChat(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>message</i>
+              </dt>
+              <dd>The message to send. </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SendChat(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NullReferenceException">NullReferenceException</a>
+                </td>
+                <td>If the user is no longer online.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../Sansar.Script/ThrottleException.html">Sansar.Script.ThrottleException</a>
+                </td>
+                <td>If the throttle rate is exceeded.</td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SendChat(System.String):Remarks">eprecated. Use AgentPrivate.SendChat or AgentPublic.SendChat</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SendChat(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent)">SetActiveCamera Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent):member">
+          <div class="msummary">Sets the active camera for this Client.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetActiveCamera</b> (<a href="../Sansar.Simulation/CameraComponent.html">CameraComponent</a> component)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent):Parameters">
+            <dl>
+              <dt>
+                <i>component</i>
+              </dt>
+              <dd>The camera component to set </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent,Sansar.Simulation.ScriptCameraControlMode)">SetActiveCamera Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent,Sansar.Simulation.ScriptCameraControlMode):member">
+          <div class="msummary">Sets the active camera for this Client.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetActiveCamera</b> (<a href="../Sansar.Simulation/CameraComponent.html">CameraComponent</a> component, <a href="../Sansar.Simulation/ScriptCameraControlMode.html">ScriptCameraControlMode</a> controlMode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent,Sansar.Simulation.ScriptCameraControlMode):Parameters">
+            <dl>
+              <dt>
+                <i>component</i>
+              </dt>
+              <dd>The camera component to set </dd>
+              <dt>
+                <i>controlMode</i>
+              </dt>
+              <dd>The script camera control mode to set </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent,Sansar.Simulation.ScriptCameraControlMode):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SetActiveCamera(Sansar.Simulation.CameraComponent,Sansar.Simulation.ScriptCameraControlMode):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint)">ShowTutorialHint Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint):member">
+          <div class="msummary">
+            Show a tutorial hint to the player
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ShowTutorialHint</b> (<a href="../Sansar.Simulation/TutorialHint.html">TutorialHint</a> hint)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint):Parameters">
+            <dl>
+              <dt>
+                <i>hint</i>
+              </dt>
+              <dd>The hint to show.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Action{Sansar.Script.OperationCompleteEvent})">ShowTutorialHint Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">
+            Show a tutorial hint to the player
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ShowTutorialHint</b> (<a href="../Sansar.Simulation/TutorialHint.html">TutorialHint</a> hint, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>hint</i>
+              </dt>
+              <dd>The hint to show.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32)">ShowTutorialHint Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32):member">
+          <div class="msummary">
+            Show a tutorial hint to the player
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ShowTutorialHint</b> (<a href="../Sansar.Simulation/TutorialHint.html">TutorialHint</a> hint, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> variant)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>hint</i>
+              </dt>
+              <dd>The hint to show.</dd>
+              <dt>
+                <i>variant</i>
+              </dt>
+              <dd>Optional variant of the hint to show.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent})">ShowTutorialHint Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">
+            Show a tutorial hint to the player
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ShowTutorialHint</b> (<a href="../Sansar.Simulation/TutorialHint.html">TutorialHint</a> hint, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> variant, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>hint</i>
+              </dt>
+              <dd>The hint to show.</dd>
+              <dt>
+                <i>variant</i>
+              </dt>
+              <dd>Optional variant of the hint to show.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ShowTutorialHint(Sansar.Simulation.TutorialHint,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean)">SubscribeToCommand Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):member">
+          <div class="msummary">Subscribes to Command Events.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> <b>SubscribeToCommand</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> Command, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;CommandData&gt;</a> callback, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.CancelData&gt;</a> canceled, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):See Also">
+            <div>
+              <a href="../Sansar.Simulation/CommandData.html">CommandData</a>
+            </div>
+            <div>
+              <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>Command</i>
+              </dt>
+              <dd> The command which occurred.</dd>
+              <dt>
+                <i>callback</i>
+              </dt>
+              <dd>Callback which is executed when the event completes.</dd>
+              <dt>
+                <i>canceled</i>
+              </dt>
+              <dd>Callback which is executed when the subscription is canceled.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>Optional, set to false to unsubscribe after one event.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):Returns">An <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> that can be used to cancel the subscription.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,Sansar.Simulation.CommandAction,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean)">SubscribeToCommand Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,Sansar.Simulation.CommandAction,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):member">
+          <div class="msummary">Subscribes to Command Events.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> <b>SubscribeToCommand</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> Command, <a href="../Sansar.Simulation/CommandAction.html">CommandAction</a> Action, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;CommandData&gt;</a> callback, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.CancelData&gt;</a> canceled, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,Sansar.Simulation.CommandAction,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):See Also">
+            <div>
+              <a href="../Sansar.Simulation/CommandData.html">CommandData</a>
+            </div>
+            <div>
+              <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,Sansar.Simulation.CommandAction,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>Command</i>
+              </dt>
+              <dd> The command which occurred.</dd>
+              <dt>
+                <i>Action</i>
+              </dt>
+              <dd> The action which occurred.</dd>
+              <dt>
+                <i>callback</i>
+              </dt>
+              <dd>Callback which is executed when the event completes.</dd>
+              <dt>
+                <i>canceled</i>
+              </dt>
+              <dd>Callback which is executed when the subscription is canceled.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>Optional, set to false to unsubscribe after one event.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,Sansar.Simulation.CommandAction,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):Returns">An <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> that can be used to cancel the subscription.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,Sansar.Simulation.CommandAction,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SubscribeToCommand(System.String,Sansar.Simulation.CommandAction,System.Action{Sansar.Simulation.CommandData},System.Action{Sansar.Script.CancelData},System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.SubscribeToTwitch(System.Action{Sansar.Simulation.TwitchData},System.Boolean)">SubscribeToTwitch Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.SubscribeToTwitch(System.Action{Sansar.Simulation.TwitchData},System.Boolean):member">
+          <div class="msummary">Subscribes to Twitch Events.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> <b>SubscribeToTwitch</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;TwitchData&gt;</a> callback, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(System.Action{Sansar.Simulation.TwitchData},System.Boolean):See Also">
+            <div>
+              <a href="../Sansar.Simulation/TwitchData.html">TwitchData</a>
+            </div>
+            <div>
+              <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(System.Action{Sansar.Simulation.TwitchData},System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>callback</i>
+              </dt>
+              <dd>Callback which is executed when the event completes.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>Optional, set to false to unsubscribe after one event.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(System.Action{Sansar.Simulation.TwitchData},System.Boolean):Returns">An <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> that can be used to cancel the subscription.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(System.Action{Sansar.Simulation.TwitchData},System.Boolean):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(System.Action{Sansar.Simulation.TwitchData},System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.SubscribeToTwitch(Sansar.Simulation.TwitchEventType,System.Action{Sansar.Simulation.TwitchData},System.Boolean)">SubscribeToTwitch Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.SubscribeToTwitch(Sansar.Simulation.TwitchEventType,System.Action{Sansar.Simulation.TwitchData},System.Boolean):member">
+          <div class="msummary">Subscribes to Twitch Events.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> <b>SubscribeToTwitch</b> (<a href="../Sansar.Simulation/TwitchEventType.html">TwitchEventType</a> EventType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;TwitchData&gt;</a> callback, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(Sansar.Simulation.TwitchEventType,System.Action{Sansar.Simulation.TwitchData},System.Boolean):See Also">
+            <div>
+              <a href="../Sansar.Simulation/TwitchData.html">TwitchData</a>
+            </div>
+            <div>
+              <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(Sansar.Simulation.TwitchEventType,System.Action{Sansar.Simulation.TwitchData},System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>EventType</i>
+              </dt>
+              <dd> The event which occurred</dd>
+              <dt>
+                <i>callback</i>
+              </dt>
+              <dd>Callback which is executed when the event completes.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>Optional, set to false to unsubscribe after one event.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(Sansar.Simulation.TwitchEventType,System.Action{Sansar.Simulation.TwitchData},System.Boolean):Returns">An <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> that can be used to cancel the subscription.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(Sansar.Simulation.TwitchEventType,System.Action{Sansar.Simulation.TwitchData},System.Boolean):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.SubscribeToTwitch(Sansar.Simulation.TwitchEventType,System.Action{Sansar.Simulation.TwitchData},System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.TeleportTo(System.String)">TeleportTo Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.TeleportTo(System.String):member">
+          <div class="msummary">
+            Teleports to a spawn point in the scene
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>TeleportTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> spawnPointName)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.TeleportTo(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>spawnPointName</i>
+              </dt>
+              <dd>The name of the target spawn point in the destination.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportTo(System.String):Remarks">Teleports may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportTo(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.TeleportTo(Sansar.Vector,Sansar.Vector)">TeleportTo Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.TeleportTo(Sansar.Vector,Sansar.Vector):member">
+          <div class="msummary">
+            Teleports to the position facing the specified direction
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>TeleportTo</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> position, <a href="../Sansar/Vector.html">Sansar.Vector</a> forward)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.TeleportTo(Sansar.Vector,Sansar.Vector):Parameters">
+            <dl>
+              <dt>
+                <i>position</i>
+              </dt>
+              <dd>The teleport destination position.</dd>
+              <dt>
+                <i>forward</i>
+              </dt>
+              <dd>The teleport destination forward direction.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportTo(Sansar.Vector,Sansar.Vector):Remarks">The agent will be set to the specified position facing the given forward direction. Note that avatars always remain upright so the Z component of the forward vector will be ignored.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportTo(Sansar.Vector,Sansar.Vector):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.TeleportToCharacterEditor()">TeleportToCharacterEditor Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.TeleportToCharacterEditor():member">
+          <div class="msummary">
+            Teleports to the Character Editor
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>TeleportToCharacterEditor</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToCharacterEditor():Remarks">Teleports may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToCharacterEditor():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.TeleportToCharacterEditor(System.String)">TeleportToCharacterEditor Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.TeleportToCharacterEditor(System.String):member">
+          <div class="msummary">
+            Teleports to the Character Editor
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>TeleportToCharacterEditor</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> returnSpawnPointName)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.TeleportToCharacterEditor(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>returnSpawnPointName</i>
+              </dt>
+              <dd>When returning to the world from the character editor, this spawn point will be used</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToCharacterEditor(System.String):Remarks">Teleports may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToCharacterEditor(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String)">TeleportToLocation Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String):member">
+          <div class="msummary">
+            Teleports the personaHandle to the locationHandle.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>TeleportToLocation</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> avatarId, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> locationHandle)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>avatarId</i>
+              </dt>
+              <dd>The <a href="../Sansar.Simulation/SceneInfo.html#P:Sansar.Simulation.SceneInfo.AvatarId">SceneInfo.AvatarId</a> of the destination creator.</dd>
+              <dt>
+                <i>locationHandle</i>
+              </dt>
+              <dd>The <a href="../Sansar.Simulation/SceneInfo.html#P:Sansar.Simulation.SceneInfo.LocationHandle">SceneInfo.LocationHandle</a> of the destination.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String):Remarks">Teleports may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String,System.String)">TeleportToLocation Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String,System.String):member">
+          <div class="msummary">
+            Teleports the personaHandle to the locationHandle.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>TeleportToLocation</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> avatarId, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> locationHandle, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> spawnPointName)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>avatarId</i>
+              </dt>
+              <dd>The <a href="../Sansar.Simulation/SceneInfo.html#P:Sansar.Simulation.SceneInfo.AvatarId">SceneInfo.AvatarId</a> of the destination creator.</dd>
+              <dt>
+                <i>locationHandle</i>
+              </dt>
+              <dd>The <a href="../Sansar.Simulation/SceneInfo.html#P:Sansar.Simulation.SceneInfo.LocationHandle">SceneInfo.LocationHandle</a> of the destination.</dd>
+              <dt>
+                <i>spawnPointName</i>
+              </dt>
+              <dd>The name of the target spawn point in the destination.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String,System.String):Remarks">Teleports may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToLocation(System.String,System.String,System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.TeleportToLookbook()">TeleportToLookbook Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.TeleportToLookbook():member">
+          <div class="msummary">
+            Teleports to the Lookbook
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>TeleportToLookbook</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToLookbook():Remarks">Teleports may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToLookbook():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.TeleportToLookbook(System.String)">TeleportToLookbook Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.TeleportToLookbook(System.String):member">
+          <div class="msummary">
+            Teleports to the Lookbook
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>TeleportToLookbook</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> returnSpawnPointName)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.TeleportToLookbook(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>returnSpawnPointName</i>
+              </dt>
+              <dd>When returning to the world from the lookbook, this spawn point will be used</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToLookbook(System.String):Remarks">Teleports may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToLookbook(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.TeleportToUri(System.String)">TeleportToUri Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.TeleportToUri(System.String):member">
+          <div class="msummary">
+            Teleports to the specified URI
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>TeleportToUri</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sansarUri)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.TeleportToUri(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>sansarUri</i>
+              </dt>
+              <dd>The URI to teleport to.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToUri(System.String):Remarks">Teleports may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.TeleportToUri(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.ToString():member">
+          <div class="msummary"> A string representation of this object. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.ToString():Returns">A string representation of this object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ToString():Remarks">The format of this string may change between releases.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.ToString():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.Client.UI">UI Property</h3>
+        <blockquote id="P:Sansar.Simulation.Client.UI:member">
+          <div class="msummary"> Returns the <a href="../Sansar.Simulation/UI.html">Sansar.Simulation.UI</a> for this instance. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/UI.html">UI</a> <b>UI</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.Client.UI:Value">The <a href="../Sansar.Simulation/UI.html">Sansar.Simulation.UI</a> for this instance</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Client.UI:Remarks">The <a href="../Sansar.Simulation/UI.html">Sansar.Simulation.UI</a> for this instance.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Client.UI:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Client.VibrationPulse(Sansar.Simulation.ControlPointType,System.Single,System.Single)">VibrationPulse Method</h3>
+        <blockquote id="M:Sansar.Simulation.Client.VibrationPulse(Sansar.Simulation.ControlPointType,System.Single,System.Single):member">
+          <div class="msummary">Pulses the vibration haptic motor for a control point.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>VibrationPulse</b> (<a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a> type, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> intensity, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> duration)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Client.VibrationPulse(Sansar.Simulation.ControlPointType,System.Single,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>See <a href="../Sansar.Simulation/ControlPointType.html">Sansar.Simulation.ControlPointType</a></dd>
+              <dt>
+                <i>intensity</i>
+              </dt>
+              <dd> Intensity of vibration.  Intensity will be clamped to the range [0, 1]. </dd>
+              <dt>
+                <i>duration</i>
+              </dt>
+              <dd> Duration of the pulse in milliseconds.  Will be clamped to the range [0, 1000]. </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.VibrationPulse(Sansar.Simulation.ControlPointType,System.Single,System.Single):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Client.VibrationPulse(Sansar.Simulation.ControlPointType,System.Single,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,870 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.Interaction</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.Interaction">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.Interaction:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.Interaction:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.Interaction:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.Interaction">Interaction  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.Interaction:Summary">
+    </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.Interaction:Signature">[Sansar.Script.Interface]<br />public class  <b>Interaction</b> : <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.Interaction:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.Interaction:Docs:Remarks">
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.Interaction:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.GetEnabled()">GetEnabled</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Returns true if the interaction is enabled.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.GetPrompt()">GetPrompt</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Get the current Interaction prompt.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean)">SetEnabled</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>Change an Interaction state to disabled or enabled.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean)">SetEnabled</a>
+                  </b>(<a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>Change an Interaction state to disabled or enabled.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean)">SetEnabled</a>
+                  </b>(<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>Change an Interaction state to disabled or enabled.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,Sansar.Script.ScriptBase.OperationComplete)">SetEnabled</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Change an Interaction state to disabled or enabled.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetEnabled</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Change an Interaction state to disabled or enabled.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetEnabled</a>
+                  </b>(<a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Change an Interaction state to disabled or enabled.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetEnabled</a>
+                  </b>(<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Change an Interaction state to disabled or enabled.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetPrompt(System.String)">SetPrompt</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Set the Interaction prompt string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String)">SetPrompt</a>
+                  </b>(<a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Set the Interaction prompt string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String)">SetPrompt</a>
+                  </b>(<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Set the Interaction prompt string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetPrompt(System.String,Sansar.Script.ScriptBase.OperationComplete)">SetPrompt</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Set the Interaction prompt string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetPrompt(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">SetPrompt</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Set the Interaction prompt string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String,System.Action{Sansar.Script.OperationCompleteEvent})">SetPrompt</a>
+                  </b>(<a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Set the Interaction prompt string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String,System.Action{Sansar.Script.OperationCompleteEvent})">SetPrompt</a>
+                  </b>(<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Set the Interaction prompt string.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Interaction.Subscribe(System.Action{Sansar.Simulation.InteractionData},System.Boolean)">Subscribe</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;InteractionData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a></nobr><blockquote>Subscribes to Interaction Events.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.Interaction:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Simulation.Interaction.GetEnabled()">GetEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.GetEnabled():member">
+          <div class="msummary">Returns true if the interaction is enabled.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>GetEnabled</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.GetEnabled():Returns">true if the interaction is enabled.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.GetEnabled():Remarks">Disabled interactions do not highlight, do not show their prompt and cannot be 'clicked'.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.GetEnabled():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.GetPrompt()">GetPrompt Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.GetPrompt():member">
+          <div class="msummary">Get the current Interaction prompt.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetPrompt</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.GetPrompt():Returns">The current prompt string.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.GetPrompt():Remarks">The prompt text shows when hovering over the object the script is on.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.GetPrompt():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean)">SetEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean):member">
+          <div class="msummary">Change an Interaction state to disabled or enabled.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetEnabled</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>true to enable the Interaction, false to disable it.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean):Remarks">All Interactions start off enabled. Disabled interactions do not highlight, do not show their prompt and cannot be 'clicked'.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean)">SetEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean):member">
+          <div class="msummary">Change an Interaction state to disabled or enabled.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetEnabled</b> (<a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a> sessionId, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>sessionId</i>
+              </dt>
+              <dd>The SessionId of the agent to disable or enable the interaction for..</dd>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>true to enable the Interaction, false to disable it.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean):Remarks">All Interactions start off enabled. Disabled interactions do not highlight, do not show their prompt and cannot be 'clicked'. This method will only change the enabled state for a single user and will not persist across client restarts, server restarts, or leaving the scene (even for changing avatars). It will also be overriden by any global setEnabled calls.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean)">SetEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean):member">
+          <div class="msummary">Change an Interaction state to disabled or enabled.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetEnabled</b> (<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a> agent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>agent</i>
+              </dt>
+              <dd>The agent to disable or enable the interaction for.</dd>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>true to enable the Interaction, false to disable it.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean):Remarks">All Interactions start off enabled. Disabled interactions do not highlight, do not show their prompt and cannot be 'clicked'. This method will only change the enabled state for a single user and will not persist across client restarts, server restarts, or leaving the scene (even for changing avatars). It will also be overriden by any global setEnabled calls.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,Sansar.Script.ScriptBase.OperationComplete)">SetEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Change an Interaction state to disabled or enabled.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetEnabled</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> value, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>true to enable the Interaction, false to disable it.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Returns">A legacy eventId</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Remarks">All Interactions start off enabled. Disabled interactions do not highlight, do not show their prompt and cannot be 'clicked'.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Change an Interaction state to disabled or enabled.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetEnabled</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> value, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>true to enable the Interaction, false to disable it.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">All Interactions start off enabled. Disabled interactions do not highlight, do not show their prompt and cannot be 'clicked'.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Change an Interaction state to disabled or enabled.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetEnabled</b> (<a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a> sessionId, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> value, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>sessionId</i>
+              </dt>
+              <dd>The SessionId of the agent to disable or enable the interaction for..</dd>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>true to enable the Interaction, false to disable it.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">All Interactions start off enabled. Disabled interactions do not highlight, do not show their prompt and cannot be 'clicked'. This method will only change the enabled state for a single user and will not persist across client restarts, server restarts, or leaving the scene (even for changing avatars). It will also be overriden by any global setEnabled calls.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Script.SessionId,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Change an Interaction state to disabled or enabled.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetEnabled</b> (<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a> agent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> value, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>agent</i>
+              </dt>
+              <dd>The agent to disable or enable the interaction for.</dd>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>true to enable the Interaction, false to disable it.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">All Interactions start off enabled. Disabled interactions do not highlight, do not show their prompt and cannot be 'clicked'. This method will only change the enabled state for a single user and will not persist across client restarts, server restarts, or leaving the scene (even for changing avatars). It will also be overriden by any global setEnabled calls.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetEnabled(Sansar.Simulation.AgentPrivate,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetPrompt(System.String)">SetPrompt Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetPrompt(System.String):member">
+          <div class="msummary">Set the Interaction prompt string.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetPrompt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prompt)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>prompt</i>
+              </dt>
+              <dd>The string to set the prompt to.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String):Remarks">The prompt text shows when hovering over the object the script is on. The prompt must be 128 characters or less and 4 lines or less. Use <a href="../Sansar.Script/DefaultValueAttribute.html">Sansar.Script.DefaultValueAttribute</a> to set a default prompt.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String)">SetPrompt Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String):member">
+          <div class="msummary">Set the Interaction prompt string.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetPrompt</b> (<a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a> sessionId, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prompt)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>sessionId</i>
+              </dt>
+              <dd>The sessionId of the user to change the prompt for.</dd>
+              <dt>
+                <i>prompt</i>
+              </dt>
+              <dd>The string to set the prompt to.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String):Remarks">The prompt text shows when hovering over the object the script is on. The prompt must be 128 characters or less and 4 lines or less. Will only change the prompt for a single user and will not persist across client restarts, server restarts, or leaving the scene (even for changing avatars). It will also be overriden by any global setPrompt calls.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String)">SetPrompt Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String):member">
+          <div class="msummary">Set the Interaction prompt string.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetPrompt</b> (<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a> agent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prompt)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>agent</i>
+              </dt>
+              <dd>The agent to change the prompt for.</dd>
+              <dt>
+                <i>prompt</i>
+              </dt>
+              <dd>The string to set the prompt to.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String):Remarks">The prompt text shows when hovering over the object the script is on. The prompt must be 128 characters or less and 4 lines or less. Will only change the prompt for a single user and will not persist across client restarts, server restarts, or leaving the scene (even for changing avatars). It will also be overriden by any global setPrompt calls.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,Sansar.Script.ScriptBase.OperationComplete)">SetPrompt Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Set the Interaction prompt string.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetPrompt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prompt, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>prompt</i>
+              </dt>
+              <dd>The string to set the prompt to.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,Sansar.Script.ScriptBase.OperationComplete):Returns">A legacy eventId</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,Sansar.Script.ScriptBase.OperationComplete):Remarks">The prompt text shows when hovering over the object the script is on. The prompt must be 128 characters or less and 4 lines or less. Use <a href="../Sansar.Script/DefaultValueAttribute.html">Sansar.Script.DefaultValueAttribute</a> to set a default prompt.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">SetPrompt Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Set the Interaction prompt string.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetPrompt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prompt, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>prompt</i>
+              </dt>
+              <dd>The string to set the prompt to.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">The prompt text shows when hovering over the object the script is on. The prompt must be 128 characters or less and 4 lines or less. Use <a href="../Sansar.Script/DefaultValueAttribute.html">Sansar.Script.DefaultValueAttribute</a> to set a default prompt.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String,System.Action{Sansar.Script.OperationCompleteEvent})">SetPrompt Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Set the Interaction prompt string.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetPrompt</b> (<a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a> sessionId, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prompt, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>sessionId</i>
+              </dt>
+              <dd>The sessionId of the user to change the prompt for.</dd>
+              <dt>
+                <i>prompt</i>
+              </dt>
+              <dd>The string to set the prompt to.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">The prompt text shows when hovering over the object the script is on. The prompt must be 128 characters or less and 4 lines or less. Will only change the prompt for a single user and will not persist across client restarts, server restarts, or leaving the scene (even for changing avatars). It will also be overriden by any global setPrompt calls.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Script.SessionId,System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String,System.Action{Sansar.Script.OperationCompleteEvent})">SetPrompt Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Set the Interaction prompt string.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetPrompt</b> (<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a> agent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prompt, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>agent</i>
+              </dt>
+              <dd>The agent to change the prompt for.</dd>
+              <dt>
+                <i>prompt</i>
+              </dt>
+              <dd>The string to set the prompt to.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">The prompt text shows when hovering over the object the script is on. The prompt must be 128 characters or less and 4 lines or less. Will only change the prompt for a single user and will not persist across client restarts, server restarts, or leaving the scene (even for changing avatars). It will also be overriden by any global setPrompt calls.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.SetPrompt(Sansar.Simulation.AgentPrivate,System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Interaction.Subscribe(System.Action{Sansar.Simulation.InteractionData},System.Boolean)">Subscribe Method</h3>
+        <blockquote id="M:Sansar.Simulation.Interaction.Subscribe(System.Action{Sansar.Simulation.InteractionData},System.Boolean):member">
+          <div class="msummary">Subscribes to Interaction Events.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> <b>Subscribe</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;InteractionData&gt;</a> callback, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.Subscribe(System.Action{Sansar.Simulation.InteractionData},System.Boolean):See Also">
+            <div>
+              <a href="../Sansar.Simulation/InteractionData.html">InteractionData</a>
+            </div>
+            <div>
+              <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.Subscribe(System.Action{Sansar.Simulation.InteractionData},System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>callback</i>
+              </dt>
+              <dd>Callback which is executed when the event completes.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>Optional, set to false to unsubscribe after one event.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Interaction.Subscribe(System.Action{Sansar.Simulation.InteractionData},System.Boolean):Returns">An <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> that can be used to cancel the subscription.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.Subscribe(System.Action{Sansar.Simulation.InteractionData},System.Boolean):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Interaction.Subscribe(System.Action{Sansar.Simulation.InteractionData},System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

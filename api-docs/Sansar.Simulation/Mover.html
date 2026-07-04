@@ -1,0 +1,1475 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.Mover</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.Mover">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.Mover:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.Mover:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.Mover:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.Mover">Mover  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.Mover:Summary">The Mover handles adding moves to process for an object.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.Mover:Signature">[Sansar.Script.Interface]<br />public class  <b>Mover</b> : <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.Mover:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.Mover:Docs:Remarks">
+            The Movable From Script flag must be set to true in the editor to use the Mover.
+            Additionally, player characters and rigid bodies with Static or Dynamic motion types cannot be moved using the Mover.
+            Unlike the RigidBodyComponent movement functions, the Mover can be applied to objects that do not contain Volumes.
+            </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.Mover:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.Mover.IsMoving">IsMoving</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. Property to check if a move command is currently executing for this Mover.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.Mover.MoveCount">MoveCount</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. The number of move commands waiting to be excuted and currently executing for this Mover.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion)">AddMove</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>)<blockquote>Sets the transform of this Mover to a target World Space position and rotation.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent})">AddMove</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the transform of this Mover to a target World Space position and rotation.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode)">AddMove</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>)<blockquote>Translate and rotate the Mover to the target World Space position and rotation over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddMove</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Translate and rotate the Mover to the target World Space position and rotation over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion)">AddMoveOffset</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>)<blockquote>Sets the transform of this Mover to a target Local Space position and rotation.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent})">AddMoveOffset</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the transform of this Mover to a target Local Space position and rotation.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode)">AddMoveOffset</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>)<blockquote>Translate and rotate the Mover to the target Local Space position and rotation over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddMoveOffset</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Translate and rotate the Mover to the target Local Space position and rotation over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddPause(System.Double)">AddPause</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<blockquote>Adds a pause of the given length for this Mover.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddPause(System.Double,System.Action{Sansar.Script.OperationCompleteEvent})">AddPause</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Adds a pause of the given length for this Mover.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion)">AddRotate</a>
+                  </b>(<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>)<blockquote>Sets the rotation of this Mover to a target World Space rotation.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent})">AddRotate</a>
+                  </b>(<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the rotation of this Mover to a target World Space rotation.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode)">AddRotate</a>
+                  </b>(<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>)<blockquote>Rotate the Mover to the target World Space rotation over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddRotate</a>
+                  </b>(<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Rotate the Mover to the target World Space rotation over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion)">AddRotateOffset</a>
+                  </b>(<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>)<blockquote>Sets the rotation of this Mover to a target Local Space rotation.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent})">AddRotateOffset</a>
+                  </b>(<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the rotation of this Mover to a target Local Space rotation.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode)">AddRotateOffset</a>
+                  </b>(<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>)<blockquote>Rotate the Mover to the target Local Space rotation over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddRotateOffset</a>
+                  </b>(<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Rotate the Mover to the target Local Space rotation over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector)">AddTranslate</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>)<blockquote>Sets the position of this Mover to a target World Space position.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent})">AddTranslate</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the position of this Mover to a target World Space position.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode)">AddTranslate</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>)<blockquote>Translate the Mover to the target World Space position over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddTranslate</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Translate the Mover to the target World Space position over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector)">AddTranslateOffset</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>)<blockquote>Sets the position of this Mover to a target Local Space position.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent})">AddTranslateOffset</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the position of this Mover to a target Local Space position.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode)">AddTranslateOffset</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>)<blockquote>Translate the Mover to the target Local Space position over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddTranslateOffset</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Translate the Mover to the target Local Space position over time.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.StopAndClear()">StopAndClear</a>
+                  </b>()<blockquote>Stops the current movement and clears any further movements for this Mover.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.StopAndClear(System.Action{Sansar.Script.OperationCompleteEvent})">StopAndClear</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Stops the current movement and clears any further movements for this Mover.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.Mover.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote> A string representation of this object. </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.Mover:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion)">AddMove Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion):member">
+          <div class="msummary">Sets the transform of this Mover to a target World Space position and rotation.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMove</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> position, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotation)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion):Parameters">
+            <dl>
+              <dt>
+                <i>position</i>
+              </dt>
+              <dd>The target position.</dd>
+              <dt>
+                <i>rotation</i>
+              </dt>
+              <dd>The target rotation.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent})">AddMove Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the transform of this Mover to a target World Space position and rotation.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMove</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> position, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotation, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>position</i>
+              </dt>
+              <dd>The target position.</dd>
+              <dt>
+                <i>rotation</i>
+              </dt>
+              <dd>The target rotation.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode)">AddMove Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):member">
+          <div class="msummary">Translate and rotate the Mover to the target World Space position and rotation over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMove</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> targetPosition, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> targetRotation, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Parameters">
+            <dl>
+              <dt>
+                <i>targetPosition</i>
+              </dt>
+              <dd>The target position.</dd>
+              <dt>
+                <i>targetRotation</i>
+              </dt>
+              <dd>The target rotation.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddMove Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Translate and rotate the Mover to the target World Space position and rotation over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMove</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> targetPosition, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> targetRotation, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>targetPosition</i>
+              </dt>
+              <dd>The target position.</dd>
+              <dt>
+                <i>targetRotation</i>
+              </dt>
+              <dd>The target rotation.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMove(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion)">AddMoveOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion):member">
+          <div class="msummary">Sets the transform of this Mover to a target Local Space position and rotation.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMoveOffset</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> positionOffset, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotationOffset)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion):Parameters">
+            <dl>
+              <dt>
+                <i>positionOffset</i>
+              </dt>
+              <dd>The local space position offset.</dd>
+              <dt>
+                <i>rotationOffset</i>
+              </dt>
+              <dd>The local space rotation offset.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent})">AddMoveOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the transform of this Mover to a target Local Space position and rotation.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMoveOffset</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> positionOffset, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotationOffset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>positionOffset</i>
+              </dt>
+              <dd>The local space position offset.</dd>
+              <dt>
+                <i>rotationOffset</i>
+              </dt>
+              <dd>The local space rotation offset.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode)">AddMoveOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):member">
+          <div class="msummary">Translate and rotate the Mover to the target Local Space position and rotation over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMoveOffset</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> positionOffset, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotationOffset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Parameters">
+            <dl>
+              <dt>
+                <i>positionOffset</i>
+              </dt>
+              <dd>The local space position offset.</dd>
+              <dt>
+                <i>rotationOffset</i>
+              </dt>
+              <dd>The local space rotation offset.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddMoveOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Translate and rotate the Mover to the target Local Space position and rotation over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMoveOffset</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> positionOffset, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotationOffset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>positionOffset</i>
+              </dt>
+              <dd>The local space position offset.</dd>
+              <dt>
+                <i>rotationOffset</i>
+              </dt>
+              <dd>The local space rotation offset.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddMoveOffset(Sansar.Vector,Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddPause(System.Double)">AddPause Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddPause(System.Double):member">
+          <div class="msummary">Adds a pause of the given length for this Mover.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddPause</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddPause(System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The amount of time in seconds that the movement should be paused.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddPause(System.Double):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddPause(System.Double):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddPause(System.Double):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddPause(System.Double,System.Action{Sansar.Script.OperationCompleteEvent})">AddPause Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddPause(System.Double,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Adds a pause of the given length for this Mover.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddPause</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddPause(System.Double,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The amount of time in seconds that the movement should be paused.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddPause(System.Double,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddPause(System.Double,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddPause(System.Double,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion)">AddRotate Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion):member">
+          <div class="msummary">Sets the rotation of this Mover to a target World Space rotation.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddRotate</b> (<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotation)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion):Parameters">
+            <dl>
+              <dt>
+                <i>rotation</i>
+              </dt>
+              <dd>The target rotation.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent})">AddRotate Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the rotation of this Mover to a target World Space rotation.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddRotate</b> (<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotation, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>rotation</i>
+              </dt>
+              <dd>The target rotation.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode)">AddRotate Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):member">
+          <div class="msummary">Rotate the Mover to the target World Space rotation over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddRotate</b> (<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> targetRotation, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Parameters">
+            <dl>
+              <dt>
+                <i>targetRotation</i>
+              </dt>
+              <dd>The target rotation.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddRotate Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Rotate the Mover to the target World Space rotation over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddRotate</b> (<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> targetRotation, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>targetRotation</i>
+              </dt>
+              <dd>The target rotation.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotate(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion)">AddRotateOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion):member">
+          <div class="msummary">Sets the rotation of this Mover to a target Local Space rotation.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddRotateOffset</b> (<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotationOffset)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion):Parameters">
+            <dl>
+              <dt>
+                <i>rotationOffset</i>
+              </dt>
+              <dd>The local space rotation offset.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent})">AddRotateOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the rotation of this Mover to a target Local Space rotation.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddRotateOffset</b> (<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotationOffset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>rotationOffset</i>
+              </dt>
+              <dd>The local space rotation offset.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode)">AddRotateOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):member">
+          <div class="msummary">Rotate the Mover to the target Local Space rotation over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddRotateOffset</b> (<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotationOffset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Parameters">
+            <dl>
+              <dt>
+                <i>rotationOffset</i>
+              </dt>
+              <dd>The local space rotation offset.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddRotateOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Rotate the Mover to the target Local Space rotation over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddRotateOffset</b> (<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> rotationOffset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>rotationOffset</i>
+              </dt>
+              <dd>The local space rotation offset.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddRotateOffset(Sansar.Quaternion,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector)">AddTranslate Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector):member">
+          <div class="msummary">Sets the position of this Mover to a target World Space position.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddTranslate</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> position)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector):Parameters">
+            <dl>
+              <dt>
+                <i>position</i>
+              </dt>
+              <dd>The target position.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent})">AddTranslate Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the position of this Mover to a target World Space position.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddTranslate</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> position, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>position</i>
+              </dt>
+              <dd>The target position.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode)">AddTranslate Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):member">
+          <div class="msummary">Translate the Mover to the target World Space position over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddTranslate</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> targetPosition, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):Parameters">
+            <dl>
+              <dt>
+                <i>targetPosition</i>
+              </dt>
+              <dd>The target position.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddTranslate Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Translate the Mover to the target World Space position over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddTranslate</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> targetPosition, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>targetPosition</i>
+              </dt>
+              <dd>The target position.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslate(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector)">AddTranslateOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector):member">
+          <div class="msummary">Sets the position of this Mover to a target Local Space position.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddTranslateOffset</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> positionOffset)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector):Parameters">
+            <dl>
+              <dt>
+                <i>positionOffset</i>
+              </dt>
+              <dd>The local space position offset.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent})">AddTranslateOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the position of this Mover to a target Local Space position.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddTranslateOffset</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> positionOffset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>positionOffset</i>
+              </dt>
+              <dd>The local space position offset.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode)">AddTranslateOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):member">
+          <div class="msummary">Translate the Mover to the target Local Space position over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddTranslateOffset</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> positionOffset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):Parameters">
+            <dl>
+              <dt>
+                <i>positionOffset</i>
+              </dt>
+              <dd>The local space position offset.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent})">AddTranslateOffset Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Translate the Mover to the target Local Space position over time.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddTranslateOffset</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> positionOffset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> timeInSeconds, <a href="../Sansar.Simulation/MoveMode.html">MoveMode</a> interpolationMode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>positionOffset</i>
+              </dt>
+              <dd>The local space position offset.</dd>
+              <dt>
+                <i>timeInSeconds</i>
+              </dt>
+              <dd>The time in seconds to move over.</dd>
+              <dt>
+                <i>interpolationMode</i>
+              </dt>
+              <dd>The method of interpolation to use when moving.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues this command then returns.
+            To block until this move command has been executed and completed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.AddTranslateOffset(Sansar.Vector,System.Double,Sansar.Simulation.MoveMode,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.Mover.IsMoving">IsMoving Property</h3>
+        <blockquote id="P:Sansar.Simulation.Mover.IsMoving:member">
+          <div class="msummary">Property to check if a move command is currently executing for this Mover.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsMoving</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.Mover.IsMoving:Value">Whether or not this object is currently executing a move (includes pauses).</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Mover.IsMoving:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Mover.IsMoving:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.Mover.MoveCount">MoveCount Property</h3>
+        <blockquote id="P:Sansar.Simulation.Mover.MoveCount:member">
+          <div class="msummary">The number of move commands waiting to be excuted and currently executing for this Mover.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>MoveCount</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.Mover.MoveCount:Value">The number of enqueued move commands. Includes the current active move and any pause commands.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Mover.MoveCount:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.Mover.MoveCount:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.StopAndClear()">StopAndClear Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.StopAndClear():member">
+          <div class="msummary">Stops the current movement and clears any further movements for this Mover.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>StopAndClear</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.StopAndClear():Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.StopAndClear():Remarks">This method is not enqueued like other operations on the Mover.
+            To block until the operation has executed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.StopAndClear():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.StopAndClear(System.Action{Sansar.Script.OperationCompleteEvent})">StopAndClear Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.StopAndClear(System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Stops the current movement and clears any further movements for this Mover.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>StopAndClear</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.StopAndClear(System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.StopAndClear(System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.StopAndClear(System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This method is not enqueued like other operations on the Mover.
+            To block until the operation has executed, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.StopAndClear(System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.Mover.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Simulation.Mover.ToString():member">
+          <div class="msummary"> A string representation of this object. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.Mover.ToString():Returns">A string representation of this object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.ToString():Remarks">The format of this string may change between releases.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.Mover.ToString():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

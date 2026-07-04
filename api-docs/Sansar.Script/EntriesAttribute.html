@@ -1,0 +1,357 @@
+<html>
+  <head>
+    <title>Sansar.Script.EntriesAttribute</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar.Script Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Script.EntriesAttribute">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.EntriesAttribute:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.EntriesAttribute:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.EntriesAttribute:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Script.EntriesAttribute">EntriesAttribute  Class</h1>
+    <p class="Summary" id="T:Sansar.Script.EntriesAttribute:Summary">
+            List of entries to populate IList or IDictionary properties with.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Script.EntriesAttribute:Signature">[System.AttributeUsage(System.AttributeTargets.Field)]<br />public class  <b>EntriesAttribute</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Attribute">Attribute</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Script.EntriesAttribute:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Script.EntriesAttribute:Docs:Remarks">When used with IDictionary the entries are the keys with no default values.</div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Script.EntriesAttribute:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Attribute">Attribute</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.EntriesAttribute(System.Object[])">EntriesAttribute</a>
+                    </b>(<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])</div>
+                </td>
+                <td>
+            List of entries to populate IList or IDictionary properties with.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Script.EntriesAttribute.Locked">Locked</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Locks the IDictionary or IList properties so entries can not be added or removed.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Script.EntriesAttribute:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Sansar.Script.EntriesAttribute(System.Object[])">EntriesAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.EntriesAttribute(System.Object[]):member">
+          <div class="msummary">
+            List of entries to populate IList or IDictionary properties with.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>EntriesAttribute</b> (<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] entries)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.EntriesAttribute(System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>entries</i>
+              </dt>
+              <dd>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.EntriesAttribute(System.Object[]):Remarks">When used with IDictionary the entries are the keys with no default values.
+            When used with IList the entries are the default values.
+            To set an IList of a specific Count with no default values use <a href="../Sansar.Script/MinEntriesAttribute.html">Sansar.Script.MinEntriesAttribute</a>Has no effect on other parameter types.
+            For <a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, and <a href="../Sansar/Color.html">Sansar.Color</a>s in IList their default values must be specified in string form.</div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.EntriesAttribute(System.Object[]):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            [Entries("King", "Queen", "Rook", "Bishop", "Knight", "Pawn")]
+            public IDictionary&lt;string, ClusterResource&gt; GamePieces;
+            
+            [Entries("&lt;1,2,3&gt;", "&lt;2.5,3.6,4.6&gt;")]
+            public IList&lt;Sansar.Vector&gt; GamePieces;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.EntriesAttribute(System.Object[]):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Script.EntriesAttribute.Locked">Locked Field</h3>
+        <blockquote id="F:Sansar.Script.EntriesAttribute.Locked:member">
+          <div class="msummary">
+            Locks the IDictionary or IList properties so entries can not be added or removed.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Locked</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Script.EntriesAttribute.Locked:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Script.EntriesAttribute.Locked:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

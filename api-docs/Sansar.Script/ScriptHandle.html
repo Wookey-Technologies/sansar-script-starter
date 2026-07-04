@@ -1,0 +1,388 @@
+<html>
+  <head>
+    <title>Sansar.Script.ScriptHandle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar.Script Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Script.ScriptHandle">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.ScriptHandle:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.ScriptHandle:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.ScriptHandle:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Script.ScriptHandle">ScriptHandle  Class</h1>
+    <p class="Summary" id="T:Sansar.Script.ScriptHandle:Summary">
+            A running script in Sansar.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Script.ScriptHandle:Signature">public class  <b>ScriptHandle</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Script.ScriptHandle:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Script.ScriptHandle:Docs:Remarks">This is a lightweight handle which is used by some API methods to refer to a script.</div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Script.ScriptHandle:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.ScriptHandle.ID">ID</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/ScriptId.html">ScriptId</a>
+                  </i>. 
+            The Sansar Script's unique ID. This ID is unique among all scripts currently running in a scene.
+            It will change every time the script or scene is started.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.ScriptHandle.UnhandledExceptionRecoverable">UnhandledExceptionRecoverable</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            If true a script can keep running if an unhandled exception is processed by <a href="../Sansar.Script/ScriptHandle.html#E:Sansar.Script.ScriptHandle.UnhandledException">ScriptHandle.UnhandledException</a>.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.ScriptHandle.Dispose()">Dispose</a>
+                  </b>()<blockquote>
+            Internal use only
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Events</h2>
+        <div class="SectionBox" id="Public Events">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:Sansar.Script.ScriptHandle.UnhandledException">UnhandledException</a>
+                  </b>
+                </td>
+                <td>
+            Run by the script scheduler when the invocation of a script event handler or coroutine throws an 
+            exception. </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Script.ScriptHandle:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Script.ScriptHandle.Dispose()">Dispose Method</h3>
+        <blockquote id="M:Sansar.Script.ScriptHandle.Dispose():member">
+          <div class="msummary">
+            Internal use only
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.ScriptHandle.Dispose():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.ScriptHandle.Dispose():Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.ScriptHandle.ID">ID Property</h3>
+        <blockquote id="P:Sansar.Script.ScriptHandle.ID:member">
+          <div class="msummary">
+            The Sansar Script's unique ID. This ID is unique among all scripts currently running in a scene.
+            It will change every time the script or scene is started.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Sansar.Script/ScriptId.html">ScriptId</a> <b>ID</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.ScriptHandle.ID:Value">Returns <a href="../Sansar.Script/ScriptId.html#F:Sansar.Script.ScriptId.Invalid">ScriptId.Invalid</a>  if the ScriptHandle is not initialized with a valid script.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.ScriptHandle.ID:Remarks">Internal.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.ScriptHandle.ID:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:Sansar.Script.ScriptHandle.UnhandledException">UnhandledException Event</h3>
+        <blockquote id="E:Sansar.Script.ScriptHandle.UnhandledException:member">
+          <div class="msummary">
+            Run by the script scheduler when the invocation of a script event handler or coroutine throws an 
+            exception. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`2">Action&lt;object, Exception&gt;</a> <b>UnhandledException</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="E:Sansar.Script.ScriptHandle.UnhandledException:Remarks">If <a href="../Sansar.Script/ScriptHandle.html#P:Sansar.Script.ScriptHandle.UnhandledExceptionRecoverable">ScriptHandle.UnhandledExceptionRecoverable</a> is true then the script may continue 
+            running if the handler does not throw an exception. If the handler needs to stop execution of the 
+            script it should throw the passed exception. The first argument is either the <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a> 
+            that was being processed, or the Coroutine that was running when the exception occurred.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="E:Sansar.Script.ScriptHandle.UnhandledException:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.ScriptHandle.UnhandledExceptionRecoverable">UnhandledExceptionRecoverable Property</h3>
+        <blockquote id="P:Sansar.Script.ScriptHandle.UnhandledExceptionRecoverable:member">
+          <div class="msummary">
+            If true a script can keep running if an unhandled exception is processed by <a href="../Sansar.Script/ScriptHandle.html#E:Sansar.Script.ScriptHandle.UnhandledException">ScriptHandle.UnhandledException</a>.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>UnhandledExceptionRecoverable</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.ScriptHandle.UnhandledExceptionRecoverable:Value">Boolean indicating if the script may continue running after an unhandled exception occurs.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.ScriptHandle.UnhandledExceptionRecoverable:Remarks">If this is true and the <a href="../Sansar.Script/ScriptHandle.html#E:Sansar.Script.ScriptHandle.UnhandledException">ScriptHandle.UnhandledException</a> event is set and does not throw and exception
+            the script will continue to be scheduled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.ScriptHandle.UnhandledExceptionRecoverable:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

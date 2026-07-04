@@ -1,0 +1,792 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.CommandData</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.CommandData">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.CommandData:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.CommandData:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.CommandData:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.CommandData">CommandData  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.CommandData:Summary">Command events are generated by the client when input events occur.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.CommandData:Signature">[Sansar.Script.Interface]<br />public class  <b>CommandData</b> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.CommandData:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.CommandData:Docs:Remarks">
+        <table class="Documentation">
+          <tr>
+            <th>Command</th>
+            <th>Default Key Binding</th>
+          </tr>
+          <tr valign="top">
+            <td>Trigger</td>
+            <td>Left Mouse Button</td>
+          </tr>
+          <tr valign="top">
+            <td>PrimaryAction</td>
+            <td>F</td>
+          </tr>
+          <tr valign="top">
+            <td>SecondaryAction</td>
+            <td>R</td>
+          </tr>
+          <tr valign="top">
+            <td>Modifier</td>
+            <td>Shift</td>
+          </tr>
+          <tr valign="top">
+            <td>Action1 to Action0</td>
+            <td>Number keys 1 to 0</td>
+          </tr>
+          <tr valign="top">
+            <td>Confirm</td>
+            <td>Enter</td>
+          </tr>
+          <tr valign="top">
+            <td>Cancel</td>
+            <td>Escape</td>
+          </tr>
+          <tr valign="top">
+            <td>SelectLeft</td>
+            <td>Left arrow</td>
+          </tr>
+          <tr valign="top">
+            <td>SelectRight</td>
+            <td>Right arrow</td>
+          </tr>
+          <tr valign="top">
+            <td>SelectUp</td>
+            <td>Up arrow</td>
+          </tr>
+          <tr valign="top">
+            <td>SelectDown</td>
+            <td>Down arrow</td>
+          </tr>
+          <tr valign="top">
+            <td>Keypad0 to Keypad9</td>
+            <td>Numberpad keys 0 to 9</td>
+          </tr>
+          <tr valign="top">
+            <td>KeypadEnter</td>
+            <td>Numberpad Enter</td>
+          </tr>
+        </table>
+        <p>An example script for handling client commands:</p>
+        <table class="CodeExampleTable">
+          <tr>
+            <td>
+              <b>
+                <font size="-1">C# Example</font>
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre class="code-csharp">/* This content is licensed under the terms of the Creative Commons Attribution 4.0 International License.
+ * When using this content, you must:
+ * �    Acknowledge that the content is from the Sansar Knowledge Base.
+ * �    Include our copyright notice: "2022 Sansar, Inc."
+ * �    Indicate that the content is licensed under the Creative Commons Attribution-Share Alike 4.0 International License.
+ * �    Include the URL for, or link to, the license summary at https://creativecommons.org/licenses/by-sa/4.0/deed.hi (and, if possible, to the complete license terms at https://creativecommons.org/licenses/by-sa/4.0/legalcode.
+ * For example:
+ * "This work uses content from the Sansar Knowledge Base. � 2022 Sansar, Inc." Licensed under the Creative Commons Attribution 4.0 International License (license summary available at https://creativecommons.org/licenses/by/4.0/ and complete license terms available at https://creativecommons.org/licenses/by/4.0/legalcode)."
+ */
+
+using Sansar.Script;
+using Sansar.Simulation;
+
+public class CommandExample : SceneObjectScript
+{
+    #region ScriptParameters
+    [Tooltip(@"The command to enable listening for the Action Command. Default: Confirm (Enter)")]
+    [DefaultValue("Confirm")]
+    [DisplayName("Subscribe Command")]
+    public readonly string SubscribeCommand;
+
+    [Tooltip(@"The command to disable listening for the Action Command. Default: Cancel (Escape)")]
+    [DefaultValue("Cancel")]
+    [DisplayName("Unsubscribe Command")]
+    public readonly string UnsubscribeCommand;
+
+    [Tooltip(@"If the command has been subscribed to by the 'Subscribe Command', this will log the action to the script console.")]
+    [DefaultValue("Trigger")]
+    [DisplayName("Action Command")]
+    public readonly string ActionCommand;
+    #endregion ScriptParameters
+
+    public override void Init()
+    {
+    // Subscribe to new user events;
+    ScenePrivate.User.Subscribe(User.AddUser, NewUser);
+    }
+
+    IEventSubscription subscription = null;
+
+    void NewUser(UserData newUser)
+    {
+        Client client = ScenePrivate.FindAgent(newUser.User).Client;
+
+        // CommandReceived will be called every time the command it triggered on the client
+        // CommandCanceled will be called if the subscription fails
+        if (SubscribeCommand != "")
+        {
+            client.SubscribeToCommand(SubscribeCommand, CommandAction.Pressed, (data) =&gt;
+            {
+                if (subscription == null)
+                {
+                    Log.Write(GetType().Name, $"[{SubscribeCommand}] Subscribing to {ActionCommand}.");
+                    subscription = client.SubscribeToCommand(ActionCommand, CommandAction.All, CommandReceived, CommandCanceled);
+                }
+            }, CommandCanceled);
+        }
+
+        if (UnsubscribeCommand != "")
+        {
+            client.SubscribeToCommand(UnsubscribeCommand, CommandAction.Pressed, (data) =&gt;
+            {
+                if (subscription != null)
+                {
+                    Log.Write(GetType().Name, $"[{UnsubscribeCommand}] Unsubscribing to {ActionCommand}.");
+                    subscription.Unsubscribe();
+                    subscription = null;
+                }
+            }, CommandCanceled);
+        }
+    }
+
+    void CommandReceived(CommandData command)
+    {
+        Log.Write(GetType().Name, $"Received command {command.Command}: {command.Action}. Targeting Info: {command.TargetingComponent}, Origin:{command.TargetingOrigin}, Position:{command.TargetingPosition}, Normal{command.TargetingNormal}");
+    }
+
+    void CommandCanceled(CancelData data)
+    {
+        Log.Write(GetType().Name, "Subscription canceled: "+data.Message);
+    }
+
+}</pre>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.CommandData:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.Action">Action</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/CommandAction.html">CommandAction</a>
+                  </i>.  The action which occurred.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.CameraControlMode">CameraControlMode</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/CameraControlMode.html">CameraControlMode</a>
+                  </i>. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.Command">Command</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>.  The command which occurred.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.ControlPoint">ControlPoint</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a>
+                  </i>. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.IsAimTarget">IsAimTarget</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.MouseLookMode">MouseLookMode</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.SessionId">SessionId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a>
+                  </i>.  The client which generated the event.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.SimulationFrame">SimulationFrame</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a>
+                  </i>. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.TargetingComponent">TargetingComponent</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/ComponentId.html">Sansar.Script.ComponentId</a>
+                  </i>. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.TargetingNormal">TargetingNormal</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Vector.html">Sansar.Vector</a>
+                  </i>. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.TargetingOrigin">TargetingOrigin</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Vector.html">Sansar.Vector</a>
+                  </i>. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CommandData.TargetingPosition">TargetingPosition</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Vector.html">Sansar.Vector</a>
+                  </i>. </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.CommandData.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote> A string representation of this object. </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/EventData.html#M:Sansar.Script.EventData.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Generates a string representation of the EventData.
+             (<i>Inherited from <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.CommandData:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="P:Sansar.Simulation.CommandData.Action">Action Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.Action:member">
+          <div class="msummary"> The action which occurred.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/CommandAction.html">CommandAction</a> <b>Action</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.Action:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.Action:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.Action:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.CameraControlMode">CameraControlMode Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.CameraControlMode:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/CameraControlMode.html">CameraControlMode</a> <b>CameraControlMode</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.CameraControlMode:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.CameraControlMode:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.CameraControlMode:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.Command">Command Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.Command:member">
+          <div class="msummary"> The command which occurred.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Command</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.Command:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.Command:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.Command:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.ControlPoint">ControlPoint Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.ControlPoint:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a> <b>ControlPoint</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.ControlPoint:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.ControlPoint:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.ControlPoint:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.IsAimTarget">IsAimTarget Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.IsAimTarget:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsAimTarget</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.IsAimTarget:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.IsAimTarget:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.IsAimTarget:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.MouseLookMode">MouseLookMode Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.MouseLookMode:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>MouseLookMode</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.MouseLookMode:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.MouseLookMode:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.MouseLookMode:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.SessionId">SessionId Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.SessionId:member">
+          <div class="msummary"> The client which generated the event.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Script/SessionId.html">Sansar.Script.SessionId</a> <b>SessionId</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.SessionId:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.SessionId:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.SessionId:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.SimulationFrame">SimulationFrame Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.SimulationFrame:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SimulationFrame</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.SimulationFrame:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.SimulationFrame:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.SimulationFrame:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.TargetingComponent">TargetingComponent Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.TargetingComponent:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Script/ComponentId.html">Sansar.Script.ComponentId</a> <b>TargetingComponent</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.TargetingComponent:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.TargetingComponent:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.TargetingComponent:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.TargetingNormal">TargetingNormal Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.TargetingNormal:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>TargetingNormal</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.TargetingNormal:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.TargetingNormal:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.TargetingNormal:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.TargetingOrigin">TargetingOrigin Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.TargetingOrigin:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>TargetingOrigin</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.TargetingOrigin:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.TargetingOrigin:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.TargetingOrigin:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CommandData.TargetingPosition">TargetingPosition Property</h3>
+        <blockquote id="P:Sansar.Simulation.CommandData.TargetingPosition:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>TargetingPosition</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CommandData.TargetingPosition:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.TargetingPosition:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CommandData.TargetingPosition:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.CommandData.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Simulation.CommandData.ToString():member">
+          <div class="msummary"> A string representation of this object. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.CommandData.ToString():Returns">A string representation of this object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CommandData.ToString():Remarks">The format of this string may change between releases.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CommandData.ToString():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

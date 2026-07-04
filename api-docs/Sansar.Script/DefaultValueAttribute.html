@@ -1,0 +1,827 @@
+<html>
+  <head>
+    <title>Sansar.Script.DefaultValueAttribute</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar.Script Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Script.DefaultValueAttribute">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.DefaultValueAttribute:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.DefaultValueAttribute:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.DefaultValueAttribute:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Script.DefaultValueAttribute">DefaultValueAttribute  Class</h1>
+    <p class="Summary" id="T:Sansar.Script.DefaultValueAttribute:Summary">
+             Set a default value to show in the script properties field.
+             </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Script.DefaultValueAttribute:Signature">[System.AttributeUsage(System.AttributeTargets.Field)]<br />public class  <b>DefaultValueAttribute</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Attribute">Attribute</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Script.DefaultValueAttribute:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Script.DefaultValueAttribute:Docs:Remarks">Unless specified by this attribute all fields shown in script properties are initialized to the default value for their type (usually 0 or empty string equivalents.). 
+             Note that Vector and Quaternions require an appropriately formatted string to work correctly.  Vectors start with '&lt;', have 3 or 4 numerical elements seperated by commas, and end with '&gt;'. Quaternions start with '[', have 4 numerical elements seperated by commas, and end with ']'</div>
+      <h2 class="Section">Example</h2>
+      <div class="SectionBox" id="T:Sansar.Script.DefaultValueAttribute:Docs:Example:1">
+        <table class="CodeExampleTable">
+          <tr>
+            <td>
+              <b>
+                <font size="-1">C# Example</font>
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre class="code-csharp">
+             [DefaultValue("Default Event")]
+             public string MyString = null;
+            
+             [DefaultValue(12.34)]
+             public float MyFloat = 1;
+            
+             [DefaultValue("&lt;1.2,3.4,5.6&gt;")]
+             public Sansar.Vector MyVector;
+            
+             [DefaultValue("[1.2,3.4,5.6,7.8]")]
+             public Sansar.Quaternion MyQuaternion;
+             
+             [DefaultValue("(1.2,3.4,5.6,7.8)")]
+             public Sansar.Color MyColor;
+            
+             [DefaultValue(true)]
+             public bool MyBool;
+            
+             [DefaultValue(2)]
+             [Range(-20, 5)]
+             public int myInt;</pre>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Script.DefaultValueAttribute:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Attribute">Attribute</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.DefaultValueAttribute(System.Boolean)">DefaultValueAttribute</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                </td>
+                <td>
+            Set a default bool value to show in the script properties for this field. Without the DefaultValue attribute bools default to 'false'.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.DefaultValueAttribute(System.Byte)">DefaultValueAttribute</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>)</div>
+                </td>
+                <td>
+            Set a default byte value to show in the script properties for this field.  Without the DefaultValue attribute bytes default to 0.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.DefaultValueAttribute(System.Double)">DefaultValueAttribute</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)</div>
+                </td>
+                <td>
+            Set a default double value to show in the script properties for this field.  Without the DefaultValue attribute doubles default to 0.0.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.DefaultValueAttribute(System.Double[])">DefaultValueAttribute</a>
+                    </b>(<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>[])</div>
+                </td>
+                <td>
+            Set a default double value to show in the script properties for this field.  Without the DefaultValue attribute doubles default to 0.0.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.DefaultValueAttribute(System.Int16)">DefaultValueAttribute</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a>)</div>
+                </td>
+                <td>
+            Set a default short value to show in the script properties for this field.  Without the DefaultValue attribute shorts default to 0.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.DefaultValueAttribute(System.Int32)">DefaultValueAttribute</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</div>
+                </td>
+                <td>
+            Set a default int value to show in the script properties for this field.  Without the DefaultValue attribute ints default to 0.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.DefaultValueAttribute(System.Int64)">DefaultValueAttribute</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>)</div>
+                </td>
+                <td>
+            Set a default long value to show in the script properties for this field.  Without the DefaultValue attribute longs default to 0.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.DefaultValueAttribute(System.Single)">DefaultValueAttribute</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)</div>
+                </td>
+                <td>
+            Set a default float value to show in the script properties for this field.  Without the DefaultValue attribute floats default to 0.0.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Script.DefaultValueAttribute(System.String)">DefaultValueAttribute</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                </td>
+                <td>
+             Set a default string value to show in the script properties for this field. Without the DefaultValue attribute strings default to an empty string.
+             </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Script.DefaultValueAttribute:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Sansar.Script.DefaultValueAttribute(System.Boolean)">DefaultValueAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.DefaultValueAttribute(System.Boolean):member">
+          <div class="msummary">
+            Set a default bool value to show in the script properties for this field. Without the DefaultValue attribute bools default to 'false'.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>DefaultValueAttribute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The default boolvalue to show in script properties.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Boolean):Remarks">
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Boolean):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            [DefaultValue(true)]
+            public bool MyBool;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Script.DefaultValueAttribute(System.Byte)">DefaultValueAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.DefaultValueAttribute(System.Byte):member">
+          <div class="msummary">
+            Set a default byte value to show in the script properties for this field.  Without the DefaultValue attribute bytes default to 0.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>DefaultValueAttribute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Byte):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The default byte value to show in script properties.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Byte):Remarks">
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Byte):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            [DefaultValue(0x00C9)]
+            public byte MyField;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Byte):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Script.DefaultValueAttribute(System.Double)">DefaultValueAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.DefaultValueAttribute(System.Double):member">
+          <div class="msummary">
+            Set a default double value to show in the script properties for this field.  Without the DefaultValue attribute doubles default to 0.0.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>DefaultValueAttribute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The default double value to show in script properties.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Double):Remarks">Script properties only support floats, this constructor is provided for convenience and values will be converted to floats.</div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Double):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            [DefaultValue(12.34)]
+            public double MyField;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Double):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Script.DefaultValueAttribute(System.Double[])">DefaultValueAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.DefaultValueAttribute(System.Double[]):member">
+          <div class="msummary">
+            Set a default double value to show in the script properties for this field.  Without the DefaultValue attribute doubles default to 0.0.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>DefaultValueAttribute</b> (<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>[] value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Double[]):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The default double value to show in script properties.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Double[]):Remarks">Script properties only support floats, this constructor is provided for convenience and values will be converted to floats.</div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Double[]):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            [DefaultValue(1.3, 2.4, 3.5)]
+            public Vector MyField;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Double[]):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Script.DefaultValueAttribute(System.Int16)">DefaultValueAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.DefaultValueAttribute(System.Int16):member">
+          <div class="msummary">
+            Set a default short value to show in the script properties for this field.  Without the DefaultValue attribute shorts default to 0.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>DefaultValueAttribute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int16):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The default short value to show in script properties.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int16):Remarks">
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int16):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            [DefaultValue(123)]
+            public short MyField;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int16):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Script.DefaultValueAttribute(System.Int32)">DefaultValueAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.DefaultValueAttribute(System.Int32):member">
+          <div class="msummary">
+            Set a default int value to show in the script properties for this field.  Without the DefaultValue attribute ints default to 0.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>DefaultValueAttribute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The default int value to show in script properties.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int32):Remarks">
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int32):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            [DefaultValue(123)]
+            public int MyField;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Script.DefaultValueAttribute(System.Int64)">DefaultValueAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.DefaultValueAttribute(System.Int64):member">
+          <div class="msummary">
+            Set a default long value to show in the script properties for this field.  Without the DefaultValue attribute longs default to 0.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>DefaultValueAttribute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int64):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The default long value to show in script properties.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int64):Remarks">
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int64):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            [DefaultValue(123)]
+            public long MyField;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Int64):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Script.DefaultValueAttribute(System.Single)">DefaultValueAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.DefaultValueAttribute(System.Single):member">
+          <div class="msummary">
+            Set a default float value to show in the script properties for this field.  Without the DefaultValue attribute floats default to 0.0.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>DefaultValueAttribute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The default float value to show in script properties.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Single):Remarks">Script properties only support up to 32bit int, this constructor is provided for convenience and values will be converted to 32bit int.</div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Single):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            [DefaultValue(12.34)]
+            public float MyField;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Script.DefaultValueAttribute(System.String)">DefaultValueAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Script.DefaultValueAttribute(System.String):member">
+          <div class="msummary">
+             Set a default string value to show in the script properties for this field. Without the DefaultValue attribute strings default to an empty string.
+             </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>DefaultValueAttribute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The default value in string form for strings, quaternions and vector fields.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.String):Remarks">The string DefaultValue attribute can be used to set Vector and Quaternions with an appropriately formatted string.  Vectors start with '&lt;', have 3 or 4 numerical elements seperated by commas, and end with '&gt;'. Quaternions start with '[', have 4 numerical elements seperated by commas, and end with ']'</div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.String):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+             [DefaultValue("Default Event")]
+             public string MyString = null;
+            
+             [DefaultValue("&lt;1.2,3.4,5.6&gt;")]
+             public Sansar.Vector MyVector;
+            
+             [DefaultValue("[1.2,3.4,5.6,7.8]")]
+             public Sansar.Quaternion MyQuaternion;
+             
+             [DefaultValue("(1.2,3.4,5.6,7.8)")]
+             public Sansar.Quaternion MyQuaternion;
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Script.DefaultValueAttribute(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

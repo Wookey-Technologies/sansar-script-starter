@@ -1,0 +1,1421 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.LightComponent</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.LightComponent">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.LightComponent:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.LightComponent:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.LightComponent:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.LightComponent">LightComponent  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.LightComponent:Summary">The LightComponent handles interactions with lights.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.LightComponent:Signature">[Sansar.Script.Interface]<br />public class  <b>LightComponent</b> : <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.LightComponent:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.LightComponent:Docs:Remarks">
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.LightComponent:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Simulation.LightComponent.ComponentType">ComponentType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/ComponentType.html">ComponentType</a>
+                  </i>. The <a href="../Sansar.Simulation/LightComponent.html#F:Sansar.Simulation.LightComponent.ComponentType">LightComponent.ComponentType</a> of this component</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.LightComponent.ComponentId">ComponentId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/ComponentId.html">Sansar.Script.ComponentId</a>
+                  </i>. Retrieves the component id for this LightComponent.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.LightComponent.IsScriptable">IsScriptable</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. The scriptable flag for this LightComponent.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.LightComponent.LightType">LightType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/LightType.html">LightType</a>
+                  </i>. The light type for this LightComponent.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.LightComponent.Name">Name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. This LightComponent name, as specified in the editor.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.GetAngle()">GetAngle</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves the cone angle of this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.GetAngularFalloff()">GetAngularFalloff</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves the angular falloff of this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.GetCastsShadows()">GetCastsShadows</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Retrieves whether this LightComponent casts shadows.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.GetNearClip()">GetNearClip</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves the near clip distance of this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.GetNormalizedColor()">GetNormalizedColor</a>
+                  </b>()<nobr> : <a href="../Sansar/Color.html">Sansar.Color</a></nobr><blockquote>Retrieves the normalized color of this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.GetRange()">GetRange</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves the current range of this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.GetRelativeIntensity()">GetRelativeIntensity</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves the intensity of this LightComponent based on its normalized color.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.GetShadowPriority()">GetShadowPriority</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a></nobr><blockquote>Retrieves the shadow priority of this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetAngle(System.Single)">SetAngle</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets the cone angle for this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetAngle(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetAngle</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Sets the cone angle for this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetAngle(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetAngle</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the cone angle for this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single)">SetAngularFalloff</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets the angular falloff for this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetAngularFalloff</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Sets the angular falloff for this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetAngularFalloff</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the angular falloff for this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean)">SetCastsShadows</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>Sets whether shadows are cast from this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,Sansar.Script.ScriptBase.OperationComplete)">SetCastsShadows</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Sets whether shadows are cast from this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetCastsShadows</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets whether shadows are cast from this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single)">SetColorAndIntensity</a>
+                  </b>(<a href="../Sansar/Color.html">Sansar.Color</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets the color for this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetColorAndIntensity</a>
+                  </b>(<a href="../Sansar/Color.html">Sansar.Color</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Sets the color for this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetColorAndIntensity</a>
+                  </b>(<a href="../Sansar/Color.html">Sansar.Color</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the color for this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetNearClip(System.Single)">SetNearClip</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets the near clip plane distance for this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetNearClip</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Sets the near clip plane distance for this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetNearClip</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the near clip plane distance for this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetRange(System.Single)">SetRange</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets the range for this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetRange(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetRange</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Sets the range for this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetRange(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetRange</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the range for this LightComponent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32)">SetShadowPriority</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>)<blockquote>Sets the shadow priority of this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,Sansar.Script.ScriptBase.OperationComplete)">SetShadowPriority</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Sets the shadow priority of this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,System.Action{Sansar.Script.OperationCompleteEvent})">SetShadowPriority</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the shadow priority of this LightComponent of type LightType.SpotLight.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.LightComponent.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote> A string representation of this object. </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.LightComponent:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="P:Sansar.Simulation.LightComponent.ComponentId">ComponentId Property</h3>
+        <blockquote id="P:Sansar.Simulation.LightComponent.ComponentId:member">
+          <div class="msummary">Retrieves the component id for this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Script/ComponentId.html">Sansar.Script.ComponentId</a> <b>ComponentId</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.LightComponent.ComponentId:Value">The id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.LightComponent.ComponentId:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.LightComponent.ComponentId:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Simulation.LightComponent.ComponentType">ComponentType Field</h3>
+        <blockquote id="F:Sansar.Simulation.LightComponent.ComponentType:member">
+          <div class="msummary">The <a href="../Sansar.Simulation/LightComponent.html#F:Sansar.Simulation.LightComponent.ComponentType">LightComponent.ComponentType</a> of this component</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar.Simulation/ComponentType.html">ComponentType</a> <b>ComponentType</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.LightComponent.ComponentType:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.LightComponent.ComponentType:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.GetAngle()">GetAngle Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.GetAngle():member">
+          <div class="msummary">Retrieves the cone angle of this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetAngle</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.GetAngle():Returns">The angle in degrees.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetAngle():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetAngle():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.GetAngularFalloff()">GetAngularFalloff Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.GetAngularFalloff():member">
+          <div class="msummary">Retrieves the angular falloff of this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetAngularFalloff</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.GetAngularFalloff():Returns">The angular falloff.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetAngularFalloff():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetAngularFalloff():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.GetCastsShadows()">GetCastsShadows Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.GetCastsShadows():member">
+          <div class="msummary">Retrieves whether this LightComponent casts shadows.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>GetCastsShadows</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.GetCastsShadows():Returns">The shadow cast state.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetCastsShadows():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetCastsShadows():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.GetNearClip()">GetNearClip Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.GetNearClip():member">
+          <div class="msummary">Retrieves the near clip distance of this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetNearClip</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.GetNearClip():Returns">The near clip distance.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetNearClip():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetNearClip():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.GetNormalizedColor()">GetNormalizedColor Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.GetNormalizedColor():member">
+          <div class="msummary">Retrieves the normalized color of this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar/Color.html">Sansar.Color</a> <b>GetNormalizedColor</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.GetNormalizedColor():Returns">The normalized color.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetNormalizedColor():Remarks">This might not match values set via script or in the editor since the color of a light is internally multiplied by its intensity before being applied to the scene.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetNormalizedColor():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.GetRange()">GetRange Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.GetRange():member">
+          <div class="msummary">Retrieves the current range of this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetRange</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.GetRange():Returns">The range.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetRange():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetRange():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.GetRelativeIntensity()">GetRelativeIntensity Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.GetRelativeIntensity():member">
+          <div class="msummary">Retrieves the intensity of this LightComponent based on its normalized color.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetRelativeIntensity</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.GetRelativeIntensity():Returns">The intensity based on a normalized color.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetRelativeIntensity():Remarks">This might not match values set via script or in the editor since the color of a light is internally multiplied by its intensity before being applied to the scene.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetRelativeIntensity():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.GetShadowPriority()">GetShadowPriority Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.GetShadowPriority():member">
+          <div class="msummary">Retrieves the shadow priority of this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>GetShadowPriority</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.GetShadowPriority():Returns">The shadow priority.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetShadowPriority():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.GetShadowPriority():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.LightComponent.IsScriptable">IsScriptable Property</h3>
+        <blockquote id="P:Sansar.Simulation.LightComponent.IsScriptable:member">
+          <div class="msummary">The scriptable flag for this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsScriptable</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.LightComponent.IsScriptable:Value">Whether or not this light can have properties changed by script.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.LightComponent.IsScriptable:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.LightComponent.IsScriptable:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.LightComponent.LightType">LightType Property</h3>
+        <blockquote id="P:Sansar.Simulation.LightComponent.LightType:member">
+          <div class="msummary">The light type for this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/LightType.html">LightType</a> <b>LightType</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.LightComponent.LightType:Value">Light type enum for the light component.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.LightComponent.LightType:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.LightComponent.LightType:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.LightComponent.Name">Name Property</h3>
+        <blockquote id="P:Sansar.Simulation.LightComponent.Name:member">
+          <div class="msummary">This LightComponent name, as specified in the editor.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.LightComponent.Name:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.LightComponent.Name:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.LightComponent.Name:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single)">SetAngle Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single):member">
+          <div class="msummary">Sets the cone angle for this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetAngle</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> angle)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>angle</i>
+              </dt>
+              <dd>The angle in degrees, 1 to 160.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetAngle Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Sets the cone angle for this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetAngle</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> angle, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>angle</i>
+              </dt>
+              <dd>The angle in degrees, 1 to 160.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,Sansar.Script.ScriptBase.OperationComplete):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetAngle Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the cone angle for this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetAngle</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> angle, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>angle</i>
+              </dt>
+              <dd>The angle in degrees, 1 to 160.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngle(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single)">SetAngularFalloff Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single):member">
+          <div class="msummary">Sets the angular falloff for this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetAngularFalloff</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> angularFalloff)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>angularFalloff</i>
+              </dt>
+              <dd>The angular falloff, 0.01 to 1.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetAngularFalloff Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Sets the angular falloff for this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetAngularFalloff</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> angularFalloff, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>angularFalloff</i>
+              </dt>
+              <dd>The angular falloff, 0.01 to 1.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,Sansar.Script.ScriptBase.OperationComplete):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetAngularFalloff Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the angular falloff for this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetAngularFalloff</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> angularFalloff, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>angularFalloff</i>
+              </dt>
+              <dd>The angular falloff, 0.01 to 1.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetAngularFalloff(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean)">SetCastsShadows Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean):member">
+          <div class="msummary">Sets whether shadows are cast from this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetCastsShadows</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> castsShadows)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>castsShadows</i>
+              </dt>
+              <dd>True to cast shadows.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,Sansar.Script.ScriptBase.OperationComplete)">SetCastsShadows Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Sets whether shadows are cast from this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetCastsShadows</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> castsShadows, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>castsShadows</i>
+              </dt>
+              <dd>True to cast shadows.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetCastsShadows Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets whether shadows are cast from this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetCastsShadows</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> castsShadows, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>castsShadows</i>
+              </dt>
+              <dd>True to cast shadows.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetCastsShadows(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single)">SetColorAndIntensity Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single):member">
+          <div class="msummary">Sets the color for this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetColorAndIntensity</b> (<a href="../Sansar/Color.html">Sansar.Color</a> color, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> intensity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>color</i>
+              </dt>
+              <dd>The color.</dd>
+              <dt>
+                <i>intensity</i>
+              </dt>
+              <dd>The intensity, 0 to 100.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single):Remarks">The intensity is multiplied by the color and then applied to the light. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetColorAndIntensity Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Sets the color for this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetColorAndIntensity</b> (<a href="../Sansar/Color.html">Sansar.Color</a> color, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> intensity, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>color</i>
+              </dt>
+              <dd>The color.</dd>
+              <dt>
+                <i>intensity</i>
+              </dt>
+              <dd>The intensity, 0 to 100.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,Sansar.Script.ScriptBase.OperationComplete):Remarks">The intensity is multiplied by the color and then applied to the light. This asynchronous method queues the write then returns.
+             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetColorAndIntensity Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the color for this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetColorAndIntensity</b> (<a href="../Sansar/Color.html">Sansar.Color</a> color, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> intensity, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>color</i>
+              </dt>
+              <dd>The color.</dd>
+              <dt>
+                <i>intensity</i>
+              </dt>
+              <dd>The intensity, 0 to 100.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">The intensity is multiplied by the color and then applied to the light. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetColorAndIntensity(Sansar.Color,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single)">SetNearClip Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single):member">
+          <div class="msummary">Sets the near clip plane distance for this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetNearClip</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> nearClip)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>nearClip</i>
+              </dt>
+              <dd>The near clip distance, 0 to 500.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetNearClip Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Sets the near clip plane distance for this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetNearClip</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> nearClip, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>nearClip</i>
+              </dt>
+              <dd>The near clip distance, 0 to 500.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,Sansar.Script.ScriptBase.OperationComplete):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetNearClip Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the near clip plane distance for this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetNearClip</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> nearClip, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>nearClip</i>
+              </dt>
+              <dd>The near clip distance, 0 to 500.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This method only affects spot lights. This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetNearClip(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetRange(System.Single)">SetRange Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetRange(System.Single):member">
+          <div class="msummary">Sets the range for this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetRange</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> range)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>range</i>
+              </dt>
+              <dd>The range, 1 to 500.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetRange Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Sets the range for this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetRange</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> range, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>range</i>
+              </dt>
+              <dd>The range, 1 to 500.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,Sansar.Script.ScriptBase.OperationComplete):Remarks">This asynchronous method queues the write then returns.
+             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetRange Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the range for this LightComponent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetRange</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> range, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>range</i>
+              </dt>
+              <dd>The range, 1 to 500.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetRange(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32)">SetShadowPriority Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32):member">
+          <div class="msummary">Sets the shadow priority of this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetShadowPriority</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> shadowPriority)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32):Parameters">
+            <dl>
+              <dt>
+                <i>shadowPriority</i>
+              </dt>
+              <dd>Shadow priority.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32):Remarks">Set this to zero to turn off shadows. This method only affects spot lights. The renderer prioritizes shadows cast from higher priority lights first.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,Sansar.Script.ScriptBase.OperationComplete)">SetShadowPriority Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Sets the shadow priority of this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetShadowPriority</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> shadowPriority, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>shadowPriority</i>
+              </dt>
+              <dd>Shadow priority.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,Sansar.Script.ScriptBase.OperationComplete):Remarks">Set this to zero to turn off shadows. This method only affects spot lights. The renderer prioritizes shadows cast from higher priority lights first.
+             This asynchronous method queues the write then returns.
+             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,System.Action{Sansar.Script.OperationCompleteEvent})">SetShadowPriority Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the shadow priority of this LightComponent of type LightType.SpotLight.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetShadowPriority</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> shadowPriority, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>shadowPriority</i>
+              </dt>
+              <dd>Shadow priority.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Set this to zero to turn off shadows. This method only affects spot lights. The renderer prioritizes shadows cast from higher priority lights first.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.SetShadowPriority(System.UInt32,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.LightComponent.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Simulation.LightComponent.ToString():member">
+          <div class="msummary"> A string representation of this object. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.LightComponent.ToString():Returns">A string representation of this object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.ToString():Remarks">The format of this string may change between releases.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.LightComponent.ToString():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

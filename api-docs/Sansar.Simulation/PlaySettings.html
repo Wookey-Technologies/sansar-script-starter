@@ -1,0 +1,470 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.PlaySettings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.PlaySettings">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.PlaySettings:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.PlaySettings:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.PlaySettings:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.PlaySettings">PlaySettings  Struct</h1>
+    <p class="Summary" id="T:Sansar.Simulation.PlaySettings:Summary">
+            The PlaySettings class contains settings for playing sounds.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.PlaySettings:Signature">[Sansar.Script.Interface]<br />public struct  <b>PlaySettings</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.PlaySettings:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.PlaySettings:Docs:Remarks">See <a href="../Sansar.Simulation/AudioComponent.html#M:Sansar.Simulation.AudioComponent.PlaySoundOnComponent(Sansar.Simulation.SoundResource,Sansar.PlaySettings)">AudioComponent.PlaySoundOnComponent(SoundResource, Sansar.PlaySettings)</a>
+            and <a href="../Sansar.Simulation/AgentPrivate.html#M:Sansar.Simulation.AgentPrivate.PlaySound(Sansar.Simulation.SoundResource,Sansar.PlaySettings)">AgentPrivate.PlaySound(SoundResource, Sansar.PlaySettings)</a></div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.PlaySettings:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ValueType">ValueType</a>.
+							</p>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Simulation.PlaySettings.DontSync">DontSync</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            false = we adjust the offset per Agent so that the sound is synchronized to everyone.  This means late-joining Agents will hear sound at a greater offset.  true = turn this off, let everyone hear sound from start / your offset
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Simulation.PlaySettings.Looped">Looped</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a>
+                  </i>. 
+            The default play parameters for looped sounds.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Simulation.PlaySettings.Looping">Looping</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            false = play once, true = sound will loop.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Simulation.PlaySettings.Loudness">Loudness</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            Loudness in dB.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Simulation.PlaySettings.Offset">Offset</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            Play from time offset (in seconds).  Use DontSync if you want everyone to hear the sound from this offset regardless of when they join.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Simulation.PlaySettings.PitchShift">PitchShift</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            Relative pitch, in semitones. Changing a sound's pitch also affects its duration. For example, if you raise the pitch by 12 semitones (an octave), it plays twice as quickly.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Simulation.PlaySettings.PlayOnce">PlayOnce</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a>
+                  </i>. 
+            The default play parameters for sounds that play once.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.PlaySettings:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="F:Sansar.Simulation.PlaySettings.DontSync">DontSync Field</h3>
+        <blockquote id="F:Sansar.Simulation.PlaySettings.DontSync:member">
+          <div class="msummary">
+            false = we adjust the offset per Agent so that the sound is synchronized to everyone.  This means late-joining Agents will hear sound at a greater offset.  true = turn this off, let everyone hear sound from start / your offset
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>DontSync</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.DontSync:Remarks">The default value is false.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.DontSync:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Simulation.PlaySettings.Looped">Looped Field</h3>
+        <blockquote id="F:Sansar.Simulation.PlaySettings.Looped:member">
+          <div class="msummary">
+            The default play parameters for looped sounds.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public static readonly <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a> <b>Looped</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.Looped:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.Looped:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Simulation.PlaySettings.Looping">Looping Field</h3>
+        <blockquote id="F:Sansar.Simulation.PlaySettings.Looping:member">
+          <div class="msummary">
+            false = play once, true = sound will loop.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Looping</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.Looping:Remarks">The default value is false.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.Looping:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Simulation.PlaySettings.Loudness">Loudness Field</h3>
+        <blockquote id="F:Sansar.Simulation.PlaySettings.Loudness:member">
+          <div class="msummary">
+            Loudness in dB.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Loudness</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.Loudness:Remarks">Default is 0.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.Loudness:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Simulation.PlaySettings.Offset">Offset Field</h3>
+        <blockquote id="F:Sansar.Simulation.PlaySettings.Offset:member">
+          <div class="msummary">
+            Play from time offset (in seconds).  Use DontSync if you want everyone to hear the sound from this offset regardless of when they join.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Offset</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.Offset:Remarks">The default is 0.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.Offset:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Simulation.PlaySettings.PitchShift">PitchShift Field</h3>
+        <blockquote id="F:Sansar.Simulation.PlaySettings.PitchShift:member">
+          <div class="msummary">
+            Relative pitch, in semitones. Changing a sound's pitch also affects its duration. For example, if you raise the pitch by 12 semitones (an octave), it plays twice as quickly.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>PitchShift</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.PitchShift:Remarks">The default is 0.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.PitchShift:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Simulation.PlaySettings.PlayOnce">PlayOnce Field</h3>
+        <blockquote id="F:Sansar.Simulation.PlaySettings.PlayOnce:member">
+          <div class="msummary">
+            The default play parameters for sounds that play once.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public static readonly <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a> <b>PlayOnce</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.PlayOnce:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.PlaySettings.PlayOnce:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

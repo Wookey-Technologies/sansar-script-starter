@@ -1,0 +1,495 @@
+<html>
+  <head>
+    <title>Sansar.VectorExtensions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.VectorExtensions">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.VectorExtensions:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.VectorExtensions:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.VectorExtensions:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.VectorExtensions">VectorExtensions  Class</h1>
+    <p class="Summary" id="T:Sansar.VectorExtensions:Summary">
+            Additional methods for Mono.Simd.Vector4f.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.VectorExtensions:Signature">public static class  <b>VectorExtensions</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.VectorExtensions:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.VectorExtensions:Docs:Remarks">
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.VectorExtensions:Docs:Version Information">
+        <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.VectorExtensions.Cos(Mono.Simd.Vector4f)">Cos</a>
+                  </b>(<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>)<nobr> : <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a></nobr><blockquote>
+            Returns the approximate cosine of the four floats in the vector.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.VectorExtensions.CosSlow(Mono.Simd.Vector4f)">CosSlow</a>
+                  </b>(<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>)<nobr> : <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a></nobr><blockquote>
+            Returns the cosine each element of the vector.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.VectorExtensions.SelectWithMask(Mono.Simd.Vector4i,Mono.Simd.Vector4f,Mono.Simd.Vector4f)">SelectWithMask</a>
+                  </b>(<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4i">Mono.Simd.Vector4i</a>, <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>, <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>)<nobr> : <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a></nobr><blockquote>
+             Creates a new vector4f from the given vectors, selecting a component from 
+             sourceIfTrue if the corresponding component in the mask is -1 and from sourceIfFalse
+             if 0.
+             </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f)">Sin</a>
+                  </b>(<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>)<nobr> : <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a></nobr><blockquote>
+            Returns the approximate sine of the four floats in the vector.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.VectorExtensions.SinSlow(Mono.Simd.Vector4f)">SinSlow</a>
+                  </b>(<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>)<nobr> : <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a></nobr><blockquote>
+            Returns the sine each element of the vector.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.VectorExtensions.SinZeroPiOverTwo(Mono.Simd.Vector4f)">SinZeroPiOverTwo</a>
+                  </b>(<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>)<nobr> : <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a></nobr><blockquote>
+            Returns the approximate sine of each element in the vector.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.VectorExtensions:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.VectorExtensions.Cos(Mono.Simd.Vector4f)">Cos Method</h3>
+        <blockquote id="M:Sansar.VectorExtensions.Cos(Mono.Simd.Vector4f):member">
+          <div class="msummary">
+            Returns the approximate cosine of the four floats in the vector.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> <b>Cos</b> (<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> x)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.Cos(Mono.Simd.Vector4f):Parameters">
+            <dl>
+              <dt>
+                <i>x</i>
+              </dt>
+              <dd>A vector of 4 floats.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.Cos(Mono.Simd.Vector4f):Returns">The approximate cosine of each element.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.Cos(Mono.Simd.Vector4f):Remarks">Uses <a href="../Sansar/VectorExtensions.html#M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f)">VectorExtensions.Sin(Mono.Simd.Vector4f)</a></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.Cos(Mono.Simd.Vector4f):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.VectorExtensions.CosSlow(Mono.Simd.Vector4f)">CosSlow Method</h3>
+        <blockquote id="M:Sansar.VectorExtensions.CosSlow(Mono.Simd.Vector4f):member">
+          <div class="msummary">
+            Returns the cosine each element of the vector.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> <b>CosSlow</b> (<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> v1)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.CosSlow(Mono.Simd.Vector4f):Parameters">
+            <dl>
+              <dt>
+                <i>v1</i>
+              </dt>
+              <dd>A vector of 4 floats.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.CosSlow(Mono.Simd.Vector4f):Returns">The cosine of each element.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.CosSlow(Mono.Simd.Vector4f):Remarks">Uses <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.Math.Cos(System.Double)">Math.Cos(double)</a>. The results are more accurate than <a href="../Sansar/VectorExtensions.html#M:Sansar.VectorExtensions.Cos(Mono.Simd.Vector4f)">VectorExtensions.Cos(Mono.Simd.Vector4f)</a> but take 
+            approximately 3x the time to calculate.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.CosSlow(Mono.Simd.Vector4f):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.VectorExtensions.SelectWithMask(Mono.Simd.Vector4i,Mono.Simd.Vector4f,Mono.Simd.Vector4f)">SelectWithMask Method</h3>
+        <blockquote id="M:Sansar.VectorExtensions.SelectWithMask(Mono.Simd.Vector4i,Mono.Simd.Vector4f,Mono.Simd.Vector4f):member">
+          <div class="msummary">
+             Creates a new vector4f from the given vectors, selecting a component from 
+             sourceIfTrue if the corresponding component in the mask is -1 and from sourceIfFalse
+             if 0.
+             </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> <b>SelectWithMask</b> (<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4i">Mono.Simd.Vector4i</a> mask, <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> sourceIfTrue, <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> sourceIfFalse)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.SelectWithMask(Mono.Simd.Vector4i,Mono.Simd.Vector4f,Mono.Simd.Vector4f):Parameters">
+            <dl>
+              <dt>
+                <i>mask</i>
+              </dt>
+              <dd>The mask vector.</dd>
+              <dt>
+                <i>sourceIfTrue</i>
+              </dt>
+              <dd>The vector containing the elements that are selected if the mask is true.</dd>
+              <dt>
+                <i>sourceIfFalse</i>
+              </dt>
+              <dd>The vector containing the elements that are selected if the maks is false.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.SelectWithMask(Mono.Simd.Vector4i,Mono.Simd.Vector4f,Mono.Simd.Vector4f):Returns">A new vector with elements selected from the source vectors based on the mask.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.SelectWithMask(Mono.Simd.Vector4i,Mono.Simd.Vector4f,Mono.Simd.Vector4f):Remarks">Each element in the mask must be 0 or -1 or the results are undefined.
+             Courtesy of Mark++, http://markplusplus.wordpress.com/2007/03/14/fast-sse-select-operation/ 
+             <table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+             Vector4f left = new Vector4f(1, 2, 3, 4);
+             Vector4f right = new Vector4f(5, 6, 7, 8);
+            
+             // Select X and Z from right and Y and W from left
+             Vector4i mask = new Vector4i(0, -1, 0, -1);
+             var result = mask.SelectWithMask(left, right);
+             Assertions.AlmostEqual((Vector)new Vector4f(5, 2, 7, 4), result);
+             </pre></td></tr></table></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.SelectWithMask(Mono.Simd.Vector4i,Mono.Simd.Vector4f,Mono.Simd.Vector4f):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f)">Sin Method</h3>
+        <blockquote id="M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f):member">
+          <div class="msummary">
+            Returns the approximate sine of the four floats in the vector.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> <b>Sin</b> (<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> a)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>A vector of 4 floats</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f):Returns">A fast approximation of the sine of each of the 4 floats.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f):Remarks">Uses <a href="../Sansar/VectorExtensions.html#M:Sansar.VectorExtensions.SinZeroPiOverTwo(Mono.Simd.Vector4f)">VectorExtensions.SinZeroPiOverTwo(Mono.Simd.Vector4f)</a></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.VectorExtensions.SinSlow(Mono.Simd.Vector4f)">SinSlow Method</h3>
+        <blockquote id="M:Sansar.VectorExtensions.SinSlow(Mono.Simd.Vector4f):member">
+          <div class="msummary">
+            Returns the sine each element of the vector.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> <b>SinSlow</b> (<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> v1)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.SinSlow(Mono.Simd.Vector4f):Parameters">
+            <dl>
+              <dt>
+                <i>v1</i>
+              </dt>
+              <dd>A vector of 4 floats.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.SinSlow(Mono.Simd.Vector4f):Returns">The sine of each element.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.SinSlow(Mono.Simd.Vector4f):Remarks">Uses <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.Math.Sin(System.Double)">Math.Sin(double)</a>. The results are more accurate than <a href="../Sansar/VectorExtensions.html#M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f)">VectorExtensions.Sin(Mono.Simd.Vector4f)</a> but take 
+            approximately 3x the time to calculate.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.SinSlow(Mono.Simd.Vector4f):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.VectorExtensions.SinZeroPiOverTwo(Mono.Simd.Vector4f)">SinZeroPiOverTwo Method</h3>
+        <blockquote id="M:Sansar.VectorExtensions.SinZeroPiOverTwo(Mono.Simd.Vector4f):member">
+          <div class="msummary">
+            Returns the approximate sine of each element in the vector.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> <b>SinZeroPiOverTwo</b> (<i>this</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> x)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.SinZeroPiOverTwo(Mono.Simd.Vector4f):Parameters">
+            <dl>
+              <dt>
+                <i>x</i>
+              </dt>
+              <dd>A vector of 4 floats.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.VectorExtensions.SinZeroPiOverTwo(Mono.Simd.Vector4f):Returns">The approximate sine of each element.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.SinZeroPiOverTwo(Mono.Simd.Vector4f):Remarks">Results only valid if each element is in [0 and Pi/2]. For unconstrained input use <a href="../Sansar/VectorExtensions.html#M:Sansar.VectorExtensions.Sin(Mono.Simd.Vector4f)">VectorExtensions.Sin(Mono.Simd.Vector4f)</a>.
+            Calculated using the Maclaurin series as sin(x) = x - (x^3)/3! + (x^5)/5! - (x^7)/7! + (x^9)/9!
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.VectorExtensions.SinZeroPiOverTwo(Mono.Simd.Vector4f):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

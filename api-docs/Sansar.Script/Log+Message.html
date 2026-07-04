@@ -1,0 +1,443 @@
+<html>
+  <head>
+    <title>Sansar.Script.Log.Message</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar.Script Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Script.Log.Message">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Log.Message:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Log.Message:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Log.Message:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Script.Log.Message">Log.Message  Struct</h1>
+    <p class="Summary" id="T:Sansar.Script.Log.Message:Summary">
+            Represents a single console message.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Script.Log.Message:Signature">public struct  <b>Log.Message</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Script.Log.Message:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Log.Message:Docs:Remarks">
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Log.Message:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ValueType">ValueType</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Log.Message.LogLevel">LogLevel</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/LogLevel.html">LogLevel</a>
+                  </i>. 
+            Message severity for filtering.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Log.Message.ScriptId">ScriptId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/ScriptId.html">ScriptId</a>
+                  </i>. 
+            Source script id.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Log.Message.Tag">Tag</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Free form tag which can be used to filter messages.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Log.Message.Text">Text</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The text of the message.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Log.Message.TimeStamp">TimeStamp</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a>
+                  </i>. 
+            Time the message was written.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.Message.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            String representation of the message.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Script.Log.Message:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="P:Sansar.Script.Log.Message.LogLevel">LogLevel Property</h3>
+        <blockquote id="P:Sansar.Script.Log.Message.LogLevel:member">
+          <div class="msummary">
+            Message severity for filtering.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />[get: System.Runtime.CompilerServices.IsReadOnly]<br />public <a href="../Sansar.Script/LogLevel.html">LogLevel</a> <b>LogLevel</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Log.Message.LogLevel:Value">The <a href="../Sansar.Script/LogLevel.html">Sansar.Script.LogLevel</a> of the message.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.LogLevel:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.LogLevel:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Log.Message.ScriptId">ScriptId Property</h3>
+        <blockquote id="P:Sansar.Script.Log.Message.ScriptId:member">
+          <div class="msummary">
+            Source script id.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />[get: System.Runtime.CompilerServices.IsReadOnly]<br />public <a href="../Sansar.Script/ScriptId.html">ScriptId</a> <b>ScriptId</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Log.Message.ScriptId:Value">The <a href="../Sansar.Script/ScriptId.html">Sansar.Script.ScriptId</a> of the source of the message.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.ScriptId:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.ScriptId:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Log.Message.Tag">Tag Property</h3>
+        <blockquote id="P:Sansar.Script.Log.Message.Tag:member">
+          <div class="msummary">
+            Free form tag which can be used to filter messages.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />[get: System.Runtime.CompilerServices.IsReadOnly]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Tag</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Log.Message.Tag:Value">The tag of the message.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.Tag:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.Tag:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Log.Message.Text">Text Property</h3>
+        <blockquote id="P:Sansar.Script.Log.Message.Text:member">
+          <div class="msummary">
+            The text of the message.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />[get: System.Runtime.CompilerServices.IsReadOnly]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Text</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Log.Message.Text:Value">The text of the message.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.Text:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.Text:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Log.Message.TimeStamp">TimeStamp Property</h3>
+        <blockquote id="P:Sansar.Script.Log.Message.TimeStamp:member">
+          <div class="msummary">
+            Time the message was written.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a> <b>TimeStamp</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Log.Message.TimeStamp:Value">The timestamp of the message.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.TimeStamp:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Message.TimeStamp:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Log.Message.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Script.Log.Message.ToString():member">
+          <div class="msummary">
+            String representation of the message.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Log.Message.ToString():Returns">String representation of the message.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Message.ToString():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Message.ToString():Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

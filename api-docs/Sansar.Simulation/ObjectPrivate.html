@@ -1,0 +1,984 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.ObjectPrivate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.ObjectPrivate">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.ObjectPrivate:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.ObjectPrivate:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.ObjectPrivate:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.ObjectPrivate">ObjectPrivate  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.ObjectPrivate:Summary">Interface to an object in a <a href="../Sansar.Simulation/Cluster.html">Sansar.Simulation.Cluster</a> in the Scene.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.ObjectPrivate:Signature">[Sansar.Script.Interface]<br />public class  <b>ObjectPrivate</b> : <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.ObjectPrivate:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.ObjectPrivate:Docs:Remarks">Provides basic information about an object.</div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.ObjectPrivate:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.ForwardVector">ForwardVector</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Vector.html">Sansar.Vector</a>
+                  </i>. The forward vector of the ObjectPrivate in the world frame.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.InitialPosition">InitialPosition</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Vector.html">Sansar.Vector</a>
+                  </i>. The position of the ObjectPrivate in world frame before simulation started.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.InitialRotation">InitialRotation</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>
+                  </i>. The rotation of the ObjectPrivate in world frame before simulation started.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.IsMovable">IsMovable</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.Mover">Mover</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/Mover.html">Mover</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.Name">Name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. This ObjectPrivate name, as specified in the editor.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.ObjectId">ObjectId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/ObjectId.html">Sansar.Script.ObjectId</a>
+                  </i>. This ObjectPrivate Id. Unique to this Scene.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.Position">Position</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Vector.html">Sansar.Vector</a>
+                  </i>. The current position of the ObjectPrivate in world frame.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.RightVector">RightVector</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Vector.html">Sansar.Vector</a>
+                  </i>. The right vector of the ObjectPrivate in the world frame.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.Rotation">Rotation</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>
+                  </i>. The current rotation of the ObjectPrivate in the world frame.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.ObjectPrivate.UpVector">UpVector</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Vector.html">Sansar.Vector</a>
+                  </i>. The up vector of the ObjectPrivate in the world frame.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean)">AddInteraction</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Add an Interaction to the object to make it clickable.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean,System.Action{Sansar.Simulation.ObjectPrivate.AddInteractionData})">AddInteraction</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;ObjectPrivate.AddInteractionData&gt;</a>)<blockquote>
+            Add an Interaction to the object to make it clickable.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.FindScripts``1()">FindScripts&lt;TInterface&gt;</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;TInterface&gt;</a></nobr><blockquote>
+            Looks up scripts on this ObjectPrivate that match the interface type.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.FindScripts``1(System.String)">FindScripts&lt;TInterface&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;TInterface&gt;</a></nobr><blockquote>
+            Looks up scripts on this ObjectPrivate that match the interface type by class name.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.GetComponent(Sansar.Simulation.ComponentType,System.UInt32)">GetComponent</a>
+                  </b>(<a href="../Sansar.Simulation/ComponentType.html">ComponentType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a></nobr><blockquote>
+            Get interfaces to the components that are available at runtime.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.GetComponentCount(Sansar.Simulation.ComponentType)">GetComponentCount</a>
+                  </b>(<a href="../Sansar.Simulation/ComponentType.html">ComponentType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a></nobr><blockquote>
+            Get the number of components of a particular component type. <a href="../Sansar.Simulation/ComponentType.html">Sansar.Simulation.ComponentType</a></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.LookupScripts()">LookupScripts</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[]</nobr><blockquote>
+            Get handles to the scripts on the ObjectPrivate
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote> A string representation of this object. </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.TryGetComponent``1(System.UInt32,``0@)">TryGetComponent&lt;ComponentClass&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>, <i>out</i> <i title="The component type. ">ComponentClass</i>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Try to get a component of a particular type from this ObjectPrivate
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.ObjectPrivate.TryGetFirstComponent``1(``0@)">TryGetFirstComponent&lt;ComponentClass&gt;</a>
+                  </b>(<i>out</i> <i title="The component type.  and ">ComponentClass</i>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Try to get the first component of a specific type on this ObjectPrivate
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.ObjectPrivate:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean)">AddInteraction Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean):member">
+          <div class="msummary">
+            Add an Interaction to the object to make it clickable.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddInteraction</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prompt, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enabled)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>prompt</i>
+              </dt>
+              <dd>The string prompt to show on hover, leave blank to only highlight the object.</dd>
+              <dt>
+                <i>enabled</i>
+              </dt>
+              <dd>Whether or not the interaction is enabled.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean):Remarks">The <a href="../Sansar.Simulation/ObjectPrivate+AddInteractionData.html">Sansar.Simulation.ObjectPrivate.AddInteractionData</a> will include the Interaction object which can be subscribed to.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean,System.Action{Sansar.Simulation.ObjectPrivate.AddInteractionData})">AddInteraction Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean,System.Action{Sansar.Simulation.ObjectPrivate.AddInteractionData}):member">
+          <div class="msummary">
+            Add an Interaction to the object to make it clickable.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddInteraction</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> prompt, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enabled, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;ObjectPrivate.AddInteractionData&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean,System.Action{Sansar.Simulation.ObjectPrivate.AddInteractionData}):Parameters">
+            <dl>
+              <dt>
+                <i>prompt</i>
+              </dt>
+              <dd>The string prompt to show on hover, leave blank to only highlight the object.</dd>
+              <dt>
+                <i>enabled</i>
+              </dt>
+              <dd>Whether or not the interaction is enabled.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean,System.Action{Sansar.Simulation.ObjectPrivate.AddInteractionData}):Remarks">The <a href="../Sansar.Simulation/ObjectPrivate+AddInteractionData.html">Sansar.Simulation.ObjectPrivate.AddInteractionData</a> will include the Interaction object which can be subscribed to.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.AddInteraction(System.String,System.Boolean,System.Action{Sansar.Simulation.ObjectPrivate.AddInteractionData}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1()">FindScripts&lt;TInterface&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1():member">
+          <div class="msummary">
+            Looks up scripts on this ObjectPrivate that match the interface type.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[Sansar.Script.NonReflective]<br />[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Sansar.Simulation.ObjectPrivate/&lt;FindScripts&gt;d__52`1))]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;TInterface&gt;</a> <b>FindScripts&lt;TInterface&gt;</b> ()<br /> where TInterface : class</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1():Type Parameters">
+            <dl>
+              <dt>
+                <i>TInterface</i>
+              </dt>
+              <dd>The interface to find.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1():Returns">An IEnumerable which contains all scripts of the given type name on this ObjectPrivate that match the given interface.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1():Remarks">The name given corresponds to the <a href="javascript:alert(&quot;Documentation not found.&quot;)">Type.FullName</a> of the main script class. Multiple scripts may define unrelated types of the same name, but only registered scripts that match the interface of TInterface will be returned.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1(System.String)">FindScripts&lt;TInterface&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1(System.String):member">
+          <div class="msummary">
+            Looks up scripts on this ObjectPrivate that match the interface type by class name.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[Sansar.Script.NonReflective]<br />[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Sansar.Simulation.ObjectPrivate/&lt;FindScripts&gt;d__51`1))]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;TInterface&gt;</a> <b>FindScripts&lt;TInterface&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)<br /> where TInterface : class</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1(System.String):Type Parameters">
+            <dl>
+              <dt>
+                <i>TInterface</i>
+              </dt>
+              <dd>The interface to find.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>The type name of the script's class to find.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1(System.String):Returns">An IEnumerable which contains all scripts of the given type name on this ObjectPrivate that match the given interface.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1(System.String):Remarks">The name given corresponds to the <a href="javascript:alert(&quot;Documentation not found.&quot;)">Type.FullName</a> of the main script class. Multiple scripts may define unrelated types of the same name, but only registered scripts that match the interface of TInterface will be returned.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.FindScripts``1(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.ForwardVector">ForwardVector Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.ForwardVector:member">
+          <div class="msummary">The forward vector of the ObjectPrivate in the world frame.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>ForwardVector</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.ForwardVector:Value">A normalized vector.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.ForwardVector:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.ForwardVector:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.GetComponent(Sansar.Simulation.ComponentType,System.UInt32)">GetComponent Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.GetComponent(Sansar.Simulation.ComponentType,System.UInt32):member">
+          <div class="msummary">
+            Get interfaces to the components that are available at runtime.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>GetComponent</b> (<a href="../Sansar.Simulation/ComponentType.html">ComponentType</a> componentType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> index)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.GetComponent(Sansar.Simulation.ComponentType,System.UInt32):Parameters">
+            <dl>
+              <dt>
+                <i>componentType</i>
+              </dt>
+              <dd>
+                <a href="../Sansar.Simulation/ComponentType.html">Sansar.Simulation.ComponentType</a>.</dd>
+              <dt>
+                <i>index</i>
+              </dt>
+              <dd>uint32 index</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.GetComponent(Sansar.Simulation.ComponentType,System.UInt32):Returns">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.GetComponent(Sansar.Simulation.ComponentType,System.UInt32):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.GetComponent(Sansar.Simulation.ComponentType,System.UInt32):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.GetComponentCount(Sansar.Simulation.ComponentType)">GetComponentCount Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.GetComponentCount(Sansar.Simulation.ComponentType):member">
+          <div class="msummary">
+            Get the number of components of a particular component type. <a href="../Sansar.Simulation/ComponentType.html">Sansar.Simulation.ComponentType</a></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>GetComponentCount</b> (<a href="../Sansar.Simulation/ComponentType.html">ComponentType</a> componentType)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.GetComponentCount(Sansar.Simulation.ComponentType):Parameters">
+            <dl>
+              <dt>
+                <i>componentType</i>
+              </dt>
+              <dd>
+                <a href="../Sansar.Simulation/ComponentType.html">Sansar.Simulation.ComponentType</a>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.GetComponentCount(Sansar.Simulation.ComponentType):Returns">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.GetComponentCount(Sansar.Simulation.ComponentType):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.GetComponentCount(Sansar.Simulation.ComponentType):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.InitialPosition">InitialPosition Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.InitialPosition:member">
+          <div class="msummary">The position of the ObjectPrivate in world frame before simulation started.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>InitialPosition</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.InitialPosition:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.InitialPosition:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.InitialPosition:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.InitialRotation">InitialRotation Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.InitialRotation:member">
+          <div class="msummary">The rotation of the ObjectPrivate in world frame before simulation started.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> <b>InitialRotation</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.InitialRotation:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.InitialRotation:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.InitialRotation:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.IsMovable">IsMovable Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.IsMovable:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsMovable</b>  { get; }</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.IsMovable:See Also">
+            <div>
+              <a href="../Sansar.Simulation/Mover.html">Mover</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.IsMovable:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.IsMovable:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.IsMovable:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.LookupScripts()">LookupScripts Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.LookupScripts():member">
+          <div class="msummary">
+            Get handles to the scripts on the ObjectPrivate
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] <b>LookupScripts</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.LookupScripts():Returns">object [] of Objects of the scripts on the ObjectPrivate</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.LookupScripts():Remarks">The returned Objects are the created script types. For example if a script on the object is <tt>public MyTestObject : ObjectScript</tt> then the Objects in the array will be of type <tt>MyTestObject</tt>.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.LookupScripts():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.Mover">Mover Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.Mover:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/Mover.html">Mover</a> <b>Mover</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.Mover:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.Mover:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.Mover:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.Name">Name Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.Name:member">
+          <div class="msummary">This ObjectPrivate name, as specified in the editor.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.Name:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.Name:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.Name:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.ObjectId">ObjectId Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.ObjectId:member">
+          <div class="msummary">This ObjectPrivate Id. Unique to this Scene.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Script/ObjectId.html">Sansar.Script.ObjectId</a> <b>ObjectId</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.ObjectId:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.ObjectId:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.ObjectId:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.Position">Position Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.Position:member">
+          <div class="msummary">The current position of the ObjectPrivate in world frame.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>Position</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.Position:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.Position:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.Position:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.RightVector">RightVector Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.RightVector:member">
+          <div class="msummary">The right vector of the ObjectPrivate in the world frame.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>RightVector</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.RightVector:Value">A normalized vector.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.RightVector:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.RightVector:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.Rotation">Rotation Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.Rotation:member">
+          <div class="msummary">The current rotation of the ObjectPrivate in the world frame.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> <b>Rotation</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.Rotation:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.Rotation:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.Rotation:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.ToString():member">
+          <div class="msummary"> A string representation of this object. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.ToString():Returns">A string representation of this object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.ToString():Remarks">The format of this string may change between releases.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.ToString():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.TryGetComponent``1(System.UInt32,``0@)">TryGetComponent&lt;ComponentClass&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.TryGetComponent``1(System.UInt32,``0@):member">
+          <div class="msummary">
+            Try to get a component of a particular type from this ObjectPrivate
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryGetComponent&lt;ComponentClass&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> index, <i>out</i> <i title="The component type. ">ComponentClass</i> component)<br /> where ComponentClass : class</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetComponent``1(System.UInt32,``0@):Type Parameters">
+            <dl>
+              <dt>
+                <i>ComponentClass</i>
+              </dt>
+              <dd>The component type. <a href="../Sansar.Simulation/AnimationComponent.html">Sansar.Simulation.AnimationComponent</a><a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetComponent``1(System.UInt32,``0@):Parameters">
+            <dl>
+              <dt>
+                <i>index</i>
+              </dt>
+              <dd>The index of this component type to get. zero based index.</dd>
+              <dt>
+                <i>component</i>
+              </dt>
+              <dd>The component out parameter of the correct type to get.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetComponent``1(System.UInt32,``0@):Returns">True if a component of the correct type at index is found, false otherwise.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetComponent``1(System.UInt32,``0@):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetComponent``1(System.UInt32,``0@):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.ObjectPrivate.TryGetFirstComponent``1(``0@)">TryGetFirstComponent&lt;ComponentClass&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Simulation.ObjectPrivate.TryGetFirstComponent``1(``0@):member">
+          <div class="msummary">
+            Try to get the first component of a specific type on this ObjectPrivate
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryGetFirstComponent&lt;ComponentClass&gt;</b> (<i>out</i> <i title="The component type.  and ">ComponentClass</i> component)<br /> where ComponentClass : class</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetFirstComponent``1(``0@):Type Parameters">
+            <dl>
+              <dt>
+                <i>ComponentClass</i>
+              </dt>
+              <dd>The component type. <a href="../Sansar.Simulation/AnimationComponent.html">Sansar.Simulation.AnimationComponent</a> and <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a></dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetFirstComponent``1(``0@):Parameters">
+            <dl>
+              <dt>
+                <i>component</i>
+              </dt>
+              <dd>Out parameter of the correct component type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetFirstComponent``1(``0@):Returns">Returns true if able to get a component of the correct type on this ObjectPrivate.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetFirstComponent``1(``0@):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.ObjectPrivate.TryGetFirstComponent``1(``0@):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.ObjectPrivate.UpVector">UpVector Property</h3>
+        <blockquote id="P:Sansar.Simulation.ObjectPrivate.UpVector:member">
+          <div class="msummary">The up vector of the ObjectPrivate in the world frame.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>UpVector</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.ObjectPrivate.UpVector:Value">A normalized vector.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.UpVector:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.ObjectPrivate.UpVector:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1370 @@
+<html>
+  <head>
+    <title>Sansar.Quaternion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Quaternion">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Quaternion:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Quaternion:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Quaternion:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Quaternion">Quaternion  Struct</h1>
+    <p class="Summary" id="T:Sansar.Quaternion:Summary">
+            Represents a quaternion orientation.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Quaternion:Signature">public struct  <b>Quaternion</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Quaternion:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Quaternion:Docs:Remarks">
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Quaternion:Docs:Version Information">
+        <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ValueType">ValueType</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Quaternion(Mono.Simd.Vector4f@)">Quaternion</a>
+                    </b>(<i>ref</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>)</div>
+                </td>
+                <td>
+            Creates a new quaternion with the supplied values.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Quaternion(System.Single,System.Single,System.Single,System.Single)">Quaternion</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)</div>
+                </td>
+                <td>
+            Creates a new quaternion with the supplied values.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Quaternion.Identity">Identity</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Quaternion.html">Quaternion</a>
+                  </i>. 
+            The identity quaternion.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                    <i>default property</i>
+                  </div>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Quaternion.Item(System.Int32)">Item</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            Allows getting coordinates by index.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Quaternion.W">W</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            The W coordinate of the quaternion.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Quaternion.X">X</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            The X coordinate of the quaternion.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Quaternion.Y">Y</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            The Y coordinate of the quaternion.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Quaternion.Z">Z</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            The Z coordinate of the quaternion.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.Dot(Sansar.Quaternion@)">Dot</a>
+                  </b>(<i>ref</i> <a href="../Sansar/Quaternion.html">Quaternion</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>
+            Performs a scalar or dot product.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.FromAngleAxis(System.Single,Sansar.Vector@)">FromAngleAxis</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <i>ref</i> <a href="../Sansar/Vector.html">Vector</a>)<nobr> : <a href="../Sansar/Quaternion.html">Quaternion</a></nobr><blockquote>
+            Generates the corresponding quaternion.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.FromEulerAngles(Sansar.Vector@)">FromEulerAngles</a>
+                  </b>(<i>ref</i> <a href="../Sansar/Vector.html">Vector</a>)<nobr> : <a href="../Sansar/Quaternion.html">Quaternion</a></nobr><blockquote>
+            Generates the corresponding quaternion.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.FromLook(Sansar.Vector,Sansar.Vector)">FromLook</a>
+                  </b>(<a href="../Sansar/Vector.html">Vector</a>, <a href="../Sansar/Vector.html">Vector</a>)<nobr> : <a href="../Sansar/Quaternion.html">Quaternion</a></nobr><blockquote>
+            Creates a new rotation with the specified direction and up vectors.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.FromLookOrthoNormal(Sansar.Vector@,Sansar.Vector@,Sansar.Vector@)">FromLookOrthoNormal</a>
+                  </b>(<i>ref</i> <a href="../Sansar/Vector.html">Vector</a>, <i>ref</i> <a href="../Sansar/Vector.html">Vector</a>, <i>ref</i> <a href="../Sansar/Vector.html">Vector</a>)<nobr> : <a href="../Sansar/Quaternion.html">Quaternion</a></nobr><blockquote>
+            Creates a new rotation with the specified direction and up vectors.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.GetEulerAngles()">GetEulerAngles</a>
+                  </b>()<nobr> : <a href="../Sansar/Vector.html">Vector</a></nobr><blockquote>
+            Converts this rotation to a vector of euler angles
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.Inverse()">Inverse</a>
+                  </b>()<nobr> : <a href="../Sansar/Quaternion.html">Quaternion</a></nobr><blockquote>
+            Gets the Inverse of the quaternion.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.Length()">Length</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>
+            Calculates the length of this quaternion.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.LengthSquared()">LengthSquared</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>
+            Calculates the length squared of this quaternion.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.Normalized()">Normalized</a>
+                  </b>()<nobr> : <a href="../Sansar/Quaternion.html">Quaternion</a></nobr><blockquote>
+            Returns a quaternion with the same orientation and unit length.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.Parse(System.String)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Sansar/Quaternion.html">Quaternion</a></nobr><blockquote>
+            Parse a Quaternion from a string.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.ShortestRotation(Sansar.Vector@,Sansar.Vector@)">ShortestRotation</a>
+                  </b>(<i>ref</i> <a href="../Sansar/Vector.html">Vector</a>, <i>ref</i> <a href="../Sansar/Vector.html">Vector</a>)<nobr> : <a href="../Sansar/Quaternion.html">Quaternion</a></nobr><blockquote>
+            Generates the shortest rotation quaternion to rotate from one vector to another.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.ToAngleAxis(System.Single@,Sansar.Vector@)">ToAngleAxis</a>
+                  </b>(<i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <i>out</i> <a href="../Sansar/Vector.html">Vector</a>)<blockquote>
+            Gets the angle-axis representation
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Generates a string representation of the quaternion.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.ToString(System.String)">ToString</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Generates a string representation of the quaternion.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Quaternion.TryParse(System.String,Sansar.Quaternion@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>out</i> <a href="../Sansar/Quaternion.html">Quaternion</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Try to parse a Quaternion from a string.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Operators</h2>
+        <div class="SectionBox" id="Public Operators">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Quaternion.op_Multiply(Sansar.Quaternion@,Sansar.Quaternion@)">Multiply</a>
+                  </b>(<i>ref</i> <a href="../Sansar/Quaternion.html">Quaternion</a>, <i>ref</i> <a href="../Sansar/Quaternion.html">Quaternion</a>)</td>
+                <td>
+            Multiplies two quaternions.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Quaternion.op_UnaryNegation(Sansar.Quaternion)">UnaryNegation</a>
+                  </b>
+                </td>
+                <td>
+            Negates a quaternion
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Quaternion.op_Implicit(Mono.Simd.Vector4f)~Sansar.Quaternion">Conversion to Sansar.Quaternion</a>
+                  </b>(Implicit)</td>
+                <td>
+            Converts a Mono.Simd.Vector4f to a quaternion.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Quaternion.op_Implicit(Sansar.Quaternion)~Mono.Simd.Vector4f">Conversion to Mono.Simd.Vector4f</a>
+                  </b>(Implicit)</td>
+                <td>
+            Converts a quaternion to a Mono.Simd.Vector4f.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Quaternion:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Sansar.Quaternion(Mono.Simd.Vector4f@)">Quaternion Constructor</h3>
+        <blockquote id="C:Sansar.Quaternion(Mono.Simd.Vector4f@):member">
+          <div class="msummary">
+            Creates a new quaternion with the supplied values.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Quaternion</b> ([System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> v)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Quaternion(Mono.Simd.Vector4f@):Parameters">
+            <dl>
+              <dt>
+                <i>v</i>
+              </dt>
+              <dd>Initializes the quaternion from a <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Quaternion(Mono.Simd.Vector4f@):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Quaternion(Mono.Simd.Vector4f@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Quaternion(System.Single,System.Single,System.Single,System.Single)">Quaternion Constructor</h3>
+        <blockquote id="C:Sansar.Quaternion(System.Single,System.Single,System.Single,System.Single):member">
+          <div class="msummary">
+            Creates a new quaternion with the supplied values.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Quaternion</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> x, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> y, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> z, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> w)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Quaternion(System.Single,System.Single,System.Single,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>x</i>
+              </dt>
+              <dd>The x coordinate.</dd>
+              <dt>
+                <i>y</i>
+              </dt>
+              <dd>The y coordinate.</dd>
+              <dt>
+                <i>z</i>
+              </dt>
+              <dd>The z coordinate.</dd>
+              <dt>
+                <i>w</i>
+              </dt>
+              <dd>The w coordinate.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Quaternion(System.Single,System.Single,System.Single,System.Single):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Quaternion(System.Single,System.Single,System.Single,System.Single):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.Dot(Sansar.Quaternion@)">Dot Method</h3>
+        <blockquote id="M:Sansar.Quaternion.Dot(Sansar.Quaternion@):member">
+          <div class="msummary">
+            Performs a scalar or dot product.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Dot</b> ([System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Quaternion.html">Quaternion</a> b)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.Dot(Sansar.Quaternion@):Parameters">
+            <dl>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second quaternion.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.Dot(Sansar.Quaternion@):Returns">Returns X*b.X+Y*b.Y+Z*b.Z+W*b.W </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Dot(Sansar.Quaternion@):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Dot(Sansar.Quaternion@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.FromAngleAxis(System.Single,Sansar.Vector@)">FromAngleAxis Method</h3>
+        <blockquote id="M:Sansar.Quaternion.FromAngleAxis(System.Single,Sansar.Vector@):member">
+          <div class="msummary">
+            Generates the corresponding quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Quaternion.html">Quaternion</a> <b>FromAngleAxis</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> angle, [System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Vector.html">Vector</a> axis)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.FromAngleAxis(System.Single,Sansar.Vector@):Parameters">
+            <dl>
+              <dt>
+                <i>angle</i>
+              </dt>
+              <dd>Angle of rotation in radians</dd>
+              <dt>
+                <i>axis</i>
+              </dt>
+              <dd>A normalized axis of rotation</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.FromAngleAxis(System.Single,Sansar.Vector@):Returns">The corresponding quaternion.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.FromAngleAxis(System.Single,Sansar.Vector@):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.FromAngleAxis(System.Single,Sansar.Vector@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.FromEulerAngles(Sansar.Vector@)">FromEulerAngles Method</h3>
+        <blockquote id="M:Sansar.Quaternion.FromEulerAngles(Sansar.Vector@):member">
+          <div class="msummary">
+            Generates the corresponding quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Quaternion.html">Quaternion</a> <b>FromEulerAngles</b> ([System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Vector.html">Vector</a> a)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.FromEulerAngles(Sansar.Vector@):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>A vector of angles in radians.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.FromEulerAngles(Sansar.Vector@):Returns">The corresponding quaternion.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.FromEulerAngles(Sansar.Vector@):Remarks">Rotates first around X (local/global coincide), then around new local Y, and finally around new local Z.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.FromEulerAngles(Sansar.Vector@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.FromLook(Sansar.Vector,Sansar.Vector)">FromLook Method</h3>
+        <blockquote id="M:Sansar.Quaternion.FromLook(Sansar.Vector,Sansar.Vector):member">
+          <div class="msummary">
+            Creates a new rotation with the specified direction and up vectors.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Quaternion.html">Quaternion</a> <b>FromLook</b> (<a href="../Sansar/Vector.html">Vector</a> facing, <a href="../Sansar/Vector.html">Vector</a> up)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.FromLook(Sansar.Vector,Sansar.Vector):Parameters">
+            <dl>
+              <dt>
+                <i>facing</i>
+              </dt>
+              <dd>The direction to look.</dd>
+              <dt>
+                <i>up</i>
+              </dt>
+              <dd>The up direction.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.FromLook(Sansar.Vector,Sansar.Vector):Returns">A new quaternion representing this rotation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.FromLook(Sansar.Vector,Sansar.Vector):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.FromLook(Sansar.Vector,Sansar.Vector):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.FromLookOrthoNormal(Sansar.Vector@,Sansar.Vector@,Sansar.Vector@)">FromLookOrthoNormal Method</h3>
+        <blockquote id="M:Sansar.Quaternion.FromLookOrthoNormal(Sansar.Vector@,Sansar.Vector@,Sansar.Vector@):member">
+          <div class="msummary">
+            Creates a new rotation with the specified direction and up vectors.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Quaternion.html">Quaternion</a> <b>FromLookOrthoNormal</b> ([System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Vector.html">Vector</a> facing, [System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Vector.html">Vector</a> up, [System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Vector.html">Vector</a> left)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.FromLookOrthoNormal(Sansar.Vector@,Sansar.Vector@,Sansar.Vector@):Parameters">
+            <dl>
+              <dt>
+                <i>facing</i>
+              </dt>
+              <dd>The direction to look.</dd>
+              <dt>
+                <i>up</i>
+              </dt>
+              <dd>The up direction.</dd>
+              <dt>
+                <i>left</i>
+              </dt>
+              <dd>The left direction.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.FromLookOrthoNormal(Sansar.Vector@,Sansar.Vector@,Sansar.Vector@):Returns">A new quaternion representing this rotation.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.FromLookOrthoNormal(Sansar.Vector@,Sansar.Vector@,Sansar.Vector@):Remarks">The 3 given vectors must be orthonormal. See <a href="../Sansar/Vector.html#M:Sansar.Vector.Orthonormalize(Sansar.Vector@,Sansar.Vector@)">Vector.Orthonormalize(Vector@, Vector@)</a></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.FromLookOrthoNormal(Sansar.Vector@,Sansar.Vector@,Sansar.Vector@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.GetEulerAngles()">GetEulerAngles Method</h3>
+        <blockquote id="M:Sansar.Quaternion.GetEulerAngles():member">
+          <div class="msummary">
+            Converts this rotation to a vector of euler angles
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Sansar/Vector.html">Vector</a> <b>GetEulerAngles</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.GetEulerAngles():Returns">A vector of angles in radians corresponding to this quaternion.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.GetEulerAngles():Remarks">Returns angles which can be passed to <a href="../Sansar/Quaternion.html#M:Sansar.Quaternion.FromEulerAngles(Sansar.Vector@)">Quaternion.FromEulerAngles(Vector@)</a> to create this quaternion.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.GetEulerAngles():Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Quaternion.Identity">Identity Field</h3>
+        <blockquote id="F:Sansar.Quaternion.Identity:member">
+          <div class="msummary">
+            The identity quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Quaternion.html">Quaternion</a> <b>Identity</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Quaternion.Identity:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Quaternion.Identity:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.Inverse()">Inverse Method</h3>
+        <blockquote id="M:Sansar.Quaternion.Inverse():member">
+          <div class="msummary">
+            Gets the Inverse of the quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Sansar/Quaternion.html">Quaternion</a> <b>Inverse</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.Inverse():Returns">A quaternion inverse, such that q * q.Inverse() == q.Inverse() * q == Quaternion.Identity</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Inverse():Remarks">Results are undefined if the length of the quaternion is close to 0.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Inverse():Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Quaternion.Item(System.Int32)">Item Property</h3>
+        <blockquote id="P:Sansar.Quaternion.Item(System.Int32):member">
+          <div class="msummary">
+            Allows getting coordinates by index.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <p>
+              <i>This is the default property for this class.</i>
+            </p>public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> this [<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> index] { get; set; }</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Quaternion.Item(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>index</i>
+              </dt>
+              <dd>0=&gt;X, 1=&gt;Y, 2=&gt;Z, 3=&gt;W</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Quaternion.Item(System.Int32):Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.Item(System.Int32):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.Item(System.Int32):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.Length()">Length Method</h3>
+        <blockquote id="M:Sansar.Quaternion.Length():member">
+          <div class="msummary">
+            Calculates the length of this quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Length</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.Length():Returns">The length of the quaternion.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Length():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Length():Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.LengthSquared()">LengthSquared Method</h3>
+        <blockquote id="M:Sansar.Quaternion.LengthSquared():member">
+          <div class="msummary">
+            Calculates the length squared of this quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>LengthSquared</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.LengthSquared():Returns">The magnitude of the vector.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.LengthSquared():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.LengthSquared():Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.Normalized()">Normalized Method</h3>
+        <blockquote id="M:Sansar.Quaternion.Normalized():member">
+          <div class="msummary">
+            Returns a quaternion with the same orientation and unit length.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Sansar/Quaternion.html">Quaternion</a> <b>Normalized</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.Normalized():Returns">A quaternion with the same orientation and unit length.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Normalized():Remarks">Results are undefined if the length of the quaternion is close to 0.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Normalized():Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.op_Implicit(Mono.Simd.Vector4f)~Sansar.Quaternion">Conversion Method</h3>
+        <blockquote id="M:Sansar.Quaternion.op_Implicit(Mono.Simd.Vector4f)~Sansar.Quaternion:member">
+          <div class="msummary">
+            Converts a Mono.Simd.Vector4f to a quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static implicit operator <a href="../Sansar/Quaternion.html">Quaternion</a> (<a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> v)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.op_Implicit(Mono.Simd.Vector4f)~Sansar.Quaternion:Parameters">
+            <dl>
+              <dt>
+                <i>v</i>
+              </dt>
+              <dd>The vector to convert</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.op_Implicit(Mono.Simd.Vector4f)~Sansar.Quaternion:Returns">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.op_Implicit(Mono.Simd.Vector4f)~Sansar.Quaternion:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.op_Implicit(Mono.Simd.Vector4f)~Sansar.Quaternion:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.op_Implicit(Sansar.Quaternion)~Mono.Simd.Vector4f">Conversion Method</h3>
+        <blockquote id="M:Sansar.Quaternion.op_Implicit(Sansar.Quaternion)~Mono.Simd.Vector4f:member">
+          <div class="msummary">
+            Converts a quaternion to a Mono.Simd.Vector4f.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static implicit operator <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> (<a href="../Sansar/Quaternion.html">Quaternion</a> v)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.op_Implicit(Sansar.Quaternion)~Mono.Simd.Vector4f:Parameters">
+            <dl>
+              <dt>
+                <i>v</i>
+              </dt>
+              <dd>The quaternion to convert</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.op_Implicit(Sansar.Quaternion)~Mono.Simd.Vector4f:Returns">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.op_Implicit(Sansar.Quaternion)~Mono.Simd.Vector4f:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.op_Implicit(Sansar.Quaternion)~Mono.Simd.Vector4f:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.op_Multiply(Sansar.Quaternion@,Sansar.Quaternion@)">op_Multiply Method</h3>
+        <blockquote id="M:Sansar.Quaternion.op_Multiply(Sansar.Quaternion@,Sansar.Quaternion@):member">
+          <div class="msummary">
+            Multiplies two quaternions.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Quaternion.html">Quaternion</a> operator* ([System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Quaternion.html">Quaternion</a> a, [System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Quaternion.html">Quaternion</a> b)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.op_Multiply(Sansar.Quaternion@,Sansar.Quaternion@):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The first quaternion</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second quaternion</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.op_Multiply(Sansar.Quaternion@,Sansar.Quaternion@):Returns">Returns the composed orientation for the two quaternions.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.op_Multiply(Sansar.Quaternion@,Sansar.Quaternion@):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.op_Multiply(Sansar.Quaternion@,Sansar.Quaternion@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.op_UnaryNegation(Sansar.Quaternion)">op_UnaryNegation Method</h3>
+        <blockquote id="M:Sansar.Quaternion.op_UnaryNegation(Sansar.Quaternion):member">
+          <div class="msummary">
+            Negates a quaternion
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete]<br />public static <a href="../Sansar/Quaternion.html">Quaternion</a> operator- (<a href="../Sansar/Quaternion.html">Quaternion</a> q)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.op_UnaryNegation(Sansar.Quaternion):Parameters">
+            <dl>
+              <dt>
+                <i>q</i>
+              </dt>
+              <dd>The quaternion to negate</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.op_UnaryNegation(Sansar.Quaternion):Returns">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.op_UnaryNegation(Sansar.Quaternion):Remarks">Note this is not a quaternion inverse, it is a component-wise multiplication by -1. For a quaternion inverse use <a href="../Sansar/Quaternion.html#M:Sansar.Quaternion.Inverse">Quaternion.Inverse</a></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.op_UnaryNegation(Sansar.Quaternion):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.Parse(System.String)">Parse Method</h3>
+        <blockquote id="M:Sansar.Quaternion.Parse(System.String):member">
+          <div class="msummary">
+            Parse a Quaternion from a string.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Quaternion.html">Quaternion</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> quaternionString)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.Parse(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>quaternionString</i>
+              </dt>
+              <dd>A string of the format "[X,Y,Z,W]"</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.Parse(System.String):Returns">The Quaternion parsed from quaternionString.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.Parse(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>If quaternionString is null.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.FormatException">FormatException</a>
+                </td>
+                <td>If the string is not a valid quaternion or its components are not valid floats.</td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Parse(System.String):Remarks">
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Parse(System.String):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">Quaternion myQuat = Quaternion.Parse("[0.0,0.0,0.0,1.0]");</pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.Parse(System.String):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.ShortestRotation(Sansar.Vector@,Sansar.Vector@)">ShortestRotation Method</h3>
+        <blockquote id="M:Sansar.Quaternion.ShortestRotation(Sansar.Vector@,Sansar.Vector@):member">
+          <div class="msummary">
+            Generates the shortest rotation quaternion to rotate from one vector to another.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Quaternion.html">Quaternion</a> <b>ShortestRotation</b> ([System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Vector.html">Vector</a> from, [System.Runtime.CompilerServices.IsReadOnly] <i>ref</i> <a href="../Sansar/Vector.html">Vector</a> to)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.ShortestRotation(Sansar.Vector@,Sansar.Vector@):Parameters">
+            <dl>
+              <dt>
+                <i>from</i>
+              </dt>
+              <dd>Vector rotating from.</dd>
+              <dt>
+                <i>to</i>
+              </dt>
+              <dd>Vector rotating to.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.ShortestRotation(Sansar.Vector@,Sansar.Vector@):Returns">The corresponding quaternion.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.ShortestRotation(Sansar.Vector@,Sansar.Vector@):Remarks">This function assumes that the passed in vectors are normalized.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.ShortestRotation(Sansar.Vector@,Sansar.Vector@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.ToAngleAxis(System.Single@,Sansar.Vector@)">ToAngleAxis Method</h3>
+        <blockquote id="M:Sansar.Quaternion.ToAngleAxis(System.Single@,Sansar.Vector@):member">
+          <div class="msummary">
+            Gets the angle-axis representation
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ToAngleAxis</b> (<i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> angle, <i>out</i> <a href="../Sansar/Vector.html">Vector</a> axis)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.ToAngleAxis(System.Single@,Sansar.Vector@):Parameters">
+            <dl>
+              <dt>
+                <i>angle</i>
+              </dt>
+              <dd>Angle of rotation in radians</dd>
+              <dt>
+                <i>axis</i>
+              </dt>
+              <dd>A normalized axis of rotation</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.ToAngleAxis(System.Single@,Sansar.Vector@):Remarks">For the Quaternion Identity (no rotation) the axis is undefined and will be given as (0,0,1)</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.ToAngleAxis(System.Single@,Sansar.Vector@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Quaternion.ToString():member">
+          <div class="msummary">
+            Generates a string representation of the quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.ToString():Returns">The quaternion as a string.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.ToString():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.ToString():Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.ToString(System.String)">ToString Method</h3>
+        <blockquote id="M:Sansar.Quaternion.ToString(System.String):member">
+          <div class="msummary">
+            Generates a string representation of the quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> format)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.ToString(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>Format to use for each of the coordinates.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.ToString(System.String):Returns">The quaternion as a string.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.ToString(System.String):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.ToString(System.String):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Quaternion.TryParse(System.String,Sansar.Quaternion@)">TryParse Method</h3>
+        <blockquote id="M:Sansar.Quaternion.TryParse(System.String,Sansar.Quaternion@):member">
+          <div class="msummary">Try to parse a Quaternion from a string.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> quaternionString, <i>out</i> <a href="../Sansar/Quaternion.html">Quaternion</a> quaternion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.TryParse(System.String,Sansar.Quaternion@):Parameters">
+            <dl>
+              <dt>
+                <i>quaternionString</i>
+              </dt>
+              <dd>A string of the format "[X,Y,Z,W]"</dd>
+              <dt>
+                <i>quaternion</i>
+              </dt>
+              <dd>The quaternion that will be set if quaternionString represents a valid quaternion.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Quaternion.TryParse(System.String,Sansar.Quaternion@):Returns">True if successfully parsed a quaternion, false if not.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.TryParse(System.String,Sansar.Quaternion@):Remarks">
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.TryParse(System.String,Sansar.Quaternion@):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">Quaternion myQuat;
+            if (Quaternion.TryParse("[0.0,0.0,0.0,1.0]", out myQuat)
+            {
+                // myQuat is set.
+            }</pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Quaternion.TryParse(System.String,Sansar.Quaternion@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Quaternion.W">W Property</h3>
+        <blockquote id="P:Sansar.Quaternion.W:member">
+          <div class="msummary">
+            The W coordinate of the quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>W</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Quaternion.W:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.W:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.W:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Quaternion.X">X Property</h3>
+        <blockquote id="P:Sansar.Quaternion.X:member">
+          <div class="msummary">
+            The X coordinate of the quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>X</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Quaternion.X:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.X:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.X:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Quaternion.Y">Y Property</h3>
+        <blockquote id="P:Sansar.Quaternion.Y:member">
+          <div class="msummary">
+            The Y coordinate of the quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Y</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Quaternion.Y:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.Y:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.Y:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Quaternion.Z">Z Property</h3>
+        <blockquote id="P:Sansar.Quaternion.Z:member">
+          <div class="msummary">
+            The Z coordinate of the quaternion.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Z</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Quaternion.Z:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.Z:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Quaternion.Z:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

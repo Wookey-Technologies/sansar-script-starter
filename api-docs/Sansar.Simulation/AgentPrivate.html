@@ -1,0 +1,1736 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.AgentPrivate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.AgentPrivate">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.AgentPrivate:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.AgentPrivate:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.AgentPrivate:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.AgentPrivate">AgentPrivate  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.AgentPrivate:Summary">The AgentPrivate class is the full interface for interactions with avatars.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.AgentPrivate:Signature">[Sansar.Script.Interface]<br />public class  <b>AgentPrivate</b> : <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.AgentPrivate:Docs">
+      <h4 class="Subsection">Exceptions</h4>
+      <blockquote class="SubsectionBox" id="T:Sansar.Simulation.AgentPrivate:Docs:Exceptions">
+        <table class="TypeDocumentation">
+          <tr>
+            <th>Type</th>
+            <th>Reason</th>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NullReferenceException">NullReferenceException</a>
+            </td>
+            <td>Thrown when using an AgentPrivate for a user who is no longer in the region.</td>
+          </tr>
+        </table>
+      </blockquote>
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.AgentPrivate:Docs:Remarks">Agents may leave at any time. Attempting to use an Agent interface for an agent no longer in the scene will throw a NullReferenceException.Use via <a href="../Sansar.Simulation/AgentScript.html#P:Sansar.Simulation.AgentScript.AgentPrivate">AgentScript.AgentPrivate</a>  to access APIs for the agent the script is on.</div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.AgentPrivate:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.AgentPrivate.AgentInfo">AgentInfo</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/AgentInfo.html">AgentInfo</a>
+                  </i>.  Returns the <a href="../Sansar.Simulation/AgentInfo.html">Sansar.Simulation.AgentInfo</a> for this instance. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.AgentPrivate.Client">Client</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/Client.html">Client</a>
+                  </i>.  Returns the <a href="../Sansar.Simulation/Client.html">Sansar.Simulation.Client</a> for this instance. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.AddReaction(System.String,System.String,Sansar.Simulation.ThumbnailedClusterResource)">AddReaction</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Sansar.Simulation/ThumbnailedClusterResource.html">ThumbnailedClusterResource</a>)<blockquote>Add a new reaction type to this agent only</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.GetControlPointEnabled(Sansar.Simulation.ControlPointType)">GetControlPointEnabled</a>
+                  </b>(<a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Retrieves whether the control point is enabled.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.GetControlPointOrientation(Sansar.Simulation.ControlPointType)">GetControlPointOrientation</a>
+                  </b>(<a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a>)<nobr> : <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a></nobr><blockquote>Retrieves the orientation in character relative space of the specified control point.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.GetControlPointPosition(Sansar.Simulation.ControlPointType)">GetControlPointPosition</a>
+                  </b>(<a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a>)<nobr> : <a href="../Sansar/Vector.html">Sansar.Vector</a></nobr><blockquote>Retrieves the position in character relative space of the specified control point.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.GetGravityFactor()">GetGravityFactor</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves what factor of the world's gravity is applied to this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.GetHeldRigidBodies()">GetHeldRigidBodies</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;RigidBodyComponent&gt;</a></nobr><blockquote>Retrieves a list of <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a> that this agent is currently holding.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.GetScaleFactor()">GetScaleFactor</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves the runtime scale factor applied to this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.GetSpeedFactor()">GetSpeedFactor</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves what factor of the base speed to apply to this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean)">IgnoreCollisionWith</a>
+                  </b>(<a href="../Sansar.Simulation/RigidBodyComponent.html">RigidBodyComponent</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>Sets whether this agent will ignore collisions with a specific <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">IgnoreCollisionWith</a>
+                  </b>(<a href="../Sansar.Simulation/RigidBodyComponent.html">RigidBodyComponent</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets whether this agent will ignore collisions with a specific <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.IsCollisionIgnoredWith(Sansar.Simulation.RigidBodyComponent)">IsCollisionIgnoredWith</a>
+                  </b>(<a href="../Sansar.Simulation/RigidBodyComponent.html">RigidBodyComponent</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Checks whether an agent is ignoring collisions with a specific <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a>.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String)">OverrideAudioStream</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Overrides source of web audio streams.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">OverrideAudioStream</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Overrides source of web audio streams.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.OverrideIndexedMediaSource(System.String,System.Int32,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent})">OverrideIndexedMediaSource</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Overrides source of indexed media surfaces.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String)">OverrideMediaSource</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Sets stream channel source.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32)">OverrideMediaSource</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>Overrides source of media surfaces.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent})">OverrideMediaSource</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Overrides source of media surfaces.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.PerformIndexedMediaAction(Sansar.Simulation.MediaAction,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent})">PerformIndexedMediaAction</a>
+                  </b>(<a href="../Sansar.Simulation/MediaAction.html">MediaAction</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Performs a specific action on the current media surface.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction)">PerformMediaAction</a>
+                  </b>(<a href="../Sansar.Simulation/MediaAction.html">MediaAction</a>)<blockquote>Performs a specific action on the current media surface.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction,System.Action{Sansar.Script.OperationCompleteEvent})">PerformMediaAction</a>
+                  </b>(<a href="../Sansar.Simulation/MediaAction.html">MediaAction</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Performs a specific action on the current media surface index.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.PlaySound(Sansar.Simulation.SoundResource,Sansar.Simulation.PlaySettings)">PlaySound</a>
+                  </b>(<a href="../Sansar.Simulation/SoundResource.html">SoundResource</a>, <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a>)<nobr> : <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a></nobr><blockquote>Play sound to direct output.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.PlaySoundAtPosition(Sansar.Simulation.SoundResource,Sansar.Vector,Sansar.Simulation.PlaySettings)">PlaySoundAtPosition</a>
+                  </b>(<a href="../Sansar.Simulation/SoundResource.html">SoundResource</a>, <a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a>)<nobr> : <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a></nobr><blockquote>Play sound at specified position.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.PlaySoundOnComponent(Sansar.Simulation.SoundResource,Sansar.Simulation.AudioComponent,Sansar.Simulation.PlaySettings)">PlaySoundOnComponent</a>
+                  </b>(<a href="../Sansar.Simulation/SoundResource.html">SoundResource</a>, <a href="../Sansar.Simulation/AudioComponent.html">AudioComponent</a>, <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a>)<nobr> : <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a></nobr><blockquote>Play sound on a component (and follows its position).</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.PlayStream(Sansar.Simulation.StreamChannel,System.Single)">PlayStream</a>
+                  </b>(<a href="../Sansar.Simulation/StreamChannel.html">StreamChannel</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a></nobr><blockquote>Play audio stream to direct output.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.PlayStreamAtPosition(Sansar.Simulation.StreamChannel,Sansar.Vector,System.Single)">PlayStreamAtPosition</a>
+                  </b>(<a href="../Sansar.Simulation/StreamChannel.html">StreamChannel</a>, <a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a></nobr><blockquote>Play web audio stream at specified position.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.PlayStreamOnComponent(Sansar.Simulation.StreamChannel,Sansar.Simulation.AudioComponent,System.Single)">PlayStreamOnComponent</a>
+                  </b>(<a href="../Sansar.Simulation/StreamChannel.html">StreamChannel</a>, <a href="../Sansar.Simulation/AudioComponent.html">AudioComponent</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a></nobr><blockquote>Play web audio stream on this component (and follow its position).</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.RemoveReaction(System.String)">RemoveReaction</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Remove the specified reaction from this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SendChat(System.String)">SendChat</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Sends a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message to the $className$.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SendChat(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">SendChat</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sends a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message to the AgentPrivate.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single)">SetGravityFactor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets what factor of the world's gravity is applied to this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetGravityFactor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets what factor of the world's gravity is applied to this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single)">SetScaleFactor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets a runtime scale factor for this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetScaleFactor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets a runtime scale factor for this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single)">SetScaleFactorAnimated</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets a runtime scale factor for this agent, interpolating smoothly over the given duration.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetScaleFactorAnimated</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets a runtime scale factor for this agent, interpolating smoothly over the given duration.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single)">SetSpeedFactor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets what factor of the base speed to apply to this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetSpeedFactor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets what factor of the base speed to apply to this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote> A string representation of this object. </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.AgentPrivate:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Simulation.AgentPrivate.AddReaction(System.String,System.String,Sansar.Simulation.ThumbnailedClusterResource)">AddReaction Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.AddReaction(System.String,System.String,Sansar.Simulation.ThumbnailedClusterResource):member">
+          <div class="msummary">Add a new reaction type to this agent only</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddReaction</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> reactionType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> displayText, <a href="../Sansar.Simulation/ThumbnailedClusterResource.html">ThumbnailedClusterResource</a> resource)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.AddReaction(System.String,System.String,Sansar.Simulation.ThumbnailedClusterResource):Parameters">
+            <dl>
+              <dt>
+                <i>reactionType</i>
+              </dt>
+              <dd>A string that gets passed to the callback.  Should be of a form like 'Developer.Type' to match the default, e.g. 'Sansar.Fire'</dd>
+              <dt>
+                <i>displayText</i>
+              </dt>
+              <dd>A short string that appears on the emotes panel</dd>
+              <dt>
+                <i>resource</i>
+              </dt>
+              <dd>A cluster source which has a thumbnail defined in inventory.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.AddReaction(System.String,System.String,Sansar.Simulation.ThumbnailedClusterResource):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.AddReaction(System.String,System.String,Sansar.Simulation.ThumbnailedClusterResource):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.AgentPrivate.AgentInfo">AgentInfo Property</h3>
+        <blockquote id="P:Sansar.Simulation.AgentPrivate.AgentInfo:member">
+          <div class="msummary"> Returns the <a href="../Sansar.Simulation/AgentInfo.html">Sansar.Simulation.AgentInfo</a> for this instance. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/AgentInfo.html">AgentInfo</a> <b>AgentInfo</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.AgentPrivate.AgentInfo:Value">The <a href="../Sansar.Simulation/AgentInfo.html">Sansar.Simulation.AgentInfo</a> for this instance</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.AgentPrivate.AgentInfo:Remarks">The <a href="../Sansar.Simulation/AgentInfo.html">Sansar.Simulation.AgentInfo</a> holds information about an agent. </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.AgentPrivate.AgentInfo:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.AgentPrivate.Client">Client Property</h3>
+        <blockquote id="P:Sansar.Simulation.AgentPrivate.Client:member">
+          <div class="msummary"> Returns the <a href="../Sansar.Simulation/Client.html">Sansar.Simulation.Client</a> for this instance. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/Client.html">Client</a> <b>Client</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.AgentPrivate.Client:Value">The <a href="../Sansar.Simulation/Client.html">Sansar.Simulation.Client</a> for this instance</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.AgentPrivate.Client:Remarks">The <a href="../Sansar.Simulation/Client.html">Sansar.Simulation.Client</a> manages interactions with a client. </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.AgentPrivate.Client:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.GetControlPointEnabled(Sansar.Simulation.ControlPointType)">GetControlPointEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.GetControlPointEnabled(Sansar.Simulation.ControlPointType):member">
+          <div class="msummary">Retrieves whether the control point is enabled.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>GetControlPointEnabled</b> (<a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointEnabled(Sansar.Simulation.ControlPointType):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>See <a href="../Sansar.Simulation/ControlPointType.html">Sansar.Simulation.ControlPointType</a>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointEnabled(Sansar.Simulation.ControlPointType):Returns">True if the control point is enabled. Control points are enabled when used.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointEnabled(Sansar.Simulation.ControlPointType):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>Thrown if an invalid control point is specified.</td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointEnabled(Sansar.Simulation.ControlPointType):Remarks">Control points are a representation of some spatial inputs, primarily VR controllers.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointEnabled(Sansar.Simulation.ControlPointType):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.GetControlPointOrientation(Sansar.Simulation.ControlPointType)">GetControlPointOrientation Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.GetControlPointOrientation(Sansar.Simulation.ControlPointType):member">
+          <div class="msummary">Retrieves the orientation in character relative space of the specified control point.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> <b>GetControlPointOrientation</b> (<a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointOrientation(Sansar.Simulation.ControlPointType):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>See <a href="../Sansar.Simulation/ControlPointType.html">Sansar.Simulation.ControlPointType</a>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointOrientation(Sansar.Simulation.ControlPointType):Returns">The orientation of the control point.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointOrientation(Sansar.Simulation.ControlPointType):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>Thrown if an invalid control point is specified.</td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointOrientation(Sansar.Simulation.ControlPointType):Remarks">Control points are a representation of some spatial inputs, primarily VR controllers.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointOrientation(Sansar.Simulation.ControlPointType):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.GetControlPointPosition(Sansar.Simulation.ControlPointType)">GetControlPointPosition Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.GetControlPointPosition(Sansar.Simulation.ControlPointType):member">
+          <div class="msummary">Retrieves the position in character relative space of the specified control point.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>GetControlPointPosition</b> (<a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointPosition(Sansar.Simulation.ControlPointType):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The control point to get the position of. See <a href="../Sansar.Simulation/ControlPointType.html">Sansar.Simulation.ControlPointType</a>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointPosition(Sansar.Simulation.ControlPointType):Returns">The position of the control point.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointPosition(Sansar.Simulation.ControlPointType):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>Thrown if an invalid control point is specified.</td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointPosition(Sansar.Simulation.ControlPointType):Remarks">Control points are a representation of some spatial inputs, primarily VR controllers.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetControlPointPosition(Sansar.Simulation.ControlPointType):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.GetGravityFactor()">GetGravityFactor Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.GetGravityFactor():member">
+          <div class="msummary">Retrieves what factor of the world's gravity is applied to this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetGravityFactor</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetGravityFactor():Returns">The gravity factor.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetGravityFactor():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetGravityFactor():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.GetHeldRigidBodies()">GetHeldRigidBodies Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.GetHeldRigidBodies():member">
+          <div class="msummary">Retrieves a list of <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a> that this agent is currently holding.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;RigidBodyComponent&gt;</a> <b>GetHeldRigidBodies</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetHeldRigidBodies():Returns"> a list of <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetHeldRigidBodies():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetHeldRigidBodies():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.GetScaleFactor()">GetScaleFactor Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.GetScaleFactor():member">
+          <div class="msummary">Retrieves the runtime scale factor applied to this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetScaleFactor</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetScaleFactor():Returns">The scale factor.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetScaleFactor():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetScaleFactor():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.GetSpeedFactor()">GetSpeedFactor Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.GetSpeedFactor():member">
+          <div class="msummary">Retrieves what factor of the base speed to apply to this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetSpeedFactor</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetSpeedFactor():Returns">The speed factor.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetSpeedFactor():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetSpeedFactor():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean)">IgnoreCollisionWith Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean):member">
+          <div class="msummary">Sets whether this agent will ignore collisions with a specific <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>IgnoreCollisionWith</b> (<a href="../Sansar.Simulation/RigidBodyComponent.html">RigidBodyComponent</a> rigidBodyComponent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> ignoreBody)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>rigidBodyComponent</i>
+              </dt>
+              <dd>The RigidBodyComponent with which to change collision behavior.</dd>
+              <dt>
+                <i>ignoreBody</i>
+              </dt>
+              <dd>When true, collision will be added to the ignore list. When false, collision will removed from the ignore list.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">IgnoreCollisionWith Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets whether this agent will ignore collisions with a specific <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>IgnoreCollisionWith</b> (<a href="../Sansar.Simulation/RigidBodyComponent.html">RigidBodyComponent</a> rigidBodyComponent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> ignoreBody, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>rigidBodyComponent</i>
+              </dt>
+              <dd>The RigidBodyComponent with which to change collision behavior.</dd>
+              <dt>
+                <i>ignoreBody</i>
+              </dt>
+              <dd>When true, collision will be added to the ignore list. When false, collision will removed from the ignore list.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.IgnoreCollisionWith(Sansar.Simulation.RigidBodyComponent,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.IsCollisionIgnoredWith(Sansar.Simulation.RigidBodyComponent)">IsCollisionIgnoredWith Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.IsCollisionIgnoredWith(Sansar.Simulation.RigidBodyComponent):member">
+          <div class="msummary">Checks whether an agent is ignoring collisions with a specific <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a>.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsCollisionIgnoredWith</b> (<a href="../Sansar.Simulation/RigidBodyComponent.html">RigidBodyComponent</a> rigidBodyComponent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.IsCollisionIgnoredWith(Sansar.Simulation.RigidBodyComponent):Parameters">
+            <dl>
+              <dt>
+                <i>rigidBodyComponent</i>
+              </dt>
+              <dd>The RigidBodyComponent that could possibly be ignored.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.IsCollisionIgnoredWith(Sansar.Simulation.RigidBodyComponent):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.IsCollisionIgnoredWith(Sansar.Simulation.RigidBodyComponent):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.IsCollisionIgnoredWith(Sansar.Simulation.RigidBodyComponent):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String)">OverrideAudioStream Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String):member">
+          <div class="msummary">Overrides source of web audio streams.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OverrideAudioStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> url)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>url</i>
+              </dt>
+              <dd>URL to use.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String):Remarks">Applies to this agent only.  NOTE: this may cause a few seconds of silence while restarting the stream.  To avoid silence, assign URLs in your SceneSettings instead, which will pre-load them.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">OverrideAudioStream Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Overrides source of web audio streams.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OverrideAudioStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> url, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>url</i>
+              </dt>
+              <dd>URL to use.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Applies to this agent only.  NOTE: this may cause a few seconds of silence while restarting the stream.  To avoid silence, assign URLs in your SceneSettings instead, which will pre-load them.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideAudioStream(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.OverrideIndexedMediaSource(System.String,System.Int32,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent})">OverrideIndexedMediaSource Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.OverrideIndexedMediaSource(System.String,System.Int32,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Overrides source of indexed media surfaces.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OverrideIndexedMediaSource</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> url, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> mediaIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> mediaWidth, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> mediaHeight, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideIndexedMediaSource(System.String,System.Int32,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>url</i>
+              </dt>
+              <dd>URL to use.</dd>
+              <dt>
+                <i>mediaIndex</i>
+              </dt>
+              <dd>(cMediaChannel only) source index.</dd>
+              <dt>
+                <i>mediaWidth</i>
+              </dt>
+              <dd>(cMediaChannel only) source width.</dd>
+              <dt>
+                <i>mediaHeight</i>
+              </dt>
+              <dd>(cMediaChannel only) source height.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideIndexedMediaSource(System.String,System.Int32,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Applies to this agent only.  NOTE: this will cause a few seconds of silence while restarting the stream.  To avoid silence, assign URLs in your SceneSettings instead, which will pre-load them.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideIndexedMediaSource(System.String,System.Int32,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String)">OverrideMediaSource Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String):member">
+          <div class="msummary">Sets stream channel source.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OverrideMediaSource</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> url)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>url</i>
+              </dt>
+              <dd>URL to use.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32)">OverrideMediaSource Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32):member">
+          <div class="msummary">Overrides source of media surfaces.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OverrideMediaSource</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> url, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> mediaWidth, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> mediaHeight)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>url</i>
+              </dt>
+              <dd>URL to use.</dd>
+              <dt>
+                <i>mediaWidth</i>
+              </dt>
+              <dd>(cMediaChannel only) source width.</dd>
+              <dt>
+                <i>mediaHeight</i>
+              </dt>
+              <dd>(cMediaChannel only) source height.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32):Remarks">Applies to this agent only.  NOTE: this will cause a few seconds of silence while restarting starting the stream.  To avoid silence, assign URLs in your SceneSettings instead, which will pre-load them.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent})">OverrideMediaSource Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Overrides source of media surfaces.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OverrideMediaSource</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> url, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> mediaWidth, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> mediaHeight, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>url</i>
+              </dt>
+              <dd>URL to use.</dd>
+              <dt>
+                <i>mediaWidth</i>
+              </dt>
+              <dd>(cMediaChannel only) source width.</dd>
+              <dt>
+                <i>mediaHeight</i>
+              </dt>
+              <dd>(cMediaChannel only) source height.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Applies to this agent only.  NOTE: this will cause a few seconds of silence while restarting the stream.  To avoid silence, assign URLs in your SceneSettings instead, which will pre-load them.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.OverrideMediaSource(System.String,System.Int32,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.PerformIndexedMediaAction(Sansar.Simulation.MediaAction,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent})">PerformIndexedMediaAction Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.PerformIndexedMediaAction(Sansar.Simulation.MediaAction,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Performs a specific action on the current media surface.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>PerformIndexedMediaAction</b> (<a href="../Sansar.Simulation/MediaAction.html">MediaAction</a> action, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> mediaIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PerformIndexedMediaAction(Sansar.Simulation.MediaAction,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>action</i>
+              </dt>
+              <dd>The action to perform.</dd>
+              <dt>
+                <i>mediaIndex</i>
+              </dt>
+              <dd>(cMediaChannel only) source index.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PerformIndexedMediaAction(Sansar.Simulation.MediaAction,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Applies to this agent only.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PerformIndexedMediaAction(Sansar.Simulation.MediaAction,System.Int32,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction)">PerformMediaAction Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction):member">
+          <div class="msummary">Performs a specific action on the current media surface.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>PerformMediaAction</b> (<a href="../Sansar.Simulation/MediaAction.html">MediaAction</a> action)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction):Parameters">
+            <dl>
+              <dt>
+                <i>action</i>
+              </dt>
+              <dd>The action to perform.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction):Remarks">Applies to this agent only.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction,System.Action{Sansar.Script.OperationCompleteEvent})">PerformMediaAction Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Performs a specific action on the current media surface index.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>PerformMediaAction</b> (<a href="../Sansar.Simulation/MediaAction.html">MediaAction</a> action, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>action</i>
+              </dt>
+              <dd>The action to perform.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Applies to this agent only.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PerformMediaAction(Sansar.Simulation.MediaAction,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.PlaySound(Sansar.Simulation.SoundResource,Sansar.Simulation.PlaySettings)">PlaySound Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.PlaySound(Sansar.Simulation.SoundResource,Sansar.Simulation.PlaySettings):member">
+          <div class="msummary">Play sound to direct output.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a> <b>PlaySound</b> (<a href="../Sansar.Simulation/SoundResource.html">SoundResource</a> soundResource, <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a> playSettings)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySound(Sansar.Simulation.SoundResource,Sansar.Simulation.PlaySettings):Parameters">
+            <dl>
+              <dt>
+                <i>soundResource</i>
+              </dt>
+              <dd>The sound resource to play.</dd>
+              <dt>
+                <i>playSettings</i>
+              </dt>
+              <dd>The play parameters.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySound(Sansar.Simulation.SoundResource,Sansar.Simulation.PlaySettings):Returns">The play handle for controlling playback.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySound(Sansar.Simulation.SoundResource,Sansar.Simulation.PlaySettings):Remarks">Plays for this agent only.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySound(Sansar.Simulation.SoundResource,Sansar.Simulation.PlaySettings):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.PlaySoundAtPosition(Sansar.Simulation.SoundResource,Sansar.Vector,Sansar.Simulation.PlaySettings)">PlaySoundAtPosition Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.PlaySoundAtPosition(Sansar.Simulation.SoundResource,Sansar.Vector,Sansar.Simulation.PlaySettings):member">
+          <div class="msummary">Play sound at specified position.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a> <b>PlaySoundAtPosition</b> (<a href="../Sansar.Simulation/SoundResource.html">SoundResource</a> soundResource, <a href="../Sansar/Vector.html">Sansar.Vector</a> position, <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a> playSettings)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySoundAtPosition(Sansar.Simulation.SoundResource,Sansar.Vector,Sansar.Simulation.PlaySettings):Parameters">
+            <dl>
+              <dt>
+                <i>soundResource</i>
+              </dt>
+              <dd>The sound resource to play.</dd>
+              <dt>
+                <i>position</i>
+              </dt>
+              <dd>The absolute position.</dd>
+              <dt>
+                <i>playSettings</i>
+              </dt>
+              <dd>The play parameters.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySoundAtPosition(Sansar.Simulation.SoundResource,Sansar.Vector,Sansar.Simulation.PlaySettings):Returns">The play handle for controlling playback.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySoundAtPosition(Sansar.Simulation.SoundResource,Sansar.Vector,Sansar.Simulation.PlaySettings):Remarks">Plays for this agent only.  By setting an absolute position, the location of this sound will be static.  If you want the sound to move, you must play the sound on an audio component and move the audio component.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySoundAtPosition(Sansar.Simulation.SoundResource,Sansar.Vector,Sansar.Simulation.PlaySettings):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.PlaySoundOnComponent(Sansar.Simulation.SoundResource,Sansar.Simulation.AudioComponent,Sansar.Simulation.PlaySettings)">PlaySoundOnComponent Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.PlaySoundOnComponent(Sansar.Simulation.SoundResource,Sansar.Simulation.AudioComponent,Sansar.Simulation.PlaySettings):member">
+          <div class="msummary">Play sound on a component (and follows its position).</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a> <b>PlaySoundOnComponent</b> (<a href="../Sansar.Simulation/SoundResource.html">SoundResource</a> soundResource, <a href="../Sansar.Simulation/AudioComponent.html">AudioComponent</a> audioComponent, <a href="../Sansar.Simulation/PlaySettings.html">PlaySettings</a> playSettings)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySoundOnComponent(Sansar.Simulation.SoundResource,Sansar.Simulation.AudioComponent,Sansar.Simulation.PlaySettings):Parameters">
+            <dl>
+              <dt>
+                <i>soundResource</i>
+              </dt>
+              <dd>The sound resource to play.</dd>
+              <dt>
+                <i>audioComponent</i>
+              </dt>
+              <dd>The audio component to play this on.</dd>
+              <dt>
+                <i>playSettings</i>
+              </dt>
+              <dd>The play parameters.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySoundOnComponent(Sansar.Simulation.SoundResource,Sansar.Simulation.AudioComponent,Sansar.Simulation.PlaySettings):Returns">The play handle for controlling playback.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySoundOnComponent(Sansar.Simulation.SoundResource,Sansar.Simulation.AudioComponent,Sansar.Simulation.PlaySettings):Remarks">Plays for this agent only.  As the component moves, this sound will follow the component's location.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlaySoundOnComponent(Sansar.Simulation.SoundResource,Sansar.Simulation.AudioComponent,Sansar.Simulation.PlaySettings):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.PlayStream(Sansar.Simulation.StreamChannel,System.Single)">PlayStream Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.PlayStream(Sansar.Simulation.StreamChannel,System.Single):member">
+          <div class="msummary">Play audio stream to direct output.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a> <b>PlayStream</b> (<a href="../Sansar.Simulation/StreamChannel.html">StreamChannel</a> streamChannel, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> loudness)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStream(Sansar.Simulation.StreamChannel,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>streamChannel</i>
+              </dt>
+              <dd>Channel of the audio stream to play.</dd>
+              <dt>
+                <i>loudness</i>
+              </dt>
+              <dd>Relative loudness in dB.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStream(Sansar.Simulation.StreamChannel,System.Single):Returns">The play handle for controlling playback.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStream(Sansar.Simulation.StreamChannel,System.Single):Remarks">Plays for this agent only.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStream(Sansar.Simulation.StreamChannel,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.PlayStreamAtPosition(Sansar.Simulation.StreamChannel,Sansar.Vector,System.Single)">PlayStreamAtPosition Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.PlayStreamAtPosition(Sansar.Simulation.StreamChannel,Sansar.Vector,System.Single):member">
+          <div class="msummary">Play web audio stream at specified position.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a> <b>PlayStreamAtPosition</b> (<a href="../Sansar.Simulation/StreamChannel.html">StreamChannel</a> streamChannel, <a href="../Sansar/Vector.html">Sansar.Vector</a> position, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> loudness)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStreamAtPosition(Sansar.Simulation.StreamChannel,Sansar.Vector,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>streamChannel</i>
+              </dt>
+              <dd>Channel of the audio stream to play.</dd>
+              <dt>
+                <i>position</i>
+              </dt>
+              <dd>The absolute position.</dd>
+              <dt>
+                <i>loudness</i>
+              </dt>
+              <dd>Relative loudness in dB.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStreamAtPosition(Sansar.Simulation.StreamChannel,Sansar.Vector,System.Single):Returns">The play handle for controlling playback.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStreamAtPosition(Sansar.Simulation.StreamChannel,Sansar.Vector,System.Single):Remarks">Plays for this agent only.  By setting an absolute position, the location of this sound will be static.  If you want the sound to move, you must play the sound on an audio component and move the audio component.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStreamAtPosition(Sansar.Simulation.StreamChannel,Sansar.Vector,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.PlayStreamOnComponent(Sansar.Simulation.StreamChannel,Sansar.Simulation.AudioComponent,System.Single)">PlayStreamOnComponent Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.PlayStreamOnComponent(Sansar.Simulation.StreamChannel,Sansar.Simulation.AudioComponent,System.Single):member">
+          <div class="msummary">Play web audio stream on this component (and follow its position).</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/PlayHandle.html">PlayHandle</a> <b>PlayStreamOnComponent</b> (<a href="../Sansar.Simulation/StreamChannel.html">StreamChannel</a> streamChannel, <a href="../Sansar.Simulation/AudioComponent.html">AudioComponent</a> audioComponent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> loudness)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStreamOnComponent(Sansar.Simulation.StreamChannel,Sansar.Simulation.AudioComponent,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>streamChannel</i>
+              </dt>
+              <dd>Channel of the audio stream to play.</dd>
+              <dt>
+                <i>audioComponent</i>
+              </dt>
+              <dd>The audio component to play this on.</dd>
+              <dt>
+                <i>loudness</i>
+              </dt>
+              <dd>Relative loudness in dB.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStreamOnComponent(Sansar.Simulation.StreamChannel,Sansar.Simulation.AudioComponent,System.Single):Returns">The play handle for controlling playback.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStreamOnComponent(Sansar.Simulation.StreamChannel,Sansar.Simulation.AudioComponent,System.Single):Remarks">Plays for this agent only.  As the component moves, this sound will follow the component's location.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.PlayStreamOnComponent(Sansar.Simulation.StreamChannel,Sansar.Simulation.AudioComponent,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.RemoveReaction(System.String)">RemoveReaction Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.RemoveReaction(System.String):member">
+          <div class="msummary">Remove the specified reaction from this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveReaction</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> reactionType)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.RemoveReaction(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>reactionType</i>
+              </dt>
+              <dd>A string that gets passed to the callback.  Should be of a form like 'Developer.Type' to match the default, e.g. 'Sansar.Fire'</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.RemoveReaction(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.RemoveReaction(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String)">SendChat Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String):member">
+          <div class="msummary">Sends a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message to the $className$.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SendChat</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>message</i>
+              </dt>
+              <dd>The message to send. </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NullReferenceException">NullReferenceException</a>
+                </td>
+                <td>If the user is no longer online.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../Sansar.Script/ThrottleException.html">Sansar.Script.ThrottleException</a>
+                </td>
+                <td>If the throttle rate is exceeded.</td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String):Remarks">eprecated. Use AgentPrivate.SendChat or AgentPublic.SendChat</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">SendChat Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sends a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message to the AgentPrivate.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SendChat</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>message</i>
+              </dt>
+              <dd>The message to send. </dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Messages may be throttled and ignored.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SendChat(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single)">SetGravityFactor Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single):member">
+          <div class="msummary">Sets what factor of the world's gravity is applied to this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetGravityFactor</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> gravityFactor)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>gravityFactor</i>
+              </dt>
+              <dd>The gravityFactor. Default value is 1, range is clamped between -2 to 2</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetGravityFactor Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets what factor of the world's gravity is applied to this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetGravityFactor</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> gravityFactor, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>gravityFactor</i>
+              </dt>
+              <dd>The gravityFactor. Default value is 1, range is clamped between -2 to 2</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single)">SetScaleFactor Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single):member">
+          <div class="msummary">Sets a runtime scale factor for this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetScaleFactor</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleFactor)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>scaleFactor</i>
+              </dt>
+              <dd>The scaleFactor. Default value is 1, range is clamped between 0.01 to 100</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetScaleFactor Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets a runtime scale factor for this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetScaleFactor</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleFactor, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>scaleFactor</i>
+              </dt>
+              <dd>The scaleFactor. Default value is 1, range is clamped between 0.01 to 100</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single)">SetScaleFactorAnimated Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single):member">
+          <div class="msummary">Sets a runtime scale factor for this agent, interpolating smoothly over the given duration.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetScaleFactorAnimated</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleFactor, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> seconds)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>scaleFactor</i>
+              </dt>
+              <dd>The target scaleFactor. Range is clamped between 0.01 to 100</dd>
+              <dt>
+                <i>seconds</i>
+              </dt>
+              <dd>The duration in seconds over which to interpolate. If 0 or negative, the change is instant.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single):Remarks">This asynchronous method queues the write then returns. The scale will smoothly
+            transition from the current value to the target over the specified duration using a smooth ease curve.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetScaleFactorAnimated Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets a runtime scale factor for this agent, interpolating smoothly over the given duration.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetScaleFactorAnimated</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleFactor, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> seconds, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>scaleFactor</i>
+              </dt>
+              <dd>The target scaleFactor. Range is clamped between 0.01 to 100</dd>
+              <dt>
+                <i>seconds</i>
+              </dt>
+              <dd>The duration in seconds over which to interpolate. If 0 or negative, the change is instant.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns. The scale will smoothly
+            transition from the current value to the target over the specified duration using a smooth ease curve.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetScaleFactorAnimated(System.Single,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single)">SetSpeedFactor Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single):member">
+          <div class="msummary">Sets what factor of the base speed to apply to this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetSpeedFactor</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> speedFactor)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>speedFactor</i>
+              </dt>
+              <dd>The speedFactor. Default value is 1, range is clamped between 0.1 to 4</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetSpeedFactor Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets what factor of the base speed to apply to this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetSpeedFactor</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> speedFactor, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>speedFactor</i>
+              </dt>
+              <dd>The speedFactor. Default value is 1, range is clamped between 0.1 to 4</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetSpeedFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.ToString():member">
+          <div class="msummary"> A string representation of this object. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.ToString():Returns">A string representation of this object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ToString():Remarks">The format of this string may change between releases.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ToString():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

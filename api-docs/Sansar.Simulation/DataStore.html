@@ -1,0 +1,548 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.DataStore</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.DataStore">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.DataStore:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.DataStore:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.DataStore:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.DataStore">DataStore  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.DataStore:Summary">
+            The <a href="../Sansar.Simulation/DataStore.html">Sansar.Simulation.DataStore</a> class provides access to a persistent data store that can be accessed by scripts from any experience.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.DataStore:Signature">[Sansar.Script.Interface]<br />public class  <b>DataStore</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.DataStore:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.DataStore:Docs:Remarks">All <a href="../Sansar.Simulation/DataStore.html">Sansar.Simulation.DataStore</a> objects with a given <a href="../Sansar.Simulation/DataStore.html#P:Sansar.Simulation.DataStore.Id">DataStore.Id</a> share the same database.</div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.DataStore:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.DataStore.Id">Id</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Guid">Guid</a>
+                  </i>. 
+            The Id of this <a href="../Sansar.Simulation/DataStore.html">Sansar.Simulation.DataStore</a>.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.DataStore.Delete(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">Delete</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>
+            Deletes the value associated with the given key
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.DataStore.Delete``1(System.String,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}})">Delete&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Sansar.Simulation/DataStore+Options.html">DataStore.Options</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;DataStore.Result&lt;T&gt;&gt;</a>)<blockquote>
+            Deletes the value associated with the given key
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.DataStore.Restore``1(System.String,System.Action{Sansar.Simulation.DataStore.Result{``0}})">Restore&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;DataStore.Result&lt;T&gt;&gt;</a>)<blockquote>
+            Retrieves the value associated with the given key.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.DataStore.Store``1(System.String,``0,System.Action{Sansar.Simulation.DataStore.Result{``0}})">Store&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i title="To be added.">T</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;DataStore.Result&lt;T&gt;&gt;</a>)<blockquote>
+            Serializes the given object to the data store
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.DataStore.Store``1(System.String,``0,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}})">Store&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i title="To be added.">T</i>, <a href="../Sansar.Simulation/DataStore+Options.html">DataStore.Options</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;DataStore.Result&lt;T&gt;&gt;</a>)<blockquote>
+            Serializes the given object to the data store
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.DataStore:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Simulation.DataStore.Delete(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">Delete Method</h3>
+        <blockquote id="M:Sansar.Simulation.DataStore.Delete(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">
+            Deletes the value associated with the given key
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Delete</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> done)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.DataStore.Delete(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>key</i>
+              </dt>
+              <dd>They key the data is stored under.</dd>
+              <dt>
+                <i>done</i>
+              </dt>
+              <dd>The action to call when the delete is complete.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Delete(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Unconditionally deletes the value associated with the given key. For a conditional delete, use <a href="../Sansar.Simulation/DataStore.html#M:Sansar.Simulation.DataStore.Delete``1(System.String,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}})">DataStore.Delete``1(string, Sansar.Simulation.DataStore.Options, Action&lt;Sansar.Simulation.DataStore.Result&lt;``0&gt;&gt;)</a>.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Delete(System.String,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.DataStore.Delete``1(System.String,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}})">Delete&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Simulation.DataStore.Delete``1(System.String,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):member">
+          <div class="msummary">
+            Deletes the value associated with the given key
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Delete&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <a href="../Sansar.Simulation/DataStore+Options.html">DataStore.Options</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;DataStore.Result&lt;T&gt;&gt;</a> done)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.DataStore.Delete``1(System.String,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type of the data stored.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.DataStore.Delete``1(System.String,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Parameters">
+            <dl>
+              <dt>
+                <i>key</i>
+              </dt>
+              <dd>They key the data is stored under.</dd>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>Controls how the operation proceeds.</dd>
+              <dt>
+                <i>done</i>
+              </dt>
+              <dd>The action to call when the delete is complete.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Delete``1(System.String,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Remarks">
+            <a href="../Sansar.Simulation/DataStore+Options.html#F:Sansar.Simulation.DataStore.Options.Version">Sansar.Simulation.DataStore.Options.Version</a> can be specified to conditionally delete only if the version matches. If the version number does not match, <a href="../Sansar.Simulation/DataStore+Result`1.html">Sansar.Simulation.DataStore.Result`1</a> will have Success == false and the current value in the Version and Object fields.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Delete``1(System.String,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.DataStore.Id">Id Property</h3>
+        <blockquote id="P:Sansar.Simulation.DataStore.Id:member">
+          <div class="msummary">
+            The Id of this <a href="../Sansar.Simulation/DataStore.html">Sansar.Simulation.DataStore</a>.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Guid">Guid</a> <b>Id</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.DataStore.Id:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.DataStore.Id:Remarks">All <a href="../Sansar.Simulation/DataStore.html">Sansar.Simulation.DataStore</a> objects with a given <a href="../Sansar.Simulation/DataStore.html#P:Sansar.Simulation.DataStore.Id">DataStore.Id</a> share the same database.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.DataStore.Id:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.DataStore.Restore``1(System.String,System.Action{Sansar.Simulation.DataStore.Result{``0}})">Restore&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Simulation.DataStore.Restore``1(System.String,System.Action{Sansar.Simulation.DataStore.Result{``0}}):member">
+          <div class="msummary">
+            Retrieves the value associated with the given key.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Restore&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;DataStore.Result&lt;T&gt;&gt;</a> done)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.DataStore.Restore``1(System.String,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type of the data stored.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.DataStore.Restore``1(System.String,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Parameters">
+            <dl>
+              <dt>
+                <i>key</i>
+              </dt>
+              <dd>They key the data is stored under.</dd>
+              <dt>
+                <i>done</i>
+              </dt>
+              <dd>The action to call when the restore is complete.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Restore``1(System.String,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Remarks">If the done action is null, this method will fail without making a call to the data store.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Restore``1(System.String,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,System.Action{Sansar.Simulation.DataStore.Result{``0}})">Store&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,System.Action{Sansar.Simulation.DataStore.Result{``0}}):member">
+          <div class="msummary">
+            Serializes the given object to the data store
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Store&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i title="To be added.">T</i> value, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;DataStore.Result&lt;T&gt;&gt;</a> done)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Parameters">
+            <dl>
+              <dt>
+                <i>key</i>
+              </dt>
+              <dd>The key to store the data under.</dd>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The object to be converted</dd>
+              <dt>
+                <i>done</i>
+              </dt>
+              <dd>The action to call when the store is complete.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Remarks">The specified key and value will always overwrite any existing data in the store. For a conditional store, 
+            use <a href="../Sansar.Simulation/DataStore.html#M:Sansar.Simulation.DataStore.Store``1(System.String,``0,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}})">DataStore.Store``1(string, ``0, Sansar.Simulation.DataStore.Options, Action&lt;Sansar.Simulation.DataStore.Result&lt;``0&gt;&gt;)</a> with <a href="../Sansar.Simulation/DataStore+Options.html#F:Sansar.Simulation.DataStore.Options.Version">Sansar.Simulation.DataStore.Options.Version</a> set to a value from a previous operation.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}})">Store&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):member">
+          <div class="msummary">
+            Serializes the given object to the data store
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Store&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i title="To be added.">T</i> value, <a href="../Sansar.Simulation/DataStore+Options.html">DataStore.Options</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;DataStore.Result&lt;T&gt;&gt;</a> done)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Parameters">
+            <dl>
+              <dt>
+                <i>key</i>
+              </dt>
+              <dd>The key to save the data under.</dd>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The object to be converted.</dd>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>Controls how the operation proceeds.</dd>
+              <dt>
+                <i>done</i>
+              </dt>
+              <dd>The action to call when the conversion is complete.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Remarks">
+            <a href="../Sansar.Simulation/DataStore+Options.html#F:Sansar.Simulation.DataStore.Options.Version">Sansar.Simulation.DataStore.Options.Version</a> can be specified to conditionally store only if the version matches. If the version number does not match, <a href="../Sansar.Simulation/DataStore+Result`1.html">Sansar.Simulation.DataStore.Result`1</a> will have Success == false and the current value in the Version and Object fields.
+            If <a href="../Sansar.Simulation/DataStore+Options.html#F:Sansar.Simulation.DataStore.Options.RetrieveData">Sansar.Simulation.DataStore.Options.RetrieveData</a> false and the write is successful, the response will not include the value written to the store and will simply pass back the value parameter. 
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.DataStore.Store``1(System.String,``0,Sansar.Simulation.DataStore.Options,System.Action{Sansar.Simulation.DataStore.Result{``0}}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

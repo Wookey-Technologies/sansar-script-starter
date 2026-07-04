@@ -1,0 +1,1415 @@
+<html>
+  <head>
+    <title>Sansar.Color</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Color">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Color:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Color:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Color:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Color">Color  Struct</h1>
+    <p class="Summary" id="T:Sansar.Color:Summary">
+            The Color class holds RGBA values that define a color.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Color:Signature">public struct  <b>Color</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Color:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Color:Docs:Remarks">
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Color:Docs:Version Information">
+        <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ValueType">ValueType</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Color(Mono.Simd.Vector4f)">Color</a>
+                    </b>(<a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>)</div>
+                </td>
+                <td>
+            Creates a new color with the supplied values.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Color(System.Single,System.Single,System.Single)">Color</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)</div>
+                </td>
+                <td>
+            Creates a new solid color with the supplied values.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Color(System.Single,System.Single,System.Single,System.Single)">Color</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)</div>
+                </td>
+                <td>
+            Creates a new color with the supplied values.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.Black">Black</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. Black</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.Blue">Blue</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. Blue</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.Clear">Clear</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. Clear</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.Cyan">Cyan</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. Cyan</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.Gray">Gray</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. Gray</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.Green">Green</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. Green</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.Magenta">Magenta</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. Magenta</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.Red">Red</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. Red</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.White">White</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. White</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Color.Yellow">Yellow</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Color.html">Color</a>
+                  </i>. Yellow</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Color.A">A</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            The alpha component of the color.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Color.B">B</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            The blue component of the color.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Color.G">G</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            The green component of the color.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Color.R">R</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. 
+            The red component of the color.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Color.Lerp(Sansar.Color@,System.Single)">Lerp</a>
+                  </b>(<i>ref</i> <a href="../Sansar/Color.html">Color</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../Sansar/Color.html">Color</a></nobr><blockquote>
+            Performs a linear interpolation between two colors.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Color.Parse(System.String)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Sansar/Color.html">Color</a></nobr><blockquote>
+            Parse a Color from a string.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Color.ToRGB()">ToRGB</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Generates a string RGB representation of the color.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Color.ToRGBA()">ToRGBA</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Generates a string RGBA representation of the color.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Color.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Generates a string representation of the color.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Color.ToString(System.String)">ToString</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Generates a string representation of the color.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Color.TryParse(System.String,Sansar.Color@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>out</i> <a href="../Sansar/Color.html">Color</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Attempt to parse a Color from a string
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Operators</h2>
+        <div class="SectionBox" id="Public Operators">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Color.op_Addition(Sansar.Color,Sansar.Color)">Addition</a>
+                  </b>(<a href="../Sansar/Color.html">Color</a>, <a href="../Sansar/Color.html">Color</a>)</td>
+                <td>
+            Performs color addition.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Color.op_Division(Sansar.Color,System.Single)">Division</a>
+                  </b>(<a href="../Sansar/Color.html">Color</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)</td>
+                <td>
+            Divides color components by a scalar.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Color.op_Multiply(Sansar.Color,System.Single)">Multiply</a>
+                  </b>(<a href="../Sansar/Color.html">Color</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)</td>
+                <td>
+            Performs a color scalar multiplication.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Color.op_Multiply(System.Single,Sansar.Color)">Multiply</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../Sansar/Color.html">Color</a>)</td>
+                <td>
+            Performs a color scalar multiplication.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Color.op_Subtraction(Sansar.Color,Sansar.Color)">Subtraction</a>
+                  </b>(<a href="../Sansar/Color.html">Color</a>, <a href="../Sansar/Color.html">Color</a>)</td>
+                <td>
+            Performs color subtraction.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Color.op_Implicit(Mono.Simd.Vector4f)~Sansar.Color">Conversion to Sansar.Color</a>
+                  </b>(Implicit)</td>
+                <td>
+            Converts a Mono.Simd.Vector4f to a Color.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#M:Sansar.Color.op_Implicit(Sansar.Color)~Mono.Simd.Vector4f">Conversion to Mono.Simd.Vector4f</a>
+                  </b>(Implicit)</td>
+                <td>
+            Converts a Color to a Mono.Simd.Vector4f
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Color:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Sansar.Color(Mono.Simd.Vector4f)">Color Constructor</h3>
+        <blockquote id="C:Sansar.Color(Mono.Simd.Vector4f):member">
+          <div class="msummary">
+            Creates a new color with the supplied values.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Color</b> (<a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> v)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Color(Mono.Simd.Vector4f):Parameters">
+            <dl>
+              <dt>
+                <i>v</i>
+              </dt>
+              <dd>Initializes the color from a <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a>.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Color(Mono.Simd.Vector4f):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Color(Mono.Simd.Vector4f):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Color(System.Single,System.Single,System.Single)">Color Constructor</h3>
+        <blockquote id="C:Sansar.Color(System.Single,System.Single,System.Single):member">
+          <div class="msummary">
+            Creates a new solid color with the supplied values.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Color</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> r, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> g, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> b)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Color(System.Single,System.Single,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>The red component.</dd>
+              <dt>
+                <i>g</i>
+              </dt>
+              <dd>The green component.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The blue component.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Color(System.Single,System.Single,System.Single):Remarks">The alpha component is set to 1.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Color(System.Single,System.Single,System.Single):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Sansar.Color(System.Single,System.Single,System.Single,System.Single)">Color Constructor</h3>
+        <blockquote id="C:Sansar.Color(System.Single,System.Single,System.Single,System.Single):member">
+          <div class="msummary">
+            Creates a new color with the supplied values.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Color</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> r, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> g, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> b, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> a)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Sansar.Color(System.Single,System.Single,System.Single,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>r</i>
+              </dt>
+              <dd>The red component.</dd>
+              <dt>
+                <i>g</i>
+              </dt>
+              <dd>The green component.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The blue component.</dd>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The alpha component.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Color(System.Single,System.Single,System.Single,System.Single):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Color(System.Single,System.Single,System.Single,System.Single):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Color.A">A Property</h3>
+        <blockquote id="P:Sansar.Color.A:member">
+          <div class="msummary">
+            The alpha component of the color.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>A</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Color.A:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Color.A:Remarks">Alpha is 1 by default.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Color.A:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Color.B">B Property</h3>
+        <blockquote id="P:Sansar.Color.B:member">
+          <div class="msummary">
+            The blue component of the color.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>B</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Color.B:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Color.B:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Color.B:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.Black">Black Field</h3>
+        <blockquote id="F:Sansar.Color.Black:member">
+          <div class="msummary">Black</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>Black</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Black:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Black:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.Blue">Blue Field</h3>
+        <blockquote id="F:Sansar.Color.Blue:member">
+          <div class="msummary">Blue</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>Blue</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Blue:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Blue:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.Clear">Clear Field</h3>
+        <blockquote id="F:Sansar.Color.Clear:member">
+          <div class="msummary">Clear</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>Clear</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Clear:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Clear:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.Cyan">Cyan Field</h3>
+        <blockquote id="F:Sansar.Color.Cyan:member">
+          <div class="msummary">Cyan</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>Cyan</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Cyan:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Cyan:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Color.G">G Property</h3>
+        <blockquote id="P:Sansar.Color.G:member">
+          <div class="msummary">
+            The green component of the color.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>G</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Color.G:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Color.G:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Color.G:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.Gray">Gray Field</h3>
+        <blockquote id="F:Sansar.Color.Gray:member">
+          <div class="msummary">Gray</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>Gray</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Gray:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Gray:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.Green">Green Field</h3>
+        <blockquote id="F:Sansar.Color.Green:member">
+          <div class="msummary">Green</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>Green</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Green:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Green:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.Lerp(Sansar.Color@,System.Single)">Lerp Method</h3>
+        <blockquote id="M:Sansar.Color.Lerp(Sansar.Color@,System.Single):member">
+          <div class="msummary">
+            Performs a linear interpolation between two colors.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Sansar/Color.html">Color</a> <b>Lerp</b> (<i>ref</i> <a href="../Sansar/Color.html">Color</a> c, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> amount)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.Lerp(Sansar.Color@,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>c</i>
+              </dt>
+              <dd>The second color.</dd>
+              <dt>
+                <i>amount</i>
+              </dt>
+              <dd>Value from [0..1] indicating the weight for the second color.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.Lerp(Sansar.Color@,System.Single):Returns">A color that is linearly interpolated between the two sources.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.Lerp(Sansar.Color@,System.Single):Remarks">a + (c-a) * amount.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.Lerp(Sansar.Color@,System.Single):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.Magenta">Magenta Field</h3>
+        <blockquote id="F:Sansar.Color.Magenta:member">
+          <div class="msummary">Magenta</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>Magenta</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Magenta:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Magenta:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.op_Addition(Sansar.Color,Sansar.Color)">op_Addition Method</h3>
+        <blockquote id="M:Sansar.Color.op_Addition(Sansar.Color,Sansar.Color):member">
+          <div class="msummary">
+            Performs color addition.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Color.html">Color</a> operator+ (<a href="../Sansar/Color.html">Color</a> a, <a href="../Sansar/Color.html">Color</a> b)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Addition(Sansar.Color,Sansar.Color):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The first Color.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second Color.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Addition(Sansar.Color,Sansar.Color):Returns">A new color that is the sum of the arguments.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Addition(Sansar.Color,Sansar.Color):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Addition(Sansar.Color,Sansar.Color):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.op_Division(Sansar.Color,System.Single)">op_Division Method</h3>
+        <blockquote id="M:Sansar.Color.op_Division(Sansar.Color,System.Single):member">
+          <div class="msummary">
+            Divides color components by a scalar.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Color.html">Color</a> operator/ (<a href="../Sansar/Color.html">Color</a> c, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> s)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Division(Sansar.Color,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>c</i>
+              </dt>
+              <dd>The color.</dd>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>The scalar.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Division(Sansar.Color,System.Single):Returns">Returns a new color with value [c.R/s, c.G/s, c.B/s, c.A/s]</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Division(Sansar.Color,System.Single):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Division(Sansar.Color,System.Single):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.op_Implicit(Mono.Simd.Vector4f)~Sansar.Color">Conversion Method</h3>
+        <blockquote id="M:Sansar.Color.op_Implicit(Mono.Simd.Vector4f)~Sansar.Color:member">
+          <div class="msummary">
+            Converts a Mono.Simd.Vector4f to a Color.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static implicit operator <a href="../Sansar/Color.html">Color</a> (<a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> v)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Implicit(Mono.Simd.Vector4f)~Sansar.Color:Parameters">
+            <dl>
+              <dt>
+                <i>v</i>
+              </dt>
+              <dd>Vector to convert</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Implicit(Mono.Simd.Vector4f)~Sansar.Color:Returns">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Implicit(Mono.Simd.Vector4f)~Sansar.Color:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Implicit(Mono.Simd.Vector4f)~Sansar.Color:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.op_Implicit(Sansar.Color)~Mono.Simd.Vector4f">Conversion Method</h3>
+        <blockquote id="M:Sansar.Color.op_Implicit(Sansar.Color)~Mono.Simd.Vector4f:member">
+          <div class="msummary">
+            Converts a Color to a Mono.Simd.Vector4f
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static implicit operator <a href="http://docs.go-mono.com/?link=T%3aMono.Simd.Vector4f">Mono.Simd.Vector4f</a> (<a href="../Sansar/Color.html">Color</a> c)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Implicit(Sansar.Color)~Mono.Simd.Vector4f:Parameters">
+            <dl>
+              <dt>
+                <i>c</i>
+              </dt>
+              <dd>Color to convert</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Implicit(Sansar.Color)~Mono.Simd.Vector4f:Returns">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Implicit(Sansar.Color)~Mono.Simd.Vector4f:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Implicit(Sansar.Color)~Mono.Simd.Vector4f:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.op_Multiply(Sansar.Color,System.Single)">op_Multiply Method</h3>
+        <blockquote id="M:Sansar.Color.op_Multiply(Sansar.Color,System.Single):member">
+          <div class="msummary">
+            Performs a color scalar multiplication.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Color.html">Color</a> operator* (<a href="../Sansar/Color.html">Color</a> c, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> s)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Multiply(Sansar.Color,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>c</i>
+              </dt>
+              <dd>The color.</dd>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>The scalar.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Multiply(Sansar.Color,System.Single):Returns">Returns a new color with value [c.R*s, c.G*s, c.B*s, c.A*s]</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Multiply(Sansar.Color,System.Single):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Multiply(Sansar.Color,System.Single):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.op_Multiply(System.Single,Sansar.Color)">op_Multiply Method</h3>
+        <blockquote id="M:Sansar.Color.op_Multiply(System.Single,Sansar.Color):member">
+          <div class="msummary">
+            Performs a color scalar multiplication.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Color.html">Color</a> operator* (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> s, <a href="../Sansar/Color.html">Color</a> c)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Multiply(System.Single,Sansar.Color):Parameters">
+            <dl>
+              <dt>
+                <i>s</i>
+              </dt>
+              <dd>The scalar.</dd>
+              <dt>
+                <i>c</i>
+              </dt>
+              <dd>The color.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Multiply(System.Single,Sansar.Color):Returns">Returns a new color with value [s*c.R, s*c.G, s*c.B, s*c.A]</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Multiply(System.Single,Sansar.Color):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Multiply(System.Single,Sansar.Color):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.op_Subtraction(Sansar.Color,Sansar.Color)">op_Subtraction Method</h3>
+        <blockquote id="M:Sansar.Color.op_Subtraction(Sansar.Color,Sansar.Color):member">
+          <div class="msummary">
+            Performs color subtraction.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Color.html">Color</a> operator- (<a href="../Sansar/Color.html">Color</a> a, <a href="../Sansar/Color.html">Color</a> b)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Subtraction(Sansar.Color,Sansar.Color):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The first Color.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second Color.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.op_Subtraction(Sansar.Color,Sansar.Color):Returns">A new color that is the difference of the arguments.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Subtraction(Sansar.Color,Sansar.Color):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.op_Subtraction(Sansar.Color,Sansar.Color):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.Parse(System.String)">Parse Method</h3>
+        <blockquote id="M:Sansar.Color.Parse(System.String):member">
+          <div class="msummary">
+            Parse a Color from a string.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar/Color.html">Color</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> colorString)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.Parse(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>colorString</i>
+              </dt>
+              <dd>A string of the format (R,G,B) or (R,G,B,A)</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.Parse(System.String):Returns">The Color parsed from the string.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.Parse(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>If colorString is null.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.FormatException">FormatException</a>
+                </td>
+                <td>If the string is not a valid color or its components are not valid floats.</td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.Parse(System.String):Remarks">
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="M:Sansar.Color.Parse(System.String):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">Color myColor = Color.Parse("(0.5,1.0,0.8)");</pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.Parse(System.String):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Color.R">R Property</h3>
+        <blockquote id="P:Sansar.Color.R:member">
+          <div class="msummary">
+            The red component of the color.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>R</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Color.R:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Color.R:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Color.R:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.Red">Red Field</h3>
+        <blockquote id="F:Sansar.Color.Red:member">
+          <div class="msummary">Red</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>Red</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Red:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Red:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.ToRGB()">ToRGB Method</h3>
+        <blockquote id="M:Sansar.Color.ToRGB():member">
+          <div class="msummary">
+            Generates a string RGB representation of the color.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToRGB</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.ToRGB():Returns">The RGB color as a string.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.ToRGB():Remarks">RGB values are based on a scale from 0 to 255.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.ToRGB():Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.ToRGBA()">ToRGBA Method</h3>
+        <blockquote id="M:Sansar.Color.ToRGBA():member">
+          <div class="msummary">
+            Generates a string RGBA representation of the color.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToRGBA</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.ToRGBA():Returns">The RGBA color as a string.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.ToRGBA():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.ToRGBA():Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Color.ToString():member">
+          <div class="msummary">
+            Generates a string representation of the color.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.ToString():Returns">The color as a string.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.ToString():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.ToString():Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.ToString(System.String)">ToString Method</h3>
+        <blockquote id="M:Sansar.Color.ToString(System.String):member">
+          <div class="msummary">
+            Generates a string representation of the color.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> format)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.ToString(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>Format to use for each of the coordinates.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.ToString(System.String):Returns">The color as a string.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.ToString(System.String):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.ToString(System.String):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Color.TryParse(System.String,Sansar.Color@)">TryParse Method</h3>
+        <blockquote id="M:Sansar.Color.TryParse(System.String,Sansar.Color@):member">
+          <div class="msummary">
+            Attempt to parse a Color from a string
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> colorString, <i>out</i> <a href="../Sansar/Color.html">Color</a> color)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.TryParse(System.String,Sansar.Color@):Parameters">
+            <dl>
+              <dt>
+                <i>colorString</i>
+              </dt>
+              <dd>A string of the format (R,G,B) or (R,G,B,A)</dd>
+              <dt>
+                <i>color</i>
+              </dt>
+              <dd>The color that will be set if colorString represents a valid color.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Color.TryParse(System.String,Sansar.Color@):Returns">True if successfully parsed a color, false if not.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Color.TryParse(System.String,Sansar.Color@):Remarks">
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="M:Sansar.Color.TryParse(System.String,Sansar.Color@):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">Color myColor;
+            if (Color.Parse("(0.5,1.0,0.8)", out myColor)
+            {
+                // myColor is set
+            }</pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Color.TryParse(System.String,Sansar.Color@):Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.White">White Field</h3>
+        <blockquote id="F:Sansar.Color.White:member">
+          <div class="msummary">White</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>White</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.White:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.White:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Color.Yellow">Yellow Field</h3>
+        <blockquote id="F:Sansar.Color.Yellow:member">
+          <div class="msummary">Yellow</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../Sansar/Color.html">Color</a> <b>Yellow</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Yellow:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Color.Yellow:Version Information">
+            <b>Namespace: </b>Sansar<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

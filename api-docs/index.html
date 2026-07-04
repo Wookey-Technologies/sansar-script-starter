@@ -1,0 +1,304 @@
+<html>
+  <head>
+    <title>Sansar Script API</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+    </div>
+    <h1 class="PageTitle">Sansar Script API</h1>
+    <p class="Summary">
+      <div class="AssemblyRemarks" style="margin-top: 1em; margin-bottom: 1em">
+        <p>Documentation for the Sansar script API.</p>
+        <div style="margin-left: 1em;">
+          <p>
+          Sansar uses C# scripts to provide dynamic behaviors and interactions.
+        </p>
+          <p>
+          Creating a Sansar script:
+          <ol><li>
+              Choose a base class for your script depending on where the script will live and what APIs it needs access to. There are three core APIs: <strong>Object</strong>, <strong>Scene</strong>, and <strong>Agent</strong>. Each of these is split into two interfaces: a <strong>Public</strong> interface that is generally available and a <strong>Private</strong> interface that is a more complete superset of the Public interface. The base class chosen will determine which APIs are available to the script.
+              <ul><li>
+                  Sansar currently supports:
+                  <ul><li><a href="./Sansar.Simulation/SceneObjectScript.html">Sansar.Simulation.SceneObjectScript</a> for scripts attached to objects that are part of the scene.<br />This will give it access to <a href="./Sansar.Simulation/ObjectPrivate.html">Sansar.Simulation.ObjectPrivate</a> for the object the script is on, and <a href="./Sansar.Simulation/ScenePrivate.html">Sansar.Simulation.ScenePrivate</a> for the scene the object is a part of.
+                    </li></ul></li><li>
+                  There is planned support for:
+                  <ul><li><strong>Sansar.Simulation.AgentScript</strong> for scripts that are attached directly to agents.<br />This will give it access to <a href="./Sansar.Simulation/ObjectPrivate.html">Sansar.Simulation.ObjectPrivate</a> for the avatar object, <a href="./Sansar.Simulation/AgentPrivate.html">Sansar.Simulation.AgentPrivate</a> for the agent the script is on, and <a href="./Sansar.Simulation/ScenePublic.html">Sansar.Simulation.ScenePublic</a> for the scene the agent is currently in.
+                    </li><li><strong>Sansar.Simulation.SceneScript</strong> for scripts that are attached directly to the experience.<br />This will give it access to the <a href="./Sansar.Simulation/ScenePrivate.html">Sansar.Simulation.ScenePrivate</a> interface for the scene the script is attached to.
+                    </li><li><strong>Sansar.Simulation.ObjectScript</strong> for scripts attached to objects that are not part of the scene.<br />This will give it access to <a href="./Sansar.Simulation/ObjectPrivate.html">Sansar.Simulation.ObjectPrivate</a> for the object the script is on, and <a href="./Sansar.Simulation/ScenePublic.html">Sansar.Simulation.ScenePublic</a> for the scene the object is currently in.
+                      </li></ul></li></ul></li><li>
+              Create a new class that extends the chosen base class.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">public class MyScript : SceneObjectScript</pre></td></tr></table></li><li>
+              Create public fields of supported types for any parameters that should be set in the object properties when editing the scene.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+public bool TrackAgentHits = true;
+public bool TrackObjectHits = true;</pre></td></tr></table></li><li>
+              Override init() to subscribe to events or initialize coroutines that will wait for events.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+public override void Init()
+{
+    // Subscribe to Add User events. Use SessionId.Invalid to track all users.
+    ScenePrivate.User.Subscribe(UserEvents.AddUser, SessionId.Invalid, AddUser);
+}</pre></td></tr></table></li><li>
+              Write event handlers and coroutines as needed to process events.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+void AddUser(string Action, Sansar.Script.SessionId User, string Data)
+{
+    // Lookup the name of the agent.
+    string name = ScenePrivate.FindAgent(User).AgentInfo.Name;
+    ScenePrivate.Chat.MessageAllUsers(string.Format("Welcome {0}!", name));
+}</pre></td></tr></table></li><li>
+              Upload the script in Sansar via the "Upload" button in inventory while editing a scene.
+              <ul><li>Errors and Warnings will show in the upload window.</li><li>Some APIs are "Restricted": generally these are unstable APIs that are being tested. Since the APIs may change or even be removed in the future scripts that use them should not be sold or traded.</li><li>The allowed C# libraries are intitially severely limited but will be expanded over time.</li></ul></li><li>
+              Once successully compiled the script will show up in inventory. Drag it from there onto an object in the scene.
+              <ul><li>Only successfully compiled scripts will be added to inventory.</li></ul></li><li>
+              Edit the properties on the object to set any parameters from the public fields set in step 3 above.
+            </li><li>
+              Save and publish the scene.
+            </li></ol></p>
+        </div>
+        <hr />
+      
+      Sansar uses a limited subset of the mono .net api. Click <a href="access.html">here</a> for a complete listing.
+    </div>
+    </p>
+    <div>
+    </div>
+    <div class="Remarks">
+      <h2 class="Section">Root Namespace</h2>
+      <p>
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </p>
+      <h2 class="Section">
+        <a href="Sansar/index.html">Sansar Namespace</a>
+      </h2>
+      <p>
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </p>
+      <h2 class="Section">
+        <a href="Sansar.Metadata/index.html">Sansar.Metadata Namespace</a>
+      </h2>
+      <p>
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </p>
+      <h2 class="Section">
+        <a href="Sansar.Microthreading/index.html">Sansar.Microthreading Namespace</a>
+      </h2>
+      <p>
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </p>
+      <h2 class="Section">
+        <a href="Sansar.Script/index.html">Sansar.Script Namespace</a>
+      </h2>
+      <p>
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </p>
+      <h2 class="Section">
+        <a href="Sansar.Script.Testing/index.html">Sansar.Script.Testing Namespace</a>
+      </h2>
+      <p>
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </p>
+      <h2 class="Section">
+        <a href="Sansar.Simulation/index.html">Sansar.Simulation Namespace</a>
+      </h2>
+      <p>
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </p>
+      <h2 class="Section">
+        <a href="Sansar.Utility/index.html">Sansar.Utility Namespace</a>
+      </h2>
+      <p>
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </p>
+    </div>
+    <div class="Members">
+    </div>
+    <hr size="1" />
+    <div class="Copyright">Copyright ©2018</div>
+  </body>
+</html>

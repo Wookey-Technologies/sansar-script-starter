@@ -1,0 +1,1032 @@
+<html>
+  <head>
+    <title>Sansar.Script.Testing.Assertions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar.Script.Testing Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Script.Testing.Assertions">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Testing.Assertions:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Testing.Assertions:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Testing.Assertions:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Script.Testing.Assertions">Assertions  Class</h1>
+    <p class="Summary" id="T:Sansar.Script.Testing.Assertions:Summary">
+            Contains various test methods which throw exceptions if the conditions are false.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Script.Testing.Assertions:Signature">public static class  <b>Assertions</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Script.Testing.Assertions:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Testing.Assertions:Docs:Remarks">This class is restricted and may not be included in scripts for sale in the marketplace.
+            All APIs are subject to change.</div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Testing.Assertions:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Testing.Assertions.LogSuccessful">LogSuccessful</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Enables or disables logging of successful assertion diagnostic messages.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Quaternion,Sansar.Quaternion,System.Int32,System.String,System.String,System.String,System.Int32)">AlmostEqual</a>
+                  </b>(<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the two Quaternions are not approximately equal.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Vector,Sansar.Vector,System.Int32,System.String,System.String,System.String,System.Int32)">AlmostEqual</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the two vectors are not approximately equal.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.AlmostEqual(System.Single,System.Single,System.Int32,System.String,System.String,System.String,System.Int32)">AlmostEqual</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the two floats are not approximately equal.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.Equal``1(``0,``0,System.String,System.String,System.String,System.Int32)">Equal&lt;T&gt;</a>
+                  </b>(<i title="The type of the objects.">T</i>, <i title="The type of the objects.">T</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the passed objects do not compare as equal via <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IComparable.CompareTo(System.Object)">IComparable.CompareTo(object)</a>. Will NOT throw if both objects are null.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.Fail(System.String,System.String,System.String,System.Int32)">Fail</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception always.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.Greater``1(``0,``0,System.String,System.String,System.String,System.Int32)">Greater&lt;T&gt;</a>
+                  </b>(<i title="The type of the objects.">T</i>, <i title="The type of the objects.">T</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the first object does not compare as greater via <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IComparable.CompareTo(System.Object)">IComparable.CompareTo(object)</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.NotEqual``1(``0,``0,System.String,System.String,System.String,System.Int32)">NotEqual&lt;T&gt;</a>
+                  </b>(<i title="The type of the objects.">T</i>, <i title="The type of the objects.">T</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the passed objects compare as equal via <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IComparable.CompareTo(System.Object)">IComparable.CompareTo(object)</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.NotNull(System.Object,System.String,System.String,System.String,System.Int32)">NotNull</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the passed argument is not null.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.Null(System.Object,System.String,System.String,System.String,System.Int32)">Null</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the passed argument is not null.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.NullOrMissing(System.String,System.String,System.String,System.String,System.String,System.Int32)">NullOrMissing</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the message is non-null and contains the contents substring.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.True(System.Boolean,System.String,System.String,System.String,System.Int32)">True</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the passed argument is false.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.Type(System.String,System.Object,System.String,System.String,System.String,System.Int32)">Type</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=P:System.Type.FullName">Type.FullName</a> of the passed object does not match the passed typename. 
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Testing.Assertions.Type``1(System.Object,System.String,System.String,System.String,System.Int32)">Type&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Throws an exception if the passed type is not of the same type as the type param or if the obj is null.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Script.Testing.Assertions:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Quaternion,Sansar.Quaternion,System.Int32,System.String,System.String,System.String,System.Int32)">AlmostEqual Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Quaternion,Sansar.Quaternion,System.Int32,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the two Quaternions are not approximately equal.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AlmostEqual</b> (<a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> a, <a href="../Sansar/Quaternion.html">Sansar.Quaternion</a> b, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> significantFigures, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Quaternion,Sansar.Quaternion,System.Int32,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The first Quaternion to check.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second Quaternion to check.</dd>
+              <dt>
+                <i>significantFigures</i>
+              </dt>
+              <dd>The number of significant digits to compare</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Quaternion,Sansar.Quaternion,System.Int32,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Quaternion,Sansar.Quaternion,System.Int32,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Vector,Sansar.Vector,System.Int32,System.String,System.String,System.String,System.Int32)">AlmostEqual Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Vector,Sansar.Vector,System.Int32,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the two vectors are not approximately equal.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AlmostEqual</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> a, <a href="../Sansar/Vector.html">Sansar.Vector</a> b, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> significantFigures, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Vector,Sansar.Vector,System.Int32,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The first vector to check.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second vector to check.</dd>
+              <dt>
+                <i>significantFigures</i>
+              </dt>
+              <dd>The number of significant digits to compare</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Vector,Sansar.Vector,System.Int32,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.AlmostEqual(Sansar.Vector,Sansar.Vector,System.Int32,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.AlmostEqual(System.Single,System.Single,System.Int32,System.String,System.String,System.String,System.Int32)">AlmostEqual Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.AlmostEqual(System.Single,System.Single,System.Int32,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the two floats are not approximately equal.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AlmostEqual</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> a, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> b, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> significantFigures, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.AlmostEqual(System.Single,System.Single,System.Int32,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The first float to check.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second float to check.</dd>
+              <dt>
+                <i>significantFigures</i>
+              </dt>
+              <dd>The number of significant digits to compare</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.AlmostEqual(System.Single,System.Single,System.Int32,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.AlmostEqual(System.Single,System.Single,System.Int32,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.Equal``1(``0,``0,System.String,System.String,System.String,System.Int32)">Equal&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.Equal``1(``0,``0,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the passed objects do not compare as equal via <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IComparable.CompareTo(System.Object)">IComparable.CompareTo(object)</a>. Will NOT throw if both objects are null.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Equal&lt;T&gt;</b> (<i title="The type of the objects.">T</i> a, <i title="The type of the objects.">T</i> b, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)<br /> where T : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IComparable">IComparable</a></div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.Equal``1(``0,``0,System.String,System.String,System.String,System.Int32):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type of the objects.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.Equal``1(``0,``0,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The first object to check.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second object to check.</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Equal``1(``0,``0,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Equal``1(``0,``0,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.Fail(System.String,System.String,System.String,System.Int32)">Fail Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.Fail(System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception always.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Fail</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.Fail(System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Fail(System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Fail(System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.Greater``1(``0,``0,System.String,System.String,System.String,System.Int32)">Greater&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.Greater``1(``0,``0,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the first object does not compare as greater via <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IComparable.CompareTo(System.Object)">IComparable.CompareTo(object)</a>.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Greater&lt;T&gt;</b> (<i title="The type of the objects.">T</i> a, <i title="The type of the objects.">T</i> b, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)<br /> where T : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IComparable">IComparable</a></div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.Greater``1(``0,``0,System.String,System.String,System.String,System.Int32):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type of the objects.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.Greater``1(``0,``0,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The first object to check.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second object to check.</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Greater``1(``0,``0,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Greater``1(``0,``0,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Testing.Assertions.LogSuccessful">LogSuccessful Property</h3>
+        <blockquote id="P:Sansar.Script.Testing.Assertions.LogSuccessful:member">
+          <div class="msummary">
+            Enables or disables logging of successful assertion diagnostic messages.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>LogSuccessful</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Testing.Assertions.LogSuccessful:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Testing.Assertions.LogSuccessful:Remarks">This can be used to trace test execution.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Testing.Assertions.LogSuccessful:Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.NotEqual``1(``0,``0,System.String,System.String,System.String,System.Int32)">NotEqual&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.NotEqual``1(``0,``0,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the passed objects compare as equal via <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IComparable.CompareTo(System.Object)">IComparable.CompareTo(object)</a>.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>NotEqual&lt;T&gt;</b> (<i title="The type of the objects.">T</i> a, <i title="The type of the objects.">T</i> b, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)<br /> where T : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IComparable">IComparable</a></div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.NotEqual``1(``0,``0,System.String,System.String,System.String,System.Int32):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type of the objects.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.NotEqual``1(``0,``0,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>The first object to check.</dd>
+              <dt>
+                <i>b</i>
+              </dt>
+              <dd>The second object to check.</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.NotEqual``1(``0,``0,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.NotEqual``1(``0,``0,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.NotNull(System.Object,System.String,System.String,System.String,System.Int32)">NotNull Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.NotNull(System.Object,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the passed argument is not null.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>NotNull</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> val, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.NotNull(System.Object,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>val</i>
+              </dt>
+              <dd>The value that must be null.</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.NotNull(System.Object,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.NotNull(System.Object,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.Null(System.Object,System.String,System.String,System.String,System.Int32)">Null Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.Null(System.Object,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the passed argument is not null.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Null</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> val, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.Null(System.Object,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>val</i>
+              </dt>
+              <dd>The value that must be null.</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Null(System.Object,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Null(System.Object,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.NullOrMissing(System.String,System.String,System.String,System.String,System.String,System.Int32)">NullOrMissing Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.NullOrMissing(System.String,System.String,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the message is non-null and contains the contents substring.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>NullOrMissing</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> contents, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.NullOrMissing(System.String,System.String,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>message</i>
+              </dt>
+              <dd>The message to check.</dd>
+              <dt>
+                <i>contents</i>
+              </dt>
+              <dd>A substring to check.</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.NullOrMissing(System.String,System.String,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.NullOrMissing(System.String,System.String,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.True(System.Boolean,System.String,System.String,System.String,System.Int32)">True Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.True(System.Boolean,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the passed argument is false.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>True</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> val, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.True(System.Boolean,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>val</i>
+              </dt>
+              <dd>The value that must be true.</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.True(System.Boolean,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.True(System.Boolean,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.Type(System.String,System.Object,System.String,System.String,System.String,System.Int32)">Type Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.Type(System.String,System.Object,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=P:System.Type.FullName">Type.FullName</a> of the passed object does not match the passed typename. 
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Type</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> typename, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> obj, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.Type(System.String,System.Object,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>typename</i>
+              </dt>
+              <dd>The expected typename.</dd>
+              <dt>
+                <i>obj</i>
+              </dt>
+              <dd>The object to check.</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Type(System.String,System.Object,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Type(System.String,System.Object,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Testing.Assertions.Type``1(System.Object,System.String,System.String,System.String,System.Int32)">Type&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Script.Testing.Assertions.Type``1(System.Object,System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Throws an exception if the passed type is not of the same type as the type param or if the obj is null.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Type&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> obj, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> diagnostic, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> memberName, [System.Runtime.CompilerServices.CallerFilePath] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceFilePath, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sourceLineNumber)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.Type``1(System.Object,System.String,System.String,System.String,System.Int32):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type to confirm.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Testing.Assertions.Type``1(System.Object,System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>obj</i>
+              </dt>
+              <dd>The object to check.</dd>
+              <dt>
+                <i>diagnostic</i>
+              </dt>
+              <dd>Optional string to show with a faulure exception.</dd>
+              <dt>
+                <i>memberName</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceFilePath</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+              <dt>
+                <i>sourceLineNumber</i>
+              </dt>
+              <dd>generated by the compiler</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Type``1(System.Object,System.String,System.String,System.String,System.Int32):Remarks">The method is restricted. The method is subject to change or removal at any time and 
+            may not be included in scripts for sale in the marketplace.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Testing.Assertions.Type``1(System.Object,System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script.Testing<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

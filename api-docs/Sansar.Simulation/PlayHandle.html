@@ -1,0 +1,895 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.PlayHandle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.PlayHandle">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.PlayHandle:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.PlayHandle:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.PlayHandle:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.PlayHandle">PlayHandle  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.PlayHandle:Summary">The PlayHandle represents audio play handles.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.PlayHandle:Signature">[Sansar.Script.Interface]<br />public class  <b>PlayHandle</b> : <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>,	<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.PlayHandle:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.PlayHandle:Docs:Remarks">
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.PlayHandle:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.Dispose()">Dispose</a>
+                  </b>()<blockquote>
+            Releases resources held by this instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.Finalize()">Finalize</a>
+                  </b>()<blockquote></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.GetLoudness()">GetLoudness</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves the loudness for this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.GetPitchShift()">GetPitchShift</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Retrieves the relative pitch for this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.GetRemainingSeconds()">GetRemainingSeconds</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Returns the number of seconds remaining.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.GetStatus()">GetStatus</a>
+                  </b>()<nobr> : <a href="../Sansar.Simulation/PlayStatus.html">PlayStatus</a></nobr><blockquote>Returns the current PlayStatus.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.IsPlaying()">IsPlaying</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Returns whether the sound is currently playing.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.OnFinished(System.Action)">OnFinished</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<blockquote>Triggers action when this sound is finished playing.  Doesn't trigger if stopped or looping.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single)">SetLoudness</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets the loudness for this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetLoudness</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Sets the loudness for this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetLoudness</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the loudness for this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single)">SetPitchShift</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets the relative pitch for this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetPitchShift</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Sets the relative pitch for this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetPitchShift</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the relative pitch for this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.Stop()">Stop</a>
+                  </b>()<blockquote>Stops the sound on this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.Stop(Sansar.Script.ScriptBase.OperationComplete)">Stop</a>
+                  </b>(<a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Stops the sound on this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.Stop(System.Action{Sansar.Script.OperationCompleteEvent})">Stop</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Stops the sound on this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.Stop(System.Boolean)">Stop</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>Stops the sound on this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,Sansar.Script.ScriptBase.OperationComplete)">Stop</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a></nobr><blockquote>Stops the sound on this PlayHandle.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">Stop</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Stops the sound on this PlayHandle.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.PlayHandle:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Simulation.PlayHandle.Dispose()">Dispose Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.Dispose():member">
+          <div class="msummary">
+            Releases resources held by this instance.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Dispose():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Dispose():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.Finalize()">Finalize Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.Finalize():member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Finalize</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Finalize():Remarks">Ensures that this instance has been Disposed.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Finalize():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.GetLoudness()">GetLoudness Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.GetLoudness():member">
+          <div class="msummary">Retrieves the loudness for this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetLoudness</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.GetLoudness():Returns">The loudness (in dB).</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.GetLoudness():Remarks">This synchronous method returns the broadcasted loudness.  It does not wait to hear back from clients.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.GetLoudness():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.GetPitchShift()">GetPitchShift Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.GetPitchShift():member">
+          <div class="msummary">Retrieves the relative pitch for this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetPitchShift</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.GetPitchShift():Returns">The relative pitch.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.GetPitchShift():Remarks">This synchronous method returns the broadcasted pitch.  It does not wait to hear back from clients.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.GetPitchShift():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.GetRemainingSeconds()">GetRemainingSeconds Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.GetRemainingSeconds():member">
+          <div class="msummary">Returns the number of seconds remaining.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetRemainingSeconds</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.GetRemainingSeconds():Returns">The number of seconds remaining. (0 if done playing, -1 if looped)</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.GetRemainingSeconds():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.GetRemainingSeconds():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.GetStatus()">GetStatus Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.GetStatus():member">
+          <div class="msummary">Returns the current PlayStatus.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/PlayStatus.html">PlayStatus</a> <b>GetStatus</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.GetStatus():Returns">The current PlayStatus.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.GetStatus():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.GetStatus():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.IsPlaying()">IsPlaying Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.IsPlaying():member">
+          <div class="msummary">Returns whether the sound is currently playing.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsPlaying</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.IsPlaying():Returns">true if currently playing</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.IsPlaying():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.IsPlaying():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.OnFinished(System.Action)">OnFinished Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.OnFinished(System.Action):member">
+          <div class="msummary">Triggers action when this sound is finished playing.  Doesn't trigger if stopped or looping.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnFinished</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.OnFinished(System.Action):Parameters">
+            <dl>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Action to be called when the sound finishes playing.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.OnFinished(System.Action):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.OnFinished(System.Action):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single)">SetLoudness Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single):member">
+          <div class="msummary">Sets the loudness for this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetLoudness</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> loudness)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>loudness</i>
+              </dt>
+              <dd>The loudness (in dB).</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetLoudness Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Sets the loudness for this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetLoudness</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> loudness, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>loudness</i>
+              </dt>
+              <dd>The loudness (in dB).</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,Sansar.Script.ScriptBase.OperationComplete):Remarks">This asynchronous method queues the write then returns.
+             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetLoudness Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the loudness for this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetLoudness</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> loudness, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>loudness</i>
+              </dt>
+              <dd>The loudness (in dB).</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetLoudness(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single)">SetPitchShift Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single):member">
+          <div class="msummary">Sets the relative pitch for this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetPitchShift</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> pitch)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>pitch</i>
+              </dt>
+              <dd>The relative pitch in semitones.  (default = 0)</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,Sansar.Script.ScriptBase.OperationComplete)">SetPitchShift Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Sets the relative pitch for this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>SetPitchShift</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> pitch, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>pitch</i>
+              </dt>
+              <dd>The relative pitch in semitones.  (default = 0)</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,Sansar.Script.ScriptBase.OperationComplete):Remarks">This asynchronous method queues the write then returns.
+             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetPitchShift Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the relative pitch for this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetPitchShift</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> pitch, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>pitch</i>
+              </dt>
+              <dd>The relative pitch in semitones.  (default = 0)</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.SetPitchShift(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.Stop()">Stop Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.Stop():member">
+          <div class="msummary">Stops the sound on this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Stop</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop():Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop():Remarks">This asynchronous method queues the write then returns.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.Stop(Sansar.Script.ScriptBase.OperationComplete)">Stop Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.Stop(Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Stops the sound on this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>Stop</b> (<a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(Sansar.Script.ScriptBase.OperationComplete):Remarks">This asynchronous method queues the write then returns.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.Stop(System.Action{Sansar.Script.OperationCompleteEvent})">Stop Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.Stop(System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Stops the sound on this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Stop</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean)">Stop Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean):member">
+          <div class="msummary">Stops the sound on this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Stop</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> fadeout)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>fadeout</i>
+              </dt>
+              <dd>Will fade out if true.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean):Remarks">This asynchronous method queues the write then returns.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,Sansar.Script.ScriptBase.OperationComplete)">Stop Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):member">
+          <div class="msummary">Stops the sound on this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("Deprecated. Use the Action&lt;&gt; overload", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a> <b>Stop</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> fadeout, <a href="../Sansar.Script/ScriptBase+OperationComplete.html">Sansar.Script.ScriptBase.OperationComplete</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Parameters">
+            <dl>
+              <dt>
+                <i>fadeout</i>
+              </dt>
+              <dd>Will fade out if true.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Remarks">This asynchronous method queues the write then returns.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,Sansar.Script.ScriptBase.OperationComplete):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">Stop Method</h3>
+        <blockquote id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Stops the sound on this PlayHandle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Stop</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> fadeout, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>fadeout</i>
+              </dt>
+              <dd>Will fade out if true.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The return value is an internal event id.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.PlayHandle.Stop(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,615 @@
+<html>
+  <head>
+    <title>Sansar.Script.Timer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar.Script Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Script.Timer">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Timer:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Timer:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Timer:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Script.Timer">Timer  Class</h1>
+    <p class="Summary" id="T:Sansar.Script.Timer:Summary">
+            The Timer class is a static class that manages timer events for a script. 
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Script.Timer:Signature">public static class  <b>Timer</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Script.Timer:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Timer:Docs:Remarks">The time the event is generated is 
+            guaranteed to be no less than the given duration, but may be more depending on system load.</div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Timer:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Timer.Cancel(System.String)">Cancel</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Cancels a repeating timer.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Timer.Create(System.Double,System.Action)">Create</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a></nobr><blockquote>
+            Generates a one time event.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action)">Create</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a></nobr><blockquote>
+            Generates a one time event.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Timer.Create(System.Double,System.Action,System.Boolean)">Create</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a></nobr><blockquote>
+            Generates a one time event.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Timer.Create(System.Double,System.Double,System.Action)">Create</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a></nobr><blockquote>
+            Generates a repeating event with an initial duration and a repeat duration.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action,System.Boolean)">Create</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a></nobr><blockquote>
+            Generates a one time event.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action)">Create</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a></nobr><blockquote>
+            Generates a repeating event with an initial duration and a repeat duration.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action,System.String)">Create</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Generates a repeating event with an initial duration and a repeat duration. The event will continue as long as the script is 
+            active or until <a href="../Sansar.Script/Timer.html#M:Sansar.Script.Timer.Cancel(System.String)">Timer.Cancel(string)</a> is called.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Script.Timer:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Script.Timer.Cancel(System.String)">Cancel Method</h3>
+        <blockquote id="M:Sansar.Script.Timer.Cancel(System.String):member">
+          <div class="msummary">
+            Cancels a repeating timer.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Named timers are deprecated. Use the IEventSubscription returned from Timer.Create to cancel a timer.", false)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Cancel</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Cancel(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>Name of the timer to cancel.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Cancel(System.String):Remarks">If no timer with the given name exists, a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a> will be thrown by the invocation.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Cancel(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Timer.Create(System.Double,System.Action)">Create Method</h3>
+        <blockquote id="M:Sansar.Script.Timer.Create(System.Double,System.Action):member">
+          <div class="msummary">
+            Generates a one time event.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a> <b>Create</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> initialDurationSeconds, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Action):Parameters">
+            <dl>
+              <dt>
+                <i>initialDurationSeconds</i>
+              </dt>
+              <dd>The minimum duration to elapse before the event is generated in seconds.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> to be called when the time has elapsed.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Action):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Action):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Action):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action)">Create Method</h3>
+        <blockquote id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action):member">
+          <div class="msummary">
+            Generates a one time event.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a> <b>Create</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a> initialDuration, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action):Parameters">
+            <dl>
+              <dt>
+                <i>initialDuration</i>
+              </dt>
+              <dd>The minimum duration to elapse before the event is generated.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> to be called when the time has elapsed.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Timer.Create(System.Double,System.Action,System.Boolean)">Create Method</h3>
+        <blockquote id="M:Sansar.Script.Timer.Create(System.Double,System.Action,System.Boolean):member">
+          <div class="msummary">
+            Generates a one time event.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a> <b>Create</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> initialDurationSeconds, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> handler, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Action,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>initialDurationSeconds</i>
+              </dt>
+              <dd>The minimum duration to elapse before the event is generated in seconds.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> to be called when the time has elapsed.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>Set to true to continue generating events, false to stop after the first one</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Action,System.Boolean):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Action,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Action,System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Timer.Create(System.Double,System.Double,System.Action)">Create Method</h3>
+        <blockquote id="M:Sansar.Script.Timer.Create(System.Double,System.Double,System.Action):member">
+          <div class="msummary">
+            Generates a repeating event with an initial duration and a repeat duration.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a> <b>Create</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> initialDurationSeconds, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> repeatDurationSeconds, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Double,System.Action):Parameters">
+            <dl>
+              <dt>
+                <i>initialDurationSeconds</i>
+              </dt>
+              <dd>The minimum duration to elapse before the event is generated in seconds.</dd>
+              <dt>
+                <i>repeatDurationSeconds</i>
+              </dt>
+              <dd>After the initial duration, events will be generated at this interval in seconds.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> to be called when the time has elapsed.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Double,System.Action):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Double,System.Action):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.Double,System.Double,System.Action):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action,System.Boolean)">Create Method</h3>
+        <blockquote id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action,System.Boolean):member">
+          <div class="msummary">
+            Generates a one time event.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a> <b>Create</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a> initialDuration, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> handler, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>initialDuration</i>
+              </dt>
+              <dd>The minimum duration to elapse before the event is generated.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> to be called when the time has elapsed.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>Set to true to continue generating events, false to stop after the first one</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action,System.Boolean):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.Action,System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action)">Create Method</h3>
+        <blockquote id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action):member">
+          <div class="msummary">
+            Generates a repeating event with an initial duration and a repeat duration.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a> <b>Create</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a> initialDuration, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a> repeatDuration, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action):Parameters">
+            <dl>
+              <dt>
+                <i>initialDuration</i>
+              </dt>
+              <dd>The minimum duration to elapse before the event is generated.</dd>
+              <dt>
+                <i>repeatDuration</i>
+              </dt>
+              <dd>After the initial duration, events will be generated at this interval.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> to be called when the time has elapsed.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action,System.String)">Create Method</h3>
+        <blockquote id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action,System.String):member">
+          <div class="msummary">
+            Generates a repeating event with an initial duration and a repeat duration. The event will continue as long as the script is 
+            active or until <a href="../Sansar.Script/Timer.html#M:Sansar.Script.Timer.Cancel(System.String)">Timer.Cancel(string)</a> is called.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Named timers are deprecated. Use the IEventSubscription returned from Timer.Create to cancel a timer.", false)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Create</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a> initialDuration, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a> repeatDuration, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> handler, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>initialDuration</i>
+              </dt>
+              <dd>The minimum duration to elapse before the event is generated.</dd>
+              <dt>
+                <i>repeatDuration</i>
+              </dt>
+              <dd>After the initial duration, events will be generated at this interval.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> to be called when the time has elapsed.</dd>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>A short string to identify this Timer. </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action,System.String):Remarks"> At most, one event will be generated per server frame, even if the duration is significantly shorter than the server frame time.
+            Only the first 8 characters of the name are significant. Multiple timers with 
+            the same name are allowed. When <a href="../Sansar.Script/Timer.html#M:Sansar.Script.Timer.Cancel(System.String)">Timer.Cancel(string)</a> is called the first timer with a matching name is stopped.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Timer.Create(System.TimeSpan,System.TimeSpan,System.Action,System.String):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

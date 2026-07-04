@@ -1,0 +1,453 @@
+<html>
+  <head>
+    <title>Sansar.Utility.JsonSerializer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar.Utility Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Utility.JsonSerializer">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Utility.JsonSerializer:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Utility.JsonSerializer:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Utility.JsonSerializer:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Utility.JsonSerializer">JsonSerializer  Class</h1>
+    <p class="Summary" id="T:Sansar.Utility.JsonSerializer:Summary">
+            Converts objects to and from javascript object notation strings
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Utility.JsonSerializer:Signature">public static class  <b>JsonSerializer</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Utility.JsonSerializer:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Utility.JsonSerializer:Docs:Remarks">
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Utility.JsonSerializer:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Utility<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,System.Action{Sansar.Utility.JsonSerializationData{``0}})">Deserialize&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;JsonSerializationData&lt;T&gt;&gt;</a>)<blockquote>
+            Converts the given string to an object.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}})">Deserialize&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Sansar.Utility/JsonSerializerOptions.html">JsonSerializerOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;JsonSerializationData&lt;T&gt;&gt;</a>)<blockquote>
+            Converts the given string to an object.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Utility.JsonSerializer.Serialize``1(``0,System.Action{Sansar.Utility.JsonSerializationData{``0}})">Serialize&lt;T&gt;</a>
+                  </b>(<i title="The type of the object to convert. This can usually be inferred.">T</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;JsonSerializationData&lt;T&gt;&gt;</a>)<blockquote>
+            Converts the given object to a Json string
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Utility.JsonSerializer.Serialize``1(``0,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}})">Serialize&lt;T&gt;</a>
+                  </b>(<i title="The type of the object to convert. This can usually be inferred.">T</i>, <a href="../Sansar.Utility/JsonSerializerOptions.html">JsonSerializerOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;JsonSerializationData&lt;T&gt;&gt;</a>)<blockquote>
+            Converts the given object to a Json string
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Utility.JsonSerializer:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,System.Action{Sansar.Utility.JsonSerializationData{``0}})">Deserialize&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,System.Action{Sansar.Utility.JsonSerializationData{``0}}):member">
+          <div class="msummary">
+            Converts the given string to an object.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Deserialize&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;JsonSerializationData&lt;T&gt;&gt;</a> done)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type to create.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The string in json notation.</dd>
+              <dt>
+                <i>done</i>
+              </dt>
+              <dd>The action to call when the conversion is complete.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Version Information">
+            <b>Namespace: </b>Sansar.Utility<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}})">Deserialize&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):member">
+          <div class="msummary">
+            Converts the given string to an object.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Deserialize&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value, <a href="../Sansar.Utility/JsonSerializerOptions.html">JsonSerializerOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;JsonSerializationData&lt;T&gt;&gt;</a> done)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type to create.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The string in json notation.</dd>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>Options to control the deserialization.</dd>
+              <dt>
+                <i>done</i>
+              </dt>
+              <dd>The action to call when the conversion is complete.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Utility.JsonSerializer.Deserialize``1(System.String,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Version Information">
+            <b>Namespace: </b>Sansar.Utility<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,System.Action{Sansar.Utility.JsonSerializationData{``0}})">Serialize&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,System.Action{Sansar.Utility.JsonSerializationData{``0}}):member">
+          <div class="msummary">
+            Converts the given object to a Json string
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Serialize&lt;T&gt;</b> (<i title="The type of the object to convert. This can usually be inferred.">T</i> value, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;JsonSerializationData&lt;T&gt;&gt;</a> done)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type of the object to convert. This can usually be inferred.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The object to be converted</dd>
+              <dt>
+                <i>done</i>
+              </dt>
+              <dd>The action to call when the conversion is complete.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Version Information">
+            <b>Namespace: </b>Sansar.Utility<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}})">Serialize&lt;T&gt; Generic Method</h3>
+        <blockquote id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):member">
+          <div class="msummary">
+            Converts the given object to a Json string
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Serialize&lt;T&gt;</b> (<i title="The type of the object to convert. This can usually be inferred.">T</i> value, <a href="../Sansar.Utility/JsonSerializerOptions.html">JsonSerializerOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;JsonSerializationData&lt;T&gt;&gt;</a> done)</div>
+          <h4 class="Subsection">Type Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Type Parameters">
+            <dl>
+              <dt>
+                <i>T</i>
+              </dt>
+              <dd>The type of the object to convert. This can usually be inferred.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Parameters">
+            <dl>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The object to be converted</dd>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>Options to control the serialization.</dd>
+              <dt>
+                <i>done</i>
+              </dt>
+              <dd>The action to call when the conversion is complete.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Utility.JsonSerializer.Serialize``1(``0,Sansar.Utility.JsonSerializerOptions,System.Action{Sansar.Utility.JsonSerializationData{``0}}):Version Information">
+            <b>Namespace: </b>Sansar.Utility<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

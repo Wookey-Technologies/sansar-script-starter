@@ -1,0 +1,388 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute">SimpleScript.OnScriptEventOptionsAttribute  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Summary">
+            Set options for OnScriptEvent events.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Signature">[Sansar.Script.Interface]<br />[System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false)]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />protected class  <b>SimpleScript.OnScriptEventOptionsAttribute</b> : <a href="../Sansar.Simulation/SimpleScript+SimpleScriptOptionsAttribute.html">SimpleScript.SimpleScriptOptionsAttribute</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Docs">
+      <h4 class="Subsection">See Also</h4>
+      <blockquote class="SubsectionBox" id="T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Docs:See Also">
+        <div>
+          <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object)">SimpleScript.OnScriptEvent(Sansar.Script.ScriptId, object)</a>
+        </div>
+      </blockquote>
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Docs:Remarks">If EventName is not set then OnScriptEvent will receive events with the name of the script class.</div>
+      <h2 class="Section">Example</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Docs:Example:1">
+        <table class="CodeExampleTable">
+          <tr>
+            <td>
+              <b>
+                <font size="-1">C# Example</font>
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre class="code-csharp">
+            // Send events to this handler from other simple scripts with: PostScriptEvent("AddPosition", myVector);
+            [OnScriptEventOptions(EventName="AddPosition")]
+            protected override void OnScriptEvent(object eventData)
+            {
+                Vector newPos = eventData as Vector;
+                if (newPos != null) AllPositions.Add(newPos);
+            }
+            </pre>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Simulation/SimpleScript+SimpleScriptOptionsAttribute.html">SimpleScript.SimpleScriptOptionsAttribute</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute()">SimpleScript.OnScriptEventOptionsAttribute</a>
+                    </b>()</div>
+                </td>
+                <td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute.Message">Message</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Set the name of the script event to listen for.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute()">SimpleScript.OnScriptEventOptionsAttribute Constructor</h3>
+        <blockquote id="C:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute():member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>SimpleScript.OnScriptEventOptionsAttribute</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute.Message">Message Property</h3>
+        <blockquote id="P:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute.Message:member">
+          <div class="msummary">
+            Set the name of the script event to listen for.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />[get: Sansar.Script.Interface]<br />[set: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Message</b>  { get; set; }</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute.Message:See Also">
+            <div>
+              <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object)">SimpleScript.OnScriptEvent(Sansar.Script.ScriptId, object)</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute.Message:Value">The name of the script event message to subscribe to.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute.Message:Remarks">If Message is not set then OnScriptEvent will receive events with the name of the script class. In the following example it will receive events named "MySimpleScript"
+            <table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            // Listen for script events named "MyEvent"
+            public class MySimpleScript : SimpleScript
+            {
+                protected override void OnScriptEvent(ScriptEventData data)
+                {
+                    // Will get script events named "MySimpleScript"
+                }
+            }
+            </pre></td></tr></table></div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute.Message:Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            // Listen for script events "MyEvent"
+            [OnScriptEventOptions(Message="MyEvent")]
+            protected override void OnScriptEvent(ScriptEventData data)
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute.Message:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,596 @@
+<html>
+  <head>
+    <title>Sansar.Script.Memory</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar.Script Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Script.Memory">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Memory:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Memory:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Memory:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Script.Memory">Memory  Class</h1>
+    <p class="Summary" id="T:Sansar.Script.Memory:Summary">The Memory class reports on script pool memory use.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Script.Memory:Signature">public class  <b>Memory</b> : <a href="../Sansar.Script/InstanceInterface.html">InstanceInterface</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Script.Memory:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Memory:Docs:Remarks">
+        <p>Memory use is tracked by groups of scripts called "pools". There are two types of pools:</p>
+        <table class="CodeExampleTable">
+          <tr>
+            <td>
+              <b>
+                <font size="-1">C# Example</font>
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre class="code-csharp">/* This content is licensed under the terms of the Creative Commons Attribution 4.0 International License.
+ * When using this content, you must:
+ * �    Acknowledge that the content is from the Sansar Knowledge Base.
+ * �    Include our copyright notice: "2022 Sansar, Inc."
+ * �    Indicate that the content is licensed under the Creative Commons Attribution-Share Alike 4.0 International License.
+ * �    Include the URL for, or link to, the license summary at https://creativecommons.org/licenses/by-sa/4.0/deed.hi (and, if possible, to the complete license terms at https://creativecommons.org/licenses/by-sa/4.0/legalcode.
+ * For example:
+ * "This work uses content from the Sansar Knowledge Base. � 2022 Sansar, Inc." Licensed under the Creative Commons Attribution 4.0 International License (license summary available at https://creativecommons.org/licenses/by/4.0/ and complete license terms available at https://creativecommons.org/licenses/by/4.0/legalcode)."
+ */
+
+using System;
+using Sansar.Script;
+using Sansar.Simulation;
+
+// This example shows how to track and report on script memory use.
+// Memory use is tracked by "pool". There are two types of pools:
+//   Scene: The scripts attached to the scene all share a pool that is allowed a large amount of memory
+//   User: Scripts associated with each user share their own pool and are allowed a smaller amount of memory
+public class MemoryExample : SceneObjectScript
+{
+    // Set the Report_Command in the object properties to the chat command used to get the memory report.
+    [DefaultValue("/memory")]
+    [DisplayName("Report Command")]
+    public readonly string Report_Command = "/memory";
+
+    private MemoryUseLevel memoryLevel = MemoryUseLevel.Low;
+
+    public override void Init()
+    {
+        //When the memory level changes, store the new memory level.
+        // If used in a more complex script this event could be used to clear log history or otherwise reduce used memory
+        Memory.Subscribe((data) =&gt; { memoryLevel = data.UseLevel; });
+
+        // Set a chat subscription that will call ReportMemory when anyone says the Report_Command
+        ScenePrivate.Chat.Subscribe(0, null, (data) =&gt; { if (data.Message == Report_Command) ReportMemory(ScenePrivate.FindAgent(data.SourceId)); });
+    }
+
+    // Reports the last recorded memory level from an event along with current Memory data.
+    private void ReportMemory(AgentPrivate agent)
+    {
+        agent.SendChat(String.Format("Memory info: [{0}] {1}", memoryLevel.ToString(), Memory.ToString()));
+    }
+}</pre>
+            </td>
+          </tr>
+        </table>
+        <ul>
+          <li>Scene: The scripts attached to the scene and to objects built into the scene all share a pool that is allowed a large amount of memory.</li>
+          <li>Guests: Scripts associated with each visiting user share their own pool independent of other users. These pools are allowed a smaller amount of memory.</li>
+        </ul>
+        <p>The Policy properties will reflect the use levels for the type of pool this script is associated with.</p>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Memory:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Memory.ActivityLevel">ActivityLevel</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. Current memory activity level since start of last memory counting.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">InstanceInterface</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Memory.PeakUsedBytes">PeakUsedBytes</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                  </i>. The highest level of memory used by the script pool.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Memory.PolicyCritical">PolicyCritical</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                  </i>. Current policy Critical level of used memory by the script pool</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Memory.PolicyLimit">PolicyLimit</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                  </i>. Current policy Limit level of used memory by the script pool</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Memory.PolicyWarning">PolicyWarning</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                  </i>. Current policy Warning level of used memory by the script pool</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Memory.UsedBytes">UsedBytes</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                  </i>. Total bytes used by this script pool as of last accounting.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Memory.Subscribe(Sansar.Script.Memory.SubscriptionHandler,System.Boolean)">Subscribe</a>
+                  </b>(<a href="../Sansar.Script/Memory+SubscriptionHandler.html">Memory.SubscriptionHandler</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>Subscribes to Memory Events.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Memory.Subscribe(System.Action{Sansar.Script.MemoryData},System.Boolean)">Subscribe</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MemoryData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a></nobr><blockquote>Subscribes to Memory Events.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Memory.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote> A string representation of this object. </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Script.Memory:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="P:Sansar.Script.Memory.ActivityLevel">ActivityLevel Property</h3>
+        <blockquote id="P:Sansar.Script.Memory.ActivityLevel:member">
+          <div class="msummary">Current memory activity level since start of last memory counting.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>ActivityLevel</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Memory.ActivityLevel:Value">uint</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.ActivityLevel:Remarks">Activity levels are 0-1: Low activity, 1-2: Medium activity, &gt;2: High activity.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.ActivityLevel:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Memory.PeakUsedBytes">PeakUsedBytes Property</h3>
+        <blockquote id="P:Sansar.Script.Memory.PeakUsedBytes:member">
+          <div class="msummary">The highest level of memory used by the script pool.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>PeakUsedBytes</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Memory.PeakUsedBytes:Value">uint</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.PeakUsedBytes:Remarks">The peak is reset when the server resets.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.PeakUsedBytes:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Memory.PolicyCritical">PolicyCritical Property</h3>
+        <blockquote id="P:Sansar.Script.Memory.PolicyCritical:member">
+          <div class="msummary">Current policy Critical level of used memory by the script pool</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>PolicyCritical</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Memory.PolicyCritical:Value">uint</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.PolicyCritical:Remarks">When the memory used in the pool passes this mark events will be sent to scripts subscribed to ScriptMemoryEvents and memory counting will become more frequent.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.PolicyCritical:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Memory.PolicyLimit">PolicyLimit Property</h3>
+        <blockquote id="P:Sansar.Script.Memory.PolicyLimit:member">
+          <div class="msummary">Current policy Limit level of used memory by the script pool</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>PolicyLimit</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Memory.PolicyLimit:Value">uint</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.PolicyLimit:Remarks">When the memory used in the pool passes this mark events will be sent to scripts subscribed to ScriptMemoryEvents. Script pools that stay above this limit may be stopped or removed from the scene.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.PolicyLimit:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Memory.PolicyWarning">PolicyWarning Property</h3>
+        <blockquote id="P:Sansar.Script.Memory.PolicyWarning:member">
+          <div class="msummary">Current policy Warning level of used memory by the script pool</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>PolicyWarning</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Memory.PolicyWarning:Value">uint</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.PolicyWarning:Remarks">When the memory used in the pool passes this mark events will be sent to scripts subscribed to ScriptMemoryEvents</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.PolicyWarning:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Memory.Subscribe(Sansar.Script.Memory.SubscriptionHandler,System.Boolean)">Subscribe Method</h3>
+        <blockquote id="M:Sansar.Script.Memory.Subscribe(Sansar.Script.Memory.SubscriptionHandler,System.Boolean):member">
+          <div class="msummary">Subscribes to Memory Events.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Use subscription callbacks of type Action&lt;Sansar.Script.MemoryData&gt;", false)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Subscribe</b> (<a href="../Sansar.Script/Memory+SubscriptionHandler.html">Memory.SubscriptionHandler</a> callback, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Memory.Subscribe(Sansar.Script.Memory.SubscriptionHandler,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>callback</i>
+              </dt>
+              <dd>Callback which is executed when the event completes.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>Optional, set to false to unsubscribe after one event.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Memory.Subscribe(Sansar.Script.Memory.SubscriptionHandler,System.Boolean):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Memory.Subscribe(Sansar.Script.Memory.SubscriptionHandler,System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Memory.Subscribe(System.Action{Sansar.Script.MemoryData},System.Boolean)">Subscribe Method</h3>
+        <blockquote id="M:Sansar.Script.Memory.Subscribe(System.Action{Sansar.Script.MemoryData},System.Boolean):member">
+          <div class="msummary">Subscribes to Memory Events.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a> <b>Subscribe</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MemoryData&gt;</a> callback, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Memory.Subscribe(System.Action{Sansar.Script.MemoryData},System.Boolean):See Also">
+            <div>
+              <a href="../Sansar.Script/MemoryData.html">MemoryData</a>
+            </div>
+            <div>
+              <a href="../Sansar.Script/IEventSubscription.html">IEventSubscription</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Memory.Subscribe(System.Action{Sansar.Script.MemoryData},System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>callback</i>
+              </dt>
+              <dd>Callback which is executed when the event completes.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>Optional, set to false to unsubscribe after one event.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Memory.Subscribe(System.Action{Sansar.Script.MemoryData},System.Boolean):Returns">An <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> that can be used to cancel the subscription.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Memory.Subscribe(System.Action{Sansar.Script.MemoryData},System.Boolean):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Memory.Subscribe(System.Action{Sansar.Script.MemoryData},System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Memory.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Script.Memory.ToString():member">
+          <div class="msummary"> A string representation of this object. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Memory.ToString():Returns">A string representation of this object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Memory.ToString():Remarks">The format of this string may change between releases.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Memory.ToString():Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Memory.UsedBytes">UsedBytes Property</h3>
+        <blockquote id="P:Sansar.Script.Memory.UsedBytes:member">
+          <div class="msummary">Total bytes used by this script pool as of last accounting.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>UsedBytes</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Memory.UsedBytes:Value">uint</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.UsedBytes:Remarks">Memory is counted based on script activity in the scene across all pools. <a href="../Sansar.Script/Memory.html#P:Sansar.Script.Memory.ActivityLevel">Memory.ActivityLevel</a></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Memory.UsedBytes:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

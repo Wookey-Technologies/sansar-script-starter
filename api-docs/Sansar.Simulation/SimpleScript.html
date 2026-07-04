@@ -1,0 +1,1702 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.SimpleScript</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.SimpleScript">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.SimpleScript:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.SimpleScript:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.SimpleScript:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.SimpleScript">SimpleScript  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.SimpleScript:Summary">
+            Extend SimpleScript to create a script that can be used on content that is natively in the scene.
+            This is the primary script type in Sansar.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.SimpleScript:Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", true)]<br />public abstract class  <b>SimpleScript</b> : <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.SimpleScript:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.SimpleScript:Docs:Remarks">
+        <p>Use <a href="../Sansar.Simulation/SimpleScript.html#P:Sansar.Simulation.SimpleScript.ObjectPrivate">SimpleScript.ObjectPrivate</a> to access the Object the script is on.</p>
+        <p>Use <a href="../Sansar.Simulation/SimpleScript.html#P:Sansar.Simulation.SimpleScript.ScenePrivate">SimpleScript.ScenePrivate</a> to access the Scene the object is in.</p>
+        <p>Override <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate)">SimpleScript.OnAddUser(AgentPrivate)</a> to handle AddUser events.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            protected override OnAddUser(AgentPrivate agent)
+            {
+                agent.SendChat($"Welcome to the {ScenePrivate.SceneInfo.ExperienceName} scene!");
+            }</pre></td></tr></table></p>
+        <p>Override <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo)">SimpleScript.OnRemoveUser(AgentInfo)</a> to handle AddUser events.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            protected override OnRemoveUser(AgentInfo agent)
+            {
+                Log.Write($"{agent.Name} has left the region.");
+            }</pre></td></tr></table></p>
+        <p>Override <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnTimer">SimpleScript.OnTimer</a> to do something at regular intervals.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            protected override OnTimer()
+            {
+                RigidBodyComponent?.SetPosition(ObjectPrivate?.InitialPosition);
+            }</pre></td></tr></table></p>
+        <p>Override <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnChat(Sansar.Simulation.ChatData)">SimpleScript.OnChat(ChatData)</a> to handle Chat events when users or scripts chat.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            protected override OnChat(ChatData data)
+            {
+                AgentPrivate agent = ScenePrivate.FindAgent(data.SourceId);
+                if (agent != null &amp;&amp; agent.AgentInfo.AvatarUuid == ScenePrivate.SceneInfo.AvatarUuid))
+                {
+                   Log.Write($"Scene owner {agent.AgentInfo.Name} said {data.Message}");
+                }
+            }</pre></td></tr></table></p>
+        <p>Override <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnCollision(Sansar.Simulation.CollisionData)">SimpleScript.OnCollision(CollisionData)</a> to handle Collision events with the object this script is on.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            protected override OnCollision(CollisionData data)
+            {
+                Log.Write($"Bumped {data.HitObject.ObjectId}");
+            }</pre></td></tr></table></p>
+        <p>Override <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object)">SimpleScript.OnScriptEvent(Sansar.Script.ScriptId, object)</a> to handle ScriptEvent events from other scripts.<table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            protected override OnScriptEvent(AgentPrivate agent)
+            {
+                ISimpleScriptEvent simple = data.Data.As&lt;ISimpleScriptEvent&gt;();
+                Log.Write($"Received message {data.Message} event with data {simple.Value}");
+            }</pre></td></tr></table></p>
+        <p>Override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Sansar.Script.SimpleScript.SimpleInit()</a> for more advanced script initialization.</p>
+        <table class="CodeExampleTable">
+          <tr>
+            <td>
+              <b>
+                <font size="-1">C# Example</font>
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre class="code-csharp">
+              </pre>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.SimpleScript:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.
+							</p>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Simulation.SimpleScript()">SimpleScript</a>
+                    </b>()</div>
+                </td>
+                <td>
+            This constructor is called before any properties have been set. Override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Sansar.Script.SimpleScript.SimpleInit()</a> to initialize the script after properties have been set and events setup.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#P:Sansar.Script.ScriptBase.Log">Log</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/Log.html">Sansar.Script.Log</a>
+                  </i>. 
+            Gets the script console.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#P:Sansar.Script.ScriptBase.Memory">Memory</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/Memory.html">Sansar.Script.Memory</a>
+                  </i>. 
+            Memory information for the pool this script is in.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.SimpleScript.ObjectPrivate">ObjectPrivate</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/ObjectPrivate.html">ObjectPrivate</a>
+                  </i>. 
+            The ObjectPrivate this script is attached to if it is attached to an object.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.SimpleScript.ScenePrivate">ScenePrivate</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/ScenePrivate.html">ScenePrivate</a>
+                  </i>. 
+            The Scene API for the Scene this script is a part of if the script is attached to scene content.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#P:Sansar.Script.ScriptBase.Script">Script</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/ScriptHandle.html">Sansar.Script.ScriptHandle</a>
+                  </i>. 
+            Script handle to this script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Properties</h2>
+        <div class="SectionBox" id="Protected Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/Reflective.html#P:Sansar.Script.Reflective.AllowedContexts">AllowedContexts</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/Reflective+Context.html">Sansar.Script.Reflective.Context</a>
+                  </i>. Internal Use Only. Overridden by subclasses to return only those contexts requested which are allowed for that type of script. (<i>Inherited from <a href="../Sansar.Script/Reflective.html">Sansar.Script.Reflective</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#P:Sansar.Script.ScriptBase.CurrentCoroutine">CurrentCoroutine</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/ICoroutine.html">Sansar.Script.ICoroutine</a>
+                  </i>. 
+            Gets the ICoroutine interface for the current coroutine.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#P:Sansar.Script.ScriptBase.MaxCoroutines">MaxCoroutines</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. 
+            The maximum number of coroutines that a single script can run.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#P:Sansar.Script.ScriptBase.PendingEventCount">PendingEventCount</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. 
+            The number of events currently waiting to be processed.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/Reflective.html#P:Sansar.Script.Reflective.ReflectiveContexts">ReflectiveContexts</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Script/Reflective+Context.html">Sansar.Script.Reflective.Context</a>
+                  </i>. 
+            Override ReflectiveContexts to limit which contexts this Reflective interface is available in when registered with.
+             (<i>Inherited from <a href="../Sansar.Script/Reflective.html">Sansar.Script.Reflective</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/Reflective.html#P:Sansar.Script.Reflective.ReflectiveName">ReflectiveName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Override ReflectiveName to change which name this class will be registered as in the Reflective system.
+             (<i>Inherited from <a href="../Sansar.Script/Reflective.html">Sansar.Script.Reflective</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.SimpleScript.RigidBodyComponent">RigidBodyComponent</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/RigidBodyComponent.html">RigidBodyComponent</a>
+                  </i>. 
+            The first RigidBodyComponent on ObjectPrivate
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/Reflective.html#M:Sansar.Script.Reflective.AsInterface``1()">AsInterface&lt;TInterface&gt;</a>
+                  </b>()<nobr> : <i title="The interface describing the methods and properties desired.">TInterface</i></nobr><blockquote>
+            Returns a TInterface object if one can be created, null otherwise
+             (<i>Inherited from <a href="../Sansar.Script/Reflective.html">Sansar.Script.Reflective</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/Reflective.html#M:Sansar.Script.Reflective.FullInterface(System.String)">FullInterface</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Generates a string which shows all the members which can be reflected.
+             (<i>Inherited from <a href="../Sansar.Script/Reflective.html">Sansar.Script.Reflective</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.SimpleScript.Init()">Init</a>
+                  </b>()<blockquote>
+            Init() initializes all event subscriptions for the overridable methods in SimpleScript
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.Init()">Init</a>
+                  </b>()<blockquote> 
+            Init() is called after all interfaces have been initialized.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/Reflective.html#M:Sansar.Script.Reflective.Register()">Register</a>
+                  </b>()<blockquote>
+            Register this object to be found with <a href="../Sansar.Simulation/ScenePrivate.html#M:Sansar.Simulation.ScenePrivate.FindReflective(System.String)">ScenePrivate.FindReflective(string)</a> (<i>Inherited from <a href="../Sansar.Script/Reflective.html">Sansar.Script.Reflective</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/Reflective.html#M:Sansar.Script.Reflective.Unregister()">Unregister</a>
+                  </b>()<blockquote>
+            Unregister this object so it will not be found with <a href="../Sansar.Simulation/ScenePrivate.html#M:Sansar.Simulation.ScenePrivate.FindReflective(System.String)">ScenePrivate.FindReflective(string)</a> (<i>Inherited from <a href="../Sansar.Script/Reflective.html">Sansar.Script.Reflective</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.Yield()">Yield</a>
+                  </b>()<blockquote>
+            Yield to let other coroutines or events run.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.GetAllCoroutines()">GetAllCoroutines</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IReadOnlyList`1">IReadOnlyList&lt;Sansar.Script.ICoroutine&gt;</a></nobr><blockquote>
+            A list of all coroutines for this script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.GetCoroutineCount()">GetCoroutineCount</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            The total number of coroutines running on this script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.SimpleScript.GetSubscription(System.String)">GetSubscription</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a></nobr><blockquote>
+            Get the IEventSubscription for any of the registered event subscription methods
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.Lock(System.Object)">Lock</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>
+            Use to create a critical section with a using statement, ensuring that no other coroutines or scripts (via Reflective) may enter this code section while one coroutine or script is in it.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate)">OnAddUser</a>
+                  </b>(<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a>)<blockquote>
+            Code in OnAddUser will run whenever a user enters the scene.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.SimpleScript.OnChat(Sansar.Simulation.ChatData)">OnChat</a>
+                  </b>(<a href="../Sansar.Simulation/ChatData.html">ChatData</a>)<blockquote>
+            Code in OnChat will run whenever chat is heard. 
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.SimpleScript.OnCollision(Sansar.Simulation.CollisionData)">OnCollision</a>
+                  </b>(<a href="../Sansar.Simulation/CollisionData.html">CollisionData</a>)<blockquote>
+            Receive events whenever the object this script is on collides with something or someone.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo)">OnRemoveUser</a>
+                  </b>(<a href="../Sansar.Simulation/AgentInfo.html">AgentInfo</a>)<blockquote>
+            Code in OnRemoveUser will run whenever a user leaves the scene.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object)">OnScriptEvent</a>
+                  </b>(<a href="../Sansar.Script/ScriptId.html">Sansar.Script.ScriptId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote>
+            Receive events from other scripts.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.SimpleScript.OnTimer()">OnTimer</a>
+                  </b>()<blockquote>
+            Code in OnTimer will run at regular intervals.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.PostScriptEvent(System.String)">PostScriptEvent</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Post the event for all scripts.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.PostScriptEvent(System.String,Sansar.Script.Reflective)">PostScriptEvent</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Sansar.Script/Reflective.html">Sansar.Script.Reflective</a>)<blockquote>
+            Post the event for all scripts.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.PostScriptEvent(Sansar.Script.ScriptId,System.String,Sansar.Script.Reflective)">PostScriptEvent</a>
+                  </b>(<a href="../Sansar.Script/ScriptId.html">Sansar.Script.ScriptId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Sansar.Script/Reflective.html">Sansar.Script.Reflective</a>)<blockquote>
+            Post the event for the target script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.PostSimpleScriptEvent(System.String,System.Object)">PostSimpleScriptEvent</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote>
+            Deprecated. Use <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.PostScriptEvent(Sansar.Script.ScriptId,System.String,Sansar.Script.Reflective)">Sansar.Script.ScriptBase.PostScriptEvent(Sansar.Script.ScriptId, string, Sansar.Script.Reflective)</a> (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.PostSimpleScriptEvent(Sansar.Script.ScriptId,System.String,System.Object)">PostSimpleScriptEvent</a>
+                  </b>(<a href="../Sansar.Script/ScriptId.html">Sansar.Script.ScriptId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote>
+            Deprecated. Use <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.PostScriptEvent(Sansar.Script.ScriptId,System.String,Sansar.Script.Reflective)">Sansar.Script.ScriptBase.PostScriptEvent(Sansar.Script.ScriptId, string, Sansar.Script.Reflective)</a> (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.ReleaseLock(System.Object)">ReleaseLock</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote>
+            Release a lock if held.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.SetDefaultErrorMode()">SetDefaultErrorMode</a>
+                  </b>()<blockquote>
+            Write errors to the Script Debug Console instead of throwing exceptions for some common API errors while still throwing exceptions for the more serious errors.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.SetRelaxedErrorMode()">SetRelaxedErrorMode</a>
+                  </b>()<blockquote>
+            Write errors to the Script Debug Console instead of throw exceptions for almost all Sansar API errors.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.SetStrictErrorMode()">SetStrictErrorMode</a>
+                  </b>()<blockquote>
+            Throw exceptions for almost all Sansar API errors.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.SimpleScript.SimpleInit()">SimpleInit</a>
+                  </b>()<blockquote>
+            Override SimpleInit for script setup, such as subscribing to other events or 
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.StartCoroutine(System.Action,System.Action{Sansar.Script.OperationCompleteEvent})">StartCoroutine</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<nobr> : <a href="../Sansar.Script/ICoroutine.html">Sansar.Script.ICoroutine</a></nobr><blockquote>
+            Starts a coroutine on the current script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.StartCoroutine``1(System.Action{``0},``0,System.Action{Sansar.Script.OperationCompleteEvent})">StartCoroutine&lt;T&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;T&gt;</a>, <i title="Type of the first parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<nobr> : <a href="../Sansar.Script/ICoroutine.html">Sansar.Script.ICoroutine</a></nobr><blockquote>
+            Starts a coroutine on the current script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.StartCoroutine``2(System.Action{``0,``1},``0,``1,System.Action{Sansar.Script.OperationCompleteEvent})">StartCoroutine&lt;T,T1&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`2">Action&lt;T, T1&gt;</a>, <i title="Type of the first parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T</i>, <i title="Type of the second parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T1</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<nobr> : <a href="../Sansar.Script/ICoroutine.html">Sansar.Script.ICoroutine</a></nobr><blockquote>
+            Starts a coroutine on the current script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.StartCoroutine``3(System.Action{``0,``1,``2},``0,``1,``2,System.Action{Sansar.Script.OperationCompleteEvent})">StartCoroutine&lt;T,T1,T2&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`3">Action&lt;T, T1, T2&gt;</a>, <i title="Type of the first parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T</i>, <i title="Type of the second parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T1</i>, <i title="Type of the third parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T2</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<nobr> : <a href="../Sansar.Script/ICoroutine.html">Sansar.Script.ICoroutine</a></nobr><blockquote>
+            Starts a coroutine on the current script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.StartCoroutine``4(System.Action{``0,``1,``2,``3},``0,``1,``2,``3,System.Action{Sansar.Script.OperationCompleteEvent})">StartCoroutine&lt;T,T1,T2,T3&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`4">Action&lt;T, T1, T2, T3&gt;</a>, <i title="Type of the first parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T</i>, <i title="Type of the second parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T1</i>, <i title="Type of the third parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T2</i>, <i title="Type of the fourth parameter to pass to the coroutine when it is run. This can usually be derived from the Action.">T3</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<nobr> : <a href="../Sansar.Script/ICoroutine.html">Sansar.Script.ICoroutine</a></nobr><blockquote>
+            Starts a coroutine on the current script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.SubscribeToScriptEvent(System.String,System.Action{Sansar.Script.ScriptEventData},System.Boolean)">SubscribeToScriptEvent</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.ScriptEventData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a></nobr><blockquote>
+            Subscribes to events sent by other scripts
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.SubscribeToScriptEvent(Sansar.Script.ScriptId,System.String,System.Action{Sansar.Script.ScriptEventData},System.Boolean)">SubscribeToScriptEvent</a>
+                  </b>(<a href="../Sansar.Script/ScriptId.html">Sansar.Script.ScriptId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.ScriptEventData&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a></nobr><blockquote>
+            Subscribes to events sent only by a specific script.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.Terminate(System.String)">Terminate</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Terminates this script immediately.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.Wait(System.Double)">Wait</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<blockquote>
+            Delays execution of the current coroutine for the specified time.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.Wait(System.TimeSpan)">Wait</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>)<blockquote>
+            Delays execution of the current coroutine for the specified time.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor(Sansar.Script.ICoroutine)">WaitFor</a>
+                  </b>(<a href="../Sansar.Script/ICoroutine.html">Sansar.Script.ICoroutine</a>)<blockquote>
+            Block the current coroutine until otherCoroutine finishes.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor(System.Action{System.Action{Sansar.Script.OperationCompleteEvent}})">WaitFor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Action&lt;Sansar.Script.OperationCompleteEvent&gt;&gt;</a>)<nobr> : <a href="../Sansar.Script/OperationCompleteEvent.html">Sansar.Script.OperationCompleteEvent</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor(System.Func{System.Action{Sansar.Script.EventData},System.Action{Sansar.Script.CancelData},System.Boolean,Sansar.Script.IEventSubscription})">WaitFor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`4">Func&lt;Action&lt;Sansar.Script.EventData&gt;, Action&lt;Sansar.Script.CancelData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor(System.Func{System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription})">WaitFor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`3">Func&lt;Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor(System.Func{System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},System.Action)">WaitFor</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`3">Func&lt;Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``1(System.Func{``0,System.Action{Sansar.Script.EventData},System.Action{Sansar.Script.CancelData},System.Boolean,Sansar.Script.IEventSubscription},``0)">WaitFor&lt;ARG1&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`5">Func&lt;ARG1, Action&lt;Sansar.Script.EventData&gt;, Action&lt;Sansar.Script.CancelData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``1(System.Func{``0,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0)">WaitFor&lt;ARG1&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`4">Func&lt;ARG1, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``1(System.Func{``0,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0,System.Action)">WaitFor&lt;ARG1&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`4">Func&lt;ARG1, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``1(System.Action{``0,System.Action{Sansar.Script.OperationCompleteEvent}},``0)">WaitFor&lt;T1&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`2">Action&lt;T1, Action&lt;Sansar.Script.OperationCompleteEvent&gt;&gt;</a>, <i title="The type of the argument to func.">T1</i>)<nobr> : <a href="../Sansar.Script/OperationCompleteEvent.html">Sansar.Script.OperationCompleteEvent</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``2(System.Func{``0,``1,System.Action{Sansar.Script.EventData},System.Action{Sansar.Script.CancelData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1)">WaitFor&lt;ARG1,ARG2&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`6">Func&lt;ARG1, ARG2, Action&lt;Sansar.Script.EventData&gt;, Action&lt;Sansar.Script.CancelData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``2(System.Func{``0,``1,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1)">WaitFor&lt;ARG1,ARG2&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`5">Func&lt;ARG1, ARG2, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``2(System.Func{``0,``1,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,System.Action)">WaitFor&lt;ARG1,ARG2&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`5">Func&lt;ARG1, ARG2, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``2(System.Action{``0,``1,System.Action{Sansar.Script.OperationCompleteEvent}},``0,``1)">WaitFor&lt;T1,T2&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`3">Action&lt;T1, T2, Action&lt;Sansar.Script.OperationCompleteEvent&gt;&gt;</a>, <i title="The type of the argument to func.">T1</i>, <i title="The type of the argument to func.">T2</i>)<nobr> : <a href="../Sansar.Script/OperationCompleteEvent.html">Sansar.Script.OperationCompleteEvent</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``3(System.Func{``0,``1,``2,System.Action{Sansar.Script.EventData},System.Action{Sansar.Script.CancelData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,``2)">WaitFor&lt;ARG1,ARG2,ARG3&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`7">Func&lt;ARG1, ARG2, ARG3, Action&lt;Sansar.Script.EventData&gt;, Action&lt;Sansar.Script.CancelData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <i title="The type of the argument to func.">ARG3</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``3(System.Func{``0,``1,``2,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,``2)">WaitFor&lt;ARG1,ARG2,ARG3&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`6">Func&lt;ARG1, ARG2, ARG3, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <i title="The type of the argument to func.">ARG3</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``3(System.Func{``0,``1,``2,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,``2,System.Action)">WaitFor&lt;ARG1,ARG2,ARG3&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`6">Func&lt;ARG1, ARG2, ARG3, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <i title="The type of the argument to func.">ARG3</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``3(System.Action{``0,``1,``2,System.Action{Sansar.Script.OperationCompleteEvent}},``0,``1,``2)">WaitFor&lt;T1,T2,T3&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`4">Action&lt;T1, T2, T3, Action&lt;Sansar.Script.OperationCompleteEvent&gt;&gt;</a>, <i title="The type of the argument to func.">T1</i>, <i title="The type of the argument to func.">T2</i>, <i title="The type of the argument to func.">T3</i>)<nobr> : <a href="../Sansar.Script/OperationCompleteEvent.html">Sansar.Script.OperationCompleteEvent</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``4(System.Func{``0,``1,``2,``3,System.Action{Sansar.Script.EventData},System.Action{Sansar.Script.CancelData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,``2,``3)">WaitFor&lt;ARG1,ARG2,ARG3,ARG4&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`8">Func&lt;ARG1, ARG2, ARG3, ARG4, Action&lt;Sansar.Script.EventData&gt;, Action&lt;Sansar.Script.CancelData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <i title="The type of the argument to func.">ARG3</i>, <i title="The type of the argument to func.">ARG4</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``4(System.Func{``0,``1,``2,``3,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,``2,``3)">WaitFor&lt;ARG1,ARG2,ARG3,ARG4&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`7">Func&lt;ARG1, ARG2, ARG3, ARG4, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <i title="The type of the argument to func.">ARG3</i>, <i title="The type of the argument to func.">ARG4</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``4(System.Func{``0,``1,``2,``3,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,``2,``3,System.Action)">WaitFor&lt;ARG1,ARG2,ARG3,ARG4&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`7">Func&lt;ARG1, ARG2, ARG3, ARG4, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <i title="The type of the argument to func.">ARG3</i>, <i title="The type of the argument to func.">ARG4</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``4(System.Action{``0,``1,``2,``3,System.Action{Sansar.Script.OperationCompleteEvent}},``0,``1,``2,``3)">WaitFor&lt;T1,T2,T3,T4&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`5">Action&lt;T1, T2, T3, T4, Action&lt;Sansar.Script.OperationCompleteEvent&gt;&gt;</a>, <i title="The type of the argument to func.">T1</i>, <i title="The type of the argument to func.">T2</i>, <i title="The type of the argument to func.">T3</i>, <i title="The type of the argument to func.">T4</i>)<nobr> : <a href="../Sansar.Script/OperationCompleteEvent.html">Sansar.Script.OperationCompleteEvent</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``5(System.Func{``0,``1,``2,``3,``4,System.Action{Sansar.Script.EventData},System.Action{Sansar.Script.CancelData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,``2,``3,``4)">WaitFor&lt;ARG1,ARG2,ARG3,ARG4,ARG5&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`9">Func&lt;ARG1, ARG2, ARG3, ARG4, ARG5, Action&lt;Sansar.Script.EventData&gt;, Action&lt;Sansar.Script.CancelData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <i title="The type of the argument to func.">ARG3</i>, <i title="The type of the argument to func.">ARG4</i>, <i title="The type of the argument to func.">ARG5</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``5(System.Func{``0,``1,``2,``3,``4,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,``2,``3,``4)">WaitFor&lt;ARG1,ARG2,ARG3,ARG4,ARG5&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`8">Func&lt;ARG1, ARG2, ARG3, ARG4, ARG5, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <i title="The type of the argument to func.">ARG3</i>, <i title="The type of the argument to func.">ARG4</i>, <i title="The type of the argument to func.">ARG5</i>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor``5(System.Func{``0,``1,``2,``3,``4,System.Action{Sansar.Script.EventData},System.Boolean,Sansar.Script.IEventSubscription},``0,``1,``2,``3,``4,System.Action)">WaitFor&lt;ARG1,ARG2,ARG3,ARG4,ARG5&gt;</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`8">Func&lt;ARG1, ARG2, ARG3, ARG4, ARG5, Action&lt;Sansar.Script.EventData&gt;,System.Boolean,Sansar.Script.IEventSubscription&gt;</a>, <i title="The type of the argument to func.">ARG1</i>, <i title="The type of the argument to func.">ARG2</i>, <i title="The type of the argument to func.">ARG3</i>, <i title="The type of the argument to func.">ARG4</i>, <i title="The type of the argument to func.">ARG5</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)<nobr> : <a href="../Sansar.Script/EventData.html">Sansar.Script.EventData</a></nobr><blockquote>
+            Use to pause the script until an event happens.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitForLock(System.Object)">WaitForLock</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote>
+            WaitFor and take a lock on Token
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitForSignal()">WaitForSignal</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Wait the current coroutine until at least 1 signal is sent to it through the ICoroutine interface.
+             (<i>Inherited from <a href="../Sansar.Script/ScriptBase.html">Sansar.Script.ScriptBase</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.SimpleScript:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Sansar.Simulation.SimpleScript()">SimpleScript Constructor</h3>
+        <blockquote id="C:Sansar.Simulation.SimpleScript():member">
+          <div class="msummary">
+            This constructor is called before any properties have been set. Override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Sansar.Script.SimpleScript.SimpleInit()</a> to initialize the script after properties have been set and events setup.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />protected  <b>SimpleScript</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Simulation.SimpleScript():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Simulation.SimpleScript():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.SimpleScript.GetSubscription(System.String)">GetSubscription Method</h3>
+        <blockquote id="M:Sansar.Simulation.SimpleScript.GetSubscription(System.String):member">
+          <div class="msummary">
+            Get the IEventSubscription for any of the registered event subscription methods
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="../Sansar.Script/IEventSubscription.html">Sansar.Script.IEventSubscription</a> <b>GetSubscription</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> methodName)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.GetSubscription(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>methodName</i>
+              </dt>
+              <dd>The n</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.GetSubscription(System.String):Returns">An IEventSubscription interface that can be used to unsubscribe from a registered event.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.GetSubscription(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.GetSubscription(System.String):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            GetSubscription("OnChat").Unsubscribe();
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.GetSubscription(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.SimpleScript.Init()">Init Method</h3>
+        <blockquote id="M:Sansar.Simulation.SimpleScript.Init():member">
+          <div class="msummary">
+            Init() initializes all event subscriptions for the overridable methods in SimpleScript
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Api]<br />public override sealed <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Init</b> ()</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.Init():See Also">
+            <div>
+              <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.SimpleInit">SimpleScript.SimpleInit</a>
+            </div>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.Init():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.Init():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.SimpleScript.ObjectPrivate">ObjectPrivate Property</h3>
+        <blockquote id="P:Sansar.Simulation.SimpleScript.ObjectPrivate:member">
+          <div class="msummary">
+            The ObjectPrivate this script is attached to if it is attached to an object.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.NonReflective]<br />[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/ObjectPrivate.html">ObjectPrivate</a> <b>ObjectPrivate</b>  { protected get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.SimpleScript.ObjectPrivate:Value">The scene object this script is attached to if it is attached to an object, null otherwise.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.SimpleScript.ObjectPrivate:Remarks"> For AgentScripts this is the Agent's ObjectPrivate of their avatar.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.SimpleScript.ObjectPrivate:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate)">OnAddUser Method</h3>
+        <blockquote id="M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate):member">
+          <div class="msummary">
+            Code in OnAddUser will run whenever a user enters the scene.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnAddUser</b> (<a href="../Sansar.Simulation/AgentPrivate.html">AgentPrivate</a> agent)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate):See Also">
+            <div>
+              <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo)">SimpleScript.OnRemoveUser(AgentInfo)</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate):Parameters">
+            <dl>
+              <dt>
+                <i>agent</i>
+              </dt>
+              <dd>The AgentPrivate for the user that has joined the scene.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate):Remarks">Override OnAddUser to handle events when a user enters the scene.</div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            protected override OnAddUser(AgentPrivate agent)
+            {
+               agent.SendChat($"Welcome to the {ScenePrivate.SceneInfo.ExperienceName} scene!");
+            }
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.SimpleScript.OnChat(Sansar.Simulation.ChatData)">OnChat Method</h3>
+        <blockquote id="M:Sansar.Simulation.SimpleScript.OnChat(Sansar.Simulation.ChatData):member">
+          <div class="msummary">
+            Code in OnChat will run whenever chat is heard. 
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnChat</b> (<a href="../Sansar.Simulation/ChatData.html">ChatData</a> data)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnChat(Sansar.Simulation.ChatData):See Also">
+            <div>
+              <a href="../Sansar.Simulation/SimpleScript+OnChatOptionsAttribute.html">Sansar.Simulation.SimpleScript.OnChatOptionsAttribute</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnChat(Sansar.Simulation.ChatData):Parameters">
+            <dl>
+              <dt>
+                <i>data</i>
+              </dt>
+              <dd>ChatData for the message.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnChat(Sansar.Simulation.ChatData):Remarks">Defaults to all chat on the default channel. Use [OnChatOptions] to change the channel or limit the source of the chat.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnChat(Sansar.Simulation.ChatData):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.SimpleScript.OnCollision(Sansar.Simulation.CollisionData)">OnCollision Method</h3>
+        <blockquote id="M:Sansar.Simulation.SimpleScript.OnCollision(Sansar.Simulation.CollisionData):member">
+          <div class="msummary">
+            Receive events whenever the object this script is on collides with something or someone.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnCollision</b> (<a href="../Sansar.Simulation/CollisionData.html">CollisionData</a> data)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnCollision(Sansar.Simulation.CollisionData):See Also">
+            <div>
+              <a href="../Sansar.Simulation/SimpleScript+OnCollisionOptionsAttribute.html">Sansar.Simulation.SimpleScript.OnCollisionOptionsAttribute</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnCollision(Sansar.Simulation.CollisionData):Parameters">
+            <dl>
+              <dt>
+                <i>data</i>
+              </dt>
+              <dd>The CollisionData about the collision.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnCollision(Sansar.Simulation.CollisionData):Remarks">By default receives events for every collision. Use <a href="../Sansar.Simulation/SimpleScript+OnCollisionOptionsAttribute.html">Sansar.Simulation.SimpleScript.OnCollisionOptionsAttribute</a> to change which types of collision events will trigger OnCollision.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnCollision(Sansar.Simulation.CollisionData):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo)">OnRemoveUser Method</h3>
+        <blockquote id="M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo):member">
+          <div class="msummary">
+            Code in OnRemoveUser will run whenever a user leaves the scene.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnRemoveUser</b> (<a href="../Sansar.Simulation/AgentInfo.html">AgentInfo</a> data)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo):See Also">
+            <div>
+              <a href="../Sansar.Simulation/SimpleScript.html#M:Sansar.Simulation.SimpleScript.OnAddUser(Sansar.Simulation.AgentPrivate)">SimpleScript.OnAddUser(AgentPrivate)</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo):Parameters">
+            <dl>
+              <dt>
+                <i>data</i>
+              </dt>
+              <dd>UserData for the user that has left the scene.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo):Remarks">Override OnAddUser to handle events when a user enters the scene.</div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">// This event occurs when a user leaves the scene
+            protected override void OnRemoveUser(AgentInfo info)
+            {
+                Log.Write($"{info.Name} has left the region.");
+            }</pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnRemoveUser(Sansar.Simulation.AgentInfo):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object)">OnScriptEvent Method</h3>
+        <blockquote id="M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object):member">
+          <div class="msummary">
+            Receive events from other scripts.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnScriptEvent</b> (<a href="../Sansar.Script/ScriptId.html">Sansar.Script.ScriptId</a> sourceScriptId, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> data)</div>
+          <h4 class="Subsection">See Also</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object):See Also">
+            <div>
+              <a href="../Sansar.Simulation/SimpleScript+OnScriptEventOptionsAttribute.html">Sansar.Simulation.SimpleScript.OnScriptEventOptionsAttribute</a>
+            </div>
+          </blockquote>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object):Parameters">
+            <dl>
+              <dt>
+                <i>sourceScriptId</i>
+              </dt>
+              <dd>The <a href="../Sansar.Script/ScriptId.html">Sansar.Script.ScriptId</a> of the script that sent the message</dd>
+              <dt>
+                <i>data</i>
+              </dt>
+              <dd>The data sent by another script, as an object.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object):Remarks">If EventName is not set then OnScriptEvent will receive events with the name of the script class. In the following example it will receive events named "MySimpleScript"
+            <table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            public class SimpleExample : SimpleScript
+            {
+                // Send events to this handler from other simple scripts with: PostScriptEvent("SimpleExample", myVector);
+                protected override void OnScriptEvent(object eventData)
+                {
+                    Vector newPos = eventData as Vector;
+                    if (newPos != null) AllPositions.Add(newPos);
+                }
+            }    
+            </pre></td></tr></table><p>To send events to a SimpleScript from a non-simple script, the non-simple script must build a Reflective class that contains a single public object field named Data like this:
+            <table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            class SimpleData : Reflective
+            {
+                public object Data;
+            }
+            </pre></td></tr></table>
+            Then send the data like this:
+            <table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">PostScriptEvent("simpleeventname",new SimpleData {Data = position});</pre></td></tr></table></p></div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object):Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            // Send events to this handler from other simple scripts with: PostScriptEvent("AddPosition", myVector);
+            [OnScriptEventOptions(EventName="AddPosition")]
+            protected override void OnScriptEvent(object eventData)
+            {
+                Vector newPos = eventData as Vector;
+                if (newPos != null) AllPositions.Add(newPos);
+            }
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnScriptEvent(Sansar.Script.ScriptId,System.Object):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.SimpleScript.OnTimer()">OnTimer Method</h3>
+        <blockquote id="M:Sansar.Simulation.SimpleScript.OnTimer():member">
+          <div class="msummary">
+            Code in OnTimer will run at regular intervals.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnTimer</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnTimer():Remarks">Defaults to one call per second. Change the rate with <a href="../Sansar.Simulation/SimpleScript+OnTimerOptionsAttribute.html">Sansar.Simulation.SimpleScript.OnTimerOptionsAttribute</a></div>
+          <h2 class="Section">Example</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnTimer():Example:1">
+            <table class="CodeExampleTable">
+              <tr>
+                <td>
+                  <b>
+                    <font size="-1">C# Example</font>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <pre class="code-csharp">
+            // Set OnTimer to happen once every minute.
+            [OnTimerOptions(Rate=60)]
+            protected override void OnTimer()
+            </pre>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.OnTimer():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.SimpleScript.RigidBodyComponent">RigidBodyComponent Property</h3>
+        <blockquote id="P:Sansar.Simulation.SimpleScript.RigidBodyComponent:member">
+          <div class="msummary">
+            The first RigidBodyComponent on ObjectPrivate
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />protected <a href="../Sansar.Simulation/RigidBodyComponent.html">RigidBodyComponent</a> <b>RigidBodyComponent</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.SimpleScript.RigidBodyComponent:Value">The first <a href="../Sansar.Simulation/SimpleScript.html#P:Sansar.Simulation.SimpleScript.RigidBodyComponent">SimpleScript.RigidBodyComponent</a> on the object this script is attached to.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.SimpleScript.RigidBodyComponent:Remarks">This is a convenience for: <table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">
+            RigidBodyComponent rigidbody;
+             if (ObjectPrivate != null &amp;&amp; ObjectPrivate.TryGetFirstComponent(out rigidbody))
+            {
+                // Do something with rigidbody
+            }
+            </pre></td></tr></table></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.SimpleScript.RigidBodyComponent:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.SimpleScript.ScenePrivate">ScenePrivate Property</h3>
+        <blockquote id="P:Sansar.Simulation.SimpleScript.ScenePrivate:member">
+          <div class="msummary">
+            The Scene API for the Scene this script is a part of if the script is attached to scene content.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.NonReflective]<br />[get: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/ScenePrivate.html">ScenePrivate</a> <b>ScenePrivate</b>  { protected get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.SimpleScript.ScenePrivate:Value">The Scene API for this scene if this script was attached to scene content, null otherwise.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.SimpleScript.ScenePrivate:Remarks">This value will be set before Init is called.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.SimpleScript.ScenePrivate:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.SimpleScript.SimpleInit()">SimpleInit Method</h3>
+        <blockquote id="M:Sansar.Simulation.SimpleScript.SimpleInit():member">
+          <div class="msummary">
+            Override SimpleInit for script setup, such as subscribing to other events or 
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[System.Obsolete("SimpleScript is deprecated and will not receive new features. Please use SceneObjectScript or ObjectScript.", false)]<br />protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SimpleInit</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.SimpleInit():Remarks">SimpleInit is run after events have been set up for overridden methods. Use it to set up more complex subscriptions or otherwise initialize the script.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.SimpleScript.SimpleInit():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

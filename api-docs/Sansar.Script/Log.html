@@ -1,0 +1,750 @@
+<html>
+  <head>
+    <title>Sansar.Script.Log</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Script</a> : <a href="index.html">Sansar.Script Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Script.Log">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Log:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Log:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Script.Log:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Script.Log">Log  Class</h1>
+    <p class="Summary" id="T:Sansar.Script.Log:Summary">The Log class handles script logging and error reporting</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Script.Log:Signature">public class  <b>Log</b> : <a href="../Sansar.Script/InstanceInterface.html">InstanceInterface</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Script.Log:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Log:Docs:Remarks">
+        <p>A simple script for viewing the log messages might be:</p>
+        <table class="CodeExampleTable">
+          <tr>
+            <td>
+              <b>
+                <font size="-1">C# Example</font>
+              </b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre class="code-csharp">
+              </pre>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Script.Log:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Script.Log.ConsoleHistory">ConsoleHistory</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i> (0). 
+            The maximum number of messages to store on this console.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Script.Log.MaximumMessageLength">MaximumMessageLength</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i> (1024). 
+            The maximum length of a log message.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Script.Log.MaximumTagLength">MaximumTagLength</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i> (32). 
+            The maximum length of the log message tag.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">InstanceInterface</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Script.Log.Messages">Messages</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Log.Message&gt;</a>
+                  </i>. 
+            All current log messages.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.Clear()">Clear</a>
+                  </b>()<blockquote>
+            Clears all messages in this console.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.Clear(Sansar.Script.LogLevel)">Clear</a>
+                  </b>(<a href="../Sansar.Script/LogLevel.html">LogLevel</a>)<blockquote>
+            Clears all messages in this console with the given logLevel.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.Clear(Sansar.Script.ScriptId)">Clear</a>
+                  </b>(<a href="../Sansar.Script/ScriptId.html">ScriptId</a>)<blockquote>
+            Clears all messages in this console with the given ScriptId.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.Clear(System.String)">Clear</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Clears all messages in this console with the given tag.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.Write(System.String)">Write</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Writes an info message to the server log.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String)">Write</a>
+                  </b>(<a href="../Sansar.Script/LogLevel.html">LogLevel</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Writes a message to the server log.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.Write(System.String,System.String)">Write</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Writes an info message to the server log.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String,System.String)">Write</a>
+                  </b>(<a href="../Sansar.Script/LogLevel.html">LogLevel</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote> Writes a message to the server log.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Script.Log.WriteDebug(System.String,System.String,System.String,System.Int32)">WriteDebug</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Writes a debug message to the server log, including caller information.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Script.Log:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:Sansar.Script.Log.Clear()">Clear Method</h3>
+        <blockquote id="M:Sansar.Script.Log.Clear():member">
+          <div class="msummary">
+            Clears all messages in this console.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Clear</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Clear():Remarks">Messages cannot be restored.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Clear():Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Log.Clear(Sansar.Script.LogLevel)">Clear Method</h3>
+        <blockquote id="M:Sansar.Script.Log.Clear(Sansar.Script.LogLevel):member">
+          <div class="msummary">
+            Clears all messages in this console with the given logLevel.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Clear</b> (<a href="../Sansar.Script/LogLevel.html">LogLevel</a> logLevel)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Log.Clear(Sansar.Script.LogLevel):Parameters">
+            <dl>
+              <dt>
+                <i>logLevel</i>
+              </dt>
+              <dd>The LogLevel to clear from the log. Multiple loglevels can be cleared in a single cal.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Clear(Sansar.Script.LogLevel):Remarks">Messages cannot be restored.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Clear(Sansar.Script.LogLevel):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Log.Clear(Sansar.Script.ScriptId)">Clear Method</h3>
+        <blockquote id="M:Sansar.Script.Log.Clear(Sansar.Script.ScriptId):member">
+          <div class="msummary">
+            Clears all messages in this console with the given ScriptId.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Clear</b> (<a href="../Sansar.Script/ScriptId.html">ScriptId</a> scriptId)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Log.Clear(Sansar.Script.ScriptId):Parameters">
+            <dl>
+              <dt>
+                <i>scriptId</i>
+              </dt>
+              <dd>The ScriptId to clear from the log.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Clear(Sansar.Script.ScriptId):Remarks">Messages cannot be restored.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Clear(Sansar.Script.ScriptId):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Log.Clear(System.String)">Clear Method</h3>
+        <blockquote id="M:Sansar.Script.Log.Clear(System.String):member">
+          <div class="msummary">
+            Clears all messages in this console with the given tag.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Clear</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tag)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Log.Clear(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>tag</i>
+              </dt>
+              <dd>The tag to clear from the log.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Clear(System.String):Remarks">Messages cannot be restored.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Clear(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Script.Log.ConsoleHistory">ConsoleHistory Field</h3>
+        <blockquote id="F:Sansar.Script.Log.ConsoleHistory:member">
+          <div class="msummary">
+            The maximum number of messages to store on this console.
+            </div>
+          <p>
+            <b>Value: </b>0</p>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ConsoleHistory</b> </div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="F:Sansar.Script.Log.ConsoleHistory:Returns">The maximum number of messages stored by the console.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Script.Log.ConsoleHistory:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Script.Log.ConsoleHistory:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Script.Log.MaximumMessageLength">MaximumMessageLength Field</h3>
+        <blockquote id="F:Sansar.Script.Log.MaximumMessageLength:member">
+          <div class="msummary">
+            The maximum length of a log message.
+            </div>
+          <p>
+            <b>Value: </b>1024</p>
+          <h2>Syntax</h2>
+          <div class="Signature">public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>MaximumMessageLength</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Script.Log.MaximumMessageLength:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Script.Log.MaximumMessageLength:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Sansar.Script.Log.MaximumTagLength">MaximumTagLength Field</h3>
+        <blockquote id="F:Sansar.Script.Log.MaximumTagLength:member">
+          <div class="msummary">
+            The maximum length of the log message tag.
+            </div>
+          <p>
+            <b>Value: </b>32</p>
+          <h2>Syntax</h2>
+          <div class="Signature">public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>MaximumTagLength</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Script.Log.MaximumTagLength:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Script.Log.MaximumTagLength:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Script.Log.Messages">Messages Property</h3>
+        <blockquote id="P:Sansar.Script.Log.Messages:member">
+          <div class="msummary">
+            All current log messages.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.Obsolete("Messages are no longer stored.", true)]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Log.Message&gt;</a> <b>Messages</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Script.Log.Messages:Value">All currently stored log messages.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Messages:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Script.Log.Messages:Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Log.Write(System.String)">Write Method</h3>
+        <blockquote id="M:Sansar.Script.Log.Write(System.String):member">
+          <div class="msummary">Writes an info message to the server log.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Write</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Log.Write(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>message</i>
+              </dt>
+              <dd>The message to be logged.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Write(System.String):Remarks">Log messages may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Write(System.String):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String)">Write Method</h3>
+        <blockquote id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String):member">
+          <div class="msummary">Writes a message to the server log.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Write</b> (<a href="../Sansar.Script/LogLevel.html">LogLevel</a> logLevel, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>logLevel</i>
+              </dt>
+              <dd>LogLevel of the message.</dd>
+              <dt>
+                <i>message</i>
+              </dt>
+              <dd>The message to be logged.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String):Remarks">Log messages may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Log.Write(System.String,System.String)">Write Method</h3>
+        <blockquote id="M:Sansar.Script.Log.Write(System.String,System.String):member">
+          <div class="msummary">Writes an info message to the server log.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Write</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tag, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Log.Write(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>tag</i>
+              </dt>
+              <dd>A freeform string tag for filtering the message.</dd>
+              <dt>
+                <i>message</i>
+              </dt>
+              <dd>The message to be logged.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Write(System.String,System.String):Remarks">Log messages may be throttled.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Write(System.String,System.String):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String,System.String)">Write Method</h3>
+        <blockquote id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String,System.String):member">
+          <div class="msummary"> Writes a message to the server log.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Write</b> (<a href="../Sansar.Script/LogLevel.html">LogLevel</a> logLevel, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tag, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>logLevel</i>
+              </dt>
+              <dd>LogLevel of the message.</dd>
+              <dt>
+                <i>tag</i>
+              </dt>
+              <dd>Tag for the message.</dd>
+              <dt>
+                <i>message</i>
+              </dt>
+              <dd>Message to log.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String,System.String):Remarks">Also tracks the sending script and the time. No messages are locally retained.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.Write(Sansar.Script.LogLevel,System.String,System.String):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Script.Log.WriteDebug(System.String,System.String,System.String,System.Int32)">WriteDebug Method</h3>
+        <blockquote id="M:Sansar.Script.Log.WriteDebug(System.String,System.String,System.String,System.Int32):member">
+          <div class="msummary">
+            Writes a debug message to the server log, including caller information.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteDebug</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tag, [System.Runtime.CompilerServices.CallerMemberName] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> callerMemberName, [System.Runtime.CompilerServices.CallerLineNumber] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> callerLineNumber)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Script.Log.WriteDebug(System.String,System.String,System.String,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>message</i>
+              </dt>
+              <dd>(Optional) The message to be logged. When left empty, it will only log caller information.</dd>
+              <dt>
+                <i>tag</i>
+              </dt>
+              <dd>(Optional) A tag for the message.</dd>
+              <dt>
+                <i>callerMemberName</i>
+              </dt>
+              <dd>Automatically populated with the name of the calling member (method or property).</dd>
+              <dt>
+                <i>callerLineNumber</i>
+              </dt>
+              <dd>Automatically populated with the line number in the source code where the method was called.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.WriteDebug(System.String,System.String,System.String,System.Int32):Remarks">
+            Log messages may be throttled. WriteDebug(..) serves the same purpose as using Write(LogLevel.Debug, ..), while also including automatically populated caller information for debugging purposes.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Script.Log.WriteDebug(System.String,System.String,System.String,System.Int32):Version Information">
+            <b>Namespace: </b>Sansar.Script<br /><b>Assembly: </b>Sansar.Script (in Sansar.Script.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
