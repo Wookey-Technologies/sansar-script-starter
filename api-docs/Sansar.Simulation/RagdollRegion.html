@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Sansar.Simulation.ComponentType</title>
+    <title>Sansar.Simulation.RagdollRegion</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
         a { text-decoration: none }
@@ -196,109 +196,95 @@
       <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
     <div class="SideBar">
       <p>
-        <a href="#T:Sansar.Simulation.ComponentType">Overview</a>
+        <a href="#T:Sansar.Simulation.RagdollRegion">Overview</a>
       </p>
       <p>
-        <a href="#T:Sansar.Simulation.ComponentType:Signature">Signature</a>
+        <a href="#T:Sansar.Simulation.RagdollRegion:Signature">Signature</a>
       </p>
       <p>
-        <a href="#T:Sansar.Simulation.ComponentType:Docs">Remarks</a>
+        <a href="#T:Sansar.Simulation.RagdollRegion:Docs">Remarks</a>
       </p>
       <p>
         <a href="#Members">Members</a>
       </p>
       <p>
-        <a href="#T:Sansar.Simulation.ComponentType:Members">Member Details</a>
+        <a href="#T:Sansar.Simulation.RagdollRegion:Members">Member Details</a>
       </p>
     </div>
-    <h1 class="PageTitle" id="T:Sansar.Simulation.ComponentType">ComponentType  Enum</h1>
-    <p class="Summary" id="T:Sansar.Simulation.ComponentType:Summary">Type of component. See <a href="../Sansar.Simulation/ObjectPrivate.html#M:Sansar.Simulation.ObjectPrivate.GetComponent(Sansar.Simulation.ComponentType,System.UInt32)">ObjectPrivate.GetComponent(ComponentType, uint)</a></p>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.RagdollRegion">RagdollRegion  Enum</h1>
+    <p class="Summary" id="T:Sansar.Simulation.RagdollRegion:Summary">
+            Flags for targeting specific ragdoll body regions. Combine with bitwise OR.
+            </p>
     <div>
       <h2>Syntax</h2>
-      <div class="Signature" id="T:Sansar.Simulation.ComponentType:Signature">[Sansar.Script.Interface]<br />public enum <b>ComponentType</b></div>
+      <div class="Signature" id="T:Sansar.Simulation.RagdollRegion:Signature">[Sansar.Script.Interface]<br />[System.Flags]<br />public enum <b>RagdollRegion</b></div>
     </div>
-    <div class="Remarks" id="T:Sansar.Simulation.ComponentType:Docs">
+    <div class="Remarks" id="T:Sansar.Simulation.RagdollRegion:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:Sansar.Simulation.ComponentType:Docs:Remarks">
-      </div>
+      <div class="SectionBox" id="T:Sansar.Simulation.RagdollRegion:Docs:Remarks">When applying impulse to specific regions (e.g. LeftArm | LeftLeg), the force is
+            distributed only among the bodies in those regions, creating asymmetric effects like spinning falls.</div>
       <h2 class="Section">Members</h2>
-      <div class="SectionBox" id="T:Sansar.Simulation.ComponentType:Docs:Members">
+      <div class="SectionBox" id="T:Sansar.Simulation.RagdollRegion:Docs:Members">
         <table class="Enumeration">
           <tr>
             <th>Member Name</th>
             <th>Description</th>
           </tr>
           <tr valign="top">
-            <td id="F:Sansar.Simulation.ComponentType.AnimationComponent">
-              <b>AnimationComponent</b>
+            <td id="F:Sansar.Simulation.RagdollRegion.AllRegions">
+              <b>AllRegions</b>
             </td>
-            <td>
-              <a href="../Sansar.Simulation/AnimationComponent.html">Sansar.Simulation.AnimationComponent</a>
-            </td>
+            <td>All regions.</td>
           </tr>
           <tr valign="top">
-            <td id="F:Sansar.Simulation.ComponentType.AudioComponent">
-              <b>AudioComponent</b>
+            <td id="F:Sansar.Simulation.RagdollRegion.Head">
+              <b>Head</b>
             </td>
-            <td>
-              <a href="../Sansar.Simulation/AudioComponent.html">Sansar.Simulation.AudioComponent</a>
-            </td>
+            <td>Head.</td>
           </tr>
           <tr valign="top">
-            <td id="F:Sansar.Simulation.ComponentType.CameraComponent">
-              <b>CameraComponent</b>
+            <td id="F:Sansar.Simulation.RagdollRegion.LeftArm">
+              <b>LeftArm</b>
             </td>
-            <td>
-              <a href="../Sansar.Simulation/CameraComponent.html">Sansar.Simulation.CameraComponent</a>
-            </td>
+            <td>Left arm (shoulder, elbow, wrist).</td>
           </tr>
           <tr valign="top">
-            <td id="F:Sansar.Simulation.ComponentType.CharacterComponent">
-              <b>CharacterComponent</b>
+            <td id="F:Sansar.Simulation.RagdollRegion.LeftLeg">
+              <b>LeftLeg</b>
             </td>
-            <td>
-              <a href="../Sansar.Simulation/CameraComponent.html">Sansar.Simulation.CameraComponent</a>
-            </td>
+            <td>Left leg (hip, knee, ankle).</td>
           </tr>
           <tr valign="top">
-            <td id="F:Sansar.Simulation.ComponentType.LightComponent">
-              <b>LightComponent</b>
+            <td id="F:Sansar.Simulation.RagdollRegion.NoRegion">
+              <b>NoRegion</b>
             </td>
-            <td>
-              <a href="../Sansar.Simulation/LightComponent.html">Sansar.Simulation.LightComponent</a>
-            </td>
+            <td>No region.</td>
           </tr>
           <tr valign="top">
-            <td id="F:Sansar.Simulation.ComponentType.MeshComponent">
-              <b>MeshComponent</b>
+            <td id="F:Sansar.Simulation.RagdollRegion.RightArm">
+              <b>RightArm</b>
             </td>
-            <td>
-              <a href="../Sansar.Simulation/MeshComponent.html">Sansar.Simulation.MeshComponent</a>
-            </td>
+            <td>Right arm (shoulder, elbow, wrist).</td>
           </tr>
           <tr valign="top">
-            <td id="F:Sansar.Simulation.ComponentType.MirrorComponent">
-              <b>MirrorComponent</b>
+            <td id="F:Sansar.Simulation.RagdollRegion.RightLeg">
+              <b>RightLeg</b>
             </td>
-            <td>
-              <a href="../Sansar.Simulation/MirrorComponent.html">Sansar.Simulation.MirrorComponent</a>
-            </td>
+            <td>Right leg (hip, knee, ankle).</td>
           </tr>
           <tr valign="top">
-            <td id="F:Sansar.Simulation.ComponentType.RigidBodyComponent">
-              <b>RigidBodyComponent</b>
+            <td id="F:Sansar.Simulation.RagdollRegion.Torso">
+              <b>Torso</b>
             </td>
-            <td>
-              <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a>
-            </td>
+            <td>Torso (pelvis, spine, neck).</td>
           </tr>
         </table>
       </div>
       <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:Sansar.Simulation.ComponentType:Docs:Version Information">
+      <div class="SectionBox" id="T:Sansar.Simulation.RagdollRegion:Docs:Version Information">
         <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
     </div>
-    <div class="Members" id="T:Sansar.Simulation.ComponentType:Members">
+    <div class="Members" id="T:Sansar.Simulation.RagdollRegion:Members">
     </div>
     <hr size="1" />
     <div class="Copyright">

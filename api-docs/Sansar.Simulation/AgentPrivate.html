@@ -234,7 +234,7 @@
         </table>
       </blockquote>
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:Sansar.Simulation.AgentPrivate:Docs:Remarks">Agents may leave at any time. Attempting to use an Agent interface for an agent no longer in the scene will throw a NullReferenceException.Use via <a href="../Sansar.Simulation/AgentScript.html#P:Sansar.Simulation.AgentScript.AgentPrivate">AgentScript.AgentPrivate</a>  to access APIs for the agent the script is on.</div>
+      <div class="SectionBox" id="T:Sansar.Simulation.AgentPrivate:Docs:Remarks">Use via <a href="../Sansar.Simulation/AgentScript.html#P:Sansar.Simulation.AgentScript.AgentPrivate">AgentScript.AgentPrivate</a>  to access APIs for the agent the script is on.Agents may leave at any time. Attempting to use an Agent interface for an agent no longer in the scene will throw a NullReferenceException.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:Sansar.Simulation.AgentPrivate:Docs:Version Information">
         <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
@@ -310,6 +310,86 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector)">ApplyRagdollImpulse</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>)<blockquote>Applies a linear impulse to the entire ragdoll.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent})">ApplyRagdollImpulse</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Applies a linear impulse to the entire ragdoll.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single)">ApplyRagdollImpulse</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Applies a linear impulse to the entire ragdoll and sets the auto-recovery delay.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">ApplyRagdollImpulse</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Applies a linear impulse to the entire ragdoll and sets the auto-recovery delay.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion)">ApplyRagdollImpulseToRegions</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar.Simulation/RagdollRegion.html">RagdollRegion</a>)<blockquote>Applies a linear impulse to specific ragdoll body regions.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Action{Sansar.Script.OperationCompleteEvent})">ApplyRagdollImpulseToRegions</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar.Simulation/RagdollRegion.html">RagdollRegion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Applies a linear impulse to specific ragdoll body regions.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single)">ApplyRagdollImpulseToRegions</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar.Simulation/RagdollRegion.html">RagdollRegion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Applies a linear impulse to specific ragdoll body regions and sets the auto-recovery delay.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">ApplyRagdollImpulseToRegions</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="../Sansar.Simulation/RagdollRegion.html">RagdollRegion</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Applies a linear impulse to specific ragdoll body regions and sets the auto-recovery delay.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="#M:Sansar.Simulation.AgentPrivate.GetControlPointEnabled(Sansar.Simulation.ControlPointType)">GetControlPointEnabled</a>
                   </b>(<a href="../Sansar.Simulation/ControlPointType.html">ControlPointType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Retrieves whether the control point is enabled.</blockquote></td>
               </tr>
@@ -352,6 +432,26 @@
                   <b>
                     <a href="#M:Sansar.Simulation.AgentPrivate.GetHeldRigidBodies()">GetHeldRigidBodies</a>
                   </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;RigidBodyComponent&gt;</a></nobr><blockquote>Retrieves a list of <a href="../Sansar.Simulation/RigidBodyComponent.html">Sansar.Simulation.RigidBodyComponent</a> that this agent is currently holding.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.GetRagdollBounce()">GetRagdollBounce</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Gets the current ragdoll bounce factor.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.GetRagdollEnabled()">GetRagdollEnabled</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Returns whether ragdoll physics is currently active for this agent.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -610,6 +710,66 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single)">SetRagdollBounce</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets the bounciness of the ragdoll body.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetRagdollBounce</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Sets the bounciness of the ragdoll body.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean)">SetRagdollEnabled</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>Enables or disables ragdoll physics on this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetRagdollEnabled</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Enables or disables ragdoll physics on this agent.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single)">SetRagdollEnabled</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Enables or disables ragdoll physics on this agent and sets the auto-recovery delay.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetRagdollEnabled</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>Enables or disables ragdoll physics on this agent and sets the auto-recovery delay.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="#M:Sansar.Simulation.AgentPrivate.SetScaleFactor(System.Single)">SetScaleFactor</a>
                   </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets a runtime scale factor for this agent.</blockquote></td>
               </tr>
@@ -722,6 +882,242 @@
           <div class="SectionBox" id="P:Sansar.Simulation.AgentPrivate.AgentInfo:Remarks">The <a href="../Sansar.Simulation/AgentInfo.html">Sansar.Simulation.AgentInfo</a> holds information about an agent. </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:Sansar.Simulation.AgentPrivate.AgentInfo:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector)">ApplyRagdollImpulse Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector):member">
+          <div class="msummary">Applies a linear impulse to the entire ragdoll.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ApplyRagdollImpulse</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> impulse)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector):Parameters">
+            <dl>
+              <dt>
+                <i>impulse</i>
+              </dt>
+              <dd>The impulse vector in world space.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector):Remarks">This automatically enables ragdoll if needed and uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent})">ApplyRagdollImpulse Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Applies a linear impulse to the entire ragdoll.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ApplyRagdollImpulse</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> impulse, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>impulse</i>
+              </dt>
+              <dd>The impulse vector in world space.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This automatically enables ragdoll if needed and uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single)">ApplyRagdollImpulse Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single):member">
+          <div class="msummary">Applies a linear impulse to the entire ragdoll and sets the auto-recovery delay.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ApplyRagdollImpulse</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> impulse, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> autoRecoverDelaySeconds)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>impulse</i>
+              </dt>
+              <dd>The impulse vector in world space.</dd>
+              <dt>
+                <i>autoRecoverDelaySeconds</i>
+              </dt>
+              <dd>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single):Remarks">This automatically enables ragdoll if needed.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">ApplyRagdollImpulse Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Applies a linear impulse to the entire ragdoll and sets the auto-recovery delay.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ApplyRagdollImpulse</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> impulse, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> autoRecoverDelaySeconds, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>impulse</i>
+              </dt>
+              <dd>The impulse vector in world space.</dd>
+              <dt>
+                <i>autoRecoverDelaySeconds</i>
+              </dt>
+              <dd>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This automatically enables ragdoll if needed.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion)">ApplyRagdollImpulseToRegions Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion):member">
+          <div class="msummary">Applies a linear impulse to specific ragdoll body regions.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ApplyRagdollImpulseToRegions</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> impulse, <a href="../Sansar.Simulation/RagdollRegion.html">RagdollRegion</a> regions)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion):Parameters">
+            <dl>
+              <dt>
+                <i>impulse</i>
+              </dt>
+              <dd>The impulse vector in world space.</dd>
+              <dt>
+                <i>regions</i>
+              </dt>
+              <dd>One or more RagdollRegion flags combined with bitwise OR (e.g. RagdollRegion.LeftArm | RagdollRegion.LeftLeg).</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion):Remarks">Applying impulse to one side (e.g. LeftArm | LeftLeg) creates a spinning fall effect.
+            This automatically enables ragdoll if needed and uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Action{Sansar.Script.OperationCompleteEvent})">ApplyRagdollImpulseToRegions Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Applies a linear impulse to specific ragdoll body regions.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ApplyRagdollImpulseToRegions</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> impulse, <a href="../Sansar.Simulation/RagdollRegion.html">RagdollRegion</a> regions, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>impulse</i>
+              </dt>
+              <dd>The impulse vector in world space.</dd>
+              <dt>
+                <i>regions</i>
+              </dt>
+              <dd>One or more RagdollRegion flags combined with bitwise OR (e.g. RagdollRegion.LeftArm | RagdollRegion.LeftLeg).</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Applying impulse to one side (e.g. LeftArm | LeftLeg) creates a spinning fall effect.
+            This automatically enables ragdoll if needed and uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single)">ApplyRagdollImpulseToRegions Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single):member">
+          <div class="msummary">Applies a linear impulse to specific ragdoll body regions and sets the auto-recovery delay.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ApplyRagdollImpulseToRegions</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> impulse, <a href="../Sansar.Simulation/RagdollRegion.html">RagdollRegion</a> regions, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> autoRecoverDelaySeconds)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>impulse</i>
+              </dt>
+              <dd>The impulse vector in world space.</dd>
+              <dt>
+                <i>regions</i>
+              </dt>
+              <dd>One or more RagdollRegion flags combined with bitwise OR (e.g. RagdollRegion.LeftArm | RagdollRegion.LeftLeg).</dd>
+              <dt>
+                <i>autoRecoverDelaySeconds</i>
+              </dt>
+              <dd>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single):Remarks">Applying impulse to one side (e.g. LeftArm | LeftLeg) creates a spinning fall effect.
+            This automatically enables ragdoll if needed.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">ApplyRagdollImpulseToRegions Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Applies a linear impulse to specific ragdoll body regions and sets the auto-recovery delay.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ApplyRagdollImpulseToRegions</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> impulse, <a href="../Sansar.Simulation/RagdollRegion.html">RagdollRegion</a> regions, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> autoRecoverDelaySeconds, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>impulse</i>
+              </dt>
+              <dd>The impulse vector in world space.</dd>
+              <dt>
+                <i>regions</i>
+              </dt>
+              <dd>One or more RagdollRegion flags combined with bitwise OR (e.g. RagdollRegion.LeftArm | RagdollRegion.LeftLeg).</dd>
+              <dt>
+                <i>autoRecoverDelaySeconds</i>
+              </dt>
+              <dd>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Applying impulse to one side (e.g. LeftArm | LeftLeg) creates a spinning fall effect.
+            This automatically enables ragdoll if needed.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
             <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
           <hr size="1" />
         </blockquote>
@@ -880,6 +1276,36 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetHeldRigidBodies():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.GetRagdollBounce()">GetRagdollBounce Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.GetRagdollBounce():member">
+          <div class="msummary">Gets the current ragdoll bounce factor.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetRagdollBounce</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetRagdollBounce():Returns">The bounce factor (0-1).</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetRagdollBounce():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetRagdollBounce():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.GetRagdollEnabled()">GetRagdollEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.GetRagdollEnabled():member">
+          <div class="msummary">Returns whether ragdoll physics is currently active for this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>GetRagdollEnabled</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.GetRagdollEnabled():Returns">True if ragdoll is active.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetRagdollEnabled():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.GetRagdollEnabled():Version Information">
             <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
           <hr size="1" />
         </blockquote>
@@ -1556,6 +1982,160 @@
             To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetGravityFactor(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single)">SetRagdollBounce Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single):member">
+          <div class="msummary">Sets the bounciness of the ragdoll body.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetRagdollBounce</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> bounce)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>bounce</i>
+              </dt>
+              <dd>Bounce factor from 0 (no bounce) to 1 (maximum bounce). Default is 0.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetRagdollBounce Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Sets the bounciness of the ragdoll body.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetRagdollBounce</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> bounce, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>bounce</i>
+              </dt>
+              <dd>Bounce factor from 0 (no bounce) to 1 (maximum bounce). Default is 0.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean)">SetRagdollEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean):member">
+          <div class="msummary">Enables or disables ragdoll physics on this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetRagdollEnabled</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enabled)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>enabled</i>
+              </dt>
+              <dd>True to enable ragdoll, false to disable.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean):Remarks">Enabling ragdoll through this overload uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">SetRagdollEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Enables or disables ragdoll physics on this agent.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetRagdollEnabled</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enabled, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>enabled</i>
+              </dt>
+              <dd>True to enable ragdoll, false to disable.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Enabling ragdoll through this overload uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single)">SetRagdollEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single):member">
+          <div class="msummary">Enables or disables ragdoll physics on this agent and sets the auto-recovery delay.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetRagdollEnabled</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enabled, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> autoRecoverDelaySeconds)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>enabled</i>
+              </dt>
+              <dd>True to enable ragdoll, false to disable.</dd>
+              <dt>
+                <i>autoRecoverDelaySeconds</i>
+              </dt>
+              <dd>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">SetRagdollEnabled Method</h3>
+        <blockquote id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">Enables or disables ragdoll physics on this agent and sets the auto-recovery delay.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetRagdollEnabled</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enabled, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> autoRecoverDelaySeconds, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>enabled</i>
+              </dt>
+              <dd>True to enable ragdoll, false to disable.</dd>
+              <dt>
+                <i>autoRecoverDelaySeconds</i>
+              </dt>
+              <dd>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <a href="../Sansar.Script/ScriptBase.html#M:Sansar.Script.ScriptBase.WaitFor">Sansar.Script.ScriptBase.WaitFor</a> while in a coroutine.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
             <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
           <hr size="1" />
         </blockquote>

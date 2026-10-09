@@ -1,0 +1,817 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.UIMenu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.UIMenu">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.UIMenu:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.UIMenu:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.UIMenu:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.UIMenu">UIMenu  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.UIMenu:Summary">
+            Manages a clickable on-screen menu UI element.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.UIMenu:Signature">[Sansar.Script.Interface]<br />public class  <b>UIMenu</b> : <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.UIMenu:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.UIMenu:Docs:Remarks">Use this for text-heavy game menus, voting prompts, settings panels, or non-interactive leaderboards.</div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.UIMenu:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.
+							</p>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Sansar.Simulation.UIMenu.cMaxItems">cMaxItems</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. Maximum number of menu items allowed per menu.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.UIMenu.Footer">Footer</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The current menu footer.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../Sansar.Script/InstanceInterface.html#P:Sansar.Script.InstanceInterface.IsValid">IsValid</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Whether or not this interface is valid.
+             (<i>Inherited from <a href="../Sansar.Script/InstanceInterface.html">Sansar.Script.InstanceInterface</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.UIMenu.SelectedIndex">SelectedIndex</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. The zero-based index of the last selected menu item, or -1 if none selected.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.UIMenu.SelectedItem">SelectedItem</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The label of the last selected menu item.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.UIMenu.Subtitle">Subtitle</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The current menu subtitle.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.UIMenu.Title">Title</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The current menu title.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.UIMenu.Hide()">Hide</a>
+                  </b>()<blockquote>
+            Hide the current menu.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean)">Show</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Show a scriptable menu using the default client theme.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">Show</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>
+            Show a scriptable menu using the default client theme.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color)">ShowStyled</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../Sansar/Color.html">Sansar.Color</a>, <a href="../Sansar/Color.html">Sansar.Color</a>, <a href="../Sansar/Color.html">Sansar.Color</a>, <a href="../Sansar/Color.html">Sansar.Color</a>, <a href="../Sansar/Color.html">Sansar.Color</a>)<blockquote>
+            Show a scriptable menu with caller-provided colors.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,System.Action{Sansar.Script.OperationCompleteEvent})">ShowStyled</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../Sansar/Color.html">Sansar.Color</a>, <a href="../Sansar/Color.html">Sansar.Color</a>, <a href="../Sansar/Color.html">Sansar.Color</a>, <a href="../Sansar/Color.html">Sansar.Color</a>, <a href="../Sansar/Color.html">Sansar.Color</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a>)<blockquote>
+            Show a scriptable menu with caller-provided colors.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.UIMenu.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote> A string representation of this object. </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.UIMenu:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="F:Sansar.Simulation.UIMenu.cMaxItems">cMaxItems Field</h3>
+        <blockquote id="F:Sansar.Simulation.UIMenu.cMaxItems:member">
+          <div class="msummary">Maximum number of menu items allowed per menu.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>cMaxItems</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.UIMenu.cMaxItems:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Sansar.Simulation.UIMenu.cMaxItems:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.UIMenu.Footer">Footer Property</h3>
+        <blockquote id="P:Sansar.Simulation.UIMenu.Footer:member">
+          <div class="msummary">The current menu footer.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Footer</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.UIMenu.Footer:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.Footer:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.Footer:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.UIMenu.Hide()">Hide Method</h3>
+        <blockquote id="M:Sansar.Simulation.UIMenu.Hide():member">
+          <div class="msummary">
+            Hide the current menu.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Hide</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.Hide():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.Hide():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.UIMenu.SelectedIndex">SelectedIndex Property</h3>
+        <blockquote id="P:Sansar.Simulation.UIMenu.SelectedIndex:member">
+          <div class="msummary">The zero-based index of the last selected menu item, or -1 if none selected.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>SelectedIndex</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.UIMenu.SelectedIndex:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.SelectedIndex:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.SelectedIndex:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.UIMenu.SelectedItem">SelectedItem Property</h3>
+        <blockquote id="P:Sansar.Simulation.UIMenu.SelectedItem:member">
+          <div class="msummary">The label of the last selected menu item.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SelectedItem</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.UIMenu.SelectedItem:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.SelectedItem:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.SelectedItem:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean)">Show Method</h3>
+        <blockquote id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean):member">
+          <div class="msummary">
+            Show a scriptable menu using the default client theme.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Show</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> title, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> subtitle, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> footer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] items, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> positionXPercent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> positionYPercent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> interactive, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> closeOnSelection)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>title</i>
+              </dt>
+              <dd>Primary header text.</dd>
+              <dt>
+                <i>subtitle</i>
+              </dt>
+              <dd>Optional secondary header text.</dd>
+              <dt>
+                <i>footer</i>
+              </dt>
+              <dd>Optional footer or hint text.</dd>
+              <dt>
+                <i>items</i>
+              </dt>
+              <dd>List of rows to display.</dd>
+              <dt>
+                <i>positionXPercent</i>
+              </dt>
+              <dd>Horizontal menu center position in percent of screen width.</dd>
+              <dt>
+                <i>positionYPercent</i>
+              </dt>
+              <dd>Vertical menu center position in percent of screen height.</dd>
+              <dt>
+                <i>interactive</i>
+              </dt>
+              <dd>If false, the menu becomes a click-through display panel.</dd>
+              <dt>
+                <i>closeOnSelection</i>
+              </dt>
+              <dd>If true, the menu closes on the first click.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean):Returns">The internal event id for the selection completion event.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean):Remarks">Call this with WaitFor to block until the first menu row is clicked.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">Show Method</h3>
+        <blockquote id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">
+            Show a scriptable menu using the default client theme.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Show</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> title, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> subtitle, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> footer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] items, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> positionXPercent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> positionYPercent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> interactive, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> closeOnSelection, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>title</i>
+              </dt>
+              <dd>Primary header text.</dd>
+              <dt>
+                <i>subtitle</i>
+              </dt>
+              <dd>Optional secondary header text.</dd>
+              <dt>
+                <i>footer</i>
+              </dt>
+              <dd>Optional footer or hint text.</dd>
+              <dt>
+                <i>items</i>
+              </dt>
+              <dd>List of rows to display.</dd>
+              <dt>
+                <i>positionXPercent</i>
+              </dt>
+              <dd>Horizontal menu center position in percent of screen width.</dd>
+              <dt>
+                <i>positionYPercent</i>
+              </dt>
+              <dd>Vertical menu center position in percent of screen height.</dd>
+              <dt>
+                <i>interactive</i>
+              </dt>
+              <dd>If false, the menu becomes a click-through display panel.</dd>
+              <dt>
+                <i>closeOnSelection</i>
+              </dt>
+              <dd>If true, the menu closes on the first click.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The internal event id for the selection completion event.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Call this with WaitFor to block until the first menu row is clicked.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color)">ShowStyled Method</h3>
+        <blockquote id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color):member">
+          <div class="msummary">
+            Show a scriptable menu with caller-provided colors.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ShowStyled</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> title, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> subtitle, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> footer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] items, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> positionXPercent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> positionYPercent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> interactive, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> closeOnSelection, <a href="../Sansar/Color.html">Sansar.Color</a> panelBackgroundColor, <a href="../Sansar/Color.html">Sansar.Color</a> panelBorderColor, <a href="../Sansar/Color.html">Sansar.Color</a> titleColor, <a href="../Sansar/Color.html">Sansar.Color</a> textColor, <a href="../Sansar/Color.html">Sansar.Color</a> accentColor)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color):Parameters">
+            <dl>
+              <dt>
+                <i>title</i>
+              </dt>
+              <dd>Primary header text.</dd>
+              <dt>
+                <i>subtitle</i>
+              </dt>
+              <dd>Optional secondary header text.</dd>
+              <dt>
+                <i>footer</i>
+              </dt>
+              <dd>Optional footer or hint text.</dd>
+              <dt>
+                <i>items</i>
+              </dt>
+              <dd>List of rows to display.</dd>
+              <dt>
+                <i>positionXPercent</i>
+              </dt>
+              <dd>Horizontal menu center position in percent of screen width.</dd>
+              <dt>
+                <i>positionYPercent</i>
+              </dt>
+              <dd>Vertical menu center position in percent of screen height.</dd>
+              <dt>
+                <i>interactive</i>
+              </dt>
+              <dd>If false, the menu becomes a click-through display panel.</dd>
+              <dt>
+                <i>closeOnSelection</i>
+              </dt>
+              <dd>If true, the menu closes on the first click.</dd>
+              <dt>
+                <i>panelBackgroundColor</i>
+              </dt>
+              <dd>Background color for the menu body.</dd>
+              <dt>
+                <i>panelBorderColor</i>
+              </dt>
+              <dd>Border color for the menu frame.</dd>
+              <dt>
+                <i>titleColor</i>
+              </dt>
+              <dd>Title text color.</dd>
+              <dt>
+                <i>textColor</i>
+              </dt>
+              <dd>Body and row text color.</dd>
+              <dt>
+                <i>accentColor</i>
+              </dt>
+              <dd>Accent color used for hover and separators.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color):Returns">The internal event id for the selection completion event.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color):Remarks">Call this with WaitFor to block until the first menu row is clicked.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,System.Action{Sansar.Script.OperationCompleteEvent})">ShowStyled Method</h3>
+        <blockquote id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,System.Action{Sansar.Script.OperationCompleteEvent}):member">
+          <div class="msummary">
+            Show a scriptable menu with caller-provided colors.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ShowStyled</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> title, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> subtitle, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> footer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] items, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> positionXPercent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> positionYPercent, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> interactive, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> closeOnSelection, <a href="../Sansar/Color.html">Sansar.Color</a> panelBackgroundColor, <a href="../Sansar/Color.html">Sansar.Color</a> panelBorderColor, <a href="../Sansar/Color.html">Sansar.Color</a> titleColor, <a href="../Sansar/Color.html">Sansar.Color</a> textColor, <a href="../Sansar/Color.html">Sansar.Color</a> accentColor, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;Sansar.Script.OperationCompleteEvent&gt;</a> handler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,System.Action{Sansar.Script.OperationCompleteEvent}):Parameters">
+            <dl>
+              <dt>
+                <i>title</i>
+              </dt>
+              <dd>Primary header text.</dd>
+              <dt>
+                <i>subtitle</i>
+              </dt>
+              <dd>Optional secondary header text.</dd>
+              <dt>
+                <i>footer</i>
+              </dt>
+              <dd>Optional footer or hint text.</dd>
+              <dt>
+                <i>items</i>
+              </dt>
+              <dd>List of rows to display.</dd>
+              <dt>
+                <i>positionXPercent</i>
+              </dt>
+              <dd>Horizontal menu center position in percent of screen width.</dd>
+              <dt>
+                <i>positionYPercent</i>
+              </dt>
+              <dd>Vertical menu center position in percent of screen height.</dd>
+              <dt>
+                <i>interactive</i>
+              </dt>
+              <dd>If false, the menu becomes a click-through display panel.</dd>
+              <dt>
+                <i>closeOnSelection</i>
+              </dt>
+              <dd>If true, the menu closes on the first click.</dd>
+              <dt>
+                <i>panelBackgroundColor</i>
+              </dt>
+              <dd>Background color for the menu body.</dd>
+              <dt>
+                <i>panelBorderColor</i>
+              </dt>
+              <dd>Border color for the menu frame.</dd>
+              <dt>
+                <i>titleColor</i>
+              </dt>
+              <dd>Title text color.</dd>
+              <dt>
+                <i>textColor</i>
+              </dt>
+              <dd>Body and row text color.</dd>
+              <dt>
+                <i>accentColor</i>
+              </dt>
+              <dd>Accent color used for hover and separators.</dd>
+              <dt>
+                <i>handler</i>
+              </dt>
+              <dd>Handler to be called when the event completes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,System.Action{Sansar.Script.OperationCompleteEvent}):Returns">The internal event id for the selection completion event.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,System.Action{Sansar.Script.OperationCompleteEvent}):Remarks">Call this with WaitFor to block until the first menu row is clicked.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,System.Action{Sansar.Script.OperationCompleteEvent}):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.UIMenu.Subtitle">Subtitle Property</h3>
+        <blockquote id="P:Sansar.Simulation.UIMenu.Subtitle:member">
+          <div class="msummary">The current menu subtitle.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Subtitle</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.UIMenu.Subtitle:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.Subtitle:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.Subtitle:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.UIMenu.Title">Title Property</h3>
+        <blockquote id="P:Sansar.Simulation.UIMenu.Title:member">
+          <div class="msummary">The current menu title.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Title</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.UIMenu.Title:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.Title:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.UIMenu.Title:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.UIMenu.ToString()">ToString Method</h3>
+        <blockquote id="M:Sansar.Simulation.UIMenu.ToString():member">
+          <div class="msummary"> A string representation of this object. </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.UIMenu.ToString():Returns">A string representation of this object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.ToString():Remarks">The format of this string may change between releases.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.UIMenu.ToString():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

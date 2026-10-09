@@ -71,7 +71,7 @@ runtime behavior is only testable in-world.
 ## Freshness
 
 The assemblies, API docs, whitelist and official examples in this kit are a snapshot
-of the **March 2026 Sansar client**. To refresh them from a newer installation, copy:
+of the **Sansar 47.7.0 client (October 2026)**. To refresh them from a newer installation, copy:
 
 - `C:\Program Files\Sansar\Client\ScriptApi\Assemblies\*` → `assemblies/`
 - `C:\Program Files\Sansar\Client\ScriptApi\Documentation\*` → `api-docs/`

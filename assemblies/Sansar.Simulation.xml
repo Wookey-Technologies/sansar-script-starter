@@ -740,7 +740,7 @@
             </summary>
             <value>The default scene gravity magnitude.</value>
             <remarks>The direction of the gravity vector is constant.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(269)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(301)</sourceLocation>
             <example><code lang="C#">float sansarGravity = ScenePrivate.DefaultGravity; // Get default gravity in m/s^2</code></example>
             <remarks>See GravityExample.cs in the Examples folder for more details.</remarks>
         </member>
@@ -839,6 +839,64 @@
             </summary>
             <remarks>All clients will be momentarily disconnected.</remarks>
             <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(235)</sourceLocation>
+        </member>
+        <member name="M:Sansar.Simulation.ScenePrivate.AddToSceneLibrary(Sansar.Simulation.ClusterResource,System.String,System.String)">
+            <summary>Add an item to the scene library for all users.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(267)</sourceLocation>
+            
+            
+            
+            <param name='resource'>The cluster resource to add.</param>
+            <param name='displayName'>The display name shown in the backpack.</param>
+            <param name='thumbnailAssetId'>Optional thumbnail asset id shown as the item icon.</param>
+        </member>
+        <member name="M:Sansar.Simulation.ScenePrivate.AddToSceneLibrary(Sansar.Simulation.ClusterResource,System.String)">
+            <summary>Add an item to the scene library for all users.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(267)</sourceLocation>
+            
+            
+            
+            <param name='resource'>The cluster resource to add.</param>
+            <param name='displayName'>The display name shown in the backpack.</param>
+        </member>
+        <member name="M:Sansar.Simulation.ScenePrivate.RemoveFromSceneLibrary(Sansar.Simulation.ClusterResource)">
+            <summary>Remove an item from the scene library for all users.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(271)</sourceLocation>
+            
+            <param name='resource'>The cluster resource to remove.</param>
+        </member>
+        <member name="M:Sansar.Simulation.ScenePrivate.ClearSceneLibrary">
+            <summary>Remove all items from the scene library for all users.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(274)</sourceLocation>
+        </member>
+        <member name="M:Sansar.Simulation.ScenePrivate.AddToSceneLibraryForAgent(Sansar.Simulation.AgentPrivate,Sansar.Simulation.ClusterResource,System.String,System.String)">
+            <summary>Add an item to the scene library for a specific agent.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(282)</sourceLocation>
+            
+            
+            
+            
+            <param name='agent'>The target agent.</param>
+            <param name='resource'>The cluster resource to add.</param>
+            <param name='displayName'>The display name shown in the backpack.</param>
+            <param name='thumbnailAssetId'>Optional thumbnail asset id shown as the item icon.</param>
+        </member>
+        <member name="M:Sansar.Simulation.ScenePrivate.AddToSceneLibraryForAgent(Sansar.Simulation.AgentPrivate,Sansar.Simulation.ClusterResource,System.String)">
+            <summary>Add an item to the scene library for a specific agent.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(282)</sourceLocation>
+            
+            
+            
+            
+            <param name='agent'>The target agent.</param>
+            <param name='resource'>The cluster resource to add.</param>
+            <param name='displayName'>The display name shown in the backpack.</param>
+        </member>
+        <member name="M:Sansar.Simulation.ScenePrivate.RemoveFromSceneLibraryForAgent(Sansar.Simulation.AgentPrivate,Sansar.Simulation.ClusterResource)">
+            <summary>Remove an item from the scene library for a specific agent.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(287)</sourceLocation>
+            
+            
+            <param name='agent'>The target agent.</param>
+            <param name='resource'>The cluster resource to remove.</param>
+        </member>
+        <member name="M:Sansar.Simulation.ScenePrivate.ClearSceneLibraryForAgent(Sansar.Simulation.AgentPrivate)">
+            <summary>Remove all per-agent scene library items for a specific agent.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(291)</sourceLocation>
+            
+            <param name='agent'>The target agent.</param>
         </member>
         <member name="M:Sansar.Simulation.ScenePrivate.GetPortalUri(Sansar.Script.ObjectId)">
             <summary>URI destination for the specified portal.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(121)</sourceLocation>
@@ -976,7 +1034,7 @@
         <member name="M:Sansar.Simulation.ScenePrivate.GetGravity">
             <summary>Gets the scene's current acceleration of gravity in m/s^2.</summary>
             <remarks>The default gravity for the scene is <see cref='P:Sansar.Simulation.ScenePrivate.DefaultGravity'/></remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(270)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(302)</sourceLocation>
             <value>Number indicating the magnitude of gravity in the scene.</value>
             <example><code lang='C#'>float currentGravity = ScenePrivate.GetGravity(); // Get the current scene gravity in m/s^2</code></example>
             <remarks>See GravityExample.cs in the Examples folder for more details.</remarks>
@@ -985,7 +1043,7 @@
             <summary>Sets the scene's current gravity acceleration in m/s^2.</summary>
             
             <remarks>Set to <see cref='P:Sansar.Simulation.ScenePrivate.DefaultGravity'/> to return to the default. The valid range is from <see cref='F:Sansar.Simulation.ScenePrivate.GravityMinimum'/> to <see cref='F:Sansar.Simulation.ScenePrivate.GravityMaximum'/>. The direction cannot be changed.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(271)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(303)</sourceLocation>
             <value>The return value is an internal event id which can be passed to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> from a coroutine for synchronous behavior.</value>
             <example><code lang='C#'>ScenePrivate.SetGravity(1.622f); // Set the scene to moon gravity</code></example>
             <remarks>See GravityExample.cs in the Examples folder for more details.</remarks>
@@ -996,7 +1054,7 @@
             <summary>Sets the scene's current gravity acceleration in m/s^2.</summary>
             
             <remarks>Set to <see cref='P:Sansar.Simulation.ScenePrivate.DefaultGravity'/> to return to the default. The valid range is from <see cref='F:Sansar.Simulation.ScenePrivate.GravityMinimum'/> to <see cref='F:Sansar.Simulation.ScenePrivate.GravityMaximum'/>. The direction cannot be changed.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(271)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(303)</sourceLocation>
             <value>The return value is an internal event id which can be passed to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> from a coroutine for synchronous behavior.</value>
             <example><code lang='C#'>ScenePrivate.SetGravity(1.622f); // Set the scene to moon gravity</code></example>
             <remarks>See GravityExample.cs in the Examples folder for more details.</remarks>
@@ -2396,6 +2454,38 @@
             <summary>The first bone subset. This may not be defined for all animations.
             For agent animations this represents the upper body subset of bones.</summary>
         </member>
+        <member name="T:Sansar.Simulation.RagdollRegion">
+            <summary>
+            Flags for targeting specific ragdoll body regions. Combine with bitwise OR.
+            </summary>
+            <remarks>When applying impulse to specific regions (e.g. LeftArm | LeftLeg), the force is
+            distributed only among the bodies in those regions, creating asymmetric effects like spinning falls.</remarks>
+            <sourceLocation>App/Libraries\SimulationScriptApi/SimulationScriptTypes.h(139)</sourceLocation>
+        </member>
+        <member name="F:Sansar.Simulation.RagdollRegion.NoRegion">
+            <summary>No region.</summary>
+        </member>
+        <member name="F:Sansar.Simulation.RagdollRegion.LeftArm">
+            <summary>Left arm (shoulder, elbow, wrist).</summary>
+        </member>
+        <member name="F:Sansar.Simulation.RagdollRegion.RightArm">
+            <summary>Right arm (shoulder, elbow, wrist).</summary>
+        </member>
+        <member name="F:Sansar.Simulation.RagdollRegion.LeftLeg">
+            <summary>Left leg (hip, knee, ankle).</summary>
+        </member>
+        <member name="F:Sansar.Simulation.RagdollRegion.RightLeg">
+            <summary>Right leg (hip, knee, ankle).</summary>
+        </member>
+        <member name="F:Sansar.Simulation.RagdollRegion.Torso">
+            <summary>Torso (pelvis, spine, neck).</summary>
+        </member>
+        <member name="F:Sansar.Simulation.RagdollRegion.Head">
+            <summary>Head.</summary>
+        </member>
+        <member name="F:Sansar.Simulation.RagdollRegion.AllRegions">
+            <summary>All regions.</summary>
+        </member>
         <member name="T:Sansar.Simulation.InterpolationMode">
             <summary>Type of interpolation to use for various interfaces</summary>
             <remarks>
@@ -2539,6 +2629,9 @@
         </member>
         <member name="F:Sansar.Simulation.ComponentType.CharacterComponent">
             <summary><see cref='T:Sansar.Simulation.CameraComponent'/></summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(30)</sourceLocation>
+        </member>
+        <member name="F:Sansar.Simulation.ComponentType.MirrorComponent">
+            <summary><see cref='T:Sansar.Simulation.MirrorComponent'/></summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(30)</sourceLocation>
         </member>
         <member name="T:Sansar.Simulation.CommandAction">
             <summary>
@@ -2849,7 +2942,7 @@
             The AnimationParameters struct contains settings for playing animations.
             </summary>
             <remarks></remarks>
-            <sourceLocation>App/Libraries\SimulationScriptApi/SimulationScriptTypes.h(138)</sourceLocation>
+            <sourceLocation>App/Libraries\SimulationScriptApi/SimulationScriptTypes.h(164)</sourceLocation>
         </member>
         <member name="F:Sansar.Simulation.AnimationParameters.PlaybackMode">
             <summary>
@@ -3061,19 +3154,19 @@
         <member name="P:Sansar.Simulation.AgentPrivate.Client">
             <summary> Returns the <see cref='T:Sansar.Simulation.Client' /> for this instance. </summary>
             <returns>The <see cref='T:Sansar.Simulation.Client' /> for this instance</returns>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(294)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(365)</sourceLocation>
             <remarks>The <see cref='T:Sansar.Simulation.Client' /> manages interactions with a client. </remarks>
         </member>
         <member name="P:Sansar.Simulation.AgentPrivate.AgentInfo">
             <summary> Returns the <see cref='T:Sansar.Simulation.AgentInfo' /> for this instance. </summary>
             <returns>The <see cref='T:Sansar.Simulation.AgentInfo' /> for this instance</returns>
             <remarks>The <see cref='T:Sansar.Simulation.AgentInfo' /> holds information about an agent. </remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(292)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(363)</sourceLocation>
         </member>
         <member name="M:Sansar.Simulation.AgentPrivate.SendChat(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">
             <summary>Sends a <see cref='T:System.String' /> message to the AgentPrivate.</summary>
             
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(289)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(360)</sourceLocation>
             <remarks>Messages may be throttled and ignored.</remarks>
             <param name='message'>The message to send. </param>
             <param name='handler'>Handler to be called when the event completes.</param>
@@ -3228,6 +3321,169 @@
             <summary>Retrieves the runtime scale factor applied to this agent.</summary>
             <returns>The scale factor.</returns>
             <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(267)</sourceLocation><remarks/>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Enables or disables ragdoll physics on this agent.</summary>
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(275)</sourceLocation>
+            <remarks>Enabling ragdoll through this overload uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='enabled'>True to enable ragdoll, false to disable.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean)">
+            <summary>Enables or disables ragdoll physics on this agent.</summary>
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(275)</sourceLocation>
+            <remarks>Enabling ragdoll through this overload uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='enabled'>True to enable ragdoll, false to disable.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Enables or disables ragdoll physics on this agent and sets the auto-recovery delay.</summary>
+            
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(283)</sourceLocation>
+            <remarks>This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='enabled'>True to enable ragdoll, false to disable.</param>
+            <param name='autoRecoverDelaySeconds'>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.SetRagdollEnabled(System.Boolean,System.Single)">
+            <summary>Enables or disables ragdoll physics on this agent and sets the auto-recovery delay.</summary>
+            
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(283)</sourceLocation>
+            <remarks>This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='enabled'>True to enable ragdoll, false to disable.</param>
+            <param name='autoRecoverDelaySeconds'>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.GetRagdollEnabled">
+            <summary>Returns whether ragdoll physics is currently active for this agent.</summary>
+            <returns>True if ragdoll is active.</returns>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(288)</sourceLocation><remarks/>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Applies a linear impulse to the entire ragdoll.</summary>
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(296)</sourceLocation>
+            <remarks>This automatically enables ragdoll if needed and uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='impulse'>The impulse vector in world space.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector)">
+            <summary>Applies a linear impulse to the entire ragdoll.</summary>
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(296)</sourceLocation>
+            <remarks>This automatically enables ragdoll if needed and uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='impulse'>The impulse vector in world space.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Applies a linear impulse to the entire ragdoll and sets the auto-recovery delay.</summary>
+            
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(305)</sourceLocation>
+            <remarks>This automatically enables ragdoll if needed.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='impulse'>The impulse vector in world space.</param>
+            <param name='autoRecoverDelaySeconds'>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulse(Sansar.Vector,System.Single)">
+            <summary>Applies a linear impulse to the entire ragdoll and sets the auto-recovery delay.</summary>
+            
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(305)</sourceLocation>
+            <remarks>This automatically enables ragdoll if needed.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='impulse'>The impulse vector in world space.</param>
+            <param name='autoRecoverDelaySeconds'>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Applies a linear impulse to specific ragdoll body regions.</summary>
+            
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(315)</sourceLocation>
+            <remarks>Applying impulse to one side (e.g. LeftArm | LeftLeg) creates a spinning fall effect.
+            This automatically enables ragdoll if needed and uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='impulse'>The impulse vector in world space.</param>
+            <param name='regions'>One or more RagdollRegion flags combined with bitwise OR (e.g. RagdollRegion.LeftArm | RagdollRegion.LeftLeg).</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion)">
+            <summary>Applies a linear impulse to specific ragdoll body regions.</summary>
+            
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(315)</sourceLocation>
+            <remarks>Applying impulse to one side (e.g. LeftArm | LeftLeg) creates a spinning fall effect.
+            This automatically enables ragdoll if needed and uses the default auto-recovery delay of 2 seconds.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='impulse'>The impulse vector in world space.</param>
+            <param name='regions'>One or more RagdollRegion flags combined with bitwise OR (e.g. RagdollRegion.LeftArm | RagdollRegion.LeftLeg).</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Applies a linear impulse to specific ragdoll body regions and sets the auto-recovery delay.</summary>
+            
+            
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(326)</sourceLocation>
+            <remarks>Applying impulse to one side (e.g. LeftArm | LeftLeg) creates a spinning fall effect.
+            This automatically enables ragdoll if needed.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='impulse'>The impulse vector in world space.</param>
+            <param name='regions'>One or more RagdollRegion flags combined with bitwise OR (e.g. RagdollRegion.LeftArm | RagdollRegion.LeftLeg).</param>
+            <param name='autoRecoverDelaySeconds'>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.ApplyRagdollImpulseToRegions(Sansar.Vector,Sansar.Simulation.RagdollRegion,System.Single)">
+            <summary>Applies a linear impulse to specific ragdoll body regions and sets the auto-recovery delay.</summary>
+            
+            
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(326)</sourceLocation>
+            <remarks>Applying impulse to one side (e.g. LeftArm | LeftLeg) creates a spinning fall effect.
+            This automatically enables ragdoll if needed.
+            This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='impulse'>The impulse vector in world space.</param>
+            <param name='regions'>One or more RagdollRegion flags combined with bitwise OR (e.g. RagdollRegion.LeftArm | RagdollRegion.LeftLeg).</param>
+            <param name='autoRecoverDelaySeconds'>Seconds before auto-recovery begins. Set to 0 to disable auto-recovery.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Sets the bounciness of the ragdoll body.</summary>
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(333)</sourceLocation>
+            <remarks>This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='bounce'>Bounce factor from 0 (no bounce) to 1 (maximum bounce). Default is 0.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.SetRagdollBounce(System.Single)">
+            <summary>Sets the bounciness of the ragdoll body.</summary>
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(333)</sourceLocation>
+            <remarks>This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <param name='bounce'>Bounce factor from 0 (no bounce) to 1 (maximum bounce). Default is 0.</param>
+        </member>
+        <member name="M:Sansar.Simulation.AgentPrivate.GetRagdollBounce">
+            <summary>Gets the current ragdoll bounce factor.</summary>
+            <returns>The bounce factor (0-1).</returns>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(338)</sourceLocation><remarks/>
         </member>
         <member name="M:Sansar.Simulation.AgentPrivate.PlaySound(Sansar.Simulation.SoundResource,Sansar.Simulation.PlaySettings)">
             <summary>Play sound to direct output.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(108)</sourceLocation>
@@ -3389,49 +3645,49 @@
         <member name="T:Sansar.Simulation.AgentInfo">
             <summary>The AgentInfo class has basic information and IDs for an agent.</summary><exception cref='T:System.NullReferenceException'>Thrown when using an AgentInfo for a user who is no longer in the region.</exception>
             <remarks>Agents may leave at any time. Attempting to use an AgentInfo interface for an agent no longer in the scene will throw a NullReferenceException.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(329)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(402)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.AgentInfo.Name">
             <summary>Returns the name of the AgentInfo. </summary>
             <returns>The name of the AgentInfo</returns>
             <remarks>Agent names may not be unique.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(281)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(352)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.AgentInfo.Handle">
             <summary>Returns the handle of the AgentInfo. </summary>
             <returns>The handle of the AgentInfo</returns>
             <remarks>Agent handles are unique.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(283)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(354)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.AgentInfo.AvatarUuid">
             <summary>Returns the persona ID of the AgentInfo.</summary>
             <returns>The persona ID of the AgentInfo</returns>
             <remarks>Agent persona IDs are unique</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(284)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(355)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.AgentInfo.ObjectId">
             <summary>Returns the ObjectId of the AgentInfo.</summary>
             <returns>The object ID of the AgentInfo</returns>
             <remarks>The object id can be used to compare agents or look up the <see cref="T:Sansar.Simulation.ObjectPrivate"/> associated with the agent.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(285)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(356)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.AgentInfo.SessionId">
             <summary>Returns the Id of the AgentInfo.</summary>
             <returns>The id of the AgentInfo</returns>
             <remarks>The id can be used for quick comparison between Agents.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(286)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(357)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.AgentInfo.Ticket">
             <summary>Returns the ticket for the user if they purchased one. </summary>
             <returns>The ticket of the user</returns>
             <remarks>Will be an empty string if no ticket was used to enter the scene or event.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(282)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(353)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.AgentInfo.Scale">
             <summary>Returns the scale for the user. </summary>
             <returns>The scale of the user</returns>
             <remarks>This is the scale setting from the character editor.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(287)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(358)</sourceLocation>
         </member>
         <member name="M:Sansar.Simulation.AgentInfo.ToString">
             <summary> A string representation of this object. </summary> <returns>A string representation of this object.</returns> <remarks>The format of this string may change between releases.</remarks>
@@ -3440,18 +3696,18 @@
             <summary>The AgentPublic class is a more limited subset of the <see cref='T:Sansar.Simulation.AgentPrivate'/> API for use by other scripts in the scene.</summary>
             <exception cref='T:System.NullReferenceException'>Thrown when using an AgentPublic for a user who is no longer in the region.</exception>
             <remarks>AgentPublic has a more limited API than <see cref='T:Sansar.Simulation.AgentPrivate'/>. Agents may leave the scene at any time. Attempting to use an AgentPublic interface for an agent no longer in the scene will throw a NullReferenceException.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(338)</sourceLocation>"
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(411)</sourceLocation>"
         </member>
         <member name="P:Sansar.Simulation.AgentPublic.AgentInfo">
             <summary> Returns the <see cref='T:Sansar.Simulation.AgentInfo' /> for this instance. </summary>
             <returns>The <see cref='T:Sansar.Simulation.AgentInfo' /> for this instance</returns>
             <remarks>The <see cref='T:Sansar.Simulation.AgentInfo' /> holds information about an agent. </remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(292)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(363)</sourceLocation>
         </member>
         <member name="M:Sansar.Simulation.AgentPublic.SendChat(System.String,System.Action{Sansar.Script.OperationCompleteEvent})">
             <summary>Sends a <see cref='T:System.String' /> message to the AgentPublic.</summary>
             
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(290)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/QuestApis/../CsAgent.h(361)</sourceLocation>
             <remarks>Messages may be throttled and ignored.</remarks>
             <param name='message'>The message to send. </param>
             <param name='handler'>Handler to be called when the event completes.</param>
@@ -3968,7 +4224,7 @@
             <summary> A string representation of this object. </summary> <returns>A string representation of this object.</returns> <remarks>The format of this string may change between releases.</remarks>
         </member>
         <member name="T:Sansar.Simulation.ObjectPrivate">
-            <summary>Interface to an object in a <see cref='T:Sansar.Simulation.Cluster'/> in the Scene.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(50)</sourceLocation>
+            <summary>Interface to an object in a <see cref='T:Sansar.Simulation.Cluster'/> in the Scene.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(52)</sourceLocation>
             <remarks>Provides basic information about an object.</remarks>
         </member>
         <member name="T:Sansar.Simulation.ObjectPrivate.AddInteractionData">
@@ -3981,52 +4237,52 @@
             <summary> A string representation of this object. </summary> <returns>A string representation of this object.</returns> <remarks>The format of this string may change between releases.</remarks>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.ObjectId">
-            <summary>This ObjectPrivate Id. Unique to this Scene.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(87)</sourceLocation>
+            <summary>This ObjectPrivate Id. Unique to this Scene.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(89)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.Name">
-            <summary>This ObjectPrivate name, as specified in the editor.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(92)</sourceLocation>
+            <summary>This ObjectPrivate name, as specified in the editor.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(94)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.Position">
-            <summary>The current position of the ObjectPrivate in world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(62)</sourceLocation>
+            <summary>The current position of the ObjectPrivate in world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(64)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.ForwardVector">
-            <summary>The forward vector of the ObjectPrivate in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(65)</sourceLocation>
+            <summary>The forward vector of the ObjectPrivate in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(67)</sourceLocation>
             <value>A normalized vector.</value>
             <remarks></remarks>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.RightVector">
-            <summary>The right vector of the ObjectPrivate in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(66)</sourceLocation>
+            <summary>The right vector of the ObjectPrivate in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(68)</sourceLocation>
             <value>A normalized vector.</value>
             <remarks></remarks>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.UpVector">
-            <summary>The up vector of the ObjectPrivate in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(67)</sourceLocation>
+            <summary>The up vector of the ObjectPrivate in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(69)</sourceLocation>
             <value>A normalized vector.</value>
             <remarks></remarks>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.Rotation">
-            <summary>The current rotation of the ObjectPrivate in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(63)</sourceLocation>
+            <summary>The current rotation of the ObjectPrivate in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(65)</sourceLocation>
             <value></value>
             <remarks></remarks>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.InitialPosition">
-            <summary>The position of the ObjectPrivate in world frame before simulation started.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(69)</sourceLocation>
+            <summary>The position of the ObjectPrivate in world frame before simulation started.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(71)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.InitialRotation">
-            <summary>The rotation of the ObjectPrivate in world frame before simulation started.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(70)</sourceLocation>
+            <summary>The rotation of the ObjectPrivate in world frame before simulation started.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(72)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
         <member name="P:Sansar.Simulation.ObjectPrivate.IsMovable">
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(72)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(74)</sourceLocation>
             <seealso cref="T:Sansar.Simulation.Mover"/>
             <remarks></remarks>
             <value></value>
@@ -4038,7 +4294,7 @@
             <summary>
             Get handles to the scripts on the ObjectPrivate
             </summary>
-            <returns>object [] of Objects of the scripts on the ObjectPrivate</returns><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(82)</sourceLocation>
+            <returns>object [] of Objects of the scripts on the ObjectPrivate</returns><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(84)</sourceLocation>
             <remarks>The returned Objects are the created script types. For example if a script on the object is <c>public MyTestObject : ObjectScript</c> then the Objects in the array will be of type <c>MyTestObject</c>.</remarks>
         </member>
         <member name="M:Sansar.Simulation.ObjectPrivate.GetComponent(Sansar.Simulation.ComponentType,System.UInt32)">
@@ -4047,7 +4303,7 @@
             </summary>
             
             
-            <returns></returns><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(75)</sourceLocation>
+            <returns></returns><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(77)</sourceLocation>
             <remarks></remarks>
             <param name='componentType'><see cref='T:Sansar.Simulation.ComponentType'/>.</param>
             <param name='index'>uint32 index</param>
@@ -4056,7 +4312,7 @@
             <summary>
             Get the number of components of a particular component type. <see cref='T:Sansar.Simulation.ComponentType'/>
             </summary>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(77)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(79)</sourceLocation>
             <remarks></remarks><returns/>
             <param name='componentType'><see cref='T:Sansar.Simulation.ComponentType'/></param>
         </member>
@@ -4137,50 +4393,50 @@
             <summary>The ObjectPublic class is a more limited subset of the <see cref='T:Sansar.Simulation.ObjectPrivate'/> API for use by other scripts in the scene.</summary>
             <exception cref='T:System.NullReferenceException'>Thrown when using an ObjectPublic for an object which is no longer in the scene.</exception>
             <remarks><see cref='T:Sansar.Simulation.ObjectPrivate'/> has wider access than ObjectPublic. Objects may be removed from the scene at any time. Attempting to use an ObjectPublic interface for an object no longer in the scene will throw a NullReferenceException.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(164)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(166)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.ObjectPublic.ObjectId">
-            <summary>This ObjectPublic Id. Unique to this Scene.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(87)</sourceLocation>
+            <summary>This ObjectPublic Id. Unique to this Scene.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(89)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
         <member name="P:Sansar.Simulation.ObjectPublic.Name">
-            <summary>This ObjectPublic name, as specified in the editor.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(92)</sourceLocation>
+            <summary>This ObjectPublic name, as specified in the editor.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(94)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
         <member name="P:Sansar.Simulation.ObjectPublic.Position">
-            <summary>The current position of the ObjectPublic in world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(62)</sourceLocation>
+            <summary>The current position of the ObjectPublic in world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(64)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
         <member name="P:Sansar.Simulation.ObjectPublic.ForwardVector">
-            <summary>The forward vector of the ObjectPublic in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(65)</sourceLocation>
+            <summary>The forward vector of the ObjectPublic in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(67)</sourceLocation>
             <value>A normalized vector.</value>
             <remarks></remarks>
         </member>
         <member name="P:Sansar.Simulation.ObjectPublic.RightVector">
-            <summary>The right vector of the ObjectPublic in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(66)</sourceLocation>
+            <summary>The right vector of the ObjectPublic in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(68)</sourceLocation>
             <value>A normalized vector.</value>
             <remarks></remarks>
         </member>
         <member name="P:Sansar.Simulation.ObjectPublic.UpVector">
-            <summary>The up vector of the ObjectPublic in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(67)</sourceLocation>
+            <summary>The up vector of the ObjectPublic in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(69)</sourceLocation>
             <value>A normalized vector.</value>
             <remarks></remarks>
         </member>
         <member name="P:Sansar.Simulation.ObjectPublic.Rotation">
-            <summary>The current rotation of the ObjectPublic in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(63)</sourceLocation>
+            <summary>The current rotation of the ObjectPublic in the world frame.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(65)</sourceLocation>
             <value></value>
             <remarks></remarks>
         </member>
         <member name="P:Sansar.Simulation.ObjectPublic.InitialPosition">
-            <summary>The position of the ObjectPublic in world frame before simulation started.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(69)</sourceLocation>
+            <summary>The position of the ObjectPublic in world frame before simulation started.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(71)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
         <member name="P:Sansar.Simulation.ObjectPublic.InitialRotation">
-            <summary>The rotation of the ObjectPublic in world frame before simulation started.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(70)</sourceLocation>
+            <summary>The rotation of the ObjectPublic in world frame before simulation started.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsObject.h(72)</sourceLocation>
             <remarks></remarks>
             <value></value>
         </member>
@@ -4265,7 +4521,7 @@
             <summary> A string representation of this object. </summary> <returns>A string representation of this object.</returns> <remarks>The format of this string may change between releases.</remarks>
         </member>
         <member name="T:Sansar.Simulation.CommandData">
-            <summary>Command events are generated by the client when input events occur.</summary> <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsClient.h(222)</sourceLocation>
+            <summary>Command events are generated by the client when input events occur.</summary> <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsClient.h(229)</sourceLocation>
             <remarks>
             <list type="table"><listheader><term>Command</term><description>Default Key Binding</description></listheader>
             <item><term>Trigger</term><description>Left Mouse Button</description></item>
@@ -4282,6 +4538,13 @@
             <item><term>Keypad0 to Keypad9</term><description>Numberpad keys 0 to 9</description></item>
             <item><term>KeypadEnter</term><description>Numberpad Enter</description></item>
             </list>
+            <para>While the agent is seated, the movement controls also generate keypad commands for vehicle
+            driving: W/A/S/D and the VR or gamepad left analog stick map to Keypad8 (forward), Keypad4 (left),
+            Keypad6 (right), and Keypad2 plus Keypad5 (back/brake). These aliases are only delivered while
+            seated; when standing, the movement controls move the avatar without generating commands. Stick
+            axes generate digital press/release events at half deflection, not continuous analog values.
+            Sources holding the same keypad command are combined: the first source sends Pressed and the
+            last source to release sends Released, retaining the first source's ControlPoint.</para>
             <para>An example script for handling client commands:</para>
             <example>
             <code lang="C#" src="examples/CommandExample.cs"/>
@@ -4585,6 +4848,157 @@
             Returns the duration in seconds.
             </summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsSoundResource.h(44)</sourceLocation><value/><remarks/>
         </member>
+        <member name="T:Sansar.Simulation.UIMenu">
+            <summary>
+            Manages a clickable on-screen menu UI element.
+            </summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(22)</sourceLocation>
+            <remarks>Use this for text-heavy game menus, voting prompts, settings panels, or non-interactive leaderboards.</remarks>
+        </member>
+        <member name="F:Sansar.Simulation.UIMenu.cMaxItems">
+            <summary>Maximum number of menu items allowed per menu.</summary>
+        </member>
+        <member name="P:Sansar.Simulation.UIMenu.Title">
+            <summary>The current menu title.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(62)</sourceLocation>
+        </member>
+        <member name="P:Sansar.Simulation.UIMenu.Subtitle">
+            <summary>The current menu subtitle.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(64)</sourceLocation>
+        </member>
+        <member name="P:Sansar.Simulation.UIMenu.Footer">
+            <summary>The current menu footer.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(66)</sourceLocation>
+        </member>
+        <member name="P:Sansar.Simulation.UIMenu.SelectedItem">
+            <summary>The label of the last selected menu item.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(68)</sourceLocation>
+        </member>
+        <member name="P:Sansar.Simulation.UIMenu.SelectedIndex">
+            <summary>The zero-based index of the last selected menu item, or -1 if none selected.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(70)</sourceLocation>
+        </member>
+        <member name="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>
+            Show a scriptable menu using the default client theme.
+            </summary>
+            
+            
+            
+            
+            
+            
+            
+            
+            <returns>The internal event id for the selection completion event.</returns>
+            <remarks>Call this with WaitFor to block until the first menu row is clicked.</remarks>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(33)</sourceLocation>
+            <param name='title'>Primary header text.</param>
+            <param name='subtitle'>Optional secondary header text.</param>
+            <param name='footer'>Optional footer or hint text.</param>
+            <param name='items'>List of rows to display.</param>
+            <param name='positionXPercent'>Horizontal menu center position in percent of screen width.</param>
+            <param name='positionYPercent'>Vertical menu center position in percent of screen height.</param>
+            <param name='interactive'>If false, the menu becomes a click-through display panel.</param>
+            <param name='closeOnSelection'>If true, the menu closes on the first click.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.UIMenu.Show(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Show a scriptable menu using the default client theme.
+            </summary>
+            
+            
+            
+            
+            
+            
+            
+            
+            <returns>The internal event id for the selection completion event.</returns>
+            <remarks>Call this with WaitFor to block until the first menu row is clicked.</remarks>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(33)</sourceLocation>
+            <param name='title'>Primary header text.</param>
+            <param name='subtitle'>Optional secondary header text.</param>
+            <param name='footer'>Optional footer or hint text.</param>
+            <param name='items'>List of rows to display.</param>
+            <param name='positionXPercent'>Horizontal menu center position in percent of screen width.</param>
+            <param name='positionYPercent'>Vertical menu center position in percent of screen height.</param>
+            <param name='interactive'>If false, the menu becomes a click-through display panel.</param>
+            <param name='closeOnSelection'>If true, the menu closes on the first click.</param>
+        </member>
+        <member name="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>
+            Show a scriptable menu with caller-provided colors.
+            </summary>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <returns>The internal event id for the selection completion event.</returns>
+            <remarks>Call this with WaitFor to block until the first menu row is clicked.</remarks>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(43)</sourceLocation>
+            <param name='title'>Primary header text.</param>
+            <param name='subtitle'>Optional secondary header text.</param>
+            <param name='footer'>Optional footer or hint text.</param>
+            <param name='items'>List of rows to display.</param>
+            <param name='positionXPercent'>Horizontal menu center position in percent of screen width.</param>
+            <param name='positionYPercent'>Vertical menu center position in percent of screen height.</param>
+            <param name='interactive'>If false, the menu becomes a click-through display panel.</param>
+            <param name='closeOnSelection'>If true, the menu closes on the first click.</param>
+            <param name='panelBackgroundColor'>Background color for the menu body.</param>
+            <param name='panelBorderColor'>Border color for the menu frame.</param>
+            <param name='titleColor'>Title text color.</param>
+            <param name='textColor'>Body and row text color.</param>
+            <param name='accentColor'>Accent color used for hover and separators.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.UIMenu.ShowStyled(System.String,System.String,System.String,System.Object[],System.Single,System.Single,System.Boolean,System.Boolean,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color,Sansar.Color)">
+            <summary>
+            Show a scriptable menu with caller-provided colors.
+            </summary>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <returns>The internal event id for the selection completion event.</returns>
+            <remarks>Call this with WaitFor to block until the first menu row is clicked.</remarks>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(43)</sourceLocation>
+            <param name='title'>Primary header text.</param>
+            <param name='subtitle'>Optional secondary header text.</param>
+            <param name='footer'>Optional footer or hint text.</param>
+            <param name='items'>List of rows to display.</param>
+            <param name='positionXPercent'>Horizontal menu center position in percent of screen width.</param>
+            <param name='positionYPercent'>Vertical menu center position in percent of screen height.</param>
+            <param name='interactive'>If false, the menu becomes a click-through display panel.</param>
+            <param name='closeOnSelection'>If true, the menu closes on the first click.</param>
+            <param name='panelBackgroundColor'>Background color for the menu body.</param>
+            <param name='panelBorderColor'>Border color for the menu frame.</param>
+            <param name='titleColor'>Title text color.</param>
+            <param name='textColor'>Body and row text color.</param>
+            <param name='accentColor'>Accent color used for hover and separators.</param>
+        </member>
+        <member name="M:Sansar.Simulation.UIMenu.Hide">
+            <summary>
+            Hide the current menu.
+            </summary>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUIMenu.h(58)</sourceLocation>
+        </member>
+        <member name="M:Sansar.Simulation.UIMenu.ToString">
+            <summary> A string representation of this object. </summary> <returns>A string representation of this object.</returns> <remarks>The format of this string may change between releases.</remarks>
+        </member>
         <member name="T:Sansar.Simulation.UIProgressBar">
             <summary>
             Manages a progress bar UI element.
@@ -4715,45 +5129,50 @@
             <summary> A string representation of this object. </summary> <returns>A string representation of this object.</returns> <remarks>The format of this string may change between releases.</remarks>
         </member>
         <member name="T:Sansar.Simulation.UI">
-            <summary>Manages the client UI.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(32)</sourceLocation>
+            <summary>Manages the client UI.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(33)</sourceLocation>
             <remarks>The client UI can be used to send messages that appear in a client UI.</remarks>
         </member>
         <member name="P:Sansar.Simulation.UI.ModalDialog">
             <summary>The <see cref='T:Sansar.Simulation.ModalDialog'/> for this UI.</summary>
             <value>The <see cref='T:Sansar.Simulation.ModalDialog'/> for this UI.</value>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(42)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(43)</sourceLocation>
             <remarks>See <see cref="M:Sansar.Simulation.ModalDialog.Show(System.String,System.String,System.String,Sansar.Script.ScriptBase.OperationComplete)"/> for usage details.</remarks>
+        </member>
+        <member name="P:Sansar.Simulation.UI.Menu">
+            <summary>The scriptable screen menu for this client.</summary>
+            <value>The reusable <see cref='T:Sansar.Simulation.UIMenu'/> instance.</value>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(44)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.UI.HintText">
             <summary>The hint text being shown to the user.</summary>
             <value>The hint text.</value>
             <remarks>Limited to 80 characters.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(55)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(57)</sourceLocation>
         </member>
         <member name="M:Sansar.Simulation.UI.AddProgressBar">
             <summary>Add a <see cref='T:Sansar.Simulation.UIProgressBar'/> to the ui.</summary>
             <value>The newly created <see cref='T:Sansar.Simulation.UIProgressBar'/>.</value>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(43)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(45)</sourceLocation>
             <remarks>Currently only one progress bar can be added to the screen, if one has already been added, cancel it before adding a new one</remarks>
         </member>
         <member name="M:Sansar.Simulation.UI.AddScoreBoard">
             <summary>Add a <see cref='T:Sansar.Simulation.UIScoreBoard'/> to the ui.</summary>
             <value>The newly created <see cref='T:Sansar.Simulation.UIScoreBoard'/>.</value>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(44)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(46)</sourceLocation>
             <remarks>Currently only one score board can be added to the screen.</remarks>
         </member>
         <member name="M:Sansar.Simulation.UI.GetProgressBars">
             <summary>
             Gets the progress bars that have been added to the ui.
             </summary>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(46)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(48)</sourceLocation>
             <returns>An IEnumarable collection of progress bar objects. </returns>
         </member>
         <member name="M:Sansar.Simulation.UI.GetScoreBoards">
             <summary>
             Gets the score board that have been added to the ui.
             </summary>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(47)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(49)</sourceLocation>
             <returns>An IEnumarable collection of score board objects. </returns>
         </member>
         <member name="M:Sansar.Simulation.UI.OpenDetailViewForUri(System.String)">
@@ -4761,14 +5180,14 @@
             Opens a window showing details for a sansar uri, giving the a user an option to travel to that location.
             </summary>
             <remarks />
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(49)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(51)</sourceLocation>
             <param name='sansarUri'>The location to open the detail panel for.</param>
         </member>
         <member name="M:Sansar.Simulation.UI.CloseDetailView">
             <summary>
             Close any open world detail view.
             </summary>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(50)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsUI.h(52)</sourceLocation>
         </member>
         <member name="M:Sansar.Simulation.UI.ToString">
             <summary> A string representation of this object. </summary> <returns>A string representation of this object.</returns> <remarks>The format of this string may change between releases.</remarks>
@@ -5619,13 +6038,13 @@
         <member name="T:Sansar.Simulation.SceneInfo">
             <summary>Information about a Scene.</summary>
             <remarks>Provides read only access to Scene information.</remarks>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(307)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(339)</sourceLocation>
         </member>
         <member name="F:Sansar.Simulation.SceneInfo.ApiVersionString">
             <summary>
             Api version the scene is running.
             </summary><remarks/>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(316)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(348)</sourceLocation>
         </member>
         <member name="P:Sansar.Simulation.SceneInfo.LocationHandle">
             <summary>Location handle for the Experience.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(242)</sourceLocation>
@@ -5712,7 +6131,7 @@
         </member>
         <member name="T:Sansar.Simulation.ScenePublic">
             <summary>The Public Scene API, a more limited subset of <see cref='T:Sansar.Simulation.ScenePrivate'/>.</summary>
-            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(323)</sourceLocation>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsScene.h(355)</sourceLocation>
             <remarks></remarks>
         </member>
         <member name="P:Sansar.Simulation.ScenePublic.SceneInfo">
@@ -6530,6 +6949,90 @@
             <param name='isVisible'>The visibility state to set.</param>
         </member>
         <member name="M:Sansar.Simulation.MeshComponent.ToString">
+            <summary> A string representation of this object. </summary> <returns>A string representation of this object.</returns> <remarks>The format of this string may change between releases.</remarks>
+        </member>
+        <member name="T:Sansar.Simulation.MirrorComponent">
+            <summary>The MirrorComponent handles interactions with mirrors.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsMirrorComponent.h(25)</sourceLocation><remarks/>
+        </member>
+        <member name="F:Sansar.Simulation.MirrorComponent.ComponentType">
+            <summary>The <see cref='F:Sansar.Simulation.MirrorComponent.ComponentType' /> of this component</summary>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsMirrorComponent.h(31)</sourceLocation>
+            <remarks></remarks>
+        </member>
+        <member name="P:Sansar.Simulation.MirrorComponent.ComponentId">
+            <summary>Retrieves the component id for this MirrorComponent.</summary>
+            <returns>The id.</returns>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsMirrorComponent.h(41)</sourceLocation><remarks/>
+        </member>
+        <member name="P:Sansar.Simulation.MirrorComponent.Name">
+            <summary>This MirrorComponent name, as specified in the editor.</summary><sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsMirrorComponent.h(49)</sourceLocation>
+            <remarks></remarks>
+            <value></value>
+        </member>
+        <member name="P:Sansar.Simulation.MirrorComponent.IsScriptable">
+            <summary>The scriptable flag for this MirrorComponent.</summary>
+            <returns>Whether or not this mirror can have properties changed by script.</returns>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsMirrorComponent.h(54)</sourceLocation><remarks/>
+        </member>
+        <member name="M:Sansar.Simulation.MirrorComponent.GetIsEnabled">
+            <summary>Retrieves the enabled state of this MirrorComponent.</summary>
+            <returns>The enabled state.</returns>
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsMirrorComponent.h(59)</sourceLocation><remarks/>
+        </member>
+        <member name="M:Sansar.Simulation.MirrorComponent.SetIsEnabled(System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Sets the enabled state of this MirrorComponent.</summary>
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsMirrorComponent.h(67)</sourceLocation>
+            <remarks>This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <value>The return value is an internal event id.</value>
+            <param name='isEnabled'>The enabled state to set.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.MirrorComponent.SetIsEnabled(System.Boolean)">
+            <summary>Sets the enabled state of this MirrorComponent.</summary>
+            
+            <sourceLocation>C:\localDev\sansar\Code\App\Libraries\SimulationScriptApi/CsMirrorComponent.h(67)</sourceLocation>
+            <remarks>This asynchronous method queues the write then returns.
+            To block until the write has occurred, pass this method to <see cref='M:Sansar.Script.ScriptBase.WaitFor' /> while in a coroutine.</remarks>
+            <value>The return value is an internal event id.</value>
+            <param name='isEnabled'>The enabled state to set.</param>
+        </member>
+        <member name="M:Sansar.Simulation.MirrorComponent.SetIsEnabled(Sansar.Simulation.AgentPrivate,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Sets the enabled state of this MirrorComponent for a single user.</summary>
+            <remarks>It will only change mirror enabled state for a single user and will not persist across client restarts, server restarts, or leaving the scene.</remarks>
+            
+            
+            <param name='agent'>The agent to change mirror state for.</param>
+            <param name='isEnabled'>The enabled state to set.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.MirrorComponent.SetIsEnabled(Sansar.Simulation.AgentPrivate,System.Boolean)">
+            <summary>Sets the enabled state of this MirrorComponent for a single user.</summary>
+            <remarks>It will only change mirror enabled state for a single user and will not persist across client restarts, server restarts, or leaving the scene.</remarks>
+            
+            
+            <param name='agent'>The agent to change mirror state for.</param>
+            <param name='isEnabled'>The enabled state to set.</param>
+        </member>
+        <member name="M:Sansar.Simulation.MirrorComponent.SetIsEnabled(Sansar.Script.SessionId,System.Boolean,System.Action{Sansar.Script.OperationCompleteEvent})">
+            <summary>Sets the enabled state of this MirrorComponent for a single user.</summary>
+            <remarks>It will only change mirror enabled state for a single user and will not persist across client restarts, server restarts, or leaving the scene.</remarks>
+            
+            
+            <param name='sessionId'>The sessionId of the user to change mirror state for.</param>
+            <param name='isEnabled'>The enabled state to set.</param>
+            <param name='handler'>Handler to be called when the event completes.</param>
+        </member>
+        <member name="M:Sansar.Simulation.MirrorComponent.SetIsEnabled(Sansar.Script.SessionId,System.Boolean)">
+            <summary>Sets the enabled state of this MirrorComponent for a single user.</summary>
+            <remarks>It will only change mirror enabled state for a single user and will not persist across client restarts, server restarts, or leaving the scene.</remarks>
+            
+            
+            <param name='sessionId'>The sessionId of the user to change mirror state for.</param>
+            <param name='isEnabled'>The enabled state to set.</param>
+        </member>
+        <member name="M:Sansar.Simulation.MirrorComponent.ToString">
             <summary> A string representation of this object. </summary> <returns>A string representation of this object.</returns> <remarks>The format of this string may change between releases.</remarks>
         </member>
         <member name="T:Sansar.Simulation.ModalDialog">

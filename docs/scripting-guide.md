@@ -57,6 +57,7 @@ Happy scripting!
         1. [Respond to a button press for all users in a scene](#respond-to-a-button-press-for-all-users-in-a-scene)
         1. [Respond to a button press only when a user is holding an object](#respond-to-a-button-press-only-when-a-user-is-holding-an-object)
         1. [Using the targeting information in a command](#using-the-targeting-information-in-a-command)
+    1. [Vehicle / seated driving input](#vehicle--seated-driving-input)
     1. [How to control animations](#how-to-control-animations)
     1. [How to turn lights on and off](#how-to-turn-lights-on-and-off)
     1. [How to control physical objects](#how-to-control-physical-objects)
@@ -662,6 +663,45 @@ on how to query the physics collision shapes in the scene.
 
 The complete set of data for commands can be found here:
 * `../api-docs/Sansar.Simulation/CommandData.html`
+
+
+## Vehicle / seated driving input
+
+In Sansar 47.7.0, movement controls also send the existing keypad commands while an agent is
+**confirmed seated**. Subscribe through `AgentPrivate.Client.SubscribeToCommand` as in the
+button-press examples above; existing vehicle scripts can keep their keypad subscriptions.
+
+| Direction | Keyboard | VR controller or gamepad | Commands |
+|---|---|---|---|
+| Forward | W | Left stick forward | `Keypad8` |
+| Left | A | Left stick left | `Keypad4` |
+| Right | D | Left stick right | `Keypad6` |
+| Back / brake | S | Left stick backward | `Keypad2` and `Keypad5` |
+
+These are **digital** `CommandAction.Pressed` / `CommandAction.Released` events, not continuous
+analog values. A stick axis presses past half deflection and releases at half deflection or less.
+Axes are independent, so diagonal input can drive and steer together. On Vive wands, the pressed
+trackpad supplies this input. Listen for both press and release to maintain driving state.
+
+While standing, WASD and the left stick move the avatar without firing these aliases. An
+unsuccessful sit request does not enable them. Physical numberpad keys still fire their usual
+commands whether standing or seated. S/backward fires **both** `Keypad2` and `Keypad5` for
+compatibility with existing brake controls: do not treat `Keypad5` as a separate handbrake.
+
+Sources holding the same command (including numberpad keys) are combined: the first held source
+sends one press, and the last source to release sends one release. Both events retain the first
+source's `CommandData.ControlPoint`, even if that source releases before the others. VR wand
+events identify the left hand; gamepad events keep desktop targeting and mouse-look metadata.
+
+The client synthesizes releases for outstanding seated aliases on stand-up, UI capture of that
+source, focus loss, or world exit. Standing up does not cancel an independently held numberpad
+key; focus loss ends all active driving commands, including numberpad input. Gaze panels that
+allow stick input through to the world leave driving active. After UI capture or seat exit,
+center and deflect the stick again to resume. A subscription added while a control is already
+held does not replay its press or send an orphan release.
+
+The command bindings and event fields are documented in
+[CommandData](../api-docs/Sansar.Simulation/CommandData.html).
 
 
 ## How to control animations
