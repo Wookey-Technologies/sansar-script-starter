@@ -1,7 +1,7 @@
 # Sansar Platform Constraints and Gotchas
 
 Hard facts about the Sansar scripting environment, verified against the Sansar client
-(March 2026 build) and its script import pipeline. When old forum posts, tutorials or
+(47.7.0, October 2026 build) and its script import pipeline. When old forum posts, tutorials or
 even comments in the example scripts disagree with this document, trust this document —
 and when in doubt, trust the assemblies and API docs in this repository over everything.
 
@@ -41,6 +41,9 @@ Notes on commonly-questioned APIs (current whitelist):
   otherwise is obsolete). `System.Diagnostics.Stopwatch` is also allowed and is still
   the best choice for measuring intervals.
 - `System.Random`, `System.Math`, `System.Linq`, generic collections — allowed.
+- The `System.Math` entry in `access.html` is incomplete in practice: it omits
+  trigonometry, `Sqrt`, `Pow`, and other members used in shipped and community
+  scripts. If an import rejects a Math member, check that entry first.
 - .NET reflection, file I/O, sockets and threads — not available. Use the Sansar APIs
   instead: `ScenePrivate.HttpClient` for HTTP, coroutines instead of threads, and
   Sansar's own `Reflective` mechanism (`[RegisterReflective]` / `FindReflective`) for
@@ -137,6 +140,23 @@ tell you the current replacement. Known changes you may hit in older community c
 - `InterruptibleWait(...)` — removed; use `Wait(...)`.
 - `StreamChannel.AudioChannel1` — renamed to `StreamChannel.AudioChannel`.
 - `Vector.Up` (and friends) — obsolete in favor of `ObjectUp` etc.
+
+New in **47.7.0**:
+
+- Ragdoll control on `AgentPrivate`: `SetRagdollEnabled` / `GetRagdollEnabled`,
+  `SetRagdollBounce` / `GetRagdollBounce`, `ApplyRagdollImpulse` and
+  `ApplyRagdollImpulseToRegions`, with `RagdollRegion` flags for body regions.
+- `MirrorComponent` (`ComponentType.MirrorComponent`): `GetIsEnabled` reads the global
+  state; `SetIsEnabled` sets it globally or for an individual user.
+- Scene library on `ScenePrivate`: `AddToSceneLibrary`, `RemoveFromSceneLibrary`,
+  `ClearSceneLibrary` and their `AddToSceneLibraryForAgent`,
+  `RemoveFromSceneLibraryForAgent`, `ClearSceneLibraryForAgent` variants.
+- On-screen menus via `AgentPrivate.Client.UI.Menu` (`UIMenu`): `Show`, `ShowStyled`,
+  `Hide`, `Title` / `Subtitle` / `Footer`, `SelectedIndex` / `SelectedItem`, and
+  the item limit `cMaxItems`.
+- Seated vehicle input uses existing keypad commands for WASD and the VR/gamepad
+  left stick. These are digital press/release events, not analog axis values — see
+  [vehicle / seated driving input](scripting-guide.md#vehicle--seated-driving-input).
 
 ## Iteration workflow
 

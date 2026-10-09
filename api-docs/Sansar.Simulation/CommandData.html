@@ -278,6 +278,13 @@
             <td>Numberpad Enter</td>
           </tr>
         </table>
+        <p>While the agent is seated, the movement controls also generate keypad commands for vehicle
+            driving: W/A/S/D and the VR or gamepad left analog stick map to Keypad8 (forward), Keypad4 (left),
+            Keypad6 (right), and Keypad2 plus Keypad5 (back/brake). These aliases are only delivered while
+            seated; when standing, the movement controls move the avatar without generating commands. Stick
+            axes generate digital press/release events at half deflection, not continuous analog values.
+            Sources holding the same keypad command are combined: the first source sends Pressed and the
+            last source to release sends Released, retaining the first source's ControlPoint.</p>
         <p>An example script for handling client commands:</p>
         <table class="CodeExampleTable">
           <tr>
