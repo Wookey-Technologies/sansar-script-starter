@@ -72,13 +72,16 @@ in here — you do not need the Sansar client installed to write and validate sc
 | Keyboard/controller input | `examples/official/CommandExample.cs`, `examples/snippets/AllAgentsCommandScript.cs` |
 | Vehicle / seated driving input | guide "Vehicle / seated driving input", `api-docs/Sansar.Simulation/CommandData.html` |
 | Held-object input (guns, flashlights) | `examples/snippets/FlashlightScript.cs`, `examples/official/PewPewExample.cs` |
-| Moving objects (non-physics) | `examples/official/MoverExample1.cs`, `MoverExample2.cs`, `MoverExample3.cs`, `examples/snippets/PatrolMoverScript.cs` |
+| Moving objects (non-physics) | `examples/official/MoverExample1.cs`, `MoverExample2.cs`, `MoverExample3.cs`, `MoverExample4.cs` (separate translation/rotation easing), `examples/snippets/PatrolMoverScript.cs` |
 | Physics: forces, collisions | `examples/snippets/RigidBodyImpulseScript.cs`, guide "How to control physical objects" |
 | Agent ragdoll | `api-docs/Sansar.Simulation/AgentPrivate.html`, `api-docs/Sansar.Simulation/RagdollRegion.html` |
 | Trigger volumes | `examples/snippets/TriggerVolumeScript.cs` |
 | Raycasts / shapecasts | `examples/official/CastRayExample.cs` |
 | Sounds / audio streams | `examples/snippets/SoundScript.cs`, `examples/community/binah/audio/` |
 | Lights | `examples/snippets/LightOffScript.cs`, guide "How to turn lights on and off" |
+| Time of day | `examples/official/TimeOfDayExample.cs`, `api-docs/Sansar.Simulation/TimeOfDayMode.html` |
+| Color LUT / color grading | `examples/official/ColorLutExample.cs`, `api-docs/Sansar.Simulation/TextureResource.html` |
+| Camera shake | `examples/official/CameraShakeExample.cs`, `api-docs/Sansar.Simulation/CameraShakeSettings.html` |
 | Materials: tint, glow | `docs/material-api-guide.md`, `examples/community/binah/material-api/` |
 | Mesh visibility | `examples/official/MeshVisibilityExample.cs` |
 | Mirrors | `api-docs/Sansar.Simulation/MirrorComponent.html` |
