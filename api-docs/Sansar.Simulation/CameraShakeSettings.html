@@ -1,0 +1,766 @@
+<html>
+  <head>
+    <title>Sansar.Simulation.CameraShakeSettings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        a { text-decoration: none }
+
+        body {margin-left: 20px;margin-right: 20px;}
+
+        div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+        }
+
+        .CollectionTitle { font-weight: bold }
+        .PageTitle { font-size: 150%; font-weight: bold }
+
+        .Summary { }
+        .Signature { }
+        .Remarks { }
+        .Members { }
+        .Copyright { }
+
+        .Section { font-size: 125%; font-weight: bold }
+        p.Summary {
+        margin-left: 1em;
+        }
+        .SectionBox { margin-left: 2em }
+        .NamespaceName { font-size: 105%; font-weight: bold }
+        .NamespaceSumary { }
+        .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+        .Subsection { font-size: 105%; font-weight: bold }
+        .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+        .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; width: 60%;}
+
+        .TypesListing {
+        border-collapse: collapse;
+        }
+
+        td {
+        vertical-align: top;
+        }
+        th {
+        text-align: left;
+        }
+
+        .TypesListing td {
+        margin: 0px;
+        padding: .25em;
+        border: solid gray 1px;
+        }
+
+        .TypesListing th {
+        margin: 0px;
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        }
+
+        div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+        }
+
+        span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;
+        }
+
+        [id$=Remarks] span.NotEntered {
+        visibility: hidden;
+        }
+
+        div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+        }
+
+        div.Header * {
+        font-size: smaller;
+        }
+
+        div.Note {
+        }
+
+        i.ParamRef {
+        }
+
+        i.subtitle {
+        }
+
+        ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+        }
+
+        ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+        }
+
+        table.HeaderTable {
+        }
+
+        table.SignatureTable {
+        }
+
+        table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        }
+
+        table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+        }
+
+        table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+        }
+
+        table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+        }
+
+        table.Documentation {
+        }
+
+        table.TypeMembers {
+        }
+
+        div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+        }
+
+        div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+        }
+
+        div.CodeExample div {
+        margin: 0.5em;
+        }
+
+        h4 {
+        margin-bottom: 0;
+        }
+
+        div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+        }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">Sansar.Simulation</a> : <a href="index.html">Sansar.Simulation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Sansar.Simulation.CameraShakeSettings">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.CameraShakeSettings:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.CameraShakeSettings:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Sansar.Simulation.CameraShakeSettings:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Sansar.Simulation.CameraShakeSettings">CameraShakeSettings  Class</h1>
+    <p class="Summary" id="T:Sansar.Simulation.CameraShakeSettings:Summary">Configures a camera shake; changes affect subsequent starts only.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Sansar.Simulation.CameraShakeSettings:Signature">[Sansar.Script.Interface]<br />public sealed class  <b>CameraShakeSettings</b></div>
+    </div>
+    <div class="Remarks" id="T:Sansar.Simulation.CameraShakeSettings:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.CameraShakeSettings:Docs:Remarks">Starts snapshot these settings and apply the documented bounds. Player comfort
+            settings and VR limits can reduce or suppress any shake. A shake ends when the player leaves the world.
+            <table class="CodeExampleTable"><tr><td><b><font size="-1">C# Example</font></b></td></tr><tr><td><pre class="code-csharp">/* This example is licensed under the Creative Commons Attribution 4.0 International License.
+ * Copyright 2026 Sansar, Inc. https://creativecommons.org/licenses/by/4.0/
+ */
+
+using System;
+using System.Collections.Generic;
+using Sansar;
+using Sansar.Script;
+using Sansar.Simulation;
+
+/// &lt;summary&gt;Demonstrates camera shake with chat commands on the default channel.&lt;/summary&gt;
+/// &lt;remarks&gt;Use /shake rumble, jitter, sway, impact, near, engine or stop.
+/// Engine toggles a continuous rumble for the sender; stop clears this script's shakes for everyone.
+/// An optional CameraComponent on this object fixes the view for current and future users.
+/// Player comfort settings and VR limits can reduce or suppress the motion.&lt;/remarks&gt;
+public class CameraShakeExample : SceneObjectScript
+{
+    private CameraComponent camera;
+    private readonly Dictionary&lt;SessionId, CameraShakeHandle&gt; engines =
+        new Dictionary&lt;SessionId, CameraShakeHandle&gt;();
+
+    /// &lt;summary&gt;Sets up chat commands and the optional fixed camera.&lt;/summary&gt;
+    public override void Init()
+    {
+        ObjectPrivate.TryGetFirstComponent(out camera);
+        ScenePrivate.User.Subscribe(User.AddUser, OnUserAdded);
+        ScenePrivate.User.Subscribe(User.RemoveUser, OnUserRemoved);
+        ScenePrivate.Chat.Subscribe(Chat.DefaultChannel, OnChat, true);
+
+        // Script reloads also need to set up users who are already in the world.
+        foreach (AgentPrivate agent in ScenePrivate.GetAgents())
+        {
+            SetCamera(agent);
+        }
+
+        // The Debug local-source live test requires this marker from the real body.
+        Log.Write("CameraShakeExample ready (real shake body): /shake rumble, jitter, sway, impact, near, engine, stop");
+    }
+
+    private void SetCamera(AgentPrivate agent)
+    {
+        if (camera != null &amp;&amp; agent != null &amp;&amp; agent.IsValid)
+        {
+            agent.Client.SetActiveCamera(camera, ScriptCameraControlMode.AgentControlOnly);
+        }
+    }
+
+    private void OnUserAdded(UserData data)
+    {
+        SetCamera(ScenePrivate.FindAgent(data.User));
+    }
+
+    private void OnUserRemoved(UserData data)
+    {
+        // Leaving the world ends that player's shake; discard the old session's handle.
+        engines.Remove(data.User);
+    }
+
+    private bool StopEngine(SessionId sessionId)
+    {
+        CameraShakeHandle engine;
+        if (!engines.TryGetValue(sessionId, out engine))
+        {
+            return false;
+        }
+
+        engine.Stop(0.25f);
+        engines.Remove(sessionId);
+        return true;
+    }
+
+    private void OnChat(ChatData data)
+    {
+        string[] words = data.Message.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        if (words.Length != 2 || !words[0].Equals("/shake", StringComparison.OrdinalIgnoreCase))
+        {
+            return;
+        }
+
+        // SourceId identifies the sender, rather than the object running this script.
+        AgentPrivate agent = ScenePrivate.FindAgent(data.SourceId);
+        if (agent == null || !agent.IsValid)
+        {
+            return;
+        }
+        SessionId sessionId = agent.AgentInfo.SessionId;
+
+        switch (words[1].ToLowerInvariant())
+        {
+            case "rumble":
+                // Presets are mutable: edit before starting. Starts snapshot the settings.
+                CameraShakeSettings rumble = CameraShakeSettings.Earthquake();
+                rumble.Direction = new Vector(1, 0.5f, 0);
+                agent.Client.ShakeCamera(rumble);
+                break;
+
+            case "jitter":
+                agent.Client.ShakeCamera(new CameraShakeSettings
+                {
+                    Pattern = CameraShakePattern.Jitter,
+                    Magnitude = 0.25f,
+                    Duration = 1.0f
+                    // Frequency 0 uses Jitter's default of 20 Hz.
+                });
+                break;
+
+            case "sway":
+                // Long side-to-side motion for the fixed-camera pixel-displacement test.
+                agent.Client.ShakeCamera(new CameraShakeSettings
+                {
+                    Pattern = CameraShakePattern.Sway,
+                    Magnitude = 0.6f,
+                    Frequency = 2.0f,
+                    Duration = 6.0f,
+                    Direction = new Vector(1, 0, 0),
+                    FadeOut = 0.3f
+                });
+                break;
+
+            case "impact":
+                // Landing: one downward kick. Duration 0 would still give just one kick.
+                agent.Client.ShakeCamera(CameraShakeSettings.Impact(new Vector(0, -1, 0)));
+                break;
+
+            case "near":
+                // Only players present now receive this explosion. Their camera distance
+                // from this object's world position controls falloff to zero at 20 meters.
+                ScenePrivate.ShakeCameraAtPosition(ObjectPrivate.Position, 20.0f,
+                    CameraShakeSettings.Explosion());
+                break;
+
+            case "engine":
+                // Send again to stop; separate sessions retain separate handles.
+                if (!StopEngine(sessionId))
+                {
+                    engines[sessionId] = agent.Client.ShakeCamera(CameraShakeSettings.EngineRumble());
+                }
+                break;
+
+            case "stop":
+                StopEngine(sessionId);
+                // Both stop-all scopes affect only shakes requested by this script.
+                agent.Client.StopAllCameraShakes();
+                ScenePrivate.StopAllCameraShakes();
+                engines.Clear();
+                break;
+        }
+    }
+}
+</pre></td></tr></table></div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Sansar.Simulation.CameraShakeSettings:Docs:Version Information">
+        <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Sansar.Simulation.CameraShakeSettings()">CameraShakeSettings</a>
+                    </b>()</div>
+                </td>
+                <td>Creates a one-second rumble with moderate magnitude.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CameraShakeSettings.Direction">Direction</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar/Vector.html">Sansar.Vector</a>
+                  </i>. Gets or sets camera-space right/up/forward weights; the default is (1,1,1).</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CameraShakeSettings.Duration">Duration</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. Gets or sets duration in seconds; 0 means until stopped.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CameraShakeSettings.FadeOut">FadeOut</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. Gets or sets the ending fade in seconds; the default is 0.15.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CameraShakeSettings.Frequency">Frequency</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. Gets or sets frequency in Hz; 0 selects the pattern default.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CameraShakeSettings.Magnitude">Magnitude</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. Gets or sets relative strength from 0 to 1; the default is 0.35.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Sansar.Simulation.CameraShakeSettings.Pattern">Pattern</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Sansar.Simulation/CameraShakePattern.html">CameraShakePattern</a>
+                  </i>. Gets or sets the motion pattern; the default is Rumble.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.CameraShakeSettings.Earthquake(System.Single,System.Single)">Earthquake</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../Sansar.Simulation/CameraShakeSettings.html">CameraShakeSettings</a></nobr><blockquote>Creates a slow rumble suitable for an earthquake.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.CameraShakeSettings.EngineRumble(System.Single)">EngineRumble</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../Sansar.Simulation/CameraShakeSettings.html">CameraShakeSettings</a></nobr><blockquote>Creates a subtle continuous rumble; retain its handle to stop it.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.CameraShakeSettings.Explosion(System.Single)">Explosion</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../Sansar.Simulation/CameraShakeSettings.html">CameraShakeSettings</a></nobr><blockquote>Creates a short, strong rumble suitable for an explosion.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Sansar.Simulation.CameraShakeSettings.Impact(Sansar.Vector,System.Single)">Impact</a>
+                  </b>(<a href="../Sansar/Vector.html">Sansar.Vector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../Sansar.Simulation/CameraShakeSettings.html">CameraShakeSettings</a></nobr><blockquote>Creates one kick in the given camera-space right/up/forward direction.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Sansar.Simulation.CameraShakeSettings:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Sansar.Simulation.CameraShakeSettings()">CameraShakeSettings Constructor</h3>
+        <blockquote id="C:Sansar.Simulation.CameraShakeSettings():member">
+          <div class="msummary">Creates a one-second rumble with moderate magnitude.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public  <b>CameraShakeSettings</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Sansar.Simulation.CameraShakeSettings():Remarks">Frequency 0 selects 6 Hz; magnitude is 0.35, direction is (1,1,1) and fade-out is 0.15 seconds.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Sansar.Simulation.CameraShakeSettings():Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CameraShakeSettings.Direction">Direction Property</h3>
+        <blockquote id="P:Sansar.Simulation.CameraShakeSettings.Direction:member">
+          <div class="msummary">Gets or sets camera-space right/up/forward weights; the default is (1,1,1).</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[get: Sansar.Script.Interface]<br />[set: Sansar.Script.Interface]<br />public <a href="../Sansar/Vector.html">Sansar.Vector</a> <b>Direction</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Direction:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Direction:Remarks">X is right, Y is up and Z is forward; W is ignored. Weights are clamped to [-1,1]
+            and vectors longer than 1 are normalized. Zero gives no motion. Signs select the first kick or half-cycle for Impact or Sway.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Direction:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CameraShakeSettings.Duration">Duration Property</h3>
+        <blockquote id="P:Sansar.Simulation.CameraShakeSettings.Duration:member">
+          <div class="msummary">Gets or sets duration in seconds; 0 means until stopped.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[get: Sansar.Script.Interface]<br />[set: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Duration</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Duration:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Duration:Remarks">The default is 1 second. Values are clamped to 0 through 600; positive values below
+            0.05 become 0.05. Retain the handle for continuous effects. Impact with Duration 0 is still one decaying kick.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Duration:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.CameraShakeSettings.Earthquake(System.Single,System.Single)">Earthquake Method</h3>
+        <blockquote id="M:Sansar.Simulation.CameraShakeSettings.Earthquake(System.Single,System.Single):member">
+          <div class="msummary">Creates a slow rumble suitable for an earthquake.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public static <a href="../Sansar.Simulation/CameraShakeSettings.html">CameraShakeSettings</a> <b>Earthquake</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> magnitude, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> duration)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Earthquake(System.Single,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>magnitude</i>
+              </dt>
+              <dd>Relative strength from 0 to 1; defaults to 0.35.</dd>
+              <dt>
+                <i>duration</i>
+              </dt>
+              <dd>Duration in seconds; defaults to 5. Use 0 for until stopped.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Earthquake(System.Single,System.Single):Returns">A fresh, mutable settings object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Earthquake(System.Single,System.Single):Remarks">Uses 3 Hz and fade-out 0.8 seconds. Edit settings before starting.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Earthquake(System.Single,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.CameraShakeSettings.EngineRumble(System.Single)">EngineRumble Method</h3>
+        <blockquote id="M:Sansar.Simulation.CameraShakeSettings.EngineRumble(System.Single):member">
+          <div class="msummary">Creates a subtle continuous rumble; retain its handle to stop it.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public static <a href="../Sansar.Simulation/CameraShakeSettings.html">CameraShakeSettings</a> <b>EngineRumble</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> magnitude)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.CameraShakeSettings.EngineRumble(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>magnitude</i>
+              </dt>
+              <dd>Relative strength from 0 to 1; defaults to 0.12.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.CameraShakeSettings.EngineRumble(System.Single):Returns">A fresh, mutable settings object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CameraShakeSettings.EngineRumble(System.Single):Remarks">Uses 16 Hz and Duration 0, until stopped. Edit settings before starting.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CameraShakeSettings.EngineRumble(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.CameraShakeSettings.Explosion(System.Single)">Explosion Method</h3>
+        <blockquote id="M:Sansar.Simulation.CameraShakeSettings.Explosion(System.Single):member">
+          <div class="msummary">Creates a short, strong rumble suitable for an explosion.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public static <a href="../Sansar.Simulation/CameraShakeSettings.html">CameraShakeSettings</a> <b>Explosion</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> magnitude)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Explosion(System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>magnitude</i>
+              </dt>
+              <dd>Relative strength from 0 to 1; defaults to 0.7.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Explosion(System.Single):Returns">A fresh, mutable settings object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Explosion(System.Single):Remarks">Uses 12 Hz, duration 0.65 seconds and fade-out 0.55 seconds. Edit settings before starting.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Explosion(System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CameraShakeSettings.FadeOut">FadeOut Property</h3>
+        <blockquote id="P:Sansar.Simulation.CameraShakeSettings.FadeOut:member">
+          <div class="msummary">Gets or sets the ending fade in seconds; the default is 0.15.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[get: Sansar.Script.Interface]<br />[set: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>FadeOut</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CameraShakeSettings.FadeOut:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.FadeOut:Remarks">Clamped to 0 through 5 seconds and shortened to fit Duration. The fade is included
+            in Duration. For Duration 0, Stop specifies the fade.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.FadeOut:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CameraShakeSettings.Frequency">Frequency Property</h3>
+        <blockquote id="P:Sansar.Simulation.CameraShakeSettings.Frequency:member">
+          <div class="msummary">Gets or sets frequency in Hz; 0 selects the pattern default.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[get: Sansar.Script.Interface]<br />[set: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Frequency</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Frequency:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Frequency:Remarks">Defaults are 6 Hz for Rumble, 20 for Jitter, 1.5 for Sway and 5 for Impact.
+            Other values are clamped to 0.1 through 30 Hz.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Frequency:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Sansar.Simulation.CameraShakeSettings.Impact(Sansar.Vector,System.Single)">Impact Method</h3>
+        <blockquote id="M:Sansar.Simulation.CameraShakeSettings.Impact(Sansar.Vector,System.Single):member">
+          <div class="msummary">Creates one kick in the given camera-space right/up/forward direction.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />public static <a href="../Sansar.Simulation/CameraShakeSettings.html">CameraShakeSettings</a> <b>Impact</b> (<a href="../Sansar/Vector.html">Sansar.Vector</a> direction, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> magnitude)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Impact(Sansar.Vector,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>direction</i>
+              </dt>
+              <dd>Camera-space right/up/forward weights; W is ignored.</dd>
+              <dt>
+                <i>magnitude</i>
+              </dt>
+              <dd>Relative strength from 0 to 1; defaults to 0.5.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Impact(Sansar.Vector,System.Single):Returns">A fresh, mutable settings object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Impact(Sansar.Vector,System.Single):Remarks">Uses 5 Hz and duration 0.45 seconds. Changing Duration to 0 still gives only one decaying kick.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Sansar.Simulation.CameraShakeSettings.Impact(Sansar.Vector,System.Single):Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CameraShakeSettings.Magnitude">Magnitude Property</h3>
+        <blockquote id="P:Sansar.Simulation.CameraShakeSettings.Magnitude:member">
+          <div class="msummary">Gets or sets relative strength from 0 to 1; the default is 0.35.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[get: Sansar.Script.Interface]<br />[set: Sansar.Script.Interface]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Magnitude</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Magnitude:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Magnitude:Remarks">Values are clamped to this range. This is a relative amount, not a physical impulse.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Magnitude:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Sansar.Simulation.CameraShakeSettings.Pattern">Pattern Property</h3>
+        <blockquote id="P:Sansar.Simulation.CameraShakeSettings.Pattern:member">
+          <div class="msummary">Gets or sets the motion pattern; the default is Rumble.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Sansar.Script.Interface]<br />[get: Sansar.Script.Interface]<br />[set: Sansar.Script.Interface]<br />public <a href="../Sansar.Simulation/CameraShakePattern.html">CameraShakePattern</a> <b>Pattern</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Pattern:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Pattern:Remarks">Choose Rumble, Jitter, Sway or Impact.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Sansar.Simulation.CameraShakeSettings.Pattern:Version Information">
+            <b>Namespace: </b>Sansar.Simulation<br /><b>Assembly: </b>Sansar.Simulation (in Sansar.Simulation.dll)<br /><b>Assembly Versions: </b>1.1.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
