@@ -1,7 +1,7 @@
 # Sansar Platform Constraints and Gotchas
 
 Hard facts about the Sansar scripting environment, verified against the Sansar client
-(47.7.0, October 2026 build) and its script import pipeline. When old forum posts, tutorials or
+(47.10.0, November 2026 build) and its script import pipeline. When old forum posts, tutorials or
 even comments in the example scripts disagree with this document, trust this document —
 and when in doubt, trust the assemblies and API docs in this repository over everything.
 
@@ -140,6 +140,43 @@ tell you the current replacement. Known changes you may hit in older community c
 - `InterruptibleWait(...)` — removed; use `Wait(...)`.
 - `StreamChannel.AudioChannel1` — renamed to `StreamChannel.AudioChannel`.
 - `Vector.Up` (and friends) — obsolete in favor of `ObjectUp` etc.
+
+New in **47.10.0**:
+
+- Time-of-day control on `ScenePrivate`: `GetTimeOfDay` / `SetTimeOfDay` (hours,
+  0 to 24) and `GetTimeOfDayMode` / `SetTimeOfDayMode` with `TimeOfDayMode`
+  (`Off`, `Fixed`, `Cycle`). Scenes built with `Off` keep their baked sunlight.
+- Color LUT overrides using `TextureResource` script properties (`ResourceId`):
+  `ScenePrivate.SetColorLut`, `ScenePrivate.ClearColorLut`,
+  `ScenePrivate.ClearColorLutOverrideForAgent`, `ScenePrivate.ClearColorLutOverrides`,
+  and per-agent `AgentPrivate.SetColorLut` / `AgentPrivate.ClearColorLutOverride`.
+  Overrides are per-instance; PostFX volumes with their own LUT still take precedence.
+- Flight control (per-instance): `GetAllowFlight` / `SetAllowFlight` on
+  `ScenePrivate` (instance default) and `AgentPrivate` (per-agent override), with
+  `AgentPrivate.ClearAllowFlightOverride`,
+  `ScenePrivate.ClearAllowFlightOverrideForAgent`, and
+  `ScenePrivate.ClearAllowFlightOverrides`.
+- Camera shake: `Client.ShakeCamera` (per player) and
+  `ScenePrivate.ShakeCameraAtPosition` (distance falloff), returning a
+  `CameraShakeHandle` (`Stop`), plus `StopAllCameraShakes` on `Client` and
+  `ScenePrivate`. Configure with `CameraShakeSettings` (`Pattern`, `Magnitude`,
+  `Frequency`, `Duration`, `Direction`, `FadeOut`), `CameraShakePattern`
+  (`Rumble`, `Jitter`, `Sway`, `Impact`), or presets `Explosion`, `Earthquake`,
+  `EngineRumble`, and `Impact`. Player comfort settings and VR limits can reduce
+  or suppress playback.
+- `Mover.AddMove` and `Mover.AddMoveOffset` overloads taking separate translation
+  and rotation `MoveMode` arguments (one shared duration and completion event).
+  When recompiling scripts that pass a bare `default` as the fifth argument, use
+  `handler: default`, `null`, or an explicitly typed callback to avoid an ambiguous
+  overload call.
+- Fur and grass `MaterialProperties` fields with matching capability properties on
+  `RenderMaterial` (such as `HasFurLength` and `HasGrassLength`): `FurLength`,
+  `FurDensity`, `FurThickness`, `FurRootColor`, `FurTipColor`, `GrassLength`,
+  `GrassDensity`, `GrassThickness`, `GrassRootColor`, `GrassTipColor`,
+  `GrassDirtColor`, `DirtRoughness`, `ShellHeight`, `BladeHeight`, `BladeWidth`,
+  `BladeDensity`, `UseCustomBladeShape`, `WindStrength`, `WindFlowScale`,
+  `ApplyGlobalWind`, `GravityStrength`, `SelfShadowStrength`, `Roughness`,
+  `RenderShells`, `RenderFins`, and `RenderBlades`.
 
 New in **47.7.0**:
 
